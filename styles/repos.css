@@ -72,7 +72,7 @@ html:not(.dark) .mm-repo-summary strong {
 .mm-repo-flow {
   display: flex;
   flex-direction: column;
-  margin: 0.5em -8px 2em;
+  margin: 0.5em 0 2em; /* no negative margin — was causing horizontal overflow on mobile */
 }
 
 /* ============================================================
@@ -393,41 +393,129 @@ html:not(.dark) .mm-repo-foot {
 }
 
 /* ============================================================
-   Subcategory groups (e.g. free-apis-index)
+   Subcategory groups (e.g. free-apis-index) — collapsible
    ============================================================ */
 
 .mm-repo-group {
-  margin-top: 1.6em;
+  margin-top: 1.4em;
 }
 
 .mm-repo-group:first-of-type {
-  margin-top: 0.4em;
+  margin-top: 0.6em;
 }
 
-.mm-repo-group-title {
-  margin: 0 0 0.4em !important;
-  padding: 0 0 0 14px !important;
-  font-size: 15px !important;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.72);
-  letter-spacing: 0.01em;
+.mm-repo-group-header {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 0.4em;
+  padding: 8px 4px 8px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
 }
 
-html:not(.dark) .mm-repo-group-title {
-  color: rgba(15, 23, 42, 0.78);
+html:not(.dark) .mm-repo-group-header {
+  color: rgba(15, 23, 42, 0.85);
 }
 
-.mm-repo-group-title::before {
+.mm-repo-group-header:hover {
+  background: rgba(96, 165, 250, 0.06);
+  color: #93c5fd;
+}
+
+html:not(.dark) .mm-repo-group-header:hover {
+  color: #2563eb;
+}
+
+.mm-repo-group-header::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.25em;
-  bottom: 0.25em;
+  top: 12px;
+  bottom: 12px;
   width: 3px;
   border-radius: 2px;
   background: linear-gradient(180deg, #60a5fa, #2563eb);
   box-shadow: 0 0 12px rgba(96, 165, 250, 0.5);
+}
+
+.mm-repo-group-count {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(96, 165, 250, 0.55);
+  background: rgba(96, 165, 250, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  padding: 2px 8px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.mm-repo-group-chevron {
+  margin-left: auto;
+  flex: 0 0 auto;
+  color: rgba(96, 165, 250, 0.65);
+  transition: transform 0.22s ease;
+}
+
+.mm-repo-group-header[aria-expanded='false'] .mm-repo-group-chevron {
+  transform: rotate(-90deg);
+}
+
+/* Smooth collapse via CSS grid trick */
+.mm-repo-group-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mm-repo-group-body.is-collapsed {
+  grid-template-rows: 0fr;
+}
+
+.mm-repo-group-body > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Top toolbar: 全部展开 / 收起 */
+.mm-repo-group-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0.5em;
+  font-size: 11.5px;
+}
+
+.mm-repo-group-toolbar button {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  color: rgba(96, 165, 250, 0.85);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  transition: all 0.15s;
+}
+
+.mm-repo-group-toolbar button:hover {
+  background: rgba(96, 165, 250, 0.10);
+  border-color: rgba(96, 165, 250, 0.45);
+  color: #93c5fd;
 }
 
 /* ============================================================

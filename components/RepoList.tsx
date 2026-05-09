@@ -27,7 +27,7 @@ const fmtDate = (d: string | null) => (d && d.length >= 7 ? d.slice(0, 7) : null
 
 const isGithub = (url: string) => /^https:\/\/github\.com\//.test(url)
 
-const hostname = (url: string) => {
+const hostnameOf = (url: string) => {
   try {
     return new URL(url).hostname.replace(/^www\./, '')
   } catch {
@@ -53,9 +53,14 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
   const { headline, detail } = splitDesc(repo.description || '')
   const hasDetail = detail.length > 0
   const gh = isGithub(repo.url)
-  const shortPath = gh
-    ? repo.url.replace(/^https:\/\//, '')
-    : hostname(repo.url) + (new URL(repo.url).pathname || '')
+  let shortPath = ''
+  try {
+    shortPath = gh
+      ? repo.url.replace(/^https:\/\//, '')
+      : hostnameOf(repo.url) + new URL(repo.url).pathname.replace(/\/$/, '')
+  } catch {
+    shortPath = repo.url
+  }
 
   return (
     <article className={`mm-repo-item ${open ? 'is-open' : ''}`}>
@@ -131,7 +136,6 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
   )
 }
 
-// Group consecutive items by subcategory while preserving order in the source mdx
 function groupBySub(items: Repo[]): { sub: string; items: Repo[] }[] {
   const groups: { sub: string; items: Repo[] }[] = []
   for (const r of items) {
@@ -145,6 +149,10 @@ function groupBySub(items: Repo[]): { sub: string; items: Repo[] }[] {
 
 export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
   const items = (repos as Repo[]).filter((r) => r.slug === slug)
+  const groups = groupBySub(items)
+  const hasSubs = groups.some((g) => g.sub)
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({})
+
   if (!items.length) {
     return (
       <div className="mm-repo-fallback">
@@ -153,39 +161,77 @@ export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
     )
   }
 
-  const groups = groupBySub(items)
-  const hasSubs = groups.some((g) => g.sub)
+  const toggleAll = (collapse: boolean) => {
+    if (!hasSubs) return
+    const next: Record<string, boolean> = {}
+    for (const g of groups) if (g.sub) next[g.sub] = collapse
+    setCollapsed(next)
+  }
 
+  if (!hasSubs) {
+    return (
+      <>
+        <div className="mm-repo-summary">
+          共 <strong>{items.length}</strong> 项 · 按 stars 降序
+        </div>
+        <div className="mm-repo-flow">
+          {items.map((r, i) => (
+            <RepoItem key={r.url} repo={r} index={i + 1} />
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  let runningIdx = 0
   return (
     <>
       <div className="mm-repo-summary">
-        共 <strong>{items.length}</strong> 项
-        {!hasSubs && ' · 按 stars 降序'}
+        共 <strong>{items.length}</strong> 项 · 分 <strong>{groups.length}</strong> 组
       </div>
-      {hasSubs ? (
-        <>
-          {(() => {
-            let runningIdx = 0
-            return groups.map((g, gi) => (
-              <section key={gi} className="mm-repo-group">
-                {g.sub && <h2 className="mm-repo-group-title">{g.sub}</h2>}
+      <div className="mm-repo-group-toolbar">
+        <button type="button" onClick={() => toggleAll(false)}>
+          全部展开
+        </button>
+        <button type="button" onClick={() => toggleAll(true)}>
+          全部收起
+        </button>
+      </div>
+      {groups.map((g, gi) => {
+        const isCollapsed = !!collapsed[g.sub]
+        return (
+          <section key={gi} className="mm-repo-group">
+            {g.sub && (
+              <button
+                type="button"
+                className="mm-repo-group-header"
+                aria-expanded={!isCollapsed}
+                onClick={() =>
+                  setCollapsed((c) => ({ ...c, [g.sub]: !c[g.sub] }))
+                }
+              >
+                <span>{g.sub}</span>
+                <span className="mm-repo-group-count">{g.items.length}</span>
+                <ChevronDown
+                  size={14}
+                  strokeWidth={2.4}
+                  className="mm-repo-group-chevron"
+                />
+              </button>
+            )}
+            <div className={`mm-repo-group-body ${isCollapsed ? 'is-collapsed' : ''}`}>
+              <div>
                 <div className="mm-repo-flow">
                   {g.items.map((r) => {
                     runningIdx += 1
                     return <RepoItem key={r.url} repo={r} index={runningIdx} />
                   })}
                 </div>
-              </section>
-            ))
-          })()}
-        </>
-      ) : (
-        <div className="mm-repo-flow">
-          {items.map((r, i) => (
-            <RepoItem key={r.url} repo={r} index={i + 1} />
-          ))}
-        </div>
-      )}
+              </div>
+            </div>
+          </section>
+        )
+      })}
     </>
   )
 }
