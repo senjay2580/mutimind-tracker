@@ -8,6 +8,7 @@
     "lang": null,
     "license": null,
     "category": "AI Agent 案例库 & 实战项目集合",
+    "subcategory": "",
     "slug": "agent-cases",
     "description": "500+ AI Agent 行业案例宝库（curated list）。按行业分类（医疗/金融/教育/零售/客服/法律/研发等），每个用例都链到对应开源实现项目。还按框架二级分类（CrewAI / AutoGen / Agno / Langgraph 各自的用例）。代表案例：HIA 健康洞察代理、人工智能健康助手、自动交易机器人、虚拟教育导师、24×7 客服 chatbot 等。适合「先确定行业场景再找参考实现」的 PM/创业方向调研"
   },
@@ -20,6 +21,7 @@
     "lang": null,
     "license": null,
     "category": "AI Agent 案例库 & 实战项目集合",
+    "subcategory": "",
     "slug": "agent-cases",
     "description": "80+ LLM 实战项目合集（Python 主导）。专门收集 RAG / Agent / 工作流等 LLM 应用，按板块清晰分类：🧩 Starter Agents / 🪶 Simple Agents / 🎙️ Voice Agents / 🗂️ MCP Agents / 🧠 Memory Agents / 📚 RAG Applications / 🔬 Advanced Agents。几乎每个项目都能直接跑（不是 readme demo 集合，是真实可执行 repo）。配套教程/视频列表 + 框架 tutorials。适合「想动手做 Agent 但不知道从哪个原型开始」的入门到进阶"
   },
@@ -32,6 +34,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Agentic 技能框架与软件开发方法论"
   },
@@ -44,6 +47,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "144+ AI 专家角色英文上游版（MIT，Shell）— agency-agents-zh 的英文母仓库。14 大类（Engineering 26 / Marketing 24 / Specialized 42 / Game Dev 24 / Design / Sales / Product / PM / Testing / Support / Spatial / Finance / Academic / Paid Media）。./scripts/install.sh --tool claude-code 一键装到 ~/.claude/agents/，或 --tool all --parallel 同时装到 11 个平台（Cursor/Copilot/Aider/Windsurf/Antigravity/Gemini CLI/OpenCode/OpenClaw/Qwen/Kimi/Claude Code）。⚠️ 多数 agent 是 prompt 模板（无真实 tool 调用），不要全装防污染 agent 列表，建议 cherry-pick 5-10 个（如 Reality Checker / Code Reviewer 这种通用强角色）"
   },
@@ -56,6 +60,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "从零构建类 Claude Code 的 Agent harness"
   },
@@ -68,6 +73,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "LLM 多 Agent 协作的软件开发框架"
   },
@@ -80,6 +86,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "开源深度研究 Agent"
   },
@@ -92,6 +99,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Claude Code 多 Agent 编排（Teams-first）"
   },
@@ -104,6 +112,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Claude Code 状态栏 HUD 插件（JavaScript）。在 Claude Code 界面里实时显示一个自定义信息面板：当前上下文 token 用量、当前激活的 tool 调用、正在跑的 agent、todo 列表进度。让你随时能看到 cc 在干什么、在用哪个 skill、context 还剩多少 — 不用猜。一句话：Claude Code 的\"任务管理器\""
   },
@@ -116,6 +125,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "开源 AI 代理管理平台：把 Claude Code/Codex 等编码代理当同事分配 Issue、跟踪进度、复用技能。SaaS + Docker 自托管"
   },
@@ -128,6 +138,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "任意网站/应用 → CLI 通用接口（JavaScript）。CLI 命令 + Chrome 扩展 + AI-native runtime，把任何网站、Electron 应用或本地二进制变成标准化命令行接口。通过统一 AGENT.md 让 AI agent 自动 discover / learn / execute 工具，不用配 API Key。让 AI 像真人一样操作网页搜信息。vs AutoCLI-skill（680 stars）：OpenCLI 是更大、更通用的协议层（任意工具皆可纳入）；AutoCLI 是预配置好 55+ 主流平台、开箱即用。前者灵活后者方便"
   },
@@ -140,6 +151,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "OpenAI Codex 技能目录"
   },
@@ -152,6 +164,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "\"给 AI 装上审美\"的前端设计 skill 库 — Slogan 直接写「stops the AI from generating boring, generic slop」（让 AI 别再生成无聊的通用糟粕）。12 个 skill 覆盖：品牌设计、多种 UI 风格、图片转代码、AI 生成前端界面的设计规范。专门治 AI 写网页\"千篇一律没品位\"的毛病，做出来的网页有质感、不像默认模板。Shell 安装即用"
   },
@@ -164,6 +177,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Agent 技能集合库，上下文工程与多 Agent 架构"
   },
@@ -176,6 +190,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "214 个即插即用 AI 专家角色（中文版，MIT）。上游 msitarzewski/agency-agents 的中文社区版 = 165 个英文翻译 + 49 个中国市场原创智能体（小红书/抖音/微信/B站/飞书/钉钉运营 + 跨境电商/政务 ToG/医疗合规/Qt 工业上位机/畜禽养殖档案核对等垂直领域）。覆盖 18 个部门（工程/设计/营销/产品/游戏/安全/金融…），支持 17 种 AI 编程工具（Claude Code / Cursor / Copilot / OpenClaw / Hermes / Codex / Ollama / Gemini CLI / DeepSeek / Claude API / OpenAI 等）。和普通 prompt 不同：每个智能体有明确身份 + 关键规则 + 工作流 + 交付物（如「安全工程师」按 OWASP Top 10 逐项审查代码、「小红书运营专家」输出完整种草策略 + 达人合作方案）。配套编排器 jnMetaCode/agency-orchestrator — npm i -g agency-orchestrator 后一句话自动选角 + DAG 并行执行 + 断点续跑 + 32 个现成模板"
   },
@@ -188,6 +203,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "零代码 LLM Agent 框架（纯自然语言创建部署 Agent）"
   },
@@ -200,6 +216,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "手机自动化 + 真实浏览器注入 通用电脑控制 Agent。~3K 行代码（agent loop ~100 行），9 个原子工具（代码执行/文件/Web/视觉/键鼠/手机），用 L0-L4 分层记忆代替超长 context，token 消耗比同类低 ~6×。任务执行路径自动结晶为可复用 skill 树，越用越强。支持 Claude/Gemini/Kimi。Python，pip install requests streamlit pywebview + 填 mykey.py + python launch.pyw 即可跑"
   },
@@ -212,6 +229,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "端到端自主研究工作流"
   },
@@ -224,6 +242,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Agent 编排控制中心（Command Center）"
   },
@@ -236,6 +255,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Browserbase 官方 10 个 Claude Code Skill 包（JavaScript，⚠️ 无 LICENSE）— browser（反爬云浏览器+Captcha 解决）/ functions（serverless 部署）/ site-debugger / browser-trace（CDP 抓包）/ bb-usage（用量仪表盘）/ cookie-sync（本地 Chrome→云）/ fetch / search / ui-test。安装 /plugin marketplace add browserbase/skills && /plugin install browse@browserbase 或 npx skills add browserbase/skills。💸 核心 skill 走 Browserbase SaaS（按浏览器分钟计费，免费 60min/月，超出 ~$0.10/min）。vs 本地 Playwright+CDP：反爬强站点（Cloudflare/Datadome/LinkedIn）专用；普通站点用本地方案省钱"
   },
@@ -248,6 +268,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "长期科学发现统一框架"
   },
@@ -260,6 +281,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "55+ 平台 CLI 化的 Claude Code Skill 封装 — 让 AI agent 用自然语言访问 B站/知乎/微博/小红书/Twitter/YouTube/雪球/微信读书/HackerNews/Reddit 等 55+ 平台，直接复用 Chrome 已有登录态，零 API Key。底层 nashsu/AutoCLI（2,527 stars，Rust 重写，比 opencli 快 12×、内存少 10×，4.7MB 单二进制）。还能控制 Cursor/Notion/ChatGPT/Discord 桌面应用 + GitHub CLI/Docker/kubectl 统一接口。需装 Chrome 扩展 + Chrome 开着 + 已登录目标网站。安装：npx skills add https://github.com/nashsu/AutoCLI-skill"
   },
@@ -272,6 +294,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "⭐ 跨多 AI 网页 + 本地 agent 共享身份/记忆/技能中枢（Go + Postgres + TS，38 天新仓）— 核心卖点：让 Claude / ChatGPT / Cursor / Gemini / Kimi 共享同一份 profile + memory + skills。5 套适配器：① Chrome 扩展（content script 注入到 claude.ai/chatgpt.com/gemini.google.com/kimi.moonshot.cn 的输入框 DOM + 反向爬对话历史，Claude 还会调内部 API 拿干净 JSON）② MCP server（Claude Code / Cursor / Codex CLI）③ OAuth + Remote MCP（ChatGPT Apps）④ 本地 daemon + CLI neu connect claude ⑤ GitHub Mirror（profile 自动 push 私有 repo 做版本备份）。⚠️ 无 LICENSE 文件 = 保留所有权利，不能商用 / fork 部署 ⚠️ Windows 需 WSL2 或 Docker（install 脚本只支持 mac/linux）⚠️ 调 claude.ai 内部 API 是 ToS 灰区可能封号。本质 = profile 文本经 5 种协议塞进各 AI 上下文窗口（DOM 注入 / MCP tool result / OAuth API / 本地 IPC），不是真正的\"记忆\"创新——所有 AI memory 产品都只能干这一件事。🔍 找类似项目关键词：cross-AI memory hub / multi-platform AI identity / shared agent context / mem0 / Letta / MemGPT / AI memory layer / MCP memory server"
   },
@@ -284,6 +307,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 框架",
+    "subcategory": "",
     "slug": "agent-frameworks",
     "description": "Skills For Real Engineers — Matt Pocock（TypeScript 教育者）日常 .claude 目录开源。强调「小、易改、可组合」，对抗 GSD/BMAD/Spec-Kit 全流程接管式框架。核心 Skill：/grill-me /grill-with-docs（对齐 + CONTEXT.md 共享语言）、/tdd（红绿重构）、/diagnose（调试循环）、/improve-codebase-architecture（救烂泥球）、/to-prd /to-issues /triage /zoom-out /caveman（压缩 token ~75%）。一键安装：npx skills@latest add mattpocock/skills"
   },
@@ -296,6 +320,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
     "description": "HeyGen 出品，Built for agents — 写 HTML 渲染视频。CLI non-interactive 默认，原生注册为 Claude Code slash command（/hyperframes /gsap）。AI agent 首选，新项目推荐"
   },
@@ -308,6 +333,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
     "description": "用 React/JSX/CSS 写视频，每一帧一次 React 渲染（useCurrentFrame()）。生态成熟，@remotion/lambda 支持 AWS 批渲。前端开发者首选"
   },
@@ -320,6 +346,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
     "description": "世界首个开源 agentic 视频制作系统。端到端流水线：研究主题→脚本→分镜→素材生成/检索→剪辑→配音→字幕→音乐→渲染。12 条视频 pipeline（动画科普/短视频/纪录片蒙太奇/播客转视频/软件演示/虚拟人/翻译配音/电影预告片等）+ 52 tools + 500+ agent skills。Groq Llama 4 Scout 自动路由到 Remotion（React 程序化）/ Hyperframes（HTML+GSAP 动效）/ Motion Canvas / Revideo / Diffusion Studio。真实素材路线：Archive.org / NASA / Wikimedia / Pexels / Unsplash 检索开放视频片段（非纯图片幻灯片）。Agent 指令体系：skills/ + pipeline_defs/ + .agents/skills/ 大量 Markdown/YAML 指挥每步。质量检查：渲染前后 ffprobe + 帧采样 + 音频/字幕/黑帧检查 + 成本估算 + 决策日志。API 可选：fal.ai / Kling / Runway / Veo / OpenAI / ElevenLabs / Google TTS / Suno / Pexels；无 Key 也能用 Piper TTS + FFmpeg + 开放素材本地渲染"
   },
@@ -332,6 +359,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
     "description": "视频播客制作 Skill（用于自动生成视频/讲解类内容）"
   },
@@ -344,6 +372,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
     "description": "All-in-One Agentic Framework for Video Understanding, Editing, and Remaking"
   },
@@ -356,6 +385,7 @@
     "lang": null,
     "license": null,
     "category": "Claude Code Skills 生态 (市场营销)",
+    "subcategory": "",
     "slug": "cc-skills-marketing",
     "description": "Marketing skills for Claude Code & AI agents（MIT，2026-01 创建，2026-05 持续更新）。skills/ 目录含 40 个 marketing 子 skill，覆盖 5 大方向：CRO 转化率优化（form-cro / page-cro / onboarding-cro / popup-cro / signup-flow-cro / paywall-upgrade-cro）、文案 & 内容（copywriting / copy-editing / cold-email / email-sequence / content-strategy / social-content / image / video）、SEO（seo-audit / ai-seo / programmatic-seo / schema-markup / site-architecture / aso-audit）、获客增长（paid-ads / ad-creative / launch-strategy / referral-program / directory-submissions / lead-magnets / free-tool-strategy / community-marketing）、数据运营（analytics-tracking / ab-test-setup / churn-prevention / customer-research / marketing-psychology / competitor-profiling / pricing-strategy / product-marketing-context / revops / sales-enablement）"
   },
@@ -368,6 +398,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "Skill 与生态扩展",
     "slug": "agent-video-tools",
     "description": "12 个完整项目，HTML-native motion graphics 教学 kit，学 Hyperframes + GSAP 端到端管线"
   },
@@ -380,6 +411,7 @@
     "lang": null,
     "license": null,
     "category": "Agent 视频制作方案",
+    "subcategory": "",
     "slug": "agent-video-tools",
     "description": "3.5K stars，生成 HTML 页面（架构图/diff review/plan audit），不是视频"
   },
@@ -392,6 +424,7 @@
     "lang": null,
     "license": null,
     "category": "资源聚合 & 信息源",
+    "subcategory": "",
     "slug": "aggregation",
     "description": "各类\"Awesome List\"总索引仓库"
   },
@@ -404,6 +437,7 @@
     "lang": null,
     "license": null,
     "category": "资源聚合 & 信息源",
+    "subcategory": "",
     "slug": "aggregation",
     "description": "最大开源编程教程平台（结合 NotebookLM 学习效果极佳）"
   },
@@ -416,6 +450,7 @@
     "lang": null,
     "license": null,
     "category": "资源聚合 & 信息源",
+    "subcategory": "",
     "slug": "aggregation",
     "description": "开源库存管理系统（Python/Django）"
   },
@@ -428,6 +463,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "超轻量个人 AI Agent"
   },
@@ -440,6 +476,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "将所有软件转为 Agent 可访问系统"
   },
@@ -452,6 +489,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "生产级 LLM 应用编排框架"
   },
@@ -464,6 +502,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "多模态模型（视觉/语音/实时流），手机端可运行"
   },
@@ -476,6 +515,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "开放式 Agentic 编程（Paper2Code / Text2Web / Text2Backend）"
   },
@@ -488,6 +528,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "Agent 原生个性化学习助手"
   },
@@ -500,6 +541,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "TypeScript AI Agent 框架"
   },
@@ -512,6 +554,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "开源自进化系统"
   },
@@ -524,6 +567,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "低代码 MCP 框架"
   },
@@ -536,6 +580,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "自主科学创新系统"
   },
@@ -548,6 +593,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "AI Agent 自我进化"
   },
@@ -560,6 +606,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "自动生成模型架构"
   },
@@ -572,6 +619,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "AirPods AI 姿势教练"
   },
@@ -584,6 +632,7 @@
     "lang": null,
     "license": null,
     "category": "AI/LLM 核心项目",
+    "subcategory": "",
     "slug": "ai-llm-core",
     "description": "第一性原理框架"
   },
@@ -596,6 +645,7 @@
     "lang": null,
     "license": null,
     "category": "自主研究 & 自进化",
+    "subcategory": "",
     "slug": "auto-research",
     "description": "Karpathy AI 自主研究项目"
   },
@@ -608,6 +658,7 @@
     "lang": null,
     "license": null,
     "category": "自主研究 & 自进化",
+    "subcategory": "",
     "slug": "auto-research",
     "description": "自主自进化研究系统"
   },
@@ -620,6 +671,7 @@
     "lang": null,
     "license": null,
     "category": "自主研究 & 自进化",
+    "subcategory": "",
     "slug": "auto-research",
     "description": "端到端自进化训练框架"
   },
@@ -632,6 +684,7 @@
     "lang": null,
     "license": null,
     "category": "自主研究 & 自进化",
+    "subcategory": "",
     "slug": "auto-research",
     "description": "DSPy + GEPA 遗传进化做 Agent 自进化"
   },
@@ -644,6 +697,7 @@
     "lang": null,
     "license": null,
     "category": "自主研究 & 自进化",
+    "subcategory": "",
     "slug": "auto-research",
     "description": "多步推理自进化框架"
   },
@@ -656,6 +710,7 @@
     "lang": null,
     "license": null,
     "category": "自动化 & 测试",
+    "subcategory": "",
     "slug": "automation-testing",
     "description": "浏览器自动化、测试与反检测绕过"
   },
@@ -668,6 +723,7 @@
     "lang": null,
     "license": null,
     "category": "自动化 & 测试",
+    "subcategory": "",
     "slug": "automation-testing",
     "description": "桌面级 Computer-Use Agent（桌面自动化）"
   },
@@ -680,6 +736,7 @@
     "lang": null,
     "license": null,
     "category": "自动化 & 测试",
+    "subcategory": "",
     "slug": "automation-testing",
     "description": "基于视觉语言模型的 Android 手机自动化助手"
   },
@@ -692,6 +749,7 @@
     "lang": null,
     "license": null,
     "category": "Claude Code Skills 生态 (Agents365-ai)",
+    "subcategory": "",
     "slug": "cc-skills-agents365",
     "description": "学术论文搜索 Skill，集成 Asta API。支持按标题查论文、查作者智能去伪、基于原文证据解释原理、一句话综述 40+ 篇论文。可配 LM Studio 本地 Qwen 使用"
   },
@@ -704,6 +762,7 @@
     "lang": null,
     "license": null,
     "category": "Claude Code Skills 生态 (Agents365-ai)",
+    "subcategory": "",
     "slug": "cc-skills-agents365",
     "description": "AI 一句话生成专业 draw.io 图表（v1.4）。三套风格预设（default/corporate/handdrawn）+ 六种模板（ERD/UML/Sequence/Architecture/Flowchart/ML 神经网络）+ 数据流动画。适合商务/学术正式图"
   },
@@ -716,6 +775,7 @@
     "lang": null,
     "license": null,
     "category": "Claude Code Skills 生态 (Agents365-ai)",
+    "subcategory": "",
     "slug": "cc-skills-agents365",
     "description": "AI 一句话生成手绘白板风图表。schema 正确的 .tldr JSON 骨架，10 色语义系统，视觉自检循环（自动读 PNG 修复重叠/截断/断箭头）。npm install -g @kitschpatrol/tldraw-cli 兼容 Claude Code/Opencode/OpenClaw/Hermes/Codex"
   },
@@ -728,6 +788,7 @@
     "lang": null,
     "license": null,
     "category": "速查手册 & 开发者参考",
+    "subcategory": "",
     "slug": "cheatsheets",
     "description": "DevOps 工程师学习路线图 2026（含免费资源链接）"
   },
@@ -740,6 +801,7 @@
     "lang": null,
     "license": null,
     "category": "速查手册 & 开发者参考",
+    "subcategory": "",
     "slug": "cheatsheets",
     "description": "Web 开发速查表（在线站点 devhints.io）"
   },
@@ -752,6 +814,7 @@
     "lang": null,
     "license": null,
     "category": "速查手册 & 开发者参考",
+    "subcategory": "",
     "slug": "cheatsheets",
     "description": "开发者快速参考速查表（精美排版布局）"
   },
@@ -764,6 +827,7 @@
     "lang": null,
     "license": null,
     "category": "速查手册 & 开发者参考",
+    "subcategory": "",
     "slug": "cheatsheets",
     "description": "后端开发知识白皮书（可视化速查）"
   },
@@ -776,6 +840,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "终极 CLI/Web 工具合集"
   },
@@ -788,6 +853,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "All-in-One 渗透测试工具聚合器（MIT, 335 commits）。Python 3.10+ CLI 框架统一管理 185+ 安全工具横跨 20 类：信息收集 / 无线攻击 / SQL 注入 / 钓鱼 / Web 利用 / 后渗透 / 取证 / Payload / AD / 云安全 / 移动安全等。带搜索/标签筛选/智能推荐/一键安装。支持 Linux/Kali/ParrotOS/macOS + Docker。仅限授权测试与 CTF 学习用途"
   },
@@ -800,6 +866,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "CLI 代理：通过智能过滤/分组/截断把 git/cargo/docker/AWS 等 100+ 命令的 LLM token 消耗降低 60-90%。Rust 单二进制零依赖，可挂 Claude Code 自动改写 hook"
   },
@@ -812,6 +879,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "精选命令行应用列表"
   },
@@ -824,6 +892,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "语义代码搜索 MCP（Zilliz 出品）：用向量库给 Claude Code 等 Agent 索引整个仓库，BM25 + dense vector 混合检索，按需取片段而非整目录灌入，省 token ~40%。含 VSCode 插件 + npm 核心包"
   },
@@ -836,6 +905,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "统一终端接口"
   },
@@ -848,6 +918,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "多 Agent 终端协作框架（Python，2025-10 起，6 个月 2.5k★）。一行紧凑配置 cmd; writer:codex, reviewer:claude; qa:gemini(worktree) 起 tmux 多窗格团队，支持 Claude/Codex/Gemini/OpenCode/Droid；agent 间 /ask <name>、广播、worktree 隔离；每 agent 独立 API key/model。跨 Linux/macOS/Windows/WSL"
   },
@@ -860,6 +931,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "通用工具使用层"
   },
@@ -872,6 +944,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "多提供商 AI 编码接口"
   },
@@ -884,6 +957,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "AI 驱动的终端工具精选"
   },
@@ -896,6 +970,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "AI Agent 专用 CLI 工具合集"
   },
@@ -908,6 +983,7 @@
     "lang": null,
     "license": null,
     "category": "CLI 工具汇聚 & AI Agent 集成",
+    "subcategory": "",
     "slug": "cli-agent",
     "description": "AI Agent SDK 统一编排层"
   },
@@ -920,8 +996,789 @@
     "lang": null,
     "license": null,
     "category": "DSPy",
+    "subcategory": "",
     "slug": "dspy",
     "description": "Stanford NLP 出品。Declarative Self-improving Python。把\"写 prompt\"变成\"写程序\"——LLM 应用的编译器框架。"
+  },
+  {
+    "name": "PublicAPIs.dev",
+    "owner": "",
+    "url": "https://publicapis.dev/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "1400+ 公共 API，分类细（音乐/AI/图片/工具）"
+  },
+  {
+    "name": "FreePublicAPIs",
+    "owner": "",
+    "url": "https://www.freepublicapis.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "每天检测可用性，找\"真的还能用\"的免费 API"
+  },
+  {
+    "name": "RapidAPI Free APIs",
+    "owner": "",
+    "url": "https://rapidapi.com/collection/list-of-free-apis",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "API 市场，freemium API 多，统一 key/计费"
+  },
+  {
+    "name": "APILayer Marketplace",
+    "owner": "",
+    "url": "https://marketplace.apilayer.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "偏商业稳定 API，多数有免费额度"
+  },
+  {
+    "name": "Mixed Analytics Free APIs",
+    "owner": "",
+    "url": "https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "无 key / 完全免费的公共 API，适合测试"
+  },
+  {
+    "name": "Apipheny Free API List",
+    "owner": "",
+    "url": "https://apipheny.io/free-api/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "90+ 测试用公共 API，偏入门工具型"
+  },
+  {
+    "name": "APIs.guru",
+    "owner": "",
+    "url": "https://apis.guru/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "API 聚合站",
+    "slug": "free-apis-index",
+    "description": "OpenAPI/Swagger API 索引，可自动生成 SDK"
+  },
+  {
+    "name": "TheAudioDB",
+    "owner": "",
+    "url": "https://www.theaudiodb.com/free_music_api",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "艺人/专辑/曲目/MV/榜单，免费档 ~30 req/min"
+  },
+  {
+    "name": "Spotify Web API",
+    "owner": "",
+    "url": "https://developer.spotify.com/documentation/web-api",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "曲库/播放列表/推荐/用户音乐库（OAuth）"
+  },
+  {
+    "name": "SoundCloud API",
+    "owner": "",
+    "url": "https://developers.soundcloud.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "音频内容/用户/播放接口"
+  },
+  {
+    "name": "Radio Browser",
+    "owner": "",
+    "url": "https://www.radio-browser.info/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "全球互联网电台列表，无 key"
+  },
+  {
+    "name": "Songlink / Odesli",
+    "owner": "",
+    "url": "https://odesli.co/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "一首歌在 Spotify/Apple Music/YouTube 跨平台链接"
+  },
+  {
+    "name": "Genius API",
+    "owner": "",
+    "url": "https://docs.genius.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "歌词与注释元数据"
+  },
+  {
+    "name": "Musixmatch",
+    "owner": "",
+    "url": "https://developer.musixmatch.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "歌词与音乐元数据"
+  },
+  {
+    "name": "LRCLIB",
+    "owner": "",
+    "url": "https://lrclib.net/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "同步歌词数据库（免费、开放）"
+  },
+  {
+    "name": "Discogs",
+    "owner": "",
+    "url": "https://www.discogs.com/developers",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "唱片/艺人/发行信息数据库"
+  },
+  {
+    "name": "MusicBrainz",
+    "owner": "",
+    "url": "https://musicbrainz.org/doc/MusicBrainz_API",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "开放音乐元数据百科（免费）"
+  },
+  {
+    "name": "Songkick",
+    "owner": "",
+    "url": "https://www.songkick.com/developer",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "演出/巡演/音乐活动信息"
+  },
+  {
+    "name": "Mubert",
+    "owner": "",
+    "url": "https://mubert.com/render",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "AI 音乐生成（免费试用 / 小额度）"
+  },
+  {
+    "name": "MusicGPT",
+    "owner": "",
+    "url": "https://musicgpt.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "AI 音乐生成"
+  },
+  {
+    "name": "PublicAPIs Music 分类",
+    "owner": "",
+    "url": "https://publicapis.dev/category/music",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音乐 API",
+    "slug": "free-apis-index",
+    "description": "音乐类 API 索引入口"
+  },
+  {
+    "name": "Pexels API",
+    "owner": "",
+    "url": "https://www.pexels.com/api/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "免费图片和视频素材，官方 API 免费"
+  },
+  {
+    "name": "Pixabay API",
+    "owner": "",
+    "url": "https://pixabay.com/api/docs/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "免费图片/视频素材，5.7M+ 资源"
+  },
+  {
+    "name": "Unsplash API",
+    "owner": "",
+    "url": "https://unsplash.com/developers",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "高质量图片素材（背景图首选）"
+  },
+  {
+    "name": "GIPHY API",
+    "owner": "",
+    "url": "https://developers.giphy.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "GIF/贴纸/动图搜索"
+  },
+  {
+    "name": "Tenor API",
+    "owner": "",
+    "url": "https://tenor.com/gifapi",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "GIF/贴纸/动图搜索（Google 旗下）"
+  },
+  {
+    "name": "Shutterstock API",
+    "owner": "",
+    "url": "https://api-reference.shutterstock.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "商业图库 API，免费订阅 + 付费授权"
+  },
+  {
+    "name": "Cloudinary",
+    "owner": "",
+    "url": "https://cloudinary.com/documentation",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "图片/视频存储 + 裁剪 + 转码 + CDN，有免费档"
+  },
+  {
+    "name": "Bytescale",
+    "owner": "",
+    "url": "https://www.bytescale.com/docs",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "图片 / 视频素材 API",
+    "slug": "free-apis-index",
+    "description": "图片/视频/音频上传与处理，14 天免费试用"
+  },
+  {
+    "name": "Mux",
+    "owner": "",
+    "url": "https://www.mux.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "视频上传/转码/播放/直播/分析，有免费额度"
+  },
+  {
+    "name": "Shotstack",
+    "owner": "",
+    "url": "https://shotstack.io/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "视频剪辑/模板渲染/自动生成视频"
+  },
+  {
+    "name": "Bytescale (媒体处理)",
+    "owner": "",
+    "url": "https://www.bytescale.com/docs/processing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "图片/视频/音频转码与压缩"
+  },
+  {
+    "name": "Cloudinary Video",
+    "owner": "",
+    "url": "https://cloudinary.com/documentation/video_manipulation_and_delivery",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "视频压缩/裁剪/水印/转码"
+  },
+  {
+    "name": "AssemblyAI",
+    "owner": "",
+    "url": "https://www.assemblyai.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "音频转文字/说话人分离/摘要，有免费额度"
+  },
+  {
+    "name": "Deepgram",
+    "owner": "",
+    "url": "https://deepgram.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "实时音频转文字（低延迟），有免费额度"
+  },
+  {
+    "name": "ElevenLabs",
+    "owner": "",
+    "url": "https://elevenlabs.io/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "TTS/声音克隆/音频生成（额度会变）"
+  },
+  {
+    "name": "Hugging Face Inference Providers",
+    "owner": "",
+    "url": "https://huggingface.co/inference-api",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "音频 / 视频处理 API",
+    "slug": "free-apis-index",
+    "description": "图像/音频/语音/文本模型测试，小额免费 credit"
+  },
+  {
+    "name": "Pollinations AI",
+    "owner": "",
+    "url": "https://pollinations.ai/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "文本/图片生成，常见无 key 调用，适合原型"
+  },
+  {
+    "name": "Hugging Face",
+    "owner": "",
+    "url": "https://huggingface.co/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "模型测试，免费 credit 小，不适合生产"
+  },
+  {
+    "name": "Replicate",
+    "owner": "",
+    "url": "https://replicate.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "模型市场，多模型试用，生产按量付费"
+  },
+  {
+    "name": "fal.ai",
+    "owner": "",
+    "url": "https://fal.ai/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "多模型媒体生成聚合（图像/视频/音频）"
+  },
+  {
+    "name": "Stability AI",
+    "owner": "",
+    "url": "https://platform.stability.ai/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "Stable Diffusion 系列 API（credit/付费）"
+  },
+  {
+    "name": "Leonardo API",
+    "owner": "",
+    "url": "https://leonardo.ai/api/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "新号 starter credit，适合测试"
+  },
+  {
+    "name": "xAI Imagine API",
+    "owner": "",
+    "url": "https://x.ai/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "图像/视频/音频生成入口（非长期免费）"
+  },
+  {
+    "name": "AIMLAPI",
+    "owner": "",
+    "url": "https://aimlapi.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "AI 图片 / 音频 / 视频生成 API",
+    "slug": "free-apis-index",
+    "description": "400+ 模型聚合，一个 key 调多模型"
+  },
+  {
+    "name": "Google AI Studio / Gemini",
+    "owner": "",
+    "url": "https://cloud.google.com/use-cases/free-ai-tools",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "LLM、多模态、图片理解、长文本原型"
+  },
+  {
+    "name": "Cloudflare Workers AI",
+    "owner": "",
+    "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "开源 LLM、Embedding、Whisper、图片生成、TTS"
+  },
+  {
+    "name": "Groq",
+    "owner": "",
+    "url": "https://console.groq.com/docs/rate-limits",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "超快 LLM、语音转写 Whisper"
+  },
+  {
+    "name": "Cohere",
+    "owner": "",
+    "url": "https://docs.cohere.com/v1/docs/going-to-production",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "RAG、Embedding、Rerank、分类"
+  },
+  {
+    "name": "Tavily",
+    "owner": "",
+    "url": "https://www.tavily.com/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "AI 搜索、网页检索、agent search"
+  },
+  {
+    "name": "Exa",
+    "owner": "",
+    "url": "https://exa.ai/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "AI 搜索、找网页内容、找相似站点"
+  },
+  {
+    "name": "Apify",
+    "owner": "",
+    "url": "https://apify.com/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "云端网页抓取与浏览器自动化平台，Actors 商店可抓公开网页数据，支持 API、Webhook、定时任务"
+  },
+  {
+    "name": "Hugging Face Inference Providers",
+    "owner": "",
+    "url": "https://huggingface.co/docs/api-inference/en/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "试各种开源模型，图片/音频/文本"
+  },
+  {
+    "name": "Pexels API (额度)",
+    "owner": "",
+    "url": "https://www.pexels.com/api/documentation/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "免费图片、视频素材搜索"
+  },
+  {
+    "name": "Resend",
+    "owner": "",
+    "url": "https://resend.com/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "事务邮件、验证码、通知"
+  },
+  {
+    "name": "Brevo",
+    "owner": "",
+    "url": "https://help.brevo.com/hc/en-us/articles/208580669-Is-there-a-limit-to-the-free-plan",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "邮件营销、通知邮件"
+  },
+  {
+    "name": "Mapbox",
+    "owner": "",
+    "url": "https://www.mapbox.com/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "地图、地理编码、路线、POI 搜索"
+  },
+  {
+    "name": "OpenWeather",
+    "owner": "",
+    "url": "https://openweathermap.org/price",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "天气、预报、历史天气、天气摘要"
+  },
+  {
+    "name": "NewsAPI",
+    "owner": "",
+    "url": "https://newsapi.org/pricing",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "新闻搜索、头条聚合"
+  },
+  {
+    "name": "CoinMarketCap API",
+    "owner": "",
+    "url": "https://coinmarketcap.com/api/pricing/",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "免费 API 索引",
+    "subcategory": "通用 AI / 工具 API（带免费额度）",
+    "slug": "free-apis-index",
+    "description": "加密货币价格、行情、排行榜"
   },
   {
     "name": "public-apis",
@@ -932,6 +1789,7 @@
     "lang": null,
     "license": null,
     "category": "免费 API & 开发者资源",
+    "subcategory": "",
     "slug": "free-apis",
     "description": "免费公共 API 合集（1,400+ 个 API）"
   },
@@ -944,6 +1802,7 @@
     "lang": null,
     "license": null,
     "category": "免费 API & 开发者资源",
+    "subcategory": "",
     "slug": "free-apis",
     "description": "48 类 730+ 免费公共 API 精选（附 JSON API）"
   },
@@ -956,6 +1815,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "最流行的 HTML 演示框架"
   },
@@ -968,6 +1828,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "用 JavaScript 生成 PowerPoint"
   },
@@ -980,6 +1841,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "AI 驱动的演示生成器"
   },
@@ -992,6 +1854,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "AI 从任意文档生成可编辑 PPTX"
   },
@@ -1004,6 +1867,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "DESIGN.md → 演示图像 prompt 转换器（不做生成 PPT 本身）。把 VoltAgent/awesome-design-md 上游的网页/UI 品牌设计指南，转换成\"演示图像导向\"的 DESIGN.md 文件，给 image model + design agent 当 prompt 模板用，专门生成 PowerPoint/Keynote/PDF deck/视觉随笔 用的图像素材。Python CLI（pip install -e . → design-md-ppt convert），输入 source/<brand>/DESIGN.md，输出 ppt-image/<brand>/DESIGN.md + conversion_manifest.json。明确不是：deck 生成器、PPT 导出器、截图爬虫。source/ 默认 gitignore，避免误传第三方品牌素材"
   },
@@ -1016,6 +1880,7 @@
     "lang": null,
     "license": null,
     "category": "HTML/Canvas 转 PPT",
+    "subcategory": "",
     "slug": "html-to-ppt",
     "description": "HTML 元素转可编辑 PPT"
   },
@@ -1028,6 +1893,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "Google 跨平台 UI 框架"
   },
@@ -1040,6 +1906,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "高级待办事项 + 时间追踪"
   },
@@ -1052,6 +1919,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "隐私服务和替代品精选"
   },
@@ -1064,6 +1932,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "开源 Android 应用精选合集"
   },
@@ -1076,6 +1945,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "开源 React Native 应用精选"
   },
@@ -1088,6 +1958,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "Android FOSS 应用列表"
   },
@@ -1100,6 +1971,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "Material Design 文件管理器"
   },
@@ -1112,6 +1984,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "Material Design 文件管理器"
   },
@@ -1124,6 +1997,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "搜索为中心的启动器"
   },
@@ -1136,6 +2010,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "Tor + DNSCrypt + I2P 组合"
   },
@@ -1148,6 +2023,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "SwiftUI 开源实现"
   },
@@ -1160,6 +2036,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "All-in-one 生产力工具"
   },
@@ -1172,6 +2049,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "番茄钟生产力计时器"
   },
@@ -1184,6 +2062,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "开源启动器"
   },
@@ -1196,6 +2075,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "无广告文件管理器"
   },
@@ -1208,6 +2088,7 @@
     "lang": null,
     "license": null,
     "category": "手机开源项目",
+    "subcategory": "",
     "slug": "mobile",
     "description": "完全自定义启动器"
   },
@@ -1220,6 +2101,7 @@
     "lang": null,
     "license": null,
     "category": "网盘 & 下载工具",
+    "subcategory": "",
     "slug": "netdisk-tools",
     "description": "后端直链解析服务 — Java/Vert.x 开发，需要服务器部署。把网盘分享链接转为可直接下载的直链（302 跳转或 JSON）。支持 20+ 网盘（蓝奏云、123盘、夸克、Google Drive、OneDrive 等）。适合站长/开发者提供公共解析 API。"
   },
@@ -1232,6 +2114,7 @@
     "lang": null,
     "license": null,
     "category": "网盘 & 下载工具",
+    "subcategory": "",
     "slug": "netdisk-tools",
     "description": "多网盘聚合文件管理平台 — AList 的社区分支（因治理问题独立），Go + SolidJS 开发。支持 50+ 种存储（阿里云盘、百度、S3、WebDAV 等），提供统一 Web 界面进行文件浏览、预览、上传、下载、WebDAV 挂载。功能最全面，适合搭建私有网盘门户。"
   },
@@ -1244,6 +2127,7 @@
     "lang": null,
     "license": null,
     "category": "网盘 & 下载工具",
+    "subcategory": "",
     "slug": "netdisk-tools",
     "description": "浏览器油猴脚本 — 零部署，装 Tampermonkey 即可。在网盘官网页面上直接提取直链，配合 IDM/Aria2 加速下载。支持 8 个主流国内网盘（百度、阿里、夸克、123盘等）。适合普通用户日常使用。"
   },
@@ -1256,6 +2140,7 @@
     "lang": null,
     "license": null,
     "category": "Prompt 工程 & AI 资源精选",
+    "subcategory": "",
     "slug": "prompt-engineering",
     "description": "精选 GPT-Image-2 提示词库（OpenAI API），覆盖人像、海报、UI 原型、角色设定表、社区实验。站点 https://evolink.ai/gpt-image-2-prompts"
   },
@@ -1268,6 +2153,7 @@
     "lang": null,
     "license": null,
     "category": "RAG & LLM 编排",
+    "subcategory": "",
     "slug": "rag-orchestration",
     "description": "开源 RAG 引擎"
   },
@@ -1280,6 +2166,7 @@
     "lang": null,
     "license": null,
     "category": "RAG & LLM 编排",
+    "subcategory": "",
     "slug": "rag-orchestration",
     "description": "简单快速的 RAG"
   },
@@ -1292,6 +2179,7 @@
     "lang": null,
     "license": null,
     "category": "RAG & LLM 编排",
+    "subcategory": "",
     "slug": "rag-orchestration",
     "description": "多模态文档处理 RAG"
   },
@@ -1304,6 +2192,7 @@
     "lang": null,
     "license": null,
     "category": "RAG & LLM 编排",
+    "subcategory": "",
     "slug": "rag-orchestration",
     "description": "跨平台桌面应用，用 LLM（非传统 RAG）把文档自动整理成互联知识库。两步 CoT 入库 + 知识图谱可视化 + 社区检测 + Web 调研 + Chrome 剪藏"
   },
@@ -1316,6 +2205,7 @@
     "lang": null,
     "license": null,
     "category": "RAG & LLM 编排",
+    "subcategory": "",
     "slug": "rag-orchestration",
     "description": "RAG 和 LLM Agent 编排"
   },
@@ -1328,6 +2218,7 @@
     "lang": null,
     "license": null,
     "category": "机器人 & ROS2 生态",
+    "subcategory": "",
     "slug": "robotics",
     "description": "ROS 2 机器人运动规划框架，机械臂操纵主力工具。支持 OMPL/CHOMP/STOMP/Pilz 多规划器，含运动学求解、碰撞检测、轨迹优化。C++ 86.2%，PickNik Inc 维护，覆盖 Humble/Jazzy/Rolling。具身智能机械臂方向必备"
   },
@@ -1340,6 +2231,7 @@
     "lang": null,
     "license": null,
     "category": "语音合成 (TTS)",
+    "subcategory": "",
     "slug": "tts",
     "description": "1 分钟语音数据即可训练高质量 TTS（少样本克隆）"
   },
@@ -1352,6 +2244,7 @@
     "lang": null,
     "license": null,
     "category": "语音合成 (TTS)",
+    "subcategory": "",
     "slug": "tts",
     "description": "面向日常对话的生成式语音模型"
   },
@@ -1364,6 +2257,7 @@
     "lang": null,
     "license": null,
     "category": "语音合成 (TTS)",
+    "subcategory": "",
     "slug": "tts",
     "description": "SOTA 开源 TTS 引擎"
   },
@@ -1376,6 +2270,7 @@
     "lang": null,
     "license": null,
     "category": "语音合成 (TTS)",
+    "subcategory": "",
     "slug": "tts",
     "description": "Tokenizer-Free TTS（OpenBMB / 面壁，Apache 2.0 商用友好）。2B 参数，200 万小时多语种语音训练，30 种语言 + 9 种中文方言（四川话/粤语/吴语/东北话/河南话/陕西话/山东话/天津话/闽南话）。三种使用方式：① Voice Design 自然语言描述（性别/年龄/语调/情绪/节奏）凭空造新声音，无需参考音频；② Controllable Cloning 短参考音频克隆 + 可选风格引导；③ Ultimate Cloning 给参考音频 + 转录，无缝续写保留全部细节。48kHz 录音棚级音质，支持 16kHz 输入超分到 48kHz。RTX 4090 上 RTF ~0.3，配 Nano-vLLM 或 vLLM-Omni 加速到 ~0.13。基于 MiniCPM-4 backbone，端到端 diffusion autoregressive 直接生成连续语音表征（不走离散 token）"
   },
@@ -1388,6 +2283,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "通过从零重建你喜欢的技术来精通编程（数据库/OS/Docker/Git 等）"
   },
@@ -1400,6 +2296,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "免费编程书籍大全（多语言，社区维护）"
   },
@@ -1412,6 +2309,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "交互式开发者学习路线图（前端/后端/DevOps/全栈，每日更新）"
   },
@@ -1424,6 +2322,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "系统设计学习指南（含 Anki 卡片，面试必备）"
   },
@@ -1436,6 +2335,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "完整 CS 学习计划（从零到软件工程师）"
   },
@@ -1448,6 +2348,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "项目驱动编程教程合集（边做边学）"
   },
@@ -1460,6 +2361,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "免费自学 CS 本科完整课程路径（OSSU）"
   },
@@ -1472,6 +2374,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "每个开发者都应了解的技术知识合集"
   },
@@ -1484,6 +2387,7 @@
     "lang": null,
     "license": null,
     "category": "教程库 & 学习路径",
+    "subcategory": "",
     "slug": "tutorials",
     "description": "精选大学 CS 课程（含开放讲义/作业/视频）"
   },
@@ -1496,6 +2400,7 @@
     "lang": null,
     "license": null,
     "category": "垂直领域 Agent",
+    "subcategory": "",
     "slug": "vertical-agents",
     "description": "多 Agent LLM 交易框架（Apache-2.0，Python 3.13，arxiv 2412.20138）— 模拟真实对冲基金决策链：4 分析师（Fundamentals/Sentiment/News/Technical）→ 多空研究员辩论 → Trader → 风控 → PM 审批。LangGraph 编排，支持 OpenAI/Claude/Gemini/DeepSeek/Qwen/GLM/Grok 多 LLM 后端 + Alpha Vantage 数据。conda create -n tradingagents python=3.13 && pip install . && tradingagents 或 docker compose run --rm tradingagents。💸 单 ticker 一次 propagate ≈ $3-10 LLM 费（默认 max_debate_rounds=2 = 16 次调用），用 DeepSeek 替 OpenAI 降本 95%。⚠️ 仅研究用、回测能力弱、A 股/港股不支持。比 dexter 重得多但有论文背书"
   },
@@ -1508,6 +2413,7 @@
     "lang": null,
     "license": null,
     "category": "垂直领域 Agent",
+    "subcategory": "",
     "slug": "vertical-agents",
     "description": "自主化 Web/API 渗透测试 Agent（白盒安全）"
   },
@@ -1520,6 +2426,7 @@
     "lang": null,
     "license": null,
     "category": "垂直领域 Agent",
+    "subcategory": "",
     "slug": "vertical-agents",
     "description": "金融深度研究自主 Agent（TypeScript + Bun v1.0+，⚠️ 无 LICENSE）— Planner→Executor→Self-validator 三段式 + loop guard + scratchpad + WhatsApp gateway。必须 OpenAI key + Financial Datasets API key（机构财报，免费 30 req/天根本不够，Pro $49/月）。bun install && cp env.example .env && bun start。可换 DeepSeek 替 OpenAI 降本 90%。单次深度研究 ≈ $0.5-2 LLM 费"
   },
@@ -1532,6 +2439,7 @@
     "lang": null,
     "license": null,
     "category": "垂直领域 Agent",
+    "subcategory": "",
     "slug": "vertical-agents",
     "description": "AI SRE Agent 框架（Public Alpha, Apache 2.0, Python 98.9%）。专门做生产事故的 RCA 与处置：连接 60+ 可观测性 + 基础设施工具（监控/日志/告警/CI/云平台），自动化根因分析、调查工作流、修复建议。面向 SRE 团队规模化事故响应。⚠️ Alpha 阶段，API 可能变"
   },
@@ -1544,6 +2452,7 @@
     "lang": null,
     "license": null,
     "category": "垂直领域 Agent",
+    "subcategory": "",
     "slug": "vertical-agents",
     "description": "企业架构治理 + 供应商采购 AI 工具包（v4.12.3, MIT, 1077 commits）。把架构治理从散落文档变成系统化 AI 辅助工作流：架构原则 / 干系人分析 / 风险登记册 / 商业 case / 需求文档 / 技术方案调研 / 设计评审 / Wardley 战略地图 / RFP 文档生成。Python CLI + markdown 模板，集成多家 AI 平台，附英国政府合规模板（GDS / TCoP / NCSC）。适合企业架构师 + 公共部门数字化转型"
   },
@@ -1556,6 +2465,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "全网 AI 工具系统提示词 & 内部模型合集（Cursor/Claude Code/Manus/Windsurf 等）"
   },
@@ -1568,6 +2478,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "截图/Figma → React/Vue/HTML 代码"
   },
@@ -1580,6 +2491,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "AI Prompt 模式库框架，30+ AI 供应商，众包提示词模式"
   },
@@ -1592,6 +2504,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "AI + draw.io 流程图，自然语言创建/修改图表"
   },
@@ -1604,6 +2517,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "整个仓库打包为 AI 易读单文件，喂给 LLM 做分析"
   },
@@ -1616,6 +2530,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "复合工程插件（Claude Code / Codex 等）"
   },
@@ -1628,6 +2543,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "本地优先开源设计工具（Anthropic Claude Design 替代）。Next.js + Node.js + TypeScript + SQLite。通过 Claude Code / Cursor / Gemini 等 AI 编码 Agent 生成网页/移动应用/演示文稿原型。内置 31 个设计 Skill + 72 个品牌级设计系统，Apache-2.0"
   },
@@ -1640,6 +2556,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "react-markdown 替代品，专为 AI 流式输出设计"
   },
@@ -1652,6 +2569,7 @@
     "lang": null,
     "license": null,
     "category": "Vibe Coding & 开发工具",
+    "subcategory": "",
     "slug": "vibe-coding",
     "description": "GitHub Agentic Workflows（官方 CLI 扩展）"
   },
@@ -1664,6 +2582,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "AI 全自动短视频生成（v1.2.7, 2026-04-03）。输入主题/关键词 → 自动生成文案+素材+字幕+BGM → 合成高清竖屏/横屏短视频。Streamlit Web + FastAPI，MoviePy 合成，支持 OpenAI/DeepSeek/通义千问，Docker 部署，批量生成"
   },
@@ -1676,6 +2595,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "一键视频翻译/配音工具（v3.99, 2026-04-14）。ASR → 翻译 → TTS → 合成 全流程。faster-whisper + edge-tts + F5-TTS/CosyVoice 零样本声音克隆，集成 DeepSeek/ChatGPT/Claude 翻译，PySide6 桌面 + CLI，支持说话人识别多角色配音"
   },
@@ -1688,6 +2608,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "200+ 模型聚合 / 数字人对口型 / 节点式工作流 / Muapi 网关 免费无审查 AI 图片+视频生成工作室（v1.0.10, 2026-05-01）。5 大 Studio：Image(50+T2I/55+I2I, 14 张参考图)、Video(40+T2V/60+I2V)、Lip Sync(9 模型对口型)、Cinema(专业镜头控制)、Workflow(节点式无代码流水线)。Next.js 14 + Electron 桌面，本地推理走 sd.cpp(Metal/CUDA/Vulkan/ROCm)，云推理走 Muapi.ai 付费网关。MIT"
   },
@@ -1700,6 +2621,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "超长视频问答 RAG 框架（KDD 2026），附带 Vimo 桌面应用"
   },
@@ -1712,6 +2634,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "Agentic 视频生成（导演/编剧/制片人/生成器一体化）"
   },
@@ -1724,6 +2647,7 @@
     "lang": null,
     "license": null,
     "category": "视频 AI",
+    "subcategory": "",
     "slug": "video-ai",
     "description": "Seedance 2.0 = 字节即梦 AI 视频模型完整使用指南（社区版，EvoLinkAI 整理）。覆盖图/视频/音频/文本多模态输入、prompts、用例、实战示例。配套的纯 prompts 仓库：EvoLinkAI/awesome-seedance-2.0-prompts 100+ 精选 prompt。官方更全版（字节出品 Lark Wiki）：https://bytedance.larkoffice.com/wiki/A5RHwWhoB... — 想要最详细官方文档优先看 Lark wiki，想要可 fork/embed 的开源整理用 GitHub 版"
   }

@@ -11,6 +11,7 @@ type Repo = {
   lang: string | null
   license: string | null
   category: string
+  subcategory?: string
   slug: string
   description: string
 }
@@ -24,7 +25,16 @@ const fmtStars = (n: number | null) => {
 
 const fmtDate = (d: string | null) => (d && d.length >= 7 ? d.slice(0, 7) : null)
 
-// Split description into a punchy "headline" (first sentence) + remainder for "详情"
+const isGithub = (url: string) => /^https:\/\/github\.com\//.test(url)
+
+const hostname = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return url
+  }
+}
+
 function splitDesc(desc: string): { headline: string; detail: string } {
   if (!desc) return { headline: '', detail: '' }
   const trimmed = desc.replace(/\s+/g, ' ').trim()
@@ -42,7 +52,10 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
   const date = fmtDate(repo.updated)
   const { headline, detail } = splitDesc(repo.description || '')
   const hasDetail = detail.length > 0
-  const shortPath = repo.url.replace(/^https:\/\//, '')
+  const gh = isGithub(repo.url)
+  const shortPath = gh
+    ? repo.url.replace(/^https:\/\//, '')
+    : hostname(repo.url) + (new URL(repo.url).pathname || '')
 
   return (
     <article className={`mm-repo-item ${open ? 'is-open' : ''}`}>
@@ -55,6 +68,7 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
         </h3>
         <div className="mm-repo-meta">
           {stars && <span className="mm-meta-star">★ {stars}</span>}
+          {!gh && !stars && <span className="mm-meta-site">站点</span>}
           {date && <span className="mm-meta-date">⟳ {date}</span>}
           {repo.lang && <span className="mm-meta-lang">{repo.lang}</span>}
           {repo.license && <span className="mm-meta-license">{repo.license}</span>}
@@ -72,7 +86,7 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
       )}
 
       <div className="mm-repo-foot">
-        {repo.owner && (
+        {repo.owner && gh && (
           <>
             <a
               href={`https://github.com/${repo.owner}`}
@@ -117,28 +131,61 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
   )
 }
 
+// Group consecutive items by subcategory while preserving order in the source mdx
+function groupBySub(items: Repo[]): { sub: string; items: Repo[] }[] {
+  const groups: { sub: string; items: Repo[] }[] = []
+  for (const r of items) {
+    const sub = r.subcategory || ''
+    const last = groups[groups.length - 1]
+    if (last && last.sub === sub) last.items.push(r)
+    else groups.push({ sub, items: [r] })
+  }
+  return groups
+}
+
 export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
   const items = (repos as Repo[]).filter((r) => r.slug === slug)
   if (!items.length) {
-    // Empty state. The CSS rule `.mm-repo-fallback ~ .mm-source-data` will reveal
-    // the original mdx content as a fallback (used by sections like free-apis-index
-    // where entries are not GitHub repos and therefore not indexable).
     return (
       <div className="mm-repo-fallback">
-        <span className="mm-repo-fallback-label">本分类为非标准 GitHub 项目，下方为原始内容：</span>
+        <span className="mm-repo-fallback-label">本分类为非标准项目，下方为原始内容：</span>
       </div>
     )
   }
+
+  const groups = groupBySub(items)
+  const hasSubs = groups.some((g) => g.sub)
+
   return (
     <>
       <div className="mm-repo-summary">
-        共 <strong>{items.length}</strong> 项 · 按 stars 降序
+        共 <strong>{items.length}</strong> 项
+        {!hasSubs && ' · 按 stars 降序'}
       </div>
-      <div className="mm-repo-flow">
-        {items.map((r, i) => (
-          <RepoItem key={r.url} repo={r} index={i + 1} />
-        ))}
-      </div>
+      {hasSubs ? (
+        <>
+          {(() => {
+            let runningIdx = 0
+            return groups.map((g, gi) => (
+              <section key={gi} className="mm-repo-group">
+                {g.sub && <h2 className="mm-repo-group-title">{g.sub}</h2>}
+                <div className="mm-repo-flow">
+                  {g.items.map((r) => {
+                    runningIdx += 1
+                    return <RepoItem key={r.url} repo={r} index={runningIdx} />
+                  })}
+                </div>
+              </section>
+            ))
+          })()}
+        </>
+      ) : (
+        <div className="mm-repo-flow">
+          {items.map((r, i) => (
+            <RepoItem key={r.url} repo={r} index={i + 1} />
+          ))}
+        </div>
+      )}
     </>
   )
 }

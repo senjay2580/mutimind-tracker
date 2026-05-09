@@ -25,8 +25,12 @@ const stripMd = (s) =>
 
 const ownerFromUrl = (url) => {
   const m = url.match(/github\.com\/([^/]+)\/[^/]+/)
-  return m ? m[1] : ''
+  if (m) return m[1]
+  // For non-GitHub URLs (sites), leave owner empty — we'll just show the host inline.
+  return ''
 }
+
+const isGithubUrl = (url) => /^https:\/\/github\.com\//.test(url)
 
 const parseStars = (s) => {
   if (!s) return null
@@ -48,13 +52,30 @@ const normalizeDate = (s) => {
 const repos = []
 const files = readdirSync(TRACKER).filter((f) => f.endsWith('.mdx'))
 
+// Categories that can include arbitrary site URLs (not just GitHub repos).
+// For these slugs the parser accepts any http(s) URL.
+const SITE_SLUGS = new Set(['free-apis-index'])
+const ANY_URL_RE = /https?:\/\/[^\s|)\]'">]+/
+const GH_URL_RE = /https:\/\/github\.com\/[a-zA-Z0-9._/-]+/
+
 for (const file of files) {
   const slug = file.replace('.mdx', '')
   const category = titleMap[slug] || slug
   const txt = readFileSync(resolve(TRACKER, file), 'utf8')
+  const allowSites = SITE_SLUGS.has(slug)
+  const URL_RE = allowSites ? ANY_URL_RE : GH_URL_RE
+
+  // Track the current `### subcategory` heading while walking the file.
+  let currentSub = ''
 
   // ---------- Pattern A: markdown table rows ----------
   for (const line of txt.split('\n')) {
+    // Subcategory tracking: ### resets to the new sub; ## (top section) resets to ''
+    const subM = line.match(/^###\s+(.+?)\s*$/)
+    if (subM) { currentSub = subM[1].trim(); continue }
+    const h2M = line.match(/^##\s/)
+    if (h2M) { currentSub = '' /* fall through, still parse line below */ }
+
     if (!line.startsWith('|') || line.includes('---')) continue
     const cells = line
       .split('|')
@@ -62,11 +83,11 @@ for (const file of files) {
       .map((s) => s.trim())
     if (cells.length < 3) continue
     const first = cells[0].replace(/[*`]/g, '').trim()
-    if (!first || first === '项目名称' || first === '项目名') continue
+    if (!first || first === '项目名称' || first === '项目名' || first === '名称') continue
 
-    const urlIdx = cells.findIndex((c) => /https:\/\/github\.com\//.test(c))
+    const urlIdx = cells.findIndex((c) => URL_RE.test(c))
     if (urlIdx < 0) continue
-    const urlMatch = cells[urlIdx].match(/https:\/\/github\.com\/[a-zA-Z0-9._/-]+/)
+    const urlMatch = cells[urlIdx].match(URL_RE)
     if (!urlMatch) continue
     const url = urlMatch[0].replace(/[).,;]+$/, '')
 
@@ -99,6 +120,7 @@ for (const file of files) {
       lang: null,
       license: null,
       category,
+      subcategory: currentSub,
       slug,
       description: stripMd(description).slice(0, 1200)
     })
@@ -123,6 +145,7 @@ for (const file of files) {
       lang: null,
       license: null,
       category,
+      subcategory: '',
       slug,
       description: after.slice(0, 800)
     })
@@ -164,6 +187,7 @@ for (const file of files) {
       lang,
       license,
       category,
+      subcategory: '',
       slug,
       description: stripMd(body).slice(0, 1200)
     })
