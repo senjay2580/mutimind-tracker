@@ -14,16 +14,34 @@ export const Stats: React.FC<{ items: Stat[] }> = ({ items }) => (
     {items.map((s) => (
       <div
         key={s.label}
+        className="mm-stat-card"
         style={{
           padding: '16px 18px',
           borderRadius: 12,
-          background: 'var(--mm-card-bg, rgba(120,120,140,0.06))',
-          border: '1px solid var(--mm-card-bd, rgba(120,120,140,0.18))'
+          background:
+            'linear-gradient(160deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02))',
+          border: '1px solid rgba(16,185,129,0.22)',
+          transition: 'all 0.2s'
         }}
       >
-        <div style={{ fontSize: 28, fontWeight: 700, lineHeight: 1.1 }}>{s.value}</div>
-        <div style={{ fontSize: 13, opacity: 0.7, marginTop: 4 }}>{s.label}</div>
-        {s.sub && <div style={{ fontSize: 11, opacity: 0.5, marginTop: 2 }}>{s.sub}</div>}
+        <div
+          style={{
+            fontSize: 28,
+            fontWeight: 800,
+            lineHeight: 1.1,
+            background: 'linear-gradient(135deg, #34d399, #059669)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '-0.02em'
+          }}
+        >
+          {s.value}
+        </div>
+        <div style={{ fontSize: 13, opacity: 0.72, marginTop: 6 }}>{s.label}</div>
+        {s.sub && (
+          <div style={{ fontSize: 11, opacity: 0.5, marginTop: 2 }}>{s.sub}</div>
+        )}
       </div>
     ))}
   </div>
@@ -44,24 +62,35 @@ export const CategoryGrid: React.FC<{ items: Card[] }> = ({ items }) => (
       <a
         key={c.href}
         href={c.href}
+        className="mm-cat-card"
         style={{
           display: 'block',
           padding: '14px 16px',
           borderRadius: 10,
           textDecoration: 'none',
           color: 'inherit',
-          background: 'rgba(120,120,140,0.04)',
-          border: '1px solid rgba(120,120,140,0.18)',
-          transition: 'all 0.15s'
+          background: 'rgba(16,185,129,0.04)',
+          border: '1px solid rgba(16,185,129,0.18)',
+          transition: 'all 0.18s',
+          position: 'relative',
+          overflow: 'hidden'
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'baseline'
+          }}
+        >
           <span style={{ fontWeight: 600, fontSize: 14 }}>{c.title}</span>
           {c.count != null && (
             <span style={{ fontSize: 12, opacity: 0.55 }}>{c.count}</span>
           )}
         </div>
-        {c.desc && <div style={{ fontSize: 12, opacity: 0.6, marginTop: 4 }}>{c.desc}</div>}
+        {c.desc && (
+          <div style={{ fontSize: 12, opacity: 0.6, marginTop: 4 }}>{c.desc}</div>
+        )}
       </a>
     ))}
   </div>
