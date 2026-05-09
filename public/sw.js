@@ -1,5 +1,5 @@
 /* MutiMind PWA service worker — minimal stale-while-revalidate cache. */
-const CACHE = 'mutimind-v1'
+const CACHE = 'mutimind-v2'
 const PRECACHE = ['/', '/manifest.webmanifest', '/favicon.svg', '/icon-192.png', '/icon-512.png']
 
 self.addEventListener('install', (e) => {

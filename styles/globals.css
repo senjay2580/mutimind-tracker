@@ -283,6 +283,7 @@ article main li a:hover {
     transparent
   );
   transition: left 0.6s;
+  pointer-events: none; /* never intercept clicks intended for the <a> */
 }
 
 .mm-cat-card:hover::after {
