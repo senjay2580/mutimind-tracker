@@ -104,6 +104,30 @@ for (const file of files) {
     })
   }
 
+  // ---------- Pattern C: bullet / quote / generic markdown link to GitHub ----------
+  // `> [name](url) — desc` / `- [name](url) — desc` / inline `[name](url) — desc`
+  const linkLineRe =
+    /^\s*[-*>]?\s*\[([^\]]+)\]\((https:\/\/github\.com\/[a-zA-Z0-9._/-]+)\)([^\n]*)/gm
+  for (const m of txt.matchAll(linkLineRe)) {
+    const name = m[1].trim()
+    const url = m[2].trim().replace(/[).,;]+$/, '')
+    if (!name || !url) continue
+    if (name.toLowerCase() === 'github 地址' || name.startsWith('http')) continue
+    const after = stripMd(m[3]).replace(/^[—–\-:：]\s*/, '').trim()
+    repos.push({
+      name,
+      owner: ownerFromUrl(url),
+      url,
+      stars: null,
+      updated: null,
+      lang: null,
+      license: null,
+      category,
+      slug,
+      description: after.slice(0, 800)
+    })
+  }
+
   // ---------- Pattern B: card style — `## [name](url)` + optional <RepoMeta /> + paragraph ----------
   const cardRe =
     /^## \[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\s*\n+([\s\S]*?)(?=\n^## |\n*$)/gm
@@ -146,7 +170,9 @@ for (const file of files) {
   }
 }
 
-// Dedupe by url, keeping the one with most metadata
+// Dedupe by url. When same URL appears in multiple categories, prefer the
+// "primary" home — the one with structured metadata (stars set), since that's
+// where the user actually catalogued it. Fallback to first encountered.
 const map = new Map()
 for (const r of repos) {
   const cur = map.get(r.url)
@@ -154,14 +180,21 @@ for (const r of repos) {
     map.set(r.url, r)
     continue
   }
-  // Merge: prefer non-null
+  const curHasStars = cur.stars != null
+  const newHasStars = r.stars != null
+  // primary: entry with stars wins; if both or neither, keep cur
+  const primary = !curHasStars && newHasStars ? r : cur
+  const secondary = primary === r ? cur : r
   map.set(r.url, {
-    ...cur,
-    stars: cur.stars ?? r.stars,
-    updated: cur.updated ?? r.updated,
-    lang: cur.lang ?? r.lang,
-    license: cur.license ?? r.license,
-    description: cur.description.length >= r.description.length ? cur.description : r.description
+    ...primary,
+    stars: primary.stars ?? secondary.stars,
+    updated: primary.updated ?? secondary.updated,
+    lang: primary.lang ?? secondary.lang,
+    license: primary.license ?? secondary.license,
+    description:
+      primary.description.length >= secondary.description.length
+        ? primary.description
+        : secondary.description
   })
 }
 const unique = [...map.values()]

@@ -288,18 +288,6 @@
     "description": "Skills For Real Engineers — Matt Pocock（TypeScript 教育者）日常 .claude 目录开源。强调「小、易改、可组合」，对抗 GSD/BMAD/Spec-Kit 全流程接管式框架。核心 Skill：/grill-me /grill-with-docs（对齐 + CONTEXT.md 共享语言）、/tdd（红绿重构）、/diagnose（调试循环）、/improve-codebase-architecture（救烂泥球）、/to-prd /to-issues /triage /zoom-out /caveman（压缩 token ~75%）。一键安装：npx skills@latest add mattpocock/skills"
   },
   {
-    "name": "coreyhaines31/marketingskills",
-    "owner": "coreyhaines31",
-    "url": "https://github.com/coreyhaines31/marketingskills",
-    "stars": 26806,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "Agent 视频制作方案",
-    "slug": "agent-video-tools",
-    "description": "Marketing skills for Claude Code & AI agents（MIT，2026-01 创建，2026-05 持续更新）。skills/ 目录含 40 个 marketing 子 skill，覆盖 5 大方向：CRO 转化率优化（form-cro / page-cro / onboarding-cro / popup-cro / signup-flow-cro / paywall-upgrade-cro）、文案 & 内容（copywriting / copy-editing / cold-email / email-sequence / content-strategy / social-content / image / video）、SEO（seo-audit / ai-seo / programmatic-seo / schema-markup / site-architecture / aso-audit）、获客增长（paid-ads / ad-creative / launch-strategy / referral-program / directory-submissions / lead-magnets / free-tool-strategy / community-marketing）、数据运营（analytics-tracking / ab-test-setup / churn-prevention / customer-research / marketing-psychology / competitor-profiling / pricing-strategy / product-marketing-context / revops / sales-enablement）"
-  },
-  {
     "name": "Hyperframes",
     "owner": "heygen-com",
     "url": "https://github.com/heygen-com/hyperframes",
@@ -360,6 +348,18 @@
     "description": "All-in-One Agentic Framework for Video Understanding, Editing, and Remaking"
   },
   {
+    "name": "marketingskills",
+    "owner": "coreyhaines31",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "stars": 26806,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "Claude Code Skills 生态 (市场营销)",
+    "slug": "cc-skills-marketing",
+    "description": "Marketing skills for Claude Code & AI agents（MIT，2026-01 创建，2026-05 持续更新）。skills/ 目录含 40 个 marketing 子 skill，覆盖 5 大方向：CRO 转化率优化（form-cro / page-cro / onboarding-cro / popup-cro / signup-flow-cro / paywall-upgrade-cro）、文案 & 内容（copywriting / copy-editing / cold-email / email-sequence / content-strategy / social-content / image / video）、SEO（seo-audit / ai-seo / programmatic-seo / schema-markup / site-architecture / aso-audit）、获客增长（paid-ads / ad-creative / launch-strategy / referral-program / directory-submissions / lead-magnets / free-tool-strategy / community-marketing）、数据运营（analytics-tracking / ab-test-setup / churn-prevention / customer-research / marketing-psychology / competitor-profiling / pricing-strategy / product-marketing-context / revops / sales-enablement）"
+  },
+  {
     "name": "nateherkai/hyperframes-student-kit",
     "owner": "nateherkai",
     "url": "https://github.com/nateherkai/hyperframes-student-kit",
@@ -370,6 +370,18 @@
     "category": "Agent 视频制作方案",
     "slug": "agent-video-tools",
     "description": "12 个完整项目，HTML-native motion graphics 教学 kit，学 Hyperframes + GSAP 端到端管线"
+  },
+  {
+    "name": "nicobailon/visual-explainer",
+    "owner": "nicobailon",
+    "url": "https://github.com/nicobailon/visual-explainer",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "Agent 视频制作方案",
+    "slug": "agent-video-tools",
+    "description": "3.5K stars，生成 HTML 页面（架构图/diff review/plan audit），不是视频"
   },
   {
     "name": "awesome",
@@ -621,7 +633,7 @@
     "license": null,
     "category": "自主研究 & 自进化",
     "slug": "auto-research",
-    "description": "DSPy + GEPA 遗传进化"
+    "description": "DSPy + GEPA 遗传进化做 Agent 自进化"
   },
   {
     "name": "SE-Agent",
@@ -898,6 +910,18 @@
     "category": "CLI 工具汇聚 & AI Agent 集成",
     "slug": "cli-agent",
     "description": "AI Agent SDK 统一编排层"
+  },
+  {
+    "name": "stanfordnlp/dspy",
+    "owner": "stanfordnlp",
+    "url": "https://github.com/stanfordnlp/dspy",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "DSPy",
+    "slug": "dspy",
+    "description": "Stanford NLP 出品。Declarative Self-improving Python。把\"写 prompt\"变成\"写程序\"——LLM 应用的编译器框架。"
   },
   {
     "name": "public-apis",

@@ -1,240 +1,389 @@
 /* Hide original markdown tables/cards on tracker pages —
-   they live in mdx as the data source for the build-time indexer,
-   but the user only sees the RepoList grid above. */
+   they live in mdx as the data source for the build-time indexer.
+   EXCEPT when RepoList is empty (fallback): then we reveal the source as content. */
 .mm-source-data {
   display: none !important;
 }
 
+.mm-repo-fallback ~ .mm-source-data {
+  display: block !important;
+  margin-top: 12px;
+}
+
+.mm-repo-fallback {
+  margin: 0.6em 0 0.4em;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(96, 165, 250, 0.05);
+  border: 1px dashed rgba(96, 165, 250, 0.28);
+  font-size: 12.5px;
+}
+
+.mm-repo-fallback-label {
+  color: rgba(96, 165, 250, 0.85);
+  letter-spacing: 0.01em;
+}
+
+/* When source data is shown via fallback, give it minimal table styling */
+.mm-repo-fallback ~ .mm-source-data table {
+  width: 100%;
+  font-size: 13px;
+}
+
 /* ============================================================
-   RepoList — 流式卡片布局
+   RepoList — 流式文本布局（无卡片框，类 changelog / feed）
    ============================================================ */
 
-.mm-repo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 14px;
-  margin: 1.4em 0 2em;
+.mm-repo-summary {
+  margin: 0.6em 0 1em;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(96, 165, 250, 0.05);
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  border-radius: 999px;
 }
 
-@media (max-width: 540px) {
-  .mm-repo-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+.mm-repo-summary strong {
+  color: #93c5fd;
+  font-weight: 700;
+  font-size: 13px;
 }
 
-/* ---------- Card ---------- */
-.mm-repo-card {
-  position: relative;
+html:not(.dark) .mm-repo-summary {
+  color: rgba(15, 23, 42, 0.65);
+}
+
+html:not(.dark) .mm-repo-summary strong {
+  color: #2563eb;
+}
+
+/* ============================================================
+   Flow container
+   ============================================================ */
+
+.mm-repo-flow {
   display: flex;
   flex-direction: column;
-  padding: 18px 18px 14px;
-  border-radius: 14px;
-  background:
-    linear-gradient(165deg, rgba(96, 165, 250, 0.08), rgba(59, 130, 246, 0.02));
-  border: 1px solid rgba(96, 165, 250, 0.18);
-  box-shadow:
-    0 0 0 1px rgba(59, 130, 246, 0.04) inset,
-    0 8px 22px -16px rgba(96, 165, 250, 0.45);
-  backdrop-filter: blur(10px) saturate(140%);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-  overflow: hidden;
-  isolation: isolate;
+  margin: 0.5em -8px 2em;
 }
 
-.mm-repo-card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.0), rgba(96, 165, 250, 0.18) 50%, rgba(96, 165, 250, 0));
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  z-index: -1;
+/* ============================================================
+   Item — flat, no card box; just padding + bottom hairline
+   ============================================================ */
+
+.mm-repo-item {
+  position: relative;
+  padding: 18px 14px 16px;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.08);
+  transition: background 0.18s ease, transform 0.18s ease;
 }
 
-.mm-repo-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(96, 165, 250, 0.45);
-  box-shadow:
-    0 0 0 1px rgba(59, 130, 246, 0.12) inset,
-    0 18px 38px -18px rgba(96, 165, 250, 0.55),
-    0 0 30px -8px rgba(96, 165, 250, 0.30);
+.mm-repo-item:last-child {
+  border-bottom: none;
 }
 
-.mm-repo-card:hover::before {
+.mm-repo-item:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(96, 165, 250, 0.05),
+    rgba(96, 165, 250, 0.02) 60%,
+    transparent
+  );
+}
+
+.mm-repo-item:hover::before {
   opacity: 1;
 }
 
-/* ---------- Index badge ---------- */
-.mm-repo-num {
+/* Left accent bar on hover (sliding in) */
+.mm-repo-item::before {
+  content: '';
   position: absolute;
-  top: 14px;
-  right: 16px;
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 11px;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #60a5fa, #2563eb);
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+/* ============================================================
+   Top row — number + name + inline meta
+   ============================================================ */
+
+.mm-repo-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.mm-repo-num {
+  flex: 0 0 auto;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: rgba(96, 165, 250, 0.55);
-  background: rgba(96, 165, 250, 0.08);
-  border: 1px solid rgba(96, 165, 250, 0.18);
-  padding: 2px 8px;
-  border-radius: 6px;
+  min-width: 28px;
+  user-select: none;
 }
 
-/* ---------- Header ---------- */
-.mm-repo-head {
-  margin-right: 50px; /* avoid overlap with num badge */
-  margin-bottom: 10px;
-}
-
-.mm-repo-title {
+.mm-repo-name {
   margin: 0 !important;
   padding: 0 !important;
+  flex: 1 1 auto;
   font-size: 17px !important;
   font-weight: 700;
   letter-spacing: -0.01em;
-  line-height: 1.3;
+  line-height: 1.4;
+  min-width: 0;
 }
 
-/* override the global H2 left bar inside card */
-.mm-repo-title::before { display: none !important; }
+.mm-repo-name::before { display: none !important; }
 
-.mm-repo-title a {
+.mm-repo-name a {
   color: inherit !important;
   text-decoration: none !important;
   border: none !important;
-  background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 80%);
+  background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: filter 0.2s;
 }
 
-.mm-repo-card:hover .mm-repo-title a {
+.mm-repo-item:hover .mm-repo-name a {
   filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.55));
 }
 
-.mm-repo-owner {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 4px;
-  font-size: 11px;
-  opacity: 0.6;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  letter-spacing: 0.01em;
-}
-
-/* ---------- Description ---------- */
-.mm-repo-desc {
-  margin: 0 0 14px !important;
-  font-size: 13px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.78);
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  line-clamp: 5;
-  overflow: hidden;
-  flex: 1;
-}
-
-html:not(.dark) .mm-repo-desc {
-  color: rgba(15, 23, 42, 0.75);
-}
-
-/* ---------- Meta pills row ---------- */
+/* Inline meta — right-aligned on wide, wraps below on narrow */
 .mm-repo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.mm-repo-pill {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 3px 9px;
-  border-radius: 999px;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 11.5px;
   font-weight: 600;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
   white-space: nowrap;
-  border: 1px solid;
-  line-height: 1.4;
 }
 
-.mm-pill-star {
-  background: rgba(234, 179, 8, 0.10);
-  border-color: rgba(234, 179, 8, 0.30);
+.mm-repo-meta > span {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.mm-meta-star {
   color: #facc15;
 }
-
-.mm-pill-date {
-  background: rgba(96, 165, 250, 0.10);
-  border-color: rgba(96, 165, 250, 0.28);
+.mm-meta-date {
   color: #93c5fd;
 }
-
-.mm-pill-lang {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
+.mm-meta-lang {
+  color: #38bdf8;
 }
-
-html:not(.dark) .mm-pill-lang {
-  background: rgba(15, 23, 42, 0.04);
-  border-color: rgba(15, 23, 42, 0.12);
-}
-
-.mm-pill-license {
-  background: rgba(168, 85, 247, 0.10);
-  border-color: rgba(168, 85, 247, 0.28);
+.mm-meta-license {
   color: #c4b5fd;
 }
 
-/* ---------- GitHub link ---------- */
-.mm-repo-link {
-  align-self: flex-start;
+/* Faint dividing dot between meta items, except first */
+.mm-repo-meta > span + span::before {
+  content: '·';
+  margin-right: 8px;
+  color: rgba(148, 163, 184, 0.45);
+  font-weight: 400;
+}
+
+/* ============================================================
+   Description — flowing text, indented to align with name
+   ============================================================ */
+
+.mm-repo-desc {
+  margin: 0 0 6px !important;
+  padding-left: 40px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.005em;
+}
+
+.mm-repo-empty-inline {
+  opacity: 0.4;
+  font-style: italic;
+}
+
+html:not(.dark) .mm-repo-desc {
+  color: rgba(15, 23, 42, 0.78);
+}
+
+/* Detail body — collapsed by default, expand on toggle */
+.mm-repo-detail-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-left: 40px;
+}
+
+.mm-repo-detail-wrap.is-open {
+  grid-template-rows: 1fr;
+}
+
+.mm-repo-detail-body {
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.005em;
+}
+
+html:not(.dark) .mm-repo-detail-body {
+  color: rgba(15, 23, 42, 0.65);
+}
+
+.mm-repo-detail-wrap.is-open .mm-repo-detail-body {
+  padding: 4px 0 8px;
+}
+
+/* ============================================================
+   Footer — author + url + 详情 toggle
+   ============================================================ */
+
+.mm-repo-foot {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 40px;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+html:not(.dark) .mm-repo-foot {
+  color: rgba(15, 23, 42, 0.5);
+}
+
+.mm-repo-author {
+  color: rgba(96, 165, 250, 0.7) !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: color 0.15s;
+}
+
+.mm-repo-author:hover {
+  color: #93c5fd !important;
+}
+
+.mm-repo-foot-sep {
+  opacity: 0.45;
+}
+
+.mm-repo-foot-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  background: rgba(96, 165, 250, 0.10);
-  border: 1px solid rgba(96, 165, 250, 0.30) !important;
-  color: #60a5fa !important;
+  gap: 3px;
+  color: rgba(96, 165, 250, 0.7) !important;
   text-decoration: none !important;
-  transition: all 0.18s;
+  border: none !important;
+  transition: all 0.15s;
 }
 
-.mm-repo-link:hover {
-  background: rgba(96, 165, 250, 0.22);
-  border-color: rgba(96, 165, 250, 0.55) !important;
+.mm-repo-foot-link:hover {
   color: #93c5fd !important;
-  transform: translateX(2px);
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
-.mm-repo-link-arrow {
-  transition: transform 0.18s;
+.mm-repo-foot-link svg {
+  transition: transform 0.15s;
 }
 
-.mm-repo-link:hover .mm-repo-link-arrow {
-  transform: translate(2px, -2px);
+.mm-repo-foot-link:hover svg {
+  transform: translate(1px, -1px);
 }
 
-/* ---------- Empty ---------- */
+.mm-repo-toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  background: transparent;
+  border: 1px solid rgba(96, 165, 250, 0.20);
+  color: rgba(96, 165, 250, 0.85);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mm-repo-toggle:hover {
+  background: rgba(96, 165, 250, 0.10);
+  border-color: rgba(96, 165, 250, 0.45);
+  color: #93c5fd;
+}
+
+/* ============================================================
+   Empty state
+   ============================================================ */
+
 .mm-repo-empty {
-  padding: 32px;
+  padding: 30px;
   text-align: center;
   border-radius: 12px;
   background: rgba(96, 165, 250, 0.04);
-  border: 1px dashed rgba(96, 165, 250, 0.30);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
+  border: 1px dashed rgba(96, 165, 250, 0.25);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13.5px;
+}
+
+/* ============================================================
+   Mobile: condensed flow
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .mm-repo-flow {
+    margin: 0.5em -10px 2em;
+  }
+  .mm-repo-item {
+    padding: 16px 12px;
+  }
+  .mm-repo-num {
+    font-size: 11px;
+    min-width: 24px;
+  }
+  .mm-repo-name {
+    font-size: 16px !important;
+  }
+  .mm-repo-meta {
+    flex-basis: 100%;
+    margin-left: 36px;
+    padding-top: 2px;
+  }
+  .mm-repo-desc,
+  .mm-repo-detail-wrap,
+  .mm-repo-foot {
+    padding-left: 36px;
+  }
 }

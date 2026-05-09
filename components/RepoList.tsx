@@ -1,5 +1,5 @@
-import React from 'react'
-import { Star, Clock, Code2, Scale, ExternalLink, ArrowUpRight, User } from 'lucide-react'
+import React, { useState } from 'react'
+import { ChevronDown, ArrowUpRight } from 'lucide-react'
 import repos from '../lib/repos.json'
 
 type Repo = {
@@ -22,81 +22,97 @@ const fmtStars = (n: number | null) => {
   return String(n)
 }
 
-const fmtDate = (d: string | null) => {
-  if (!d) return null
-  // Show YYYY-MM for compactness
-  return d.length >= 7 ? d.slice(0, 7) : d
+const fmtDate = (d: string | null) => (d && d.length >= 7 ? d.slice(0, 7) : null)
+
+// Split description into a punchy "headline" (first sentence) + remainder for "详情"
+function splitDesc(desc: string): { headline: string; detail: string } {
+  if (!desc) return { headline: '', detail: '' }
+  const trimmed = desc.replace(/\s+/g, ' ').trim()
+  const m = trimmed.match(/^(.{8,160}?[—。·\.!！?？:：])\s*(.*)$/)
+  if (m) return { headline: m[1].trim(), detail: m[2].trim() }
+  if (trimmed.length <= 140) return { headline: trimmed, detail: '' }
+  const cut = trimmed.lastIndexOf(' ', 150)
+  const at = cut > 80 ? cut : 140
+  return { headline: trimmed.slice(0, at).trim(), detail: trimmed.slice(at).trim() }
 }
 
-const langTone: Record<string, string> = {
-  Python: '#3b82f6',
-  TypeScript: '#38bdf8',
-  JavaScript: '#facc15',
-  Rust: '#fb923c',
-  Go: '#22d3ee',
-  Java: '#fb7185',
-  'C++': '#a78bfa',
-  Shell: '#34d399'
-}
-
-const RepoCard: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
+const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
+  const [open, setOpen] = useState(false)
   const stars = fmtStars(repo.stars)
   const date = fmtDate(repo.updated)
-  return (
-    <article className="mm-repo-card" data-has-stars={!!stars}>
-      <div className="mm-repo-num">{String(index).padStart(2, '0')}</div>
+  const { headline, detail } = splitDesc(repo.description || '')
+  const hasDetail = detail.length > 0
+  const shortPath = repo.url.replace(/^https:\/\//, '')
 
-      <header className="mm-repo-head">
-        <h3 className="mm-repo-title">
+  return (
+    <article className={`mm-repo-item ${open ? 'is-open' : ''}`}>
+      <div className="mm-repo-row">
+        <span className="mm-repo-num">{String(index).padStart(2, '0')}</span>
+        <h3 className="mm-repo-name">
           <a href={repo.url} target="_blank" rel="noreferrer">
             {repo.name}
           </a>
         </h3>
-        {repo.owner && (
-          <div className="mm-repo-owner">
-            <User size={11} strokeWidth={2.4} />
-            <span>{repo.owner}</span>
-          </div>
-        )}
-      </header>
-
-      <p className="mm-repo-desc">{repo.description || '（暂无描述）'}</p>
-
-      <div className="mm-repo-meta">
-        {stars && (
-          <span className="mm-repo-pill mm-pill-star">
-            <Star size={11} strokeWidth={2.4} fill="currentColor" />
-            {stars}
-          </span>
-        )}
-        {date && (
-          <span className="mm-repo-pill mm-pill-date">
-            <Clock size={11} strokeWidth={2.4} />
-            {date}
-          </span>
-        )}
-        {repo.lang && (
-          <span
-            className="mm-repo-pill mm-pill-lang"
-            style={{ color: langTone[repo.lang] || '#38bdf8' }}
-          >
-            <Code2 size={11} strokeWidth={2.4} />
-            {repo.lang}
-          </span>
-        )}
-        {repo.license && (
-          <span className="mm-repo-pill mm-pill-license">
-            <Scale size={11} strokeWidth={2.4} />
-            {repo.license}
-          </span>
-        )}
+        <div className="mm-repo-meta">
+          {stars && <span className="mm-meta-star">★ {stars}</span>}
+          {date && <span className="mm-meta-date">⟳ {date}</span>}
+          {repo.lang && <span className="mm-meta-lang">{repo.lang}</span>}
+          {repo.license && <span className="mm-meta-license">{repo.license}</span>}
+        </div>
       </div>
 
-      <a className="mm-repo-link" href={repo.url} target="_blank" rel="noreferrer">
-        <ExternalLink size={12} strokeWidth={2.4} />
-        <span>查看仓库</span>
-        <ArrowUpRight size={12} strokeWidth={2.4} className="mm-repo-link-arrow" />
-      </a>
+      <p className="mm-repo-desc">
+        {headline || <span className="mm-repo-empty-inline">（暂无简介）</span>}
+      </p>
+
+      {hasDetail && (
+        <div className={`mm-repo-detail-wrap ${open ? 'is-open' : ''}`}>
+          <div className="mm-repo-detail-body">{detail}</div>
+        </div>
+      )}
+
+      <div className="mm-repo-foot">
+        {repo.owner && (
+          <>
+            <a
+              href={`https://github.com/${repo.owner}`}
+              target="_blank"
+              rel="noreferrer"
+              className="mm-repo-author"
+            >
+              @{repo.owner}
+            </a>
+            <span className="mm-repo-foot-sep">·</span>
+          </>
+        )}
+        <a
+          href={repo.url}
+          target="_blank"
+          rel="noreferrer"
+          className="mm-repo-foot-link"
+        >
+          {shortPath}
+          <ArrowUpRight size={11} strokeWidth={2.4} />
+        </a>
+        {hasDetail && (
+          <button
+            type="button"
+            className="mm-repo-toggle"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+          >
+            {open ? '收起' : '详情'}
+            <ChevronDown
+              size={11}
+              strokeWidth={2.4}
+              style={{
+                transform: open ? 'rotate(180deg)' : 'rotate(0)',
+                transition: 'transform 0.2s'
+              }}
+            />
+          </button>
+        )}
+      </div>
     </article>
   )
 }
@@ -104,14 +120,26 @@ const RepoCard: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
 export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
   const items = (repos as Repo[]).filter((r) => r.slug === slug)
   if (!items.length) {
-    return <div className="mm-repo-empty">暂无项目，使用 github-tracker skill 添加。</div>
+    // Empty state. The CSS rule `.mm-repo-fallback ~ .mm-source-data` will reveal
+    // the original mdx content as a fallback (used by sections like free-apis-index
+    // where entries are not GitHub repos and therefore not indexable).
+    return (
+      <div className="mm-repo-fallback">
+        <span className="mm-repo-fallback-label">本分类为非标准 GitHub 项目，下方为原始内容：</span>
+      </div>
+    )
   }
   return (
-    <div className="mm-repo-grid">
-      {items.map((r, i) => (
-        <RepoCard key={r.url} repo={r} index={i + 1} />
-      ))}
-    </div>
+    <>
+      <div className="mm-repo-summary">
+        共 <strong>{items.length}</strong> 项 · 按 stars 降序
+      </div>
+      <div className="mm-repo-flow">
+        {items.map((r, i) => (
+          <RepoItem key={r.url} repo={r} index={i + 1} />
+        ))}
+      </div>
+    </>
   )
 }
 
