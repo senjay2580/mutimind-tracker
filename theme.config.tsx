@@ -8,9 +8,9 @@ const config: DocsThemeConfig = {
     </span>
   ),
   project: {
-    link: 'https://github.com/senjay2580/mutimind'
+    link: 'https://github.com/senjay2580/mutimind-tracker'
   },
-  docsRepositoryBase: 'https://github.com/senjay2580/mutimind/tree/main',
+  docsRepositoryBase: 'https://github.com/senjay2580/mutimind-tracker/blob/main',
   footer: {
     content: (
       <span style={{ opacity: 0.7 }}>

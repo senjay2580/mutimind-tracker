@@ -2,7 +2,7 @@
 
 精选 AI / Agent / RAG / 具身智能 / Claude Code Skills 等领域的优秀 GitHub 开源项目。
 
-🌐 在线站点：https://mutimind.vercel.app
+🌐 在线站点：https://mutimind-tracker.vercel.app
 
 ## 维护方式
 
@@ -26,4 +26,4 @@ npm run build
 
 ## 分类约定
 
-每个 H2 分类对应 `pages/tracker/<slug>.mdx` 一个文件。新增分类需同时更新 `pages/tracker/_meta.json`。
+每个 H2 分类对应 `pages/tracker/<slug>.mdx` 一个文件。新增分类需同时更新 `pages/tracker/_meta.ts` 和 `scripts/migrate.mjs` 中的 CATEGORIES。
