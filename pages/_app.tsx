@@ -1,6 +1,11 @@
 import type { AppProps } from 'next/app'
+import dynamic from 'next/dynamic'
 import { useEffect, type ReactElement } from 'react'
 import '../styles/globals.css'
+import '../styles/ask.css'
+
+// AskFab is client-only (uses fetch + window) — disable SSR
+const AskFab = dynamic(() => import('../components/AskFab'), { ssr: false })
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   useEffect(() => {
@@ -13,5 +18,10 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
     }
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <AskFab />
+    </>
+  )
 }

@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.mjs",
     "build": "next build",
     "start": "next start",
-    "migrate": "node scripts/migrate.mjs"
+    "migrate": "node scripts/migrate.mjs",
+    "index": "node scripts/build-search-index.mjs",
+    "icons": "node scripts/gen-icons.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",
