@@ -1,0 +1,68 @@
+---
+title: "Agent 视频制作方案"
+---
+
+# Agent 视频制作方案
+
+> 用 AI Agent（Claude Code / Cursor / Codex）做视频的两条主路径：**Code-based 框架** + **Generation-based 模型**，混合管道是当下主流。
+
+### 框架与系统（Code-based）
+
+| 项目 | GitHub | 类型 | 描述 |
+|---|---|---|---|
+| Hyperframes | https://github.com/heygen-com/hyperframes | 框架（HTML+GSAP） | HeyGen 出品，**Built for agents** — 写 HTML 渲染视频。CLI non-interactive 默认，原生注册为 Claude Code slash command（`/hyperframes` `/gsap`）。AI agent 首选，新项目推荐 |
+| Remotion | https://github.com/remotion-dev/remotion | 框架（React） | 用 React/JSX/CSS 写视频，每一帧一次 React 渲染（`useCurrentFrame()`）。生态成熟，`@remotion/lambda` 支持 AWS 批渲。前端开发者首选 |
+| OpenMontage | https://github.com/calesthio/OpenMontage | 全栈 agentic 系统 | **世界首个开源 agentic 视频制作系统**。端到端流水线：研究主题→脚本→分镜→素材生成/检索→剪辑→配音→字幕→音乐→渲染。**12 条视频 pipeline**（动画科普/短视频/纪录片蒙太奇/播客转视频/软件演示/虚拟人/翻译配音/电影预告片等）+ 52 tools + 500+ agent skills。Groq Llama 4 Scout 自动路由到 Remotion（React 程序化）/ Hyperframes（HTML+GSAP 动效）/ Motion Canvas / Revideo / Diffusion Studio。**真实素材路线**：Archive.org / NASA / Wikimedia / Pexels / Unsplash 检索开放视频片段（非纯图片幻灯片）。**Agent 指令体系**：skills/ + pipeline_defs/ + .agents/skills/ 大量 Markdown/YAML 指挥每步。**质量检查**：渲染前后 ffprobe + 帧采样 + 音频/字幕/黑帧检查 + 成本估算 + 决策日志。**API 可选**：fal.ai / Kling / Runway / Veo / OpenAI / ElevenLabs / Google TTS / Suno / Pexels；无 Key 也能用 Piper TTS + FFmpeg + 开放素材本地渲染 |
+| Cutia | https://linux.do/t/topic/1684186 | AI Native 在线视频编辑器 | Agent 一键成片，把经验固化成 prompt，一次生成一致性强的批量视频 |
+| video-podcast-maker | https://github.com/Agents365-ai/video-podcast-maker | Claude Code Skill | 视频播客制作 Skill（探索未至之境 UP 主出品） |
+| HKUDS/VideoAgent | https://github.com/HKUDS/VideoAgent | 学术派 Agent 框架 | All-in-One Agentic Framework for Video Understanding, Editing, and Remaking |
+
+### Skill 与生态扩展
+
+| 项目 | GitHub | 描述 |
+|---|---|---|
+| Seedance 2.0 Claude Agent Skill | https://linux.do/t/topic/1619920 | **小说→视频三件套**：Claude Code（剧本/分镜）+ Nano Banana Pro（角色一致性图）+ 视频生成模型。完整自动化生产链 |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | Marketing Skill 集合，含 video skill（Hyperframes/Remotion + Veo/Runway/Kling/Pika + HeyGen/Synthesia 数字人） |
+| nateherkai/hyperframes-student-kit | https://github.com/nateherkai/hyperframes-student-kit | 12 个完整项目，HTML-native motion graphics 教学 kit，学 Hyperframes + GSAP 端到端管线 |
+
+### SaaS 产品（黑盒 Agent）
+
+| 产品 | 链接 | 描述 |
+|---|---|---|
+| Vizplainer | https://www.vizplainer.com/ | AI 解说视频生成器。脚本/音频→可视化故事板+动画+运动图形，几分钟出片。专做 explainer 视频（产品介绍/科普/营销） |
+| LTX Studio | https://ltx.studio/ | 全链路 AI 视频工作台（视觉开发/分镜/多模型生成/音频/时间线/导出）。报告称 5–10x 产能提升 |
+| HeyGen / Synthesia | — | AI 数字人头像视频，可与 Remotion 拼接做批量数字人口播 |
+
+### 易混淆项目（不是视频工具）
+
+- [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) — 3.5K stars，生成 **HTML 页面**（架构图/diff review/plan audit），不是视频
+- 类似的 [Mojouiss/ai-visual-explainer](https://github.com/Mojouiss/ai-visual-explainer)
+
+### 选型建议
+
+| 场景 | 推荐栈 |
+|---|---|
+| 教程/科普 | Claude Code + Remotion + ElevenLabs + Whisper |
+| 营销/Logo 动画 | Claude Code + **Hyperframes**（Agent 写 HTML 最顺） |
+| 小说→故事化短片 | Seedance 2.0 三件套 |
+| 批量数字人口播 | HeyGen + Remotion + FFmpeg |
+| 一键 agentic | OpenMontage |
+| 不写代码出 explainer | Vizplainer |
+
+### 典型 5 阶段工作流
+
+```
+①意图（结构化 brief：时长/节拍/品牌色/平台）
+②脚本+分镜（Claude Code 当编剧，输出 JSON/YAML）
+③素材生成（并行调 Veo/Kling/Runway + ElevenLabs + Whisper + Nano Banana）
+④合成渲染（Remotion/Hyperframes 把分镜 JSON 喂给 defaultProps，一行命令出 MP4）
+⑤校对发布（Agent 自检 + 人审节奏品牌）
+```
+
+**关键经验**：
+- 拆 scene-level 渲染，错了只重做一段
+- 角色一致性必须用同一张参考图（Nano Banana / Midjourney CRef）
+- 声画对齐用 Whisper 反推时间戳，喂 `@remotion/captions`
+- brief 必须具体（`"60s, 3 beats, big claim 0–3s"`），模糊 brief = 模糊产出
+
+---

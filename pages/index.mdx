@@ -1,0 +1,73 @@
+---
+title: 首页
+---
+
+import { Stats, CategoryGrid } from '../components/Stats'
+
+# MutiMind · 优质开源项目追踪
+
+精选 **AI / Agent / RAG / 具身智能 / Claude Code Skills** 等领域的优质 GitHub 开源项目。
+持续追踪、按分类索引、由 [github-tracker](https://github.com/senjay2580/mutimind) skill 自动维护。
+
+<Stats items={[
+  { label: '收录项目', value: '150+', sub: '截至 2026-05' },
+  { label: '分类领域', value: 25 },
+  { label: '更新频率', value: '每周', sub: '由 skill 自动同步' },
+  { label: '部署', value: 'Vercel', sub: 'push 即上线 ~30s' }
+]} />
+
+## 浏览分类
+
+<CategoryGrid items={[
+  { title: '🌐 网盘 & 下载工具', href: '/tracker/netdisk-tools', desc: 'NFD / OpenList / LinkSwift' },
+  { title: '🧠 AI/LLM 核心项目', href: '/tracker/ai-llm-core', desc: '主流模型 / 推理框架 / 应用基础' },
+  { title: '🔬 自主研究 & 自进化', href: '/tracker/auto-research', desc: 'AutoResearcher / AgentEvolver' },
+  { title: '📚 RAG & LLM 编排', href: '/tracker/rag-orchestration', desc: 'RAGFlow / LightRAG / Dynamiq' },
+  { title: '🤖 Agent 框架', href: '/tracker/agent-frameworks', desc: 'superpowers / ChatDev / AutoAgent' },
+  { title: '📱 手机开源项目', href: '/tracker/mobile' },
+  { title: '🎨 HTML/Canvas → PPT', href: '/tracker/html-to-ppt' },
+  { title: '⚡ CLI & AI Agent 集成', href: '/tracker/cli-agent', desc: 'OpenCLI / AutoCLI / 55+ 平台' },
+  { title: '✨ Vibe Coding', href: '/tracker/vibe-coding' },
+  { title: '🗣️ 语音合成 (TTS)', href: '/tracker/tts' },
+  { title: '🎬 视频 AI', href: '/tracker/video-ai' },
+  { title: '🦾 机器人 & ROS2', href: '/tracker/robotics' },
+  { title: '🔧 自动化 & 测试', href: '/tracker/automation-testing' },
+  { title: '📖 教程库 & 学习路径', href: '/tracker/tutorials' },
+  { title: '🆓 免费 API', href: '/tracker/free-apis' },
+  { title: '📋 速查手册', href: '/tracker/cheatsheets' },
+  { title: '🎯 垂直领域 Agent', href: '/tracker/vertical-agents' },
+  { title: '💼 Agent 案例库', href: '/tracker/agent-cases' },
+  { title: '📡 资源聚合', href: '/tracker/aggregation' },
+  { title: '🗂️ 免费 API 索引', href: '/tracker/free-apis-index' },
+  { title: '🛠️ CC Skills · Agents365', href: '/tracker/cc-skills-agents365' },
+  { title: '📈 CC Skills · 市场营销', href: '/tracker/cc-skills-marketing' },
+  { title: '🎥 Agent 视频制作', href: '/tracker/agent-video-tools' },
+  { title: '🧬 DSPy', href: '/tracker/dspy' },
+  { title: '💡 Prompt 工程', href: '/tracker/prompt-engineering' }
+]} />
+
+## 添加新项目
+
+在 Claude Code 中调用 `github-tracker` skill：
+
+```
+/github-tracker add https://github.com/<owner>/<repo>
+```
+
+skill 会自动：
+1. 用 `gh api` 拉取 stars / 描述 / 主语言 / license
+2. 判断分类（基于 README 内容 + 已有分类语义）
+3. 写入对应 `pages/tracker/<category>.mdx`，使用统一的 `<RepoMeta>` 卡片格式
+4. `git commit` + `git push` → Vercel 自动构建上线
+
+## 维护原则
+
+- **唯一数据源**：本仓库的 `pages/tracker/*.mdx`，原 `MutiMind/Input/*.md` 已归档为只读
+- **格式统一**：每个新条目用 `## [name](url)` 标题 + `<RepoMeta>` 元信息卡片 + 描述段落
+- **历史保留**：旧条目保持表格格式，新条目走卡片格式，混排不影响阅读
+
+## 站点本身
+
+- 框架：[Nextra 3](https://nextra.site) (Next.js + MDX)
+- 部署：[Vercel](https://vercel.com)
+- 源码：[github.com/senjay2580/mutimind](https://github.com/senjay2580/mutimind)
