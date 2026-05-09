@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { useEffect, type ReactElement } from 'react'
 import '../styles/globals.css'
 import '../styles/ask.css'
+import '../styles/repos.css'
 
 // AskFab is client-only (uses fetch + window) — disable SSR
 const AskFab = dynamic(() => import('../components/AskFab'), { ssr: false })

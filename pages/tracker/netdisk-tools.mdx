@@ -2,7 +2,15 @@
 title: "网盘 & 下载工具"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # 网盘 & 下载工具
+
+<RepoList slug="netdisk-tools" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 ## [netdisk-fast-download (NFD)](https://github.com/qaiu/netdisk-fast-download)
 
@@ -15,3 +23,5 @@ title: "网盘 & 下载工具"
 ## [LinkSwift](https://github.com/hmjz100/LinkSwift)
 
 **浏览器油猴脚本** — 零部署，装 Tampermonkey 即可。在网盘官网页面上直接提取直链，配合 IDM/Aria2 加速下载。支持 8 个主流国内网盘（百度、阿里、夸克、123盘等）。适合普通用户日常使用。
+
+</div>

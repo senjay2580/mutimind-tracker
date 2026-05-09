@@ -2,7 +2,15 @@
 title: "CLI 工具汇聚 & AI Agent 集成"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # CLI 工具汇聚 & AI Agent 集成
+
+<RepoList slug="cli-agent" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
@@ -18,3 +26,5 @@ title: "CLI 工具汇聚 & AI Agent 集成"
 | awesome-agent-cli | https://github.com/shuyhere/awesome-agent-cli | 1 | AI Agent 专用 CLI 工具合集 |
 | super-agent | https://github.com/d-kimuson/super-agent | 1 | AI Agent SDK 统一编排层 |
 | CCB (claude_codex_bridge) | https://github.com/bfly123/claude_codex_bridge | 2,502 | **多 Agent 终端协作框架**（Python，2025-10 起，6 个月 2.5k★）。一行紧凑配置 `cmd; writer:codex, reviewer:claude; qa:gemini(worktree)` 起 tmux 多窗格团队，支持 Claude/Codex/Gemini/OpenCode/Droid；agent 间 `/ask <name>`、广播、worktree 隔离；每 agent 独立 API key/model。跨 Linux/macOS/Windows/WSL |
+
+</div>

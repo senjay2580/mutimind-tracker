@@ -1,5 +1,4 @@
-// AUTO-GENERATED-ish — order = sidebar order. Skill should preserve order on append.
-// All tracker pages use layout:'full' to drop the TOC sidebar — tables need width.
+// All tracker pages use layout:'full' to drop the right TOC sidebar.
 const full = { theme: { layout: 'full' as const, toc: false } }
 
 const titles: Record<string, string> = {

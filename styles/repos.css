@@ -1,0 +1,240 @@
+/* Hide original markdown tables/cards on tracker pages —
+   they live in mdx as the data source for the build-time indexer,
+   but the user only sees the RepoList grid above. */
+.mm-source-data {
+  display: none !important;
+}
+
+/* ============================================================
+   RepoList — 流式卡片布局
+   ============================================================ */
+
+.mm-repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 14px;
+  margin: 1.4em 0 2em;
+}
+
+@media (max-width: 540px) {
+  .mm-repo-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ---------- Card ---------- */
+.mm-repo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 14px;
+  border-radius: 14px;
+  background:
+    linear-gradient(165deg, rgba(96, 165, 250, 0.08), rgba(59, 130, 246, 0.02));
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.04) inset,
+    0 8px 22px -16px rgba(96, 165, 250, 0.45);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mm-repo-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.0), rgba(96, 165, 250, 0.18) 50%, rgba(96, 165, 250, 0));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.mm-repo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.12) inset,
+    0 18px 38px -18px rgba(96, 165, 250, 0.55),
+    0 0 30px -8px rgba(96, 165, 250, 0.30);
+}
+
+.mm-repo-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Index badge ---------- */
+.mm-repo-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(96, 165, 250, 0.55);
+  background: rgba(96, 165, 250, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- Header ---------- */
+.mm-repo-head {
+  margin-right: 50px; /* avoid overlap with num badge */
+  margin-bottom: 10px;
+}
+
+.mm-repo-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 17px !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* override the global H2 left bar inside card */
+.mm-repo-title::before { display: none !important; }
+
+.mm-repo-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: filter 0.2s;
+}
+
+.mm-repo-card:hover .mm-repo-title a {
+  filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.55));
+}
+
+.mm-repo-owner {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.6;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Description ---------- */
+.mm-repo-desc {
+  margin: 0 0 14px !important;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  overflow: hidden;
+  flex: 1;
+}
+
+html:not(.dark) .mm-repo-desc {
+  color: rgba(15, 23, 42, 0.75);
+}
+
+/* ---------- Meta pills row ---------- */
+.mm-repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.mm-repo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  border: 1px solid;
+  line-height: 1.4;
+}
+
+.mm-pill-star {
+  background: rgba(234, 179, 8, 0.10);
+  border-color: rgba(234, 179, 8, 0.30);
+  color: #facc15;
+}
+
+.mm-pill-date {
+  background: rgba(96, 165, 250, 0.10);
+  border-color: rgba(96, 165, 250, 0.28);
+  color: #93c5fd;
+}
+
+.mm-pill-lang {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+html:not(.dark) .mm-pill-lang {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.mm-pill-license {
+  background: rgba(168, 85, 247, 0.10);
+  border-color: rgba(168, 85, 247, 0.28);
+  color: #c4b5fd;
+}
+
+/* ---------- GitHub link ---------- */
+.mm-repo-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(96, 165, 250, 0.10);
+  border: 1px solid rgba(96, 165, 250, 0.30) !important;
+  color: #60a5fa !important;
+  text-decoration: none !important;
+  transition: all 0.18s;
+}
+
+.mm-repo-link:hover {
+  background: rgba(96, 165, 250, 0.22);
+  border-color: rgba(96, 165, 250, 0.55) !important;
+  color: #93c5fd !important;
+  transform: translateX(2px);
+}
+
+.mm-repo-link-arrow {
+  transition: transform 0.18s;
+}
+
+.mm-repo-link:hover .mm-repo-link-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ---------- Empty ---------- */
+.mm-repo-empty {
+  padding: 32px;
+  text-align: center;
+  border-radius: 12px;
+  background: rgba(96, 165, 250, 0.04);
+  border: 1px dashed rgba(96, 165, 250, 0.30);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}

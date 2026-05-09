@@ -2,7 +2,15 @@
 title: "自主研究 & 自进化"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # 自主研究 & 自进化
+
+<RepoList slug="auto-research" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
@@ -11,3 +19,5 @@ title: "自主研究 & 自进化"
 | AgentEvolver | https://github.com/modelscope/AgentEvolver | 1,336 | 端到端自进化训练框架 |
 | Hermes Agent Self-Evolution | https://github.com/NousResearch/hermes-agent-self-evolution | 623 | DSPy + GEPA 遗传进化 |
 | SE-Agent | https://github.com/JARVIS-Xs/SE-Agent | 245 | 多步推理自进化框架 |
+
+</div>

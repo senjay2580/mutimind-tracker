@@ -2,7 +2,15 @@
 title: "HTML/Canvas 转 PPT"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # HTML/Canvas 转 PPT
+
+<RepoList slug="html-to-ppt" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
@@ -12,3 +20,5 @@ title: "HTML/Canvas 转 PPT"
 | PPT Master | https://github.com/hugohe3/ppt-master | 3,709 | AI 从任意文档生成可编辑 PPTX |
 | dom-to-pptx | https://github.com/atharva9167j/dom-to-pptx | 102 | HTML 元素转可编辑 PPT |
 | PPT-Design-Prompt | https://github.com/Russell-cell/PPT-Design-Prompt | 887 | **DESIGN.md → 演示图像 prompt 转换器**（不做生成 PPT 本身）。把 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 上游的网页/UI 品牌设计指南，转换成"演示图像导向"的 `DESIGN.md` 文件，给 image model + design agent 当 prompt 模板用，专门生成 PowerPoint/Keynote/PDF deck/视觉随笔 用的图像素材。Python CLI（`pip install -e .` → `design-md-ppt convert`），输入 `source/<brand>/DESIGN.md`，输出 `ppt-image/<brand>/DESIGN.md` + `conversion_manifest.json`。明确**不是**：deck 生成器、PPT 导出器、截图爬虫。`source/` 默认 gitignore，避免误传第三方品牌素材 |
+
+</div>

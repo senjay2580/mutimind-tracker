@@ -2,7 +2,15 @@
 title: "教程库 & 学习路径"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # 教程库 & 学习路径
+
+<RepoList slug="tutorials" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 | 项目名称 | GitHub 地址 | Stars | 最近更新 | 描述 |
 |---------|------------|-------|---------|------|
@@ -15,3 +23,5 @@ title: "教程库 & 学习路径"
 | ossu/computer-science | https://github.com/ossu/computer-science | 203,011 | 2026-03 | 免费自学 CS 本科完整课程路径（OSSU） |
 | every-programmer-should-know | https://github.com/mtdvio/every-programmer-should-know | 98,750 | 2025-12 | 每个开发者都应了解的技术知识合集 |
 | awesome-courses | https://github.com/prakhar1989/awesome-courses | 67,500 | 2023-05 | 精选大学 CS 课程（含开放讲义/作业/视频） |
+
+</div>

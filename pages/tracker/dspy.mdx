@@ -2,7 +2,15 @@
 title: "DSPy"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # DSPy
+
+<RepoList slug="dspy" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 > [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) — Stanford NLP 出品。**Declarative Self-improving Python**。把"写 prompt"变成"写程序"——LLM 应用的编译器框架。
 
@@ -98,3 +106,5 @@ compiled_rag.save("rag_v1.json")
 - 论文：[Stanford HAI — DSPy: Compiling Declarative LM Calls](https://hai.stanford.edu/research/dspy-compiling-declarative-language-model-calls-into-state-of-the-art-pipelines)
 
 ---
+
+</div>

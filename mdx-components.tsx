@@ -1,9 +1,11 @@
 import { getComponents } from 'nextra-theme-docs'
 import RepoMeta from './components/RepoMeta'
+import RepoList from './components/RepoList'
 
 export function useMDXComponents(components?: Record<string, any>) {
   return {
     ...getComponents({ components: components as any }),
-    RepoMeta
+    RepoMeta,
+    RepoList
   }
 }

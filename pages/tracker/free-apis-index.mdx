@@ -2,7 +2,15 @@
 title: "免费 API 索引"
 ---
 
+import RepoList from '../../components/RepoList'
+
 # 免费 API 索引
+
+<RepoList slug="free-apis-index" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
 
 > 来源：用户 2026-05-05 提交。GitHub repo 标 stars，纯 SaaS API/文档站标"站点"。`public-apis/public-apis` 已在「## 免费 API & 开发者资源」收录，此处不重复。
 
@@ -96,3 +104,5 @@ title: "免费 API 索引"
 | OpenWeather | https://openweathermap.org/price | One Call 3.0 前 1,000 calls/天 | 天气、预报、历史天气、天气摘要 |
 | NewsAPI | https://newsapi.org/pricing | 100 requests/天（开发测试用） | 新闻搜索、头条聚合 |
 | CoinMarketCap API | https://coinmarketcap.com/api/pricing/ | 15,000 call credits/月 | 加密货币价格、行情、排行榜 |
+
+</div>
