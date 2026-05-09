@@ -23,8 +23,12 @@ const config: DocsThemeConfig = {
     toggleButton: true
   },
   toc: {
-    backToTop: true
+    backToTop: true,
+    float: false
   },
+  main: ({ children }) => (
+    <div style={{ maxWidth: '100%', width: '100%' }}>{children}</div>
+  ),
   search: {
     placeholder: '搜索项目 / 关键词 / 作者…'
   },
