@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "lucide-react": "^1.14.0",
+    "marked": "^18.0.3",
     "next": "^14.2.15",
     "nextra": "^3.0.15",
     "nextra-theme-docs": "^3.0.15",

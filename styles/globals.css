@@ -301,6 +301,179 @@ input[type='text']:focus {
 }
 
 /* ============================================================
+   Mobile (≤768px): tables → card list
+   每行变成一张卡片，按列拆成可读字段。
+   ============================================================ */
+
+@media (max-width: 768px) {
+  article main {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  /* 拆掉表格视觉，整体变成块级容器 */
+  article main table {
+    display: block !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+    overflow: visible !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    margin: 0.5em 0 1em;
+  }
+
+  article main table thead {
+    display: none !important;
+  }
+
+  article main table tbody {
+    display: block !important;
+  }
+
+  /* 每行 = 一张卡片 */
+  article main table tr {
+    display: block !important;
+    margin: 0 0 12px !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(
+      160deg,
+      rgba(var(--mm-blue-rgb), 0.08),
+      rgba(var(--mm-blue-rgb), 0.02)
+    ) !important;
+    border: 1px solid rgba(var(--mm-blue-rgb), 0.20) !important;
+    box-shadow: 0 6px 18px -14px rgba(var(--mm-glow-rgb), 0.45) !important;
+  }
+
+  article main table tr:hover td {
+    background: transparent !important;
+  }
+
+  /* 单元格全部块级 */
+  article main table td {
+    display: block !important;
+    padding: 0 !important;
+    border: none !important;
+    line-height: 1.55 !important;
+    background: transparent !important;
+  }
+
+  /* 1 列 = 项目名（突出显示，蓝色渐变） */
+  article main table td:first-child {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #93c5fd, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px !important;
+    word-break: break-word;
+  }
+
+  /* 2 列 = GitHub URL（链接以小标签呈现） */
+  article main table td:nth-child(2) {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  article main table td:nth-child(2) a {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(var(--mm-blue-rgb), 0.12);
+    border: 1px solid rgba(var(--mm-blue-rgb), 0.30);
+    border-radius: 999px;
+    word-break: break-all;
+    font-size: 11px;
+    line-height: 1.4;
+    text-decoration: none !important;
+  }
+
+  article main table td:nth-child(2) a::before {
+    content: '↗ ';
+    opacity: 0.7;
+  }
+
+  /* 3 列 = Stars（金色 chip） */
+  article main table td:nth-child(3) {
+    display: inline-block !important;
+    font-size: 12px !important;
+    padding: 2px 10px !important;
+    border-radius: 999px !important;
+    background: rgba(234, 179, 8, 0.12) !important;
+    color: #eab308 !important;
+    border: 1px solid rgba(234, 179, 8, 0.32) !important;
+    margin: 0 6px 8px 0 !important;
+    font-weight: 600;
+  }
+
+  article main table td:nth-child(3)::before {
+    content: '★ ';
+  }
+
+  /* 4 列：5 列表 → 日期 chip；4 列表 → 描述 */
+  article main table td:nth-child(4):not(:last-child) {
+    display: inline-block !important;
+    font-size: 11px !important;
+    padding: 2px 10px !important;
+    border-radius: 999px !important;
+    background: rgba(var(--mm-blue-rgb), 0.10) !important;
+    color: var(--mm-blue-400) !important;
+    border: 1px solid rgba(var(--mm-blue-rgb), 0.25) !important;
+    margin: 0 6px 8px 0 !important;
+  }
+
+  article main table td:nth-child(4):not(:last-child)::before {
+    content: '⟳ ';
+    opacity: 0.7;
+  }
+
+  /* 末列 = 描述（独占一行，灰色，分隔线起头） */
+  article main table td:last-child {
+    display: block !important;
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+    margin-top: 4px !important;
+    padding-top: 10px !important;
+    border-top: 1px dashed rgba(var(--mm-blue-rgb), 0.18) !important;
+    word-break: break-word;
+  }
+
+  html:not(.dark) article main table td:last-child {
+    color: rgba(0, 0, 0, 0.72) !important;
+  }
+
+  /* 仅一列也别变成奇怪样式：4 列表的最后一列就是描述，被 :last-child 命中即可 */
+
+  /* 卡片格式（## [name] + RepoMeta + 段落）在手机上字号略压缩 */
+  article main h2 {
+    font-size: 1.15em !important;
+    margin-top: 1.6em !important;
+  }
+
+  /* H1 hero 在小屏不要太大 */
+  article main h1:first-of-type {
+    font-size: 1.9em !important;
+  }
+
+  /* Stats / Category 卡片网格自适应（改最小宽度让 1 列堆叠） */
+  .mm-stat-card,
+  .mm-cat-card {
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  article main h1:first-of-type {
+    font-size: 1.7em !important;
+  }
+  article main table td:first-child {
+    font-size: 16px !important;
+  }
+}
+
+/* ============================================================
    Logo container subtle hover
    ============================================================ */
 
