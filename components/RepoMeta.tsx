@@ -19,11 +19,12 @@ const fmtStars = (n: number | string | undefined) => {
 
 const Pill: React.FC<{ children: React.ReactNode; tone?: string }> = ({ children, tone = 'default' }) => {
   const tones: Record<string, { bg: string; fg: string; bd: string }> = {
-    default: { bg: 'rgba(120,120,140,0.1)', fg: 'inherit', bd: 'rgba(120,120,140,0.25)' },
-    star:    { bg: 'rgba(234,179,8,0.12)', fg: '#eab308', bd: 'rgba(234,179,8,0.35)' },
-    lang:    { bg: 'rgba(56,189,248,0.10)', fg: '#38bdf8', bd: 'rgba(56,189,248,0.30)' },
-    date:    { bg: 'rgba(34,197,94,0.10)', fg: '#22c55e', bd: 'rgba(34,197,94,0.30)' },
-    license: { bg: 'rgba(168,85,247,0.10)', fg: '#a855f7', bd: 'rgba(168,85,247,0.30)' }
+    default: { bg: 'rgba(59,130,246,0.06)',  fg: 'inherit', bd: 'rgba(59,130,246,0.20)' },
+    primary: { bg: 'rgba(59,130,246,0.14)',  fg: '#60a5fa', bd: 'rgba(59,130,246,0.40)' },
+    star:    { bg: 'rgba(234,179,8,0.12)',   fg: '#eab308', bd: 'rgba(234,179,8,0.35)' },
+    lang:    { bg: 'rgba(56,189,248,0.10)',  fg: '#38bdf8', bd: 'rgba(56,189,248,0.30)' },
+    date:    { bg: 'rgba(59,130,246,0.10)',  fg: '#60a5fa', bd: 'rgba(59,130,246,0.32)' },
+    license: { bg: 'rgba(168,85,247,0.10)',  fg: '#a855f7', bd: 'rgba(168,85,247,0.30)' }
   }
   const t = tones[tone] || tones.default
   return (

@@ -1,43 +1,65 @@
 /* ============================================================
-   MutiMind · 绿色主题
+   MutiMind · 蓝色 + 弥光（diffuse glow）主题
    ============================================================ */
 
 :root {
-  /* Nextra 3 primary color override (used for sidebar active, links, search highlight) */
-  --nextra-primary-hue: 152deg !important;
-  --nextra-primary-saturation: 60% !important;
-  --nextra-primary-lightness: 50% !important;
+  /* Nextra 3 primary color (sidebar active / links / search) */
+  --nextra-primary-hue: 215deg !important;
+  --nextra-primary-saturation: 90% !important;
+  --nextra-primary-lightness: 55% !important;
 
-  --mm-green-50:  #ecfdf5;
-  --mm-green-100: #d1fae5;
-  --mm-green-300: #6ee7b7;
-  --mm-green-400: #34d399;
-  --mm-green-500: #10b981;
-  --mm-green-600: #059669;
-  --mm-green-700: #047857;
-  --mm-green-rgb: 16, 185, 129;
+  --mm-blue-300: #93c5fd;
+  --mm-blue-400: #60a5fa;
+  --mm-blue-500: #3b82f6;
+  --mm-blue-600: #2563eb;
+  --mm-blue-700: #1d4ed8;
+  --mm-blue-rgb: 59, 130, 246;
+  --mm-glow-rgb: 96, 165, 250;
 
   --nextra-content-width: 100%;
 }
 
 html.dark {
-  --mm-card-bg: rgba(var(--mm-green-rgb), 0.04);
-  --mm-card-bd: rgba(var(--mm-green-rgb), 0.18);
-  --mm-card-bd-hover: rgba(var(--mm-green-rgb), 0.45);
-  --mm-card-glow: 0 8px 24px -12px rgba(var(--mm-green-rgb), 0.45);
-  --mm-text-muted: rgba(255, 255, 255, 0.55);
+  --mm-card-bg: rgba(var(--mm-blue-rgb), 0.05);
+  --mm-card-bd: rgba(var(--mm-blue-rgb), 0.18);
+  --mm-card-bd-hover: rgba(var(--mm-blue-rgb), 0.45);
 }
 
 html:not(.dark) {
-  --mm-card-bg: rgba(var(--mm-green-rgb), 0.05);
-  --mm-card-bd: rgba(var(--mm-green-rgb), 0.18);
-  --mm-card-bd-hover: rgba(var(--mm-green-rgb), 0.55);
-  --mm-card-glow: 0 8px 24px -12px rgba(var(--mm-green-rgb), 0.35);
-  --mm-text-muted: rgba(0, 0, 0, 0.55);
+  --mm-card-bg: rgba(var(--mm-blue-rgb), 0.05);
+  --mm-card-bd: rgba(var(--mm-blue-rgb), 0.20);
+  --mm-card-bd-hover: rgba(var(--mm-blue-rgb), 0.55);
 }
 
 /* ============================================================
-   Layout — full-width content, no clipped tables
+   弥光底层 — 整页背景柔光晕
+   ============================================================ */
+
+html.dark body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(900px 600px at 12% -10%, rgba(96, 165, 250, 0.12), transparent 60%),
+    radial-gradient(800px 500px at 92% 110%, rgba(59, 130, 246, 0.10), transparent 60%),
+    radial-gradient(600px 400px at 50% 50%, rgba(37, 99, 235, 0.05), transparent 70%);
+}
+
+html:not(.dark) body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(900px 600px at 12% -10%, rgba(96, 165, 250, 0.18), transparent 60%),
+    radial-gradient(800px 500px at 92% 110%, rgba(59, 130, 246, 0.12), transparent 60%);
+}
+
+/* ============================================================
+   Layout — full width
    ============================================================ */
 
 article main {
@@ -52,7 +74,7 @@ article main > div,
 }
 
 /* ============================================================
-   Tables
+   Tables — 弥光卡片化
    ============================================================ */
 
 article main table {
@@ -61,22 +83,27 @@ article main table {
   table-layout: auto !important;
   font-size: 13px;
   margin: 1em 0;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    0 0 0 1px rgba(var(--mm-blue-rgb), 0.10),
+    0 12px 32px -16px rgba(var(--mm-blue-rgb), 0.30);
 }
 
 article main table thead {
   background: linear-gradient(
     180deg,
-    rgba(var(--mm-green-rgb), 0.10),
-    rgba(var(--mm-green-rgb), 0.04)
+    rgba(var(--mm-blue-rgb), 0.14),
+    rgba(var(--mm-blue-rgb), 0.05)
   );
 }
 
 article main table th {
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: var(--mm-green-400);
+  color: var(--mm-blue-400);
 }
 
 article main table th,
@@ -89,26 +116,27 @@ article main table td {
 }
 
 article main table tr:hover td {
-  background: rgba(var(--mm-green-rgb), 0.04);
+  background: rgba(var(--mm-blue-rgb), 0.05);
 }
 
 article main table td a {
   word-break: break-all;
   overflow-wrap: anywhere;
-  color: var(--mm-green-400);
+  color: var(--mm-blue-400);
   text-decoration: none;
-  border-bottom: 1px dashed rgba(var(--mm-green-rgb), 0.4);
+  border-bottom: 1px dashed rgba(var(--mm-blue-rgb), 0.4);
   transition: all 0.15s;
 }
 
 article main table td a:hover {
-  color: var(--mm-green-300);
-  border-bottom-color: var(--mm-green-300);
-  background: rgba(var(--mm-green-rgb), 0.08);
+  color: var(--mm-blue-300);
+  border-bottom-color: var(--mm-blue-300);
+  background: rgba(var(--mm-blue-rgb), 0.10);
+  text-shadow: 0 0 10px rgba(var(--mm-glow-rgb), 0.5);
 }
 
 /* ============================================================
-   Headings — green accent on H2 (each repo)
+   Headings
    ============================================================ */
 
 article main h2 {
@@ -125,114 +153,120 @@ article main h2::before {
   bottom: 0.3em;
   width: 3px;
   border-radius: 2px;
-  background: linear-gradient(180deg, var(--mm-green-400), var(--mm-green-600));
+  background: linear-gradient(180deg, var(--mm-blue-400), var(--mm-blue-600));
+  box-shadow: 0 0 12px rgba(var(--mm-glow-rgb), 0.55);
 }
 
 article main h2 a {
-  color: var(--mm-green-400) !important;
+  color: var(--mm-blue-400) !important;
 }
 
 article main h2 a:hover {
-  color: var(--mm-green-300) !important;
+  color: var(--mm-blue-300) !important;
+  text-shadow: 0 0 14px rgba(var(--mm-glow-rgb), 0.5);
 }
 
 /* ============================================================
-   Sidebar polish — green active state
+   Sidebar — active state with glow
    ============================================================ */
 
 aside.nextra-sidebar-container .nextra-sidebar-active,
 .nextra-sidebar a[aria-current='true'] {
-  background: rgba(var(--mm-green-rgb), 0.12) !important;
-  color: var(--mm-green-400) !important;
+  background: rgba(var(--mm-blue-rgb), 0.14) !important;
+  color: var(--mm-blue-400) !important;
+  box-shadow: 0 0 18px -4px rgba(var(--mm-glow-rgb), 0.4);
 }
 
 /* ============================================================
-   Logo subtle hover lift
-   ============================================================ */
-
-header a:has(svg[viewBox='0 0 32 32']) {
-  transition: transform 0.2s;
-}
-
-header a:has(svg[viewBox='0 0 32 32']):hover {
-  transform: translateY(-1px);
-}
-
-/* ============================================================
-   Index hero — gradient mesh background behind H1
+   Index hero H1 — gradient text with soft glow
    ============================================================ */
 
 article main h1:first-of-type {
-  background: linear-gradient(135deg, var(--mm-green-400), var(--mm-green-600) 80%);
+  background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 60%, #2563eb 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 2.4em !important;
+  font-size: 2.6em !important;
   font-weight: 800;
   letter-spacing: -0.02em;
+  filter: drop-shadow(0 0 22px rgba(var(--mm-glow-rgb), 0.35));
 }
 
 /* ============================================================
-   Inline code — green tint
+   Inline code — 弥光蓝
    ============================================================ */
 
 article main :not(pre) > code {
-  background: rgba(var(--mm-green-rgb), 0.10) !important;
-  border: 1px solid rgba(var(--mm-green-rgb), 0.20) !important;
-  color: var(--mm-green-400) !important;
+  background: rgba(var(--mm-blue-rgb), 0.12) !important;
+  border: 1px solid rgba(var(--mm-blue-rgb), 0.22) !important;
+  color: var(--mm-blue-400) !important;
+  box-shadow: 0 0 8px -2px rgba(var(--mm-glow-rgb), 0.30);
 }
 
-/* Code fence — subtle green border */
 article main pre {
-  border: 1px solid rgba(var(--mm-green-rgb), 0.18);
+  border: 1px solid rgba(var(--mm-blue-rgb), 0.18);
+  box-shadow: 0 8px 28px -16px rgba(var(--mm-glow-rgb), 0.40);
 }
 
 /* ============================================================
-   Blockquote — green left bar
+   Blockquote
    ============================================================ */
 
 article main blockquote {
-  border-left-color: var(--mm-green-500) !important;
-  background: rgba(var(--mm-green-rgb), 0.05);
-  border-radius: 0 8px 8px 0;
+  border-left-color: var(--mm-blue-500) !important;
+  background: rgba(var(--mm-blue-rgb), 0.06);
+  border-radius: 0 10px 10px 0;
   padding: 0.6em 1em !important;
+  box-shadow: 0 0 18px -8px rgba(var(--mm-glow-rgb), 0.30);
 }
 
 /* ============================================================
-   Links in body
+   Body links — soft underline + glow on hover
    ============================================================ */
 
 article main p a,
 article main li a {
-  color: var(--mm-green-400);
+  color: var(--mm-blue-400);
   text-decoration: none;
-  border-bottom: 1px dotted rgba(var(--mm-green-rgb), 0.4);
+  border-bottom: 1px dotted rgba(var(--mm-blue-rgb), 0.45);
   transition: all 0.15s;
 }
 
 article main p a:hover,
 article main li a:hover {
-  color: var(--mm-green-300);
-  border-bottom-color: var(--mm-green-300);
+  color: var(--mm-blue-300);
+  border-bottom-color: var(--mm-blue-300);
+  text-shadow: 0 0 12px rgba(var(--mm-glow-rgb), 0.55);
 }
 
 /* ============================================================
-   Stats / Category cards hover
+   Stats / Category cards — 玻璃 + 弥光
    ============================================================ */
 
+.mm-stat-card,
+.mm-cat-card {
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
 .mm-stat-card:hover {
-  border-color: rgba(16, 185, 129, 0.45) !important;
+  border-color: rgba(var(--mm-blue-rgb), 0.45) !important;
   background:
-    linear-gradient(160deg, rgba(16,185,129,0.14), rgba(16,185,129,0.04)) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px -12px rgba(16, 185, 129, 0.4);
+    linear-gradient(160deg, rgba(var(--mm-blue-rgb), 0.16), rgba(var(--mm-blue-rgb), 0.04)) !important;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(var(--mm-blue-rgb), 0.30),
+    0 18px 40px -16px rgba(var(--mm-glow-rgb), 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .mm-cat-card:hover {
-  border-color: rgba(16, 185, 129, 0.55) !important;
-  background: rgba(16, 185, 129, 0.10) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px -10px rgba(16, 185, 129, 0.35);
+  border-color: rgba(var(--mm-blue-rgb), 0.55) !important;
+  background: rgba(var(--mm-blue-rgb), 0.10) !important;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(var(--mm-blue-rgb), 0.35),
+    0 14px 32px -14px rgba(var(--mm-glow-rgb), 0.50);
 }
 
 .mm-cat-card::after {
@@ -245,10 +279,10 @@ article main li a:hover {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.04),
+    rgba(var(--mm-glow-rgb), 0.10),
     transparent
   );
-  transition: left 0.5s;
+  transition: left 0.6s;
 }
 
 .mm-cat-card:hover::after {
@@ -256,11 +290,24 @@ article main li a:hover {
 }
 
 /* ============================================================
-   Search box — green focus ring
+   Search box — blue focus glow
    ============================================================ */
 
 input[type='search']:focus,
 input[type='text']:focus {
-  box-shadow: 0 0 0 3px rgba(var(--mm-green-rgb), 0.25) !important;
-  border-color: var(--mm-green-500) !important;
+  box-shadow: 0 0 0 3px rgba(var(--mm-blue-rgb), 0.30),
+              0 0 18px -2px rgba(var(--mm-glow-rgb), 0.45) !important;
+  border-color: var(--mm-blue-500) !important;
+}
+
+/* ============================================================
+   Logo container subtle hover
+   ============================================================ */
+
+header a:has(svg) {
+  transition: transform 0.2s;
+}
+
+header a:has(svg):hover {
+  transform: translateY(-1px);
 }

@@ -17,11 +17,13 @@ export const Stats: React.FC<{ items: Stat[] }> = ({ items }) => (
         className="mm-stat-card"
         style={{
           padding: '16px 18px',
-          borderRadius: 12,
+          borderRadius: 14,
           background:
-            'linear-gradient(160deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02))',
-          border: '1px solid rgba(16,185,129,0.22)',
-          transition: 'all 0.2s'
+            'linear-gradient(160deg, rgba(59,130,246,0.10), rgba(59,130,246,0.02))',
+          border: '1px solid rgba(59,130,246,0.22)',
+          boxShadow:
+            '0 0 0 1px rgba(59,130,246,0.05), 0 8px 22px -14px rgba(96,165,250,0.45)',
+          transition: 'all 0.22s ease'
         }}
       >
         <div
@@ -29,11 +31,12 @@ export const Stats: React.FC<{ items: Stat[] }> = ({ items }) => (
             fontSize: 28,
             fontWeight: 800,
             lineHeight: 1.1,
-            background: 'linear-gradient(135deg, #34d399, #059669)',
+            background: 'linear-gradient(135deg, #93c5fd, #2563eb)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: 'transparent',
-            letterSpacing: '-0.02em'
+            letterSpacing: '-0.02em',
+            filter: 'drop-shadow(0 0 12px rgba(96,165,250,0.45))'
           }}
         >
           {s.value}
@@ -66,12 +69,14 @@ export const CategoryGrid: React.FC<{ items: Card[] }> = ({ items }) => (
         style={{
           display: 'block',
           padding: '14px 16px',
-          borderRadius: 10,
+          borderRadius: 12,
           textDecoration: 'none',
           color: 'inherit',
-          background: 'rgba(16,185,129,0.04)',
-          border: '1px solid rgba(16,185,129,0.18)',
-          transition: 'all 0.18s',
+          background: 'rgba(59,130,246,0.04)',
+          border: '1px solid rgba(59,130,246,0.18)',
+          boxShadow:
+            '0 0 0 1px rgba(59,130,246,0.04), 0 6px 18px -14px rgba(96,165,250,0.35)',
+          transition: 'all 0.20s ease',
           position: 'relative',
           overflow: 'hidden'
         }}
