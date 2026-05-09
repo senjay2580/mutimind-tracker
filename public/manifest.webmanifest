@@ -1,0 +1,29 @@
+{
+  "name": "MutiMind · 优质开源追踪",
+  "short_name": "MutiMind",
+  "description": "精选 AI / Agent / RAG / 具身智能 / Claude Code Skills 等领域优质 GitHub 开源项目，按分类持续追踪。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0a0a",
+  "theme_color": "#3b82f6",
+  "categories": ["productivity", "developer", "utilities"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    {
+      "name": "项目追踪",
+      "short_name": "追踪",
+      "description": "浏览全部分类",
+      "url": "/tracker/ai-llm-core",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

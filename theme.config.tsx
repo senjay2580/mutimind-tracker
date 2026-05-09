@@ -63,7 +63,14 @@ const config: DocsThemeConfig = {
       <meta property="og:title" content="MutiMind - 优质开源项目追踪" />
       <meta property="og:description" content="精选 GitHub AI/Agent/RAG/具身智能开源项目，按分类持续追踪。" />
       <meta name="theme-color" content="#3b82f6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="MutiMind" />
+      <meta name="application-name" content="MutiMind" />
+      <link rel="manifest" href="/manifest.webmanifest" />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </>
   )
 }
