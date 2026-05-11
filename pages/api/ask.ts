@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import repos from '../../lib/repos.json'
+import { applyCors } from '../../lib/cors'
 
 type Repo = {
   name: string
@@ -53,6 +54,7 @@ function buildLibrary(allRepos: Repo[]): string {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (applyCors(req, res)) return
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed' })

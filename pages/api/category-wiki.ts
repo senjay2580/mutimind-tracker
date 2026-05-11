@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import repos from '../../lib/repos.json'
+import { applyCors } from '../../lib/cors'
 
 type Repo = {
   name: string
@@ -41,6 +42,7 @@ const SYSTEM = `你是 MutiMind 优质开源项目追踪站的「分类深度分
 （基于 stars 数量、看上去更新频率，对整个分类的活跃度给一个综合判断；指出最活跃 / 最被低估的几个）`.trim()
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (applyCors(req, res)) return
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
