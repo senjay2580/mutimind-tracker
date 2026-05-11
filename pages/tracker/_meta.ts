@@ -23,6 +23,7 @@ const titles: Record<string, string> = {
   'aggregation': '资源聚合 & 信息源',
   'free-apis-index': '免费 API 索引',
   'cc-skills-agents365': 'Claude Code Skills 生态 (Agents365-ai)',
+  'cc-skills-marketplaces': 'Claude Code Skills 生态 (市场 & 工具)',
   'cc-skills-marketing': 'Claude Code Skills 生态 (市场营销)',
   'agent-video-tools': 'Agent 视频制作方案',
   'dspy': 'DSPy',

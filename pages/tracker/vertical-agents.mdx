@@ -3,6 +3,7 @@ title: "垂直领域 Agent"
 ---
 
 import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
 
 # 垂直领域 Agent
 
@@ -19,5 +20,33 @@ import RepoList from '../../components/RepoList'
 | TradingAgents | https://github.com/TauricResearch/TradingAgents | 67,707 | **多 Agent LLM 交易框架**（Apache-2.0，Python 3.13，[arxiv 2412.20138](https://arxiv.org/pdf/2412.20138)）— 模拟真实对冲基金决策链：4 分析师（Fundamentals/Sentiment/News/Technical）→ 多空研究员辩论 → Trader → 风控 → PM 审批。LangGraph 编排，支持 OpenAI/Claude/Gemini/DeepSeek/Qwen/GLM/Grok 多 LLM 后端 + Alpha Vantage 数据。`conda create -n tradingagents python=3.13 && pip install . && tradingagents` 或 `docker compose run --rm tradingagents`。💸 单 ticker 一次 propagate ≈ $3-10 LLM 费（默认 max_debate_rounds=2 = 16 次调用），用 DeepSeek 替 OpenAI 降本 95%。⚠️ 仅研究用、回测能力弱、A 股/港股不支持。比 dexter 重得多但有论文背书 |
 | ArcKit | https://github.com/tractorjuice/arc-kit | 1,700 | **企业架构治理 + 供应商采购 AI 工具包**（v4.12.3, MIT, 1077 commits）。把架构治理从散落文档变成系统化 AI 辅助工作流：架构原则 / 干系人分析 / 风险登记册 / 商业 case / 需求文档 / 技术方案调研 / 设计评审 / Wardley 战略地图 / RFP 文档生成。Python CLI + markdown 模板，集成多家 AI 平台，附英国政府合规模板（GDS / TCoP / NCSC）。适合企业架构师 + 公共部门数字化转型 |
 | OpenSRE | https://github.com/Tracer-Cloud/opensre | 4,200 | **AI SRE Agent 框架**（Public Alpha, Apache 2.0, Python 98.9%）。专门做生产事故的 RCA 与处置：连接 60+ 可观测性 + 基础设施工具（监控/日志/告警/CI/云平台），自动化根因分析、调查工作流、修复建议。面向 SRE 团队规模化事故响应。⚠️ Alpha 阶段，API 可能变 |
+
+## [financial-services](https://github.com/anthropics/financial-services)
+
+<RepoMeta
+  url="https://github.com/anthropics/financial-services"
+  stars={19813}
+  updated="2026-05-09"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['financial-services', 'managed-agents', 'claude']}
+/>
+
+**Anthropic 金融服务 Agent/Skill 参考实现** — 官方仓库，覆盖投行、权益研究、私募和财富管理常见工作流，包含 Pitch Agent、Market Researcher、Earnings Reviewer、GL Reconciler 等参考 agents，以及可单独安装的 vertical plugins、skills、slash commands 和 connectors。适合学习垂直行业 Agent 如何拆分工作流、合规边界和人工复核。
+
+**注意**：⚠️ 仓库明确声明不构成投资、法律、税务或会计建议，输出需要合格专业人士复核。
+
+## [xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp)
+
+<RepoMeta
+  url="https://github.com/xpzouying/xiaohongshu-mcp"
+  stars={13516}
+  updated="2026-04-27"
+  lang="Go"
+  license="No License"
+  tags={['mcp-server', 'xiaohongshu', 'social-media']}
+/>
+
+**小红书 MCP Server** — 面向 xiaohongshu.com 的 MCP 服务，让 Agent 能通过 MCP 协议接入小红书相关能力。适合自媒体、内容调研和小红书运营类 Agent 工具链。
 
 </div>

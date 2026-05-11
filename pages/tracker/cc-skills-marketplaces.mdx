@@ -1,0 +1,141 @@
+---
+title: "Claude Code Skills 生态 (市场 & 工具)"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# Claude Code Skills 生态 (市场 & 工具)
+
+<RepoList slug="cc-skills-marketplaces" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
+
+## [baoyu-skills](https://github.com/JimLiu/baoyu-skills)
+
+<RepoMeta
+  url="https://github.com/JimLiu/baoyu-skills"
+  stars={17753}
+  updated="2026-05-10"
+  lang="TypeScript"
+  license="No License"
+  tags={['agent-skills', 'claude-skills', 'codex-skills']}
+/>
+
+**宝玉的 Claude/Codex Skills 工具包** — 面向日常工作效率的 Skill 集合，README 提供 `npx skills add jimliu/baoyu-skills`、ClawHub 发布、Claude Code plugin marketplace 三种安装路径。适合想快速补齐内容生成、AI 后端调用和实用工具类 skill 的用户。
+
+**亮点**：
+- 支持作为 Claude Code plugin marketplace 安装，也支持按 ClawHub 单 skill 发布
+- skills 目录按内容生成、AI 生成和工具类能力组织，便于挑选和复用
+
+## [remotion-dev/skills](https://github.com/remotion-dev/skills)
+
+<RepoMeta
+  url="https://github.com/remotion-dev/skills"
+  stars={3118}
+  updated="2026-05-07"
+  lang="TypeScript"
+  license="No License"
+  tags={['remotion', 'video', 'agent-skills']}
+/>
+
+**Remotion 官方 Agent Skills** — Remotion 团队维护的 skills 仓库，核心入口是 `skills/remotion/SKILL.md`，把 React 视频生成、预览、渲染和最佳实践封装成 Agent 可复用的操作指南。适合把 Claude Code/Codex 接入自动化视频制作流水线。
+
+## [gpt_image_2_skill](https://github.com/wuyoscar/gpt_image_2_skill)
+
+<RepoMeta
+  url="https://github.com/wuyoscar/gpt_image_2_skill"
+  stars={1870}
+  updated="2026-05-08"
+  lang="Python"
+  license="MIT"
+  tags={['image-generation', 'prompt-library', 'codex-skill']}
+/>
+
+**GPT Image 2 图像生成 Skill 与提示词库** — 集合 OpenAI 图像生成/编辑的 prompt gallery、image prompt library、agentic skill 和 CLI。适合把图片生成、科研配图、设计 mockup 和编辑流程沉淀成可复用的 Skill。
+
+## [book-to-skill](https://github.com/virgiliojr94/book-to-skill)
+
+<RepoMeta
+  url="https://github.com/virgiliojr94/book-to-skill"
+  stars={570}
+  updated="2026-05-07"
+  lang="Python"
+  license="MIT"
+  tags={['book', 'skill-forge', 'pdf']}
+/>
+
+**把技术书 PDF 转成 Claude Code Skill** — 将一本技术书转成可学习、可引用、可在工作时调用的 Skill 包。用户给的 `virgiliorjq94/book-to-skill` 当前为 404，已按 GitHub 搜索和仓库元数据纠正为 `virgiliojr94/book-to-skill`。
+
+## [skills-link](https://github.com/shanliuling/skills-link)
+
+<RepoMeta
+  url="https://github.com/shanliuling/skills-link"
+  stars={175}
+  updated="2026-04-27"
+  lang="TypeScript"
+  license="MIT"
+  tags={['skills-sync', 'developer-tools', 'automation']}
+/>
+
+**跨 AI 编码工具同步本地 Skills** — 用一个命令把本地 skills 同步到 41+ AI coding agents，覆盖 Claude、Cursor 等多种工具。适合维护一套个人技能库并在不同 Agent 环境中复用。
+
+## [bmad-module-skill-forge](https://github.com/armelhbobdad/bmad-module-skill-forge)
+
+<RepoMeta
+  url="https://github.com/armelhbobdad/bmad-module-skill-forge"
+  stars={66}
+  updated="2026-05-07"
+  lang="Python"
+  license="NOASSERTION"
+  tags={['bmad', 'skill-forge', 'provenance']}
+/>
+
+**BMAD Skill Forge 模块** — 将代码仓库、文档站点和开发者讨论转成 agentskills.io 兼容、版本固定、带 provenance 的 Agent Skills。用户给的 `armelhobbad/...` 当前为 404，已按 GitHub 可用仓库纠正为 `armelhbobdad/bmad-module-skill-forge`。
+
+## [skillify-for-codex](https://github.com/Emove/skillify-for-codex)
+
+<RepoMeta
+  url="https://github.com/Emove/skillify-for-codex"
+  stars={1}
+  updated="2026-04-09"
+  lang="Shell"
+  license="MIT"
+  tags={['codex', 'workflow', 'skillify']}
+/>
+
+**把完成的 Codex 工作流沉淀成 Skill** — 面向 Codex 的轻量工具，把一次跑通的工作流程整理成可复用 skill。适合个人把高频操作从聊天记录里提炼出来，转成下一次可直接调用的操作手册。
+
+## [asgard-ai-platform/skills](https://github.com/asgard-ai-platform/skills)
+
+<RepoMeta
+  url="https://github.com/asgard-ai-platform/skills"
+  stars={132}
+  updated="2026-05-06"
+  lang="Python"
+  license="MIT"
+  tags={['claude-agent-skills', 'methodology', 'coding-agent']}
+/>
+
+**Asgard AI 平台的 263 个开源编码 Agent Skills** — 覆盖 21 个领域的方法论、判断和坑点，全部按 Claude Agent Skills 规范打包。适合直接接入 Claude Code 作为系统化的工程知识底座，相比单个 skill 仓库覆盖面更广。
+
+**亮点**：
+- 21 个领域跨语言/框架/工程实践全覆盖
+- 内置 methodology + judgment + gotchas 三段式结构，不只是 prompt 片段
+
+| 名称 | 地址 | 类型 | 描述 |
+|------|------|------|------|
+| skills.sh | https://skills.sh | Skill 目录 | AI Agent Skills 的检索和分发站点，适合按主题发现可安装 skill，并作为 GitHub skill 仓库之外的补充入口 |
+| ClawHub | https://clawhub.ai | Skill 市场 | OpenClaw/Claude Code 生态的 skill 市场，支持作者页、单 skill 页和 `clawhub install` 风格分发 |
+| SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 |
+| SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 |
+| tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | Tavily Search skill，适合给 Agent 增加网页搜索/研究入口，用户给出的 ClawHub 链接保留为主来源 |
+| youtube-watcher | https://clawhub.ai/michaelgathara/youtube-watcher | ClawHub Skill | YouTube 监控/观看类 skill，用于围绕频道或视频内容做自动化摘要、跟踪和后续处理 |
+| summarize | https://clawhub.ai/steipete/summarize | ClawHub Skill | 通用摘要 skill，适合把文章、网页或长文本压缩成结构化要点 |
+| humanizer | https://clawhub.ai/biostartechnology/humanizer | ClawHub Skill | 文本 humanizer skill，面向改写、语气自然化和降低机器味的写作后处理 |
+| xiucheng-self-improving-agent | https://clawhub.ai/xiucheng/xiucheng-self-improving-agent | ClawHub Skill | 自改进 Agent skill，围绕执行、反馈、反思和改写循环帮助 Agent 迭代自身输出 |
+| find-skills-skill | https://clawhub.ai/fangkelvin/find-skills-skill | ClawHub Skill | “找 skill 的 skill”，用于在 skill 市场或仓库中发现适合当前任务的 Agent skill |
+
+</div>

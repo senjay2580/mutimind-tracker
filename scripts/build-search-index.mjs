@@ -54,7 +54,7 @@ const files = readdirSync(TRACKER).filter((f) => f.endsWith('.mdx'))
 
 // Categories that can include arbitrary site URLs (not just GitHub repos).
 // For these slugs the parser accepts any http(s) URL.
-const SITE_SLUGS = new Set(['free-apis-index'])
+const SITE_SLUGS = new Set(['aggregation', 'cc-skills-marketplaces', 'free-apis-index'])
 const ANY_URL_RE = /https?:\/\/[^\s|)\]'">]+/
 const GH_URL_RE = /https:\/\/github\.com\/[a-zA-Z0-9._/-]+/
 
