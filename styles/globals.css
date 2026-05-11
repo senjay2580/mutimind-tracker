@@ -492,159 +492,63 @@ header a:has(svg):hover {
 }
 
 /* ============================================================
-   Manifesto — 首页核心理念巨字展示
+   Manifesto — 首页核心理念巨字流式
    ============================================================ */
 
 .mm-manifesto {
   position: relative;
-  margin: 24px 0 64px;
-  padding: 32px 0 8px;
+  margin: 28px 0 64px;
+  padding: 24px 0 8px;
   background: none;
   border: none;
   box-shadow: none;
-}
-
-.mm-manifesto-hero {
-  position: relative;
-  text-align: center;
-}
-
-.mm-manifesto-eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  letter-spacing: 0.42em;
-  font-weight: 600;
-  background: none;
-  border: none;
-  padding: 0;
-  color: rgba(147,197,253,0.7);
-  margin-bottom: 18px;
-}
-
-html:not(.dark) .mm-manifesto-eyebrow {
-  color: rgba(37,99,235,0.7);
-}
-
-.mm-manifesto-title {
-  font-size: clamp(48px, 10vw, 124px) !important;
-  line-height: 0.98 !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.04em !important;
-  margin: 0 !important;
-  border: none !important;
-  padding: 0 !important;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(8px, 2vw, 28px);
-}
-
-.mm-manifesto-title .mm-word {
-  background: linear-gradient(135deg, #dbeafe 0%, #60a5fa 45%, #2563eb 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 28px rgba(96,165,250,0.55));
-}
-
-html:not(.dark) .mm-manifesto-title .mm-word {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e3a8a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.mm-manifesto-title .mm-arrow {
-  color: rgba(147,197,253,0.55);
-  font-weight: 300;
-  font-size: 0.62em;
-  transform: translateY(-0.05em);
-  animation: mm-arrow-pulse 2.4s ease-in-out infinite;
-}
-
-.mm-manifesto-title .mm-arrow:nth-of-type(2) { animation-delay: 0.6s; }
-
-@keyframes mm-arrow-pulse {
-  0%, 100% { opacity: 0.4; transform: translateY(-0.05em) translateX(0); }
-  50% { opacity: 1; transform: translateY(-0.05em) translateX(0.1em); }
-}
-
-.mm-manifesto-sub {
-  margin-top: 22px;
-  font-size: clamp(14px, 1.5vw, 17px);
-  opacity: 0.72;
-  letter-spacing: 0.04em;
-}
-
-/* Three groups — pure typography, no card chrome */
-.mm-manifesto-flow {
-  margin-top: 56px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px 48px;
-}
-
-.mm-flow-group {
-  position: relative;
-  padding: 0;
-  background: none;
-  border: none;
-  box-shadow: none;
-}
-
-.mm-flow-num {
-  font-size: 56px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  background: linear-gradient(135deg, #93c5fd, #2563eb);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  opacity: 0.55;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 0 20px rgba(96,165,250,0.35));
-}
-
-html:not(.dark) .mm-flow-num {
-  background: linear-gradient(135deg, #2563eb, #1e3a8a);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.mm-flow-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(14px, 1.8vw, 22px);
+  text-align: left;
 }
 
-.mm-flow-list li {
-  position: relative;
-  padding-left: 0 !important;
-  font-size: 17px;
-  line-height: 1.55;
-  opacity: 0.88;
-  letter-spacing: 0.01em;
+.mm-line {
+  font-size: clamp(22px, 3.6vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #dbeafe 0%, #60a5fa 60%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(96,165,250,0.32));
+  opacity: 0.95;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.mm-flow-list li::before { content: none; }
+html:not(.dark) .mm-line {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: none;
+}
 
-/* Mobile tightening */
+.mm-line:hover {
+  opacity: 1;
+  transform: translateX(6px);
+}
+
+.mm-line-climax {
+  margin-top: clamp(8px, 1.2vw, 16px);
+  font-size: clamp(34px, 6.4vw, 88px) !important;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  filter: drop-shadow(0 0 36px rgba(96,165,250,0.55));
+}
+
 @media (max-width: 640px) {
   .mm-manifesto {
-    padding: 20px 0 4px;
+    padding: 16px 0 4px;
     margin: 14px 0 40px;
+    gap: 12px;
   }
-  .mm-manifesto-title { gap: 10px; }
-  .mm-manifesto-flow {
-    margin-top: 36px;
-    gap: 24px;
-  }
-  .mm-flow-num { font-size: 42px; margin-bottom: 12px; }
-  .mm-flow-list li { font-size: 15px; }
 }
 
 /* ============================================================
