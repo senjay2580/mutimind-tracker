@@ -1,8 +1,9 @@
 // Build-time: extract all repos from pages/tracker/*.mdx → lib/repos.json
-// Captures: name, owner, url, stars, updated, lang, license, category, slug, description
+// Captures: name, owner, url, stars, updated, lang, license, category, slug, description, addedAt
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execSync } from 'node:child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
@@ -223,6 +224,43 @@ for (const r of repos) {
 }
 const unique = [...map.values()]
 
+// ---------- addedAt: when each URL first appeared in pages/tracker via git ----------
+// Strategy: parse `git log -p` for the last 14 days; for each commit's diff, find
+// lines like `+## [name](url)` or `+| name | url | ...` — record earliest commit
+// timestamp per URL. This skips items older than 14 days (treated as "not new").
+const urlAddedAt = new Map() // url → ISO timestamp
+try {
+  const log = execSync(
+    `git log --diff-filter=AM --since="14 days ago" --reverse --format="===COMMIT %aI" -p -- pages/tracker/`,
+    { cwd: ROOT, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }
+  )
+  let curTs = null
+  for (const line of log.split('\n')) {
+    if (line.startsWith('===COMMIT ')) { curTs = line.slice(10).trim(); continue }
+    if (!line.startsWith('+') || line.startsWith('+++')) continue
+    // strip leading +
+    const body = line.slice(1)
+    // Pattern: ## [name](url)
+    const cardM = body.match(/^## \[[^\]]+\]\((https?:\/\/[^)]+)\)/)
+    // Pattern: table row | name | url | ...
+    const tableUrls = [...body.matchAll(/(https?:\/\/[^\s|)\]'">]+)/g)].map((m) => m[1])
+    const candidates = []
+    if (cardM) candidates.push(cardM[1])
+    for (const u of tableUrls) candidates.push(u)
+    for (const raw of candidates) {
+      const u = raw.replace(/[).,;]+$/, '')
+      if (!urlAddedAt.has(u) && curTs) urlAddedAt.set(u, curTs)
+    }
+  }
+} catch (e) {
+  console.warn('⚠ git log scan failed (no addedAt timestamps):', e.message)
+}
+
+for (const r of unique) {
+  const t = urlAddedAt.get(r.url)
+  if (t) r.addedAt = t
+}
+
 // Sort within each slug by stars desc (null at end)
 unique.sort((a, b) => {
   if (a.slug !== b.slug) return 0
@@ -236,6 +274,7 @@ writeFileSync(OUT, JSON.stringify(unique, null, 2), 'utf8')
 
 const withStars = unique.filter((r) => r.stars).length
 const withDate = unique.filter((r) => r.updated).length
+const withAdded = unique.filter((r) => r.addedAt).length
 console.log(
-  `✓ Indexed ${unique.length} repos (stars: ${withStars}, dates: ${withDate}) → lib/repos.json`
+  `✓ Indexed ${unique.length} repos (stars: ${withStars}, dates: ${withDate}, addedAt: ${withAdded}) → lib/repos.json`
 )

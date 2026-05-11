@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ChevronDown, ArrowUpRight } from 'lucide-react'
 import repos from '../lib/repos.json'
+import CategoryWiki from './CategoryWiki'
 
 type Repo = {
   name: string
@@ -14,7 +15,12 @@ type Repo = {
   subcategory?: string
   slug: string
   description: string
+  addedAt?: string
 }
+
+const NEW_WINDOW_MS = 24 * 60 * 60 * 1000
+const isNew = (addedAt?: string) =>
+  !!addedAt && Date.now() - new Date(addedAt).getTime() < NEW_WINDOW_MS
 
 const fmtStars = (n: number | null) => {
   if (n == null) return null
@@ -62,8 +68,11 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
     shortPath = repo.url
   }
 
+  const fresh = isNew(repo.addedAt)
+
   return (
-    <article className={`mm-repo-item ${open ? 'is-open' : ''}`}>
+    <article className={`mm-repo-item ${open ? 'is-open' : ''} ${fresh ? 'is-new' : ''}`}>
+      {fresh && <span className="mm-repo-new" title={`Added ${repo.addedAt}`}>NEW</span>}
       <div className="mm-repo-row">
         <span className="mm-repo-num">{String(index).padStart(2, '0')}</span>
         <h3 className="mm-repo-name">
@@ -168,12 +177,20 @@ export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
     setCollapsed(next)
   }
 
+  const newCount = items.filter((r) => isNew(r.addedAt)).length
+
   if (!hasSubs) {
     return (
       <>
         <div className="mm-repo-summary">
           共 <strong>{items.length}</strong> 项 · 按 stars 降序
+          {newCount > 0 && (
+            <span className="mm-repo-summary-new">
+              · 24h 内新增 <strong>{newCount}</strong>
+            </span>
+          )}
         </div>
+        <CategoryWiki slug={slug} itemCount={items.length} />
         <div className="mm-repo-flow">
           {items.map((r, i) => (
             <RepoItem key={r.url} repo={r} index={i + 1} />
@@ -188,7 +205,13 @@ export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
     <>
       <div className="mm-repo-summary">
         共 <strong>{items.length}</strong> 项 · 分 <strong>{groups.length}</strong> 组
+        {newCount > 0 && (
+          <span className="mm-repo-summary-new">
+            · 24h 内新增 <strong>{newCount}</strong>
+          </span>
+        )}
       </div>
+      <CategoryWiki slug={slug} itemCount={items.length} />
       <div className="mm-repo-group-toolbar">
         <button type="button" onClick={() => toggleAll(false)}>
           全部展开
