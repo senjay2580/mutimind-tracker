@@ -760,3 +760,118 @@ html:not(.dark) .mm-repo-group-header:hover {
   .mm-cat-wiki-md { padding: 12px 14px; font-size: 13px; }
   .mm-repo-new { top: 6px; right: 6px; font-size: 9px; padding: 1px 6px; }
 }
+
+/* CategoryWiki — cached badge + refine prompt */
+.mm-cat-wiki-cached {
+  font-size: 11px;
+  color: #fb923c;
+  font-weight: 500;
+  margin-left: 4px;
+  cursor: help;
+}
+.mm-cat-wiki-refine {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.14);
+  background: rgba(96, 165, 250, 0.04);
+  animation: mmWikiFadeIn 0.2s ease;
+}
+.mm-cat-wiki-refine-input {
+  width: 100%;
+  resize: vertical;
+  min-height: 50px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+  color: inherit;
+  font-size: 12px;
+  font-family: inherit;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.mm-cat-wiki-refine-input:focus {
+  border-color: rgba(96, 165, 250, 0.6);
+}
+.mm-cat-wiki-refine-input::placeholder {
+  color: rgba(150, 165, 200, 0.55);
+  font-size: 11px;
+}
+.mm-cat-wiki-refine-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.mm-cat-wiki-refine-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 7px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(168, 85, 247, 0.18));
+  color: #93c5fd;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.mm-cat-wiki-refine-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(168, 85, 247, 0.3));
+  transform: translateY(-1px);
+}
+.mm-cat-wiki-refine-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.mm-cat-wiki-refine-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(150, 165, 200, 0.2);
+  background: transparent;
+  color: rgba(150, 165, 200, 0.7);
+  cursor: pointer;
+}
+.mm-cat-wiki-refine-cancel:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+/* CategoryWiki — collapse button + collapsed body */
+.mm-cat-wiki-collapse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin-right: 2px;
+  border-radius: 5px;
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  background: rgba(96, 165, 250, 0.06);
+  color: #60a5fa;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.mm-cat-wiki-collapse:hover {
+  background: rgba(96, 165, 250, 0.18);
+}
+.mm-cat-wiki-result.is-collapsed .mm-cat-wiki-md,
+.mm-cat-wiki-result.is-collapsed .mm-cat-wiki-refine {
+  display: none;
+}
+.mm-cat-wiki-result.is-collapsed {
+  border-radius: 12px;
+}
+.mm-cat-wiki-result.is-collapsed .mm-cat-wiki-result-head {
+  border-bottom: none;
+  border-radius: 12px;
+}
