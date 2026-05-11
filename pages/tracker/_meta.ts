@@ -25,9 +25,12 @@ const titles: Record<string, string> = {
   'cc-skills-agents365': 'Claude Code Skills 生态 (Agents365-ai)',
   'cc-skills-marketplaces': 'Claude Code Skills 生态 (市场 & 工具)',
   'cc-skills-marketing': 'Claude Code Skills 生态 (市场营销)',
+  'cc-skills-personas': 'Claude Code Skills 生态 (人物 / 蒸馏)',
   'agent-video-tools': 'Agent 视频制作方案',
   'dspy': 'DSPy',
-  'prompt-engineering': 'Prompt 工程 & AI 资源精选'
+  'prompt-engineering': 'Prompt 工程 & AI 资源精选',
+  'info-sources': '高质量信息源 / RSS / 博客',
+  'trend-signals': '趋势洞察 / 选题信号源'
 }
 
 export default Object.fromEntries(
