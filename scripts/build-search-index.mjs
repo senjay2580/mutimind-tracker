@@ -154,7 +154,7 @@ for (const file of files) {
 
   // ---------- Pattern B: card style — `## [name](url)` + optional <RepoMeta /> + paragraph ----------
   const cardRe =
-    /^## \[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\s*\n+([\s\S]*?)(?=\n^## |\n*$)/gm
+    /^## \[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\s*\n+([\s\S]*?)(?=\n## |(?![\s\S]))/gm
   for (const m of txt.matchAll(cardRe)) {
     const name = m[1].trim()
     const url = m[2].trim().replace(/[).,;]+$/, '')
