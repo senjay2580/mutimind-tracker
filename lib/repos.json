@@ -402,7 +402,7 @@
     "category": "Agent 视频制作方案",
     "subcategory": "框架与系统（Code-based）",
     "slug": "agent-video-tools",
-    "description": "视频播客制作 Skill（用于自动生成视频/讲解类内容）",
+    "description": "AI 视频播客自动化生产 Skill（\"探索未至之境\" UP 主出品）。输入主题 → 自动生成双人对谈脚本 → TTS 配音 → 视频合成（语谱图 / 字幕 / 简单画面）全流程闭环。和 NotebookLM Audio Overview 区别：那是音频，这个能直出视频上 B 站 / YouTube。适合\"想做内容但懒得真人录制\"的 UP 主——靠 AI 工业化批量产播客类视频",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -542,7 +542,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "",
     "slug": "aggregation",
-    "description": "AI 资讯聚合站点（新闻/工具动态）",
+    "description": "AI 行业资讯聚合站点（个人 / 小团队维护）。抓 AI 领域新闻 / 工具发布 / 模型动态 / 论文热点 / 创业融资汇总到一个 dashboard。和 Hacker News 区别：HubToday 专精 AI 垂类、噪音小；HN 综合科技但 AI 内容多。适合每天 5 分钟扫一遍 AI 圈新动向，不至于错过重要发布",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -556,7 +556,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "",
     "slug": "aggregation",
-    "description": "企业级代码智能与代码搜索平台",
+    "description": "企业级代码智能 + 跨仓库搜索平台（YC，估值 27 亿）。核心能力：在公司所有 Git 仓库 + 开源代码里做语义搜索、跨文件跳转、批量重构、CI 集成。Cody（自家 AI 编程助手）+ Code Search + Batch Changes三件套，对标 GitHub Code Search + Copilot 企业版。适合 1000+ 仓库的大型工程组织，免费档供个人 / 小团队",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -570,7 +570,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "",
     "slug": "aggregation",
-    "description": "Google AI 笔记本，上传文档自动生成摘要/播客/问答",
+    "description": "Google 实验室出品的 AI 知识笔记本（2024 火出圈）。核心创新：上传文档（PDF / Google Docs / YouTube / 网站）→ 自动生成摘要 / 大纲 / FAQ / 时间线 / 学习指南 / Audio Overview（双人 AI 播客），全部带原文引文。杀手级特性是 Audio Overview — 一键把任何文档变成两个 AI 主播的 podcast 对话。研究 / 学习 / 阅读神器，目前免费",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -598,7 +598,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "",
     "slug": "aggregation",
-    "description": "Hacker News 热门博客订阅源（OPML）清单",
+    "description": "Hacker News 高互动博客的 OPML 订阅清单。从 HN 历年热门文章反推出最有价值的几百个独立博客（Paul Graham / Patrick McKenzie / Julia Evans / 各路硅谷工程师博客等），导出为 OPML 可一键导入 Feedly / Inoreader / NetNewsWire 等 RSS 阅读器。适合做\"批量订阅业界最值得读的博客\"，避免一个个手动加 RSS",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1102,7 +1102,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "1400+ 可装库 agentic skills — 覆盖 Claude Code / Cursor / Codex CLI / Gemini CLI / Antigravity，含 installer CLI、bundles、workflows、官方 + 社区 skill 集合。适合需要批量管理多 agent 工具栈的团队。 | 名称 | 地址 | 类型 | 描述 | |------|------|------|------| | skills.sh | https://skills.sh | Skill 目录 | AI Agent Skills 的检索和分发站点，适合按主题发现可安装 skill，并作为 GitHub skill 仓库之外的补充入口 | | ClawHub | https://clawhub.ai | Skill 市场 | OpenClaw/Claude Code 生态的 skill 市场，支持作者页、单 skill 页和 clawhub install 风格分发 | | SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 | | SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 | | SkillHub | https://www.skillhub.club | Skill 市场 | Claude Skills 专用市场，与 SkillsMP / ClawHub 同类，定位更专一 | | tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | Tavily Search skill，适合给 Agent 增加网页搜索/研究入口，用户给出的 ClawHub 链接保留为主来源 | | youtube-watcher | https://clawhub.ai/michaelgathara/youtube-watcher | ClawHub Skill | YouTube 监控/观看类 skill，用于围绕频道或视频内容做自动化摘要、跟踪和后续处理 | | summarize | https://clawhub.ai/steipete/summarize | ClawHub Skill | 通用摘要 skill，适合把文章、网页或长文本压缩成结构化要点 | | humanizer | h",
+    "description": "1400+ 可装库 agentic skills — 覆盖 Claude Code / Cursor / Codex CLI / Gemini CLI / Antigravity，含 installer CLI、bundles、workflows、官方 + 社区 skill 集合。适合需要批量管理多 agent 工具栈的团队。 | 名称 | 地址 | 类型 | 描述 | |------|------|------|------| | skills.sh | https://skills.sh | Skill 目录 | AI Agent Skills 的检索和分发站点，适合按主题发现可安装 skill，并作为 GitHub skill 仓库之外的补充入口 | | ClawHub | https://clawhub.ai | Skill 市场 | OpenClaw/Claude Code 生态的 skill 市场，支持作者页、单 skill 页和 clawhub install 风格分发 | | SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 | | SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 | | SkillHub | https://www.skillhub.club | Skill 市场 | Claude Skills 专用市场。和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，和 SkillsMP 区别：SkillsMP 偏中文、SkillHub 偏英文社区。适合发现\"针对 Claude Code 优化的\"skill（如配套 hook / agent / slash command 整套配置） | | tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | Tavily AI 搜索 skill 包（ClawHub 发布）。给 Agent 加 Tavily Search 能力的一键安装包——免去手动配 API key / 写 tool definition / 处理 JSON parse 各种麻烦，装上即可让 Agent 调 Tavily 做",
     "addedAt": "2026-05-11T21:05:35+08:00"
   },
   {
@@ -1368,7 +1368,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "Claude Skills 专用市场，与 SkillsMP / ClawHub 同类，定位更专一",
+    "description": "Claude Skills 专用市场。和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，和 SkillsMP 区别：SkillsMP 偏中文、SkillHub 偏英文社区。适合发现\"针对 Claude Code 优化的\"skill（如配套 hook / agent / slash command 整套配置）",
     "addedAt": "2026-05-11T21:05:35+08:00"
   },
   {
@@ -1382,7 +1382,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "Tavily Search skill，适合给 Agent 增加网页搜索/研究入口，用户给出的 ClawHub 链接保留为主来源",
+    "description": "Tavily AI 搜索 skill 包（ClawHub 发布）。给 Agent 加 Tavily Search 能力的一键安装包——免去手动配 API key / 写 tool definition / 处理 JSON parse 各种麻烦，装上即可让 Agent 调 Tavily 做研究 / 检索 / 实时网页问答。Deep Research 类工作流必备，对比裸调 API：封装好提示词 + 错误处理 + 结果格式化",
     "addedAt": "2026-05-11T20:51:57+08:00"
   },
   {
@@ -1396,7 +1396,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "YouTube 监控/观看类 skill，用于围绕频道或视频内容做自动化摘要、跟踪和后续处理",
+    "description": "YouTube 频道 / 视频自动化追踪 skill。核心能力：监控指定频道新视频 → 自动转录字幕 → LLM 摘要 → 提取关键时间戳 → 跟踪历史输出。适合做\"AI 自动给我每天看完的视频写摘要\" / 竞品频道监控 / 跨频道选题分析。装到 Agent 后无需手动开 YouTube",
     "addedAt": "2026-05-11T20:51:57+08:00"
   },
   {
@@ -1410,7 +1410,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "通用摘要 skill，适合把文章、网页或长文本压缩成结构化要点",
+    "description": "通用结构化摘要 skill（Peter Steinberger 出品）。和 LLM 默认\"总结一下\"区别：按预定义结构（要点 / 关键引用 / 行动项 / 反对意见 / 三句话版本）输出，质量稳定可控。适合把文章 / 会议纪要 / 网页 / 长文 PDF 压成可复用的结构化笔记，接入 Obsidian / Notion / Roam 工作流典型用法",
     "addedAt": "2026-05-11T20:51:57+08:00"
   },
   {
@@ -1424,7 +1424,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "文本 humanizer skill，面向改写、语气自然化和降低机器味的写作后处理",
+    "description": "AI 文本去机器味改写 skill。专治\"AI 生成味\" — 把 ChatGPT / Claude 输出的\"作为一个 AI 助手 / 总而言之 / 综上所述\"等模式化语言改写得更自然、更口语、更像真人写的。和 AIGC 降重区别：humanizer 目标是阅读流畅而非过 AI 检测。适合内容创作者让 AI 草稿不那么\"AI 味\"",
     "addedAt": "2026-05-11T20:51:57+08:00"
   },
   {
@@ -1438,7 +1438,7 @@
     "category": "Claude Code Skills 生态 (市场 & 工具)",
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
-    "description": "自改进 Agent skill，围绕执行、反馈、反思和改写循环帮助 Agent 迭代自身输出",
+    "description": "自我改进型 Agent skill（秀程出品）。核心循环：执行 → 反馈 → 反思 → 改写 → 迭代。让 Agent 在执行任务后自动检视自己的输出，识别不足并重写——而非一次性产出就完事。适合需要高质量输出但单次生成不够好的场景（深度研究 / 复杂代码 / 长文创作），对标 Reflexion / Self-Refine 论文方法的工程落地",
     "addedAt": "2026-05-11T20:51:57+08:00"
   },
   {
@@ -1900,7 +1900,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "1400+ 公共 API，分类细（音乐/AI/图片/工具）",
+    "description": "public-apis 仓库的 Web 版索引。1400+ 公共 API 分类索引（音乐 / AI / 图片 / 工具 / 金融 / 天气 / 体育等 40+ 大类），可按 HTTPS / CORS / Auth / Category 筛选。和原 GitHub repo 区别：站点带 JSON API 可被 Agent / 程序检索，适合\"让 LLM 自己找数据源\"的场景。社区维护、更新勤、链接死率低",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1914,7 +1914,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "每天检测可用性，找\"真的还能用\"的免费 API",
+    "description": "每日自动检测可用性的免费 API 索引。核心卖点：每天爬一遍所有收录的 API，标\"今天能不能用\"——和那种\"收了 500 个但一半死链\"的 awesome-list 完全不同。每条 API 标响应时间 / 上次成功调用 / 是否需 key / 速率限制。找\"真的还能用\"的免费 API 时第一站，避免踩坑死链",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1928,7 +1928,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "API 市场，freemium API 多，统一 key/计费",
+    "description": "全球最大 API 市场 RapidAPI 的免费 API 合集。统一 key + 统一计费 + 统一文档：注册一个 RapidAPI 账号就能调上千个 freemium API（多数免费档够开发 / 小项目）。省去\"每个 API 各注册一遍 + 各管一套 key\"的麻烦。但要注意 RapidAPI 抽佣，长期生产用应直接对接原厂",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1942,7 +1942,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "偏商业稳定 API，多数有免费额度",
+    "description": "偏商业稳定的 API 市场（apilayer 旗下）。和 RapidAPI 对比：精选 < 数量、稳定性 > 覆盖率——主推少量但 SLA 有保证的商业 API（汇率 / 天气 / 货币 / IP / SMS / 验证）。多数有免费额度 100-1000 calls/月，适合\"做正式产品但又不想直接对接每个原厂 SaaS\"",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1956,7 +1956,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "无 key / 完全免费的公共 API，适合测试",
+    "description": "\"真免费 / 无 key / 无认证\"公共 API 精选博文。Mixed Analytics 团队人工筛出完全不需要注册 + 不需要 token + 不限速的开放 API（如 PokéAPI / Dog API / RESTCountries / Bored API 等）。适合教学 demo / 学生作业 / 快速原型，零摩擦。和 public-apis 的差异：那个混了\"需要 key 的免费档\"",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1970,7 +1970,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "90+ 测试用公共 API，偏入门工具型",
+    "description": "Google Sheets 集成商 Apipheny 维护的 90+ 入门级公共 API。和 Mixed Analytics 同生态位但偏入门工具型 — 重点收纳那些适合塞进 Google Sheets / Notion / Airtable 等无代码工具的 API（天气 / 股价 / 加密币 / 翻译）。每条带\"如何在 Sheets 调用\"教程。适合无代码爱好者 / 数据分析师 / 学生",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1984,7 +1984,7 @@
     "category": "免费 API 索引",
     "subcategory": "API 聚合站",
     "slug": "free-apis-index",
-    "description": "OpenAPI/Swagger API 索引，可自动生成 SDK",
+    "description": "全球最大的 OpenAPI / Swagger 规范聚合站。收录 3000+ 个公开 API 的 OpenAPI JSON / YAML（如 GitHub / Stripe / Twitter / Slack / AWS 等），可被 OpenAPI Generator 自动生成 30+ 语言 SDK。适合给 Agent 喂结构化 API 描述让其自动调用任意 SaaS。和功能性 API 索引区别：这是\"机器可读\"的索引",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -1998,7 +1998,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "艺人/专辑/曲目/MV/榜单，免费档 ~30 req/min",
+    "description": "众包音乐数据库（社区维护）。艺人 / 专辑 / 曲目 / MV / 排行榜 / 演唱会全维度元数据，每条带封面图 + 多语言简介 + 流派标签。免费档 ~30 req/min（注册免费），付费 Patreon 解锁更高额度。和 MusicBrainz 互补：MusicBrainz 偏发行版本 / 唯一 ID，TheAudioDB 偏视觉 + 排行榜",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2012,7 +2012,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "曲库/播放列表/推荐/用户音乐库（OAuth）",
+    "description": "Spotify 官方 Web API。全球最大流媒体平台的曲库 / 播放列表 / 推荐 / 用户音乐库 / 播放控制完整接口。OAuth 2.0 认证（需用户登录授权），分两种模式：Client Credentials（只读曲库元数据）+ Authorization Code（操作用户库 / 播放）。免费且额度宽松（合理使用即可），是音乐 App / 数据分析 / 推荐系统的核心入口",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2026,7 +2026,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "音频内容/用户/播放接口",
+    "description": "SoundCloud 官方 API。独立音乐人 / 播客 / 电音 DJ 内容的事实平台，1.75 亿月活创作者社区。提供音频上传 / 用户 / 播放 / 评论 / 转发 / 搜索接口。和 Spotify 区别：SoundCloud 偏长尾独立内容，OAuth 模型相似。⚠️ 2024 后 API 新申请受限，老 key 继续有效",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2040,7 +2040,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "全球互联网电台列表，无 key",
+    "description": "全球开源互联网电台聚合 API。40000+ 电台实时索引（直播流 URL / 国家 / 语言 / 流派 / 比特率），完全无 key + 无速率限制（合理使用）。社区维护，自动检测电台可用性。适合做电台 App / 收音机 widget / 后台白噪音，开源应用首选数据源（替代 TuneIn 收费 API）",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2054,7 +2054,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "一首歌在 Spotify/Apple Music/YouTube 跨平台链接",
+    "description": "一首歌跨平台链接生成器。输入任意流媒体 URL（Spotify / Apple Music / YouTube / SoundCloud / Tidal / Deezer 等），返回全平台对应链接。免费 API + 友好速率，适合做\"一键分享音乐到所有平台\"工具、播放器封面图聚合、跨平台歌单同步。社交分享 / Notion 插件常见集成",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2068,7 +2068,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "歌词与注释元数据",
+    "description": "Genius（rap.genius 起家）歌词 + 注释 + 用户众包解读 API。和单纯歌词库区别：每行歌词可点开看用户提供的解读（典故 / 隐喻 / 制作背景），是流行 / 嘻哈文化研究的金矿。API 提供歌曲 / 艺人 / Annotation / 用户接口，需注册免费 token",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2082,7 +2082,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "歌词与音乐元数据",
+    "description": "全球最大同步歌词数据库 API。8000 万首歌 + 70+ 语言，带 LRC 时间码同步可做卡拉 OK / 实时字幕。免费档够开发测试（提供\"30 秒预览片段\"），生产用商业 plan。Spotify / Shazam / Vevo 等大厂都用它的歌词数据。和开源 LRCLIB 对比：商业稳定但需付费",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2096,7 +2096,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "同步歌词数据库（免费、开放）",
+    "description": "开源免费同步歌词数据库（社区维护，类 MusicBrainz 模式）。100+ 万首歌的 LRC 时间码歌词，完全免费 + 无 key + 无速率限制。适合开源播放器集成（Lyricify / Sber / Hyperion 等都用），是 Musixmatch 的免费替代品。覆盖度不如 Musixmatch 但够日常使用",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2110,7 +2110,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "唱片/艺人/发行信息数据库",
+    "description": "唱片 / 黑胶收藏家的\"豆瓣\"+ API。1500+ 万张实体唱片（黑胶 / CD / 卡带 / 数字版）详细发行信息：母带 / 副盘 / 不同压片 / 发行年份 / 国家版本 / 流通价格。用于黑胶估价 / 唱片元数据补全 / 收藏管理。免费 API 60 req/min，OAuth 解锁收藏夹操作",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2124,7 +2124,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "开放音乐元数据百科（免费）",
+    "description": "音乐元数据 Wikipedia（开放协议 CC0 / 部分 CC-BY-SA）。最权威的音乐唯一 ID 系统（MBID）+ 艺人 / 发行版 / 唱片 / 关系图谱。Last.fm / Spotify / iTunes 内部都用它的 ID。免费 API 1 req/sec（合理速率），社区驱动数据质量高。做音乐应用必备的\"打地基\"数据源",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2138,7 +2138,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "演出/巡演/音乐活动信息",
+    "description": "演唱会 / 巡演 / 音乐活动追踪 API。500 万+ 活动数据库 + 全球巡演日程，按城市 / 艺人 / 场地 / 日期查询。适合做\"我喜欢的艺人来我城市演出了\"通知 App。免费 API 需申请，Spotify / Last.fm / Bandsintown 同生态。⚠️ 数据需用户自报 + 场馆官方，准确度 95%+",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2152,7 +2152,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "AI 音乐生成（免费试用 / 小额度）",
+    "description": "AI 音乐生成 API。生成无版权背景音乐 / 跑步音乐 / 视频配乐，按情绪 / 风格 / 时长定制。和 Suno / Udio 区别：偏\"功能性背景音\"（适合直播 / 视频剪辑 / 健身 App 嵌入），不主打\"惊艳单曲\"。免费试用 / 小额度，订阅 $14+/月。视频自媒体免版税配乐选择",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2166,7 +2166,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "AI 音乐生成",
+    "description": "AI 文本到音乐生成器。和 Suno / Udio 同生态位——输入歌词 / 风格 prompt 直接生成完整歌曲（含人声 + 伴奏）。提供 Web App + API，免费每日少量生成额度，付费解锁高质量 / 长歌曲 / 商用许可。适合个人音乐爱好者 / 内容创作者做主题曲",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2180,7 +2180,7 @@
     "category": "免费 API 索引",
     "subcategory": "音乐 API",
     "slug": "free-apis-index",
-    "description": "音乐类 API 索引入口",
+    "description": "PublicAPIs.dev 的\"音乐 API\"子目录入口。一站浏览所有音乐相关公共 API：从 Spotify / SoundCloud 等大平台，到 MusicBrainz / Last.fm 等元数据库，再到 Genius / Musixmatch 歌词。适合不知道用哪个 API 时先来扫一遍找合适候选",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2194,7 +2194,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "免费图片和视频素材，官方 API 免费",
+    "description": "免费可商用图片 + 视频素材 API。Pexels 自家库 + Unsplash 风格摄影，官方 API 完全免费（200 req/小时、20K req/月）+ 无需归属署名。和 Unsplash 区别：Pexels 也提供视频素材（短片 / 4K 库）。广告 / 内容创作 / 网站背景图 首选免费 API",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2208,7 +2208,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "免费图片/视频素材，5.7M+ 资源",
+    "description": "5.7M+ 免费可商用图片 / 视频 / 矢量 / 音效。比 Pexels 量更大但摄影质量略低——胜在矢量插画 / 音效素材丰富。免费 API 100 req/60 秒，CC0 协议无需归属。适合做 Notion / Canva 插件 / 教育 App，免版税场景全覆盖",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2222,7 +2222,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "高质量图片素材（背景图首选）",
+    "description": "专业摄影社区 + 免费 API。视觉质量行业标杆——专门吸引摄影师投稿艺术级照片（多数是 16:9 / 9:16 高分辨率原图）。免费 API 50 req/小时（demo），生产档免费 5000 req/小时（需申请）。首屏背景图 / 设计稿配图默认选择，但需归属署名",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2236,7 +2236,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "GIF/贴纸/动图搜索",
+    "description": "全球最大 GIF / 贴纸 / 动图搜索引擎。官方搜索 / Trending / Translate / Random / Channel API，覆盖 Meta（FB/IG）/ TikTok 等社交平台底层数据。免费 API 需申请 key，每应用 1000 req/小时（生产档可申请提升）。做表情包 App / 评论框集成 / 内容创作工具 必备",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2250,7 +2250,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "GIF/贴纸/动图搜索（Google 旗下）",
+    "description": "Google 旗下 GIF 搜索 API（被 Google 2018 年收购）。和 GIPHY 同生态位但更深度集成 Google 体系（Android Gboard / YouTube 等内置 Tenor）。API 调用免费（合理速率），偏内容创作 / 教育 / 流行文化方向。部分企业偏好 Tenor因为不被某些防火墙拦",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2264,7 +2264,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "商业图库 API，免费订阅 + 付费授权",
+    "description": "专业商业图库 Shutterstock 的 API（4 亿+ 图片 / 视频 / 音乐）。面向需要付费授权的企业用户 — 用 API 自动检索 + 下载 + 跟踪授权状态。免费层主要是 OAuth 注册 + 浏览，下载素材按 plan 计费（$29+/月起）。适合代理商 / 设计公司 / 大媒体批量调用，个人慎入",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2278,7 +2278,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "图片/视频存储 + 裁剪 + 转码 + CDN，有免费档",
+    "description": "媒体管理 + 处理 + CDN 全家桶（云端）。核心能力：图片 / 视频上传 → URL 参数式动态裁剪 / 滤镜 / 转码 / 水印 / AI 增强 / 自适应码率 → 全球 CDN 分发。免费档 25 credits / 月（约 25K 图片 / 1K 视频处理），生产 $99+/月。和自建 ImageMagick + nginx 对比：省运维 + 全球加速，Vercel / 中型 SaaS 标配",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2292,7 +2292,7 @@
     "category": "免费 API 索引",
     "subcategory": "图片 / 视频素材 API",
     "slug": "free-apis-index",
-    "description": "图片/视频/音频上传与处理，14 天免费试用",
+    "description": "轻量级 Cloudinary 替代品（原 Upload.io）。专注\"上传 + 简单处理 + CDN\"，去掉 Cloudinary 那些复杂 AI / DAM 功能。和 Cloudinary 对比：更便宜、API 更直观、上手快，适合中小项目。14 天免费试用，订阅 $24+/月。Vercel / Next.js / React 项目 首选轻量方案",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2306,7 +2306,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "视频上传/转码/播放/直播/分析，有免费额度",
+    "description": "开发者优先的视频基础设施（YC 出身，硅谷视频界顶级）。API-first 视频上传 / 转码 / 自适应播放 / 直播 / 实时分析全栈方案，对标 AWS Elemental MediaConvert + Mux Player。免费档 100 视频分钟/月 + 1000 流分钟/月，按用量计费。Substack / Patreon / Datadog 等大厂都用 Mux 做视频，是云端视频的事实标准之一",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2320,7 +2320,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "视频剪辑/模板渲染/自动生成视频",
+    "description": "可编程视频剪辑 + 模板渲染 API。用 JSON 描述视频时间线（剪辑 / 转场 / 字幕 / 音乐 / 模板替换）→ 云端渲染输出 MP4。适合做\"批量生成营销短视频 / 个性化视频 / 自动剪辑\"流水线。免费档 20 视频/月，付费 $59+/月。MoneyPrinterTurbo 之类工具的云端替代品，免本地 ffmpeg",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2334,7 +2334,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "图片/视频/音频转码与压缩",
+    "description": "Bytescale 的 URL 参数式媒体转码 API。调用方式与 Cloudinary 类似：把转码参数（resize / crop / format / quality / watermark）写进 URL，CDN 边缘节点实时处理。图片 / 视频 / 音频统一处理，无需后端逻辑。和主 Bytescale 服务对比：这是处理子模块，免费试用同步 14 天",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2348,7 +2348,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "视频压缩/裁剪/水印/转码",
+    "description": "Cloudinary 的视频专项能力。URL 参数式动态视频压缩 / 裁剪 / 加水印 / 转 HLS-DASH / 自适应码率 / 缩略图提取 / 子码字幕烧录。和 Mux 对比：Cloudinary 偏\"图片公司加上视频\"，Mux 是\"视频专精\"——Cloudinary 适合图片为主 + 偶尔视频，Mux 适合视频为核心业务",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2362,7 +2362,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "音频转文字/说话人分离/摘要，有免费额度",
+    "description": "企业级 AI 音频转写 API。核心能力：转录（多语言）+ 说话人分离（diarization）+ 摘要 + 章节自动分段 + 情感分析 + 内容审核 + 实体提取。和 Whisper 自托管对比：开箱即用 + 准确率行业领先 + 中等价位（$0.0125 / 分钟起）。免费档 5 小时音频，适合做播客平台 / 会议工具 / 客服分析",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2376,7 +2376,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "实时音频转文字（低延迟），有免费额度",
+    "description": "实时低延迟 ASR API（端到端深度学习）。核心卖点：实时流式转录 < 300ms 延迟，比 AssemblyAI 更快但准确率略弱。Nova-2 模型 30+ 语言，支持自定义关键词 / 数字格式化 / 多人对话。免费档 $200 credit（约 16K 分钟），适合做实时字幕 / 语音助手 / 直播。和 Whisper 对比：付费但实时更稳",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2390,7 +2390,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "TTS/声音克隆/音频生成（额度会变）",
+    "description": "TTS + 声音克隆行业标杆（YC，2023 年估值 11 亿）。全球公认音质最自然的 AI 配音，覆盖 30+ 语言，5 秒参考音频零样本克隆任意人声。应用场景：有声书 / 短视频配音 / 角色游戏 / 实时翻译。免费档 10K 字符 / 月（够测试），订阅 $5-330/月，商用专业声音库需付费。⚠️ 额度政策时常变",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2404,7 +2404,7 @@
     "category": "免费 API 索引",
     "subcategory": "音频 / 视频处理 API",
     "slug": "free-apis-index",
-    "description": "图像/音频/语音/文本模型测试，小额免费 credit",
+    "description": "Hugging Face 模型推理 API 聚合（2024 重推）。一个 API 调上百万开源模型 — 文本 / 图像 / 音频 / 视频 / Embedding 全覆盖，路由到 Together / Replicate / Fireworks 等底层 GPU 提供商。小额免费 credit（够做测试），生产按 token 计费。适合 PoC 阶段快速试各种开源模型找最合适那个",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2418,7 +2418,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "文本/图片生成，常见无 key 调用，适合原型",
+    "description": "完全免费 + 无 key 的 AI 文本 / 图片生成 API。直接 URL 拼参数即可生成图片（如 pollinations.ai/p/{prompt}），无需注册 / 无需 token / 无速率限制（合理使用）。底层走 Stable Diffusion / Flux 等开源模型。适合教学 demo / 学生作业 / 快速原型，零摩擦但不能用于严肃生产",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2432,7 +2432,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "模型测试，免费 credit 小，不适合生产",
+    "description": "AI 界的 GitHub（HF 公司，估值 45 亿）。模型 / 数据集 / Spaces App 三件套 + Inference API + Inference Endpoints + AutoTrain。免费档 credit 很小（够开发测试），生产应该用 Inference Endpoints 包年。做 ML 必去的中心枢纽，但不要在生产环境直接调免费 inference（不稳）",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2446,7 +2446,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "模型市场，多模型试用，生产按量付费",
+    "description": "开源模型即服务市场（YC，2022 火起来）。任意 Cog 容器化模型一键部署成 API，多模型试用 + 生产按秒计费（GPU 时间）。和 HF Inference 对比：Replicate 启动更快、按量付费更清晰、生产可靠。适合\"想用 SD / Llama / Whisper 但不想自己跑 GPU\"的中小项目",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2460,7 +2460,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "多模型媒体生成聚合（图像/视频/音频）",
+    "description": "媒体生成模型 API 聚合（2023 出圈）。核心卖点：图像 / 视频 / 音频生成模型超低延迟——FLUX / SDXL / Stable Video / SD3 / 各种 LoRA 全聚合，比 Replicate 快 3-10×（专门优化推理）。按调用 / GPU 秒计费，付费有免费 credit。做实时 AI 图像 / 视频应用 首选",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2474,7 +2474,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "Stable Diffusion 系列 API（credit/付费）",
+    "description": "Stable Diffusion 系列模型官方 API（Stability AI 公司）。SD3 / SDXL / Stable Video / Stable Audio 全家桶，按 credit 计费（注册送少量 credit）。和 Replicate / fal.ai 对比：直接对接原厂，新模型最早发布，但价格稍贵。研究 / 学术 / 严肃生产首选官方渠道",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2488,7 +2488,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "新号 starter credit，适合测试",
+    "description": "游戏美术 / 角色立绘 AI 生成 API。专精角色 / 场景 / 概念美术——比通用 SD 在游戏 / 动漫 / 美少女题材更好。Web UI + API + 自家训练的 fine-tune（Phoenix / Anime XL 等）。新号送 starter credit（够测试一周），适合独立游戏开发 / 同人创作",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2502,7 +2502,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "图像/视频/音频生成入口（非长期免费）",
+    "description": "xAI（马斯克的 AI 公司）多模态生成入口。Grok 模型背后的 API 平台 — 提供 Grok LLM + 图像生成（Aurora）+ 视频 / 音频生成接口。和 OpenAI 同生态位但偏 X 平台集成。⚠️ 非长期免费，主要走 X Premium 订阅 + API credits 计费",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2516,7 +2516,7 @@
     "category": "免费 API 索引",
     "subcategory": "AI 图片 / 音频 / 视频生成 API",
     "slug": "free-apis-index",
-    "description": "400+ 模型聚合，一个 key 调多模型",
+    "description": "400+ AI 模型一站式聚合 API。统一 OpenAI-compatible 接口调 LLM / 图像 / 音频 / 视频 / 翻译多类模型 — Claude / Gemini / GPT-5 / DeepSeek / Llama / FLUX 等都在。和 OpenRouter 同生态位但模型种类更杂。一个 key 替代 10+ provider，适合开发者降低多 API 管理成本",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2530,7 +2530,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "LLM、多模态、图片理解、长文本原型",
+    "description": "Google 官方 Gemini API 入口（AI Studio）。Gemini 2.5 Pro / Flash / Flash Lite 全家桶 — LLM + 多模态（图像 / 视频 / 音频理解）+ 长文本（1M token 上下文）+ 代码生成。免费档对个人很慷慨（Flash 模型每天数百到数千请求），适合做 PoC / 长文本原型。和 OpenAI 对比：免费额度大、长上下文便宜、中文略弱",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2544,7 +2544,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "开源 LLM、Embedding、Whisper、图片生成、TTS",
+    "description": "Cloudflare 边缘节点 AI 推理。全球 300+ PoP 就近运行开源模型：Llama / Mistral / Whisper / SD / FLUX / Embedding 等。免费档 10K Neurons/天（Neuron 是 Cloudflare 的算力计费单位，足够个人项目）。强项是低延迟 + 全球分发，适合边缘 Agent / 实时翻译 / 边缘 ASR",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2558,7 +2558,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "超快 LLM、语音转写 Whisper",
+    "description": "超低延迟 LLM 推理（自研 LPU 芯片）。Llama 70B 推理速度 500+ tokens/sec（OpenAI 的 5-10×），完全改变实时 AI 应用体验。免费档多数模型有慷慨日额度（Llama 8B 14.4K RPD），生产按量付费。实时对话 / agent 工具循环 / 语音助手必备",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2572,7 +2572,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "RAG、Embedding、Rerank、分类",
+    "description": "企业 RAG + 检索专精的 LLM 公司（YC 出身，估值 55 亿）。核心强项不在通用 chat 而在 Embedding / Rerank——业界公认最好的 Reranker（v3 模型），RAG 工程师标配。Trial key 1000 calls/月免费，适合给 RAG 加 Rerank 层验证效果",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2586,7 +2586,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "AI 搜索、网页检索、agent search",
+    "description": "AI Agent 专用 Web 搜索 API。和 Google / Bing 区别：Tavily 直接返回 LLM-ready 摘要 + 多源对比（不只是链接），为 Agent 优化（结构化 + 去噪声）。免费档 1000 calls/月，是 Perplexity / GPT Researcher / Claude Code 等 Agent 默认搜索引擎。做 Deep Research Agent 必备",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2600,7 +2600,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "AI 搜索、找网页内容、找相似站点",
+    "description": "AI 优先的语义搜索引擎（YC，原名 Metaphor）。和 Tavily 同生态位但偏\"找相似站点 / 找精准内容\"：输入\"像 Substack 这种独立博客平台\" → 返回 10 个真正同类站点。适合做研究 / 竞品调研 / 趋势挖掘。免费档 1000 requests/月，付费 $10+/月",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2614,7 +2614,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "云端网页抓取与浏览器自动化平台，Actors 商店可抓公开网页数据，支持 API、Webhook、定时任务",
+    "description": "云端网页抓取 + 浏览器自动化平台。Actors 商店：上千个预制爬虫脚本可直接调（Twitter / Instagram / LinkedIn / Amazon / 房产网站等），支持 API + Webhook + 定时任务 + 代理池。免费计划送 $5/月 credit，适合中小爬虫项目。对比自建 Playwright + 代理：省运维 / 防反爬开箱即用",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2628,7 +2628,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "试各种开源模型，图片/音频/文本",
+    "description": "HF Inference 的新计费模式（2024 起）。免费档 $0.10/月 credit（约几百次小模型调用），Pro $2/月 升级到 $1 credit。试各种开源模型 / 跑 Spaces demo / 验证模型效果用，不适合生产（速率限制 + 冷启动慢）。生产应用 Inference Endpoints 包年方案",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2642,7 +2642,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "免费图片、视频素材搜索",
+    "description": "Pexels 免费图片 / 视频 API 的官方额度文档。注册免费 key 即可调用 200 req/小时 + 20K req/月——对个人项目 / 小型应用足够。无需归属署名（虽然推荐礼貌性标注），可商用。生产档可申请提升额度至 50K+ req/小时",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2656,7 +2656,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "事务邮件、验证码、通知",
+    "description": "新一代开发者优先的邮件 API（YC，2023 火起来）。对标 SendGrid 但 API 更 modern + 开发体验更好——React Email 集成、首批支持 OpenAPI / TypeScript SDK。免费档 100 emails/天 + 3K/月，适合事务邮件（密码重置 / 验证码 / 订单通知）。Vercel / Cal.com / Linear 等都用 Resend",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2670,7 +2670,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "邮件营销、通知邮件",
+    "description": "欧洲 Mailchimp 替代品（原 Sendinblue，欧盟 GDPR 友好）。和 Resend 区别：Brevo 偏营销邮件（newsletter / 自动化触发 / CRM 集成），Resend 偏事务邮件。免费档 300 emails/天（不限月总量，比 Resend 月 3K 更宽松）+ CRM + 短信 + WhatsApp。适合中小电商 / 内容创作者做用户运营",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2684,7 +2684,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "地图、地理编码、路线、POI 搜索",
+    "description": "Google Maps 的开发者优先替代品（向量地图行业标准）。核心能力：地图渲染 / 地理编码 / 路线规划 / 静态地图 / 时速度信号灯 / 街景。免费档极慷慨：Geocoding 100K/月 + Static Images 50K/月 + Map Loads 50K/月。Strava / Snapchat / FT / 大量 SaaS 用 Mapbox，自定义地图样式自由度甩 Google 几条街",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2698,7 +2698,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "天气、预报、历史天气、天气摘要",
+    "description": "全球天气数据 API 行业标准。实时天气 + 5 天预报 + 历史天气 + 空气质量 + UV 指数，覆盖 200K+ 城市。One Call 3.0 免费档前 1000 calls/天（足够普通 App 数千用户），付费 $40+/月起。iOS / Android 天气 App 八成都用 OpenWeather 当数据源",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2712,7 +2712,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "新闻搜索、头条聚合",
+    "description": "全球新闻聚合 API。80000+ 新闻源 + 14 种语言，按关键词 / 国家 / 来源 / 时间检索，返回标题 + 摘要 + 链接 + 缩略图。免费档 100 requests/天 + 仅本地开发 —— ⚠️ NewsAPI 免费档明确不允许生产用，要上线必须付费 $449+/月。适合 LLM Agent 做新闻摘要 / 趋势分析 PoC",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -2726,7 +2726,7 @@
     "category": "免费 API 索引",
     "subcategory": "通用 AI / 工具 API（带免费额度）",
     "slug": "free-apis-index",
-    "description": "加密货币价格、行情、排行榜",
+    "description": "全球最大加密货币数据平台 CoinMarketCap 的 API。实时价格 / 历史 K 线 / 市值排行 / 交易所深度 / 衍生品 / DeFi TVL 全维度。免费档 15K call credits / 月（够个人 dashboard / 价格通知 bot）。和 CoinGecko 对比：CMC 老牌 + 数据全，CoinGecko 免费档更友好但准确度略弱",
     "addedAt": "2026-05-09T19:43:23+08:00"
   },
   {
@@ -3314,7 +3314,7 @@
     "category": "趋势洞察 / 选题信号源",
     "subcategory": "",
     "slug": "trend-signals",
-    "description": "技术早期信号（开发者关注的新项目）",
+    "description": "每日 / 每周 GitHub 最热仓库（按语言 / 时间窗口筛）。技术早期信号——开发者真正花时间关注的项目（不是被刷上 HN 头条的）。结合 awesome-list / Hacker News / Twitter dev 圈 三路交叉验证。⚠️ 国内访问可能需代理",
     "addedAt": "2026-05-11T21:05:35+08:00"
   },
   {

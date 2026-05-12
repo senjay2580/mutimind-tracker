@@ -269,12 +269,12 @@ import RepoMeta from '../../components/RepoMeta'
 | ClawHub | https://clawhub.ai | Skill 市场 | OpenClaw/Claude Code 生态的 skill 市场，支持作者页、单 skill 页和 `clawhub install` 风格分发 |
 | SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 |
 | SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 |
-| SkillHub | https://www.skillhub.club | Skill 市场 | Claude Skills 专用市场，与 SkillsMP / ClawHub 同类，定位更专一 |
-| tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | Tavily Search skill，适合给 Agent 增加网页搜索/研究入口，用户给出的 ClawHub 链接保留为主来源 |
-| youtube-watcher | https://clawhub.ai/michaelgathara/youtube-watcher | ClawHub Skill | YouTube 监控/观看类 skill，用于围绕频道或视频内容做自动化摘要、跟踪和后续处理 |
-| summarize | https://clawhub.ai/steipete/summarize | ClawHub Skill | 通用摘要 skill，适合把文章、网页或长文本压缩成结构化要点 |
-| humanizer | https://clawhub.ai/biostartechnology/humanizer | ClawHub Skill | 文本 humanizer skill，面向改写、语气自然化和降低机器味的写作后处理 |
-| xiucheng-self-improving-agent | https://clawhub.ai/xiucheng/xiucheng-self-improving-agent | ClawHub Skill | 自改进 Agent skill，围绕执行、反馈、反思和改写循环帮助 Agent 迭代自身输出 |
+| SkillHub | https://www.skillhub.club | Skill 市场 | **Claude Skills 专用市场**。**和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent**。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，**和 SkillsMP 区别**：SkillsMP 偏中文、SkillHub 偏英文社区。**适合发现"针对 Claude Code 优化的"skill**（如配套 hook / agent / slash command 整套配置） |
+| tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | **Tavily AI 搜索 skill 包**（ClawHub 发布）。**给 Agent 加 Tavily Search 能力的一键安装包**——免去手动配 API key / 写 tool definition / 处理 JSON parse 各种麻烦，装上即可让 Agent 调 Tavily 做研究 / 检索 / 实时网页问答。**Deep Research 类工作流必备**，对比裸调 API：封装好提示词 + 错误处理 + 结果格式化 |
+| youtube-watcher | https://clawhub.ai/michaelgathara/youtube-watcher | ClawHub Skill | **YouTube 频道 / 视频自动化追踪 skill**。**核心能力**：监控指定频道新视频 → 自动转录字幕 → LLM 摘要 → 提取关键时间戳 → 跟踪历史输出。**适合**做"AI 自动给我每天看完的视频写摘要" / 竞品频道监控 / 跨频道选题分析。装到 Agent 后无需手动开 YouTube |
+| summarize | https://clawhub.ai/steipete/summarize | ClawHub Skill | **通用结构化摘要 skill**（Peter Steinberger 出品）。**和 LLM 默认"总结一下"区别**：按预定义结构（要点 / 关键引用 / 行动项 / 反对意见 / 三句话版本）输出，**质量稳定可控**。适合把文章 / 会议纪要 / 网页 / 长文 PDF 压成可复用的结构化笔记，**接入 Obsidian / Notion / Roam 工作流**典型用法 |
+| humanizer | https://clawhub.ai/biostartechnology/humanizer | ClawHub Skill | **AI 文本去机器味改写 skill**。**专治"AI 生成味"** — 把 ChatGPT / Claude 输出的"作为一个 AI 助手 / 总而言之 / 综上所述"等模式化语言改写得更自然、更口语、更像真人写的。**和 AIGC 降重区别**：humanizer 目标是阅读流畅而非过 AI 检测。**适合内容创作者**让 AI 草稿不那么"AI 味" |
+| xiucheng-self-improving-agent | https://clawhub.ai/xiucheng/xiucheng-self-improving-agent | ClawHub Skill | **自我改进型 Agent skill**（秀程出品）。**核心循环：执行 → 反馈 → 反思 → 改写 → 迭代**。让 Agent 在执行任务后**自动检视自己的输出**，识别不足并重写——而非一次性产出就完事。**适合需要高质量输出但单次生成不够好的场景**（深度研究 / 复杂代码 / 长文创作），对标 Reflexion / Self-Refine 论文方法的工程落地 |
 | find-skills-skill | https://clawhub.ai/fangkelvin/find-skills-skill | ClawHub Skill | “找 skill 的 skill”，用于在 skill 市场或仓库中发现适合当前任务的 Agent skill |
 
 </div>
