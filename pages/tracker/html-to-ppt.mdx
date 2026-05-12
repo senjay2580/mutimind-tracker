@@ -15,11 +15,11 @@ import RepoMeta from '../../components/RepoMeta'
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
-| reveal.js | https://github.com/hakimel/reveal.js | 70,930 | 最流行的 HTML 演示框架 |
-| PptxGenJS | https://github.com/gitbrent/PptxGenJS | 4,936 | 用 JavaScript 生成 PowerPoint |
-| Presenton | https://github.com/presenton/presenton | 4,559 | AI 驱动的演示生成器 |
-| PPT Master | https://github.com/hugohe3/ppt-master | 3,709 | AI 从任意文档生成可编辑 PPTX |
-| dom-to-pptx | https://github.com/atharva9167j/dom-to-pptx | 102 | HTML 元素转可编辑 PPT |
+| reveal.js | https://github.com/hakimel/reveal.js | 70,930 | **最流行的 HTML 演示文稿框架**（MIT，JavaScript，Hakim El Hattab）。**用 HTML / Markdown / CSS 写 slides**：纵横二维导航、PDF 导出、speaker notes、touch / 键盘 / 遥控器多端控制、丰富过渡动画。**开发者 / 技术演讲圈的事实选择** — GitHub Pages 直接托管、版本控制友好、可嵌 live code 演示。生态完整：插件 (Math / Highlight / Markdown / Search / Zoom)、众多主题、付费配套 [slides.com](https://slides.com) 在线编辑 |
+| PptxGenJS | https://github.com/gitbrent/PptxGenJS | 4,936 | **用 JavaScript 生成 PowerPoint**（MIT，TypeScript）。**Node / React / 浏览器全跑得动**的 `.pptx` 生成库 — 编程式定义 slides / shapes / 文本 / 表格 / 图表 / 媒体 / 主题。**官方 Office.js 的开源替代**，输出原生可编辑 PowerPoint（不是图片导出）。**典型场景**：报表自动生成 / 数据驱动 PPT / 模板批量出图。和 python-pptx 同生态位但 JS 派 |
+| Presenton | https://github.com/presenton/presenton | 4,559 | **开源 AI 演示生成器 + API**（Apache-2.0，JavaScript）。**Gamma / Beautiful AI / Decktopus 的开源平替**：输入主题 / 大纲 / 文档 → 自动生成完整演示（文字 + 图片 + 配色 + 布局）。**自带 REST API** 可嵌入到其他产品（如教育 SaaS / 内容工具）。本地部署 + 自选 LLM provider，**避开 SaaS 月费 + 数据外送**的痛点。免费 / 私有部署的 Gamma 替代品首选 |
+| PPT Master | https://github.com/hugohe3/ppt-master | 3,709 | **AI 生成"真 PowerPoint" — 原生可编辑 PPTX**（MIT，Python，作者 Hugo He）。**和"AI 出图再贴 PPT"不同 — 直接生成 PowerPoint 原生 shapes + 动画**，每个文本框 / 图形 / 排版都可在 PPT 里继续修改 / 调整。**典型卖点：让 AI 给你的 deck 草稿但保留人工最后润色的可能**。输入任意文档（PDF / Word / Markdown）→ 输出可编辑 PPTX，集成多 LLM provider |
+| dom-to-pptx | https://github.com/atharva9167j/dom-to-pptx | 102 | **HTML DOM → 可编辑 PPTX 的客户端库**（MIT，JavaScript）。**完全浏览器端**（无后端），把任意 HTML 元素转成 pixel-perfect 的 `.pptx` slide — **保留 gradient / shadow / 圆角图 / 响应式布局**。和 html2canvas 区别：那个出 PNG，这个出**可编辑 PowerPoint shapes**。**典型用法**：把 web dashboard / data viz 一键导出成可在 PPT 里继续编辑的 deck，企业内汇报神器 |
 | PPT-Design-Prompt | https://github.com/Russell-cell/PPT-Design-Prompt | 887 | **DESIGN.md → 演示图像 prompt 转换器**（不做生成 PPT 本身）。把 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 上游的网页/UI 品牌设计指南，转换成"演示图像导向"的 `DESIGN.md` 文件，给 image model + design agent 当 prompt 模板用，专门生成 PowerPoint/Keynote/PDF deck/视觉随笔 用的图像素材。Python CLI（`pip install -e .` → `design-md-ppt convert`），输入 `source/<brand>/DESIGN.md`，输出 `ppt-image/<brand>/DESIGN.md` + `conversion_manifest.json`。明确**不是**：deck 生成器、PPT 导出器、截图爬虫。`source/` 默认 gitignore，避免误传第三方品牌素材 |
 
 ## [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)

@@ -15,14 +15,14 @@ import RepoMeta from '../../components/RepoMeta'
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
-| system-prompts-and-models-of-ai-tools | https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools | 134,509 | 全网 AI 工具系统提示词 & 内部模型合集（Cursor/Claude Code/Manus/Windsurf 等） |
-| screenshot-to-code | https://github.com/abi/screenshot-to-code | 72,162 | 截图/Figma → React/Vue/HTML 代码 |
-| Fabric | https://github.com/danielmiessler/Fabric | 40,439 | AI Prompt 模式库框架，30+ AI 供应商，众包提示词模式 |
-| next-ai-draw-io | https://github.com/DayuanJiang/next-ai-draw-io | 26,168 | AI + draw.io 流程图，自然语言创建/修改图表 |
-| repomix | https://github.com/yamadashy/repomix | 23,120 | 整个仓库打包为 AI 易读单文件，喂给 LLM 做分析 |
-| compound-engineering-plugin | https://github.com/EveryInc/compound-engineering-plugin | 13,212 | 复合工程插件（Claude Code / Codex 等） |
-| vercel/streamdown | https://github.com/vercel/streamdown | 4,919 | react-markdown 替代品，专为 AI 流式输出设计 |
-| gh-aw | https://github.com/github/gh-aw | 4,225 | GitHub Agentic Workflows（官方 CLI 扩展） |
+| system-prompts-and-models-of-ai-tools | https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools | 134,509 | **全网 AI 编程工具系统提示词 & 内部模型逆向库**（GPL-3，137k★）。**逆向 + 抓包 + 泄露汇总的 30+ AI 编程工具完整 system prompt 与内部模型信息**：Augment Code / Claude Code / Cursor / Devin AI / Junie / Kiro / Lovable / Manus / NotionAI / Perplexity / Replit / Trae / VSCode Agent / Warp.dev / Windsurf / Xcode / Z.ai / Dia / v0 / Bolt 等全覆盖。**研究 prompt engineering / 复刻顶级 AI 工具的"内部工艺"** 第一手资料，更新极快 |
+| screenshot-to-code | https://github.com/abi/screenshot-to-code | 72,162 | **截图 / Figma → 干净前端代码**（MIT，TypeScript）。**拖一张 UI 截图进来，自动生成 HTML / Tailwind / React / Vue 代码**。基于 Claude / GPT-4o 多模态能力，支持视频转代码（录屏 → 动效代码）、Figma → 代码、UI 修改对话式迭代。**网站 demo 直接可用**，**Vibe Coding 时代的代表性工具** — 美工出图 5 秒变 React 组件，让设计与前端边界模糊 |
+| Fabric | https://github.com/danielmiessler/Fabric | 40,439 | **AI 增强人类的 Prompt 模式库框架**（MIT，Go）。**核心理念："增强人类用 AI"**（augmenting humans using AI）。开源协作 200+ "Pattern"（精心调优的 prompt 模板）：摘要文章 / 提取智慧 / 写博客 / 评估安全代码 / 改进文案……每个 pattern 都是独立 markdown，可以 pipe 到任何 LLM。**支持 30+ AI provider**（OpenAI / Claude / Gemini / Ollama / Groq…），社区贡献的 prompt 模式不断扩充。Daniel Miessler（安全圈名人）出品 |
+| next-ai-draw-io | https://github.com/DayuanJiang/next-ai-draw-io | 26,168 | **AI + draw.io 流程图生成器**（Apache-2.0，Next.js + TypeScript）。**自然语言创建 / 修改 draw.io 图表**：描述系统架构 → AI 直接生成 diagram XML 渲染到 draw.io 画布；点选已有节点 + 描述修改 → AI 局部更新。**比通用 mermaid 工具更专业** — draw.io 是企业架构图事实标准（含网络拓扑 / AWS 图标库 / UML / BPMN），AI 直接产出可在 Visio / draw.io 编辑。**架构师 / 技术写作者**省时利器 |
+| repomix | https://github.com/yamadashy/repomix | 23,120 | **📦 整个 Git 仓库 → 单个 AI-friendly 文件**（MIT，TypeScript）。**喂代码库给 LLM 的标准工具**：递归扫描 + .gitignore 过滤 + 按 token 数排序 + 输出 Markdown / XML / JSON 单文件。支持 Claude / ChatGPT / DeepSeek / Perplexity / Gemini / Llama / Grok 等所有主流 LLM 的格式优化。**对比 git clone + cat**：自动剔除 lock 文件 / 二进制 / 编译产物，token 友好。Code review / 大重构 / 让 LLM 理解整个项目时必备 |
+| compound-engineering-plugin | https://github.com/EveryInc/compound-engineering-plugin | 13,212 | **Compound Engineering 官方多 Agent 插件**（MIT，TypeScript）。**Every.to 创始团队提出的 "Compound Engineering" 工程方法论**实现：把开发拆成 Planner + Builder + Reviewer 多 Agent 角色，并行运转 + 互相评审。**Claude Code / Codex / Cursor 全平台插件**，提供配套 skill + slash command + agent 定义。**适合想从"单 Agent vibe coding"升级到"多 Agent 流水线"的开发者** |
+| vercel/streamdown | https://github.com/vercel/streamdown | 4,919 | **AI 流式输出专用 Markdown 渲染器**（NOASSERTION，TypeScript，Vercel 官方）。**react-markdown 的 drop-in 替换** — 但**专门为 LLM streaming token 优化**：增量渲染（已渲染部分不重绘）、不完整 markdown 安全处理（半截 code block / 表格不崩）、代码高亮性能优化。**AI 聊天 UI 的事实选择** — Vercel AI SDK 配套，复制 v0 / ChatGPT 的渲染体验 |
+| gh-aw | https://github.com/github/gh-aw | 4,225 | **GitHub Agentic Workflows 官方 gh 扩展**（MIT，Go，GitHub 官方）。**把 Claude Code / Codex / Copilot 等编码 Agent 接入 GitHub Actions** — 在 PR / Issue 上触发 Agent 自动做 review / 修 bug / 写测试，结果回写到 PR 评论。`gh extension install github/gh-aw` 一键装。**官方维护**，对比社区方案（compound-engineering 等）更稳，是"Agentic DevOps"的官方支持入口 |
 | open-design | https://github.com/nexu-io/open-design | 13,200 | **本地优先开源设计工具**（Anthropic Claude Design 替代）。Next.js + Node.js + TypeScript + SQLite。通过 Claude Code / Cursor / Gemini 等 AI 编码 Agent 生成网页/移动应用/演示文稿原型。内置 31 个设计 Skill + 72 个品牌级设计系统，Apache-2.0 |
 
 ## [page-agent (alibaba)](https://github.com/alibaba/page-agent)

@@ -15,11 +15,11 @@ import RepoMeta from '../../components/RepoMeta'
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
-| autoresearch | https://github.com/karpathy/autoresearch | 65,662 | Karpathy AI 自主研究项目 |
-| AutoResearchClaw | https://github.com/aiming-lab/AutoResearchClaw | 10,316 | 自主自进化研究系统 |
-| AgentEvolver | https://github.com/modelscope/AgentEvolver | 1,336 | 端到端自进化训练框架 |
-| Hermes Agent Self-Evolution | https://github.com/NousResearch/hermes-agent-self-evolution | 623 | DSPy + GEPA 遗传进化 |
-| SE-Agent | https://github.com/JARVIS-Xs/SE-Agent | 245 | 多步推理自进化框架 |
+| autoresearch | https://github.com/karpathy/autoresearch | 65,662 | **Karpathy 单卡 GPU 自主研究 Agent**（无 LICENSE，Python）。**Andrej Karpathy 个人实验仓库**：让 AI Agent 在**单 GPU 上自动训练 nanochat**（Karpathy 自己的 ~561 行 LLM 训练样本仓）并自主迭代研究。**典型用法：让 Agent 跑超参搜索 / 架构消融 / 训练曲线分析，自动产出研究 insights**。**为"个人用 1 张卡也能跑 AI 研究"提供示范**，配合 nanochat / nanoGPT / micrograd 形成完整教学链 |
+| AutoResearchClaw | https://github.com/aiming-lab/AutoResearchClaw | 10,316 | **🦞 全自主 + 自进化的研究 Agent**（MIT，Python，aiming-lab）。**"Chat an Idea. Get a Paper."** 从一句话想法到完整论文全自动 — 多 Agent 辩论生成假设、引用验证（防幻觉）、自进化的研究策略改进。**配套 metaClaw + OpenClaw 生态**（自家 Agent harness），强调 self-evolving — Agent 跑多轮研究后自动 evolve 自身 prompt / 工具选择。AI Scientist / Agent Laboratory / InternAgent 同生态位 |
+| AgentEvolver | https://github.com/modelscope/AgentEvolver | 1,336 | **高效自进化 Agent 训练框架**（阿里巴巴 ModelScope，Apache-2.0）。**用强化学习自进化 Agent**：Agent 在环境中行动 → 收集轨迹 → RL 优化策略 → Agent 自身能力提升 → 重复。**和"prompt 工程优化"路线不同 —— 这是真正改 Agent 的模型权重**。架构覆盖单 / 多 Agent、reward 设计、训练效率优化。论文 + 开源代码，ModelScope 在自进化 Agent 方向的代表作 |
+| Hermes Agent Self-Evolution | https://github.com/NousResearch/hermes-agent-self-evolution | 623 | **⚒ Hermes Agent 的进化式自我改进框架**（Nous Research）。**用 DSPy + GEPA（遗传进化提示优化）自动优化 Agent 的 skill / prompt / 代码**。和直接微调模型不同 —— 不改模型权重，**改"Agent 怎么用模型"**（更便宜更可控）。Nous Research 是开源大模型圈知名实验室（Hermes / Capybara / Yarn 系列），这个项目把 Stanford DSPy 框架与遗传算法结合，**研究"Agent 自我优化"的代表实践之一** |
+| SE-Agent | https://github.com/JARVIS-Xs/SE-Agent | 245 | **LLM Code Agent 的自进化框架**（MIT，Python）。**核心创新：trajectory-level evolution** — 跨多条推理路径交换信息（Revision / Recombination / Refinement 三种算子），扩大搜索空间逃离局部最优。**在 SWE-bench Verified 拿到 SOTA**（修真实 GitHub bug 测试集），MCTS（蒙特卡洛树搜索）+ test-time scaling 思路。配合 Claude Code 使用，**适合研究"如何让代码 Agent 自我进化"** |
 
 ## [AI-Scientist (Sakana AI)](https://github.com/SakanaAI/AI-Scientist)
 

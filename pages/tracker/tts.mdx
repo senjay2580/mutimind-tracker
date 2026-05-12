@@ -14,9 +14,9 @@ import RepoList from '../../components/RepoList'
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
-| GPT-SoVITS | https://github.com/RVC-Boss/GPT-SoVITS | 56,391 | 1 分钟语音数据即可训练高质量 TTS（少样本克隆） |
-| ChatTTS | https://github.com/2noise/ChatTTS | 39,013 | 面向日常对话的生成式语音模型 |
-| fish-speech | https://github.com/fishaudio/fish-speech | 29,082 | SOTA 开源 TTS 引擎 |
+| GPT-SoVITS | https://github.com/RVC-Boss/GPT-SoVITS | 56,391 | **少样本语音克隆 TTS 引擎**（MIT，RVC-Boss）。核心卖点是 **1 分钟参考音频精调出可用 TTS、5 秒音频即可零样本生成**接近原声的语音。三段式：① 零样本（5s 参考立刻推理）② 少样本（1min 微调质量飞跃）③ 跨语言推理（中/英/日/韩/粤互推）。基于 SoVITS（SoftVC + VITS）+ GPT 自回归 token 预测，WebUI 把数据集制作 / 训练 / 推理 / 工具链一站式打包。**国内中文 TTS 克隆事实标准**，个人配音 / 有声书 / 二次元角色音典型用法 |
+| ChatTTS | https://github.com/2noise/ChatTTS | 39,013 | **对话场景生成式 TTS**（AGPL-3.0，2noise）。专为 LLM 输出口语化对话设计，**中英双语**，强在长文本拼接时的自然停顿、笑声、语气词、连读。基于 4 万小时中英对话语料训练，自带韵律 / 情绪控制 token（`[laugh]` `[break]` `[uv_break]`），让生成更像"真人在说话"。**侧重对话流畅度而非高保真音色**，适合 AI 助手、虚拟主播、对话播客。⚠️ AGPL-3.0 商用衍生品需开源 |
+| fish-speech | https://github.com/fishaudio/fish-speech | 29,082 | **生产级开源 TTS 全家桶**（fishaudio）。技术栈横跨 VALL-E / VITS / VQ-VAE / VQ-GAN / Llama transformer，**强项是音质保真 + 多语言低延迟**。支持 8 种主流语言（中英日韩法德阿西），10 秒参考音频零样本克隆，配套 Fish Agent v0.1 多模态对话模型联动语音 in/out。提供 WebUI + HTTP API + Docker 部署，A100 端到端延迟 < 150ms。**适合自建商业 TTS 服务的团队**。⚠️ 非标准开源协议，商用前确认条款 |
 | VoxCPM2 | https://github.com/OpenBMB/VoxCPM | 17,199 | **Tokenizer-Free TTS**（OpenBMB / 面壁，Apache 2.0 商用友好）。2B 参数，200 万小时多语种语音训练，**30 种语言 + 9 种中文方言**（四川话/粤语/吴语/东北话/河南话/陕西话/山东话/天津话/闽南话）。三种使用方式：① **Voice Design** 自然语言描述（性别/年龄/语调/情绪/节奏）凭空造新声音，无需参考音频；② **Controllable Cloning** 短参考音频克隆 + 可选风格引导；③ **Ultimate Cloning** 给参考音频 + 转录，无缝续写保留全部细节。**48kHz 录音棚级音质**，支持 16kHz 输入超分到 48kHz。RTX 4090 上 RTF ~0.3，配 [Nano-vLLM](https://github.com/a710128/nanovllm-voxcpm) 或 vLLM-Omni 加速到 ~0.13。基于 MiniCPM-4 backbone，端到端 diffusion autoregressive 直接生成连续语音表征（不走离散 token）|
 
 </div>
