@@ -899,9 +899,9 @@ html:not(.dark) .mm-repo-group-header:hover {
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 .mm-search-input-wrap:focus-within {
-  /* 不改 border-color —— 只留外层 halo 一道光圈 */
-  background: rgba(96, 165, 250, 0.04);
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.22);
+  /* 无蓝色光圈 — 仅背景微提亮一档暗示聚焦，靠光标闪烁本身指示 */
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .mm-search-icon {
@@ -913,7 +913,7 @@ html:not(.dark) .mm-repo-group-header:hover {
   pointer-events: none;
 }
 .mm-search-input-wrap:focus-within .mm-search-icon {
-  color: rgba(96, 165, 250, 0.9);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Kill Nextra's .nextra-focus tailwind ring (uses --tw-ring-shadow var) on
@@ -1188,8 +1188,12 @@ html.light .mm-search-input-wrap {
   border-color: rgba(15, 23, 42, 0.12);
 }
 html.light .mm-search-input-wrap:focus-within {
-  background: rgba(59, 130, 246, 0.06);
-  border-color: rgba(59, 130, 246, 0.55);
+  background: rgba(15, 23, 42, 0.07);
+  border-color: rgba(15, 23, 42, 0.25);
+  box-shadow: none;
+}
+html.light .mm-search-input-wrap:focus-within .mm-search-icon {
+  color: rgba(15, 23, 42, 0.7);
 }
 html.light .mm-search-input::placeholder {
   color: rgba(15, 23, 42, 0.4);
