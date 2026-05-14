@@ -33,6 +33,17 @@ const fmtDate = (d: string | null) => (d && d.length >= 7 ? d.slice(0, 7) : null
 
 const isGithub = (url: string) => /^https:\/\/github\.com\//.test(url)
 
+export const anchorOf = (slug: string, url: string): string => {
+  const path = url
+    .replace(/^https?:\/\//, '')
+    .replace(/[?#].*$/, '')
+    .replace(/\/+$/, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return `${slug}__${path}`
+}
+
 const hostnameOf = (url: string) => {
   try {
     return new URL(url).hostname.replace(/^www\./, '')
@@ -71,7 +82,10 @@ const RepoItem: React.FC<{ repo: Repo; index: number }> = ({ repo, index }) => {
   const fresh = isNew(repo.addedAt)
 
   return (
-    <article className={`mm-repo-item ${open ? 'is-open' : ''} ${fresh ? 'is-new' : ''}`}>
+    <article
+      id={anchorOf(repo.slug, repo.url)}
+      className={`mm-repo-item ${open ? 'is-open' : ''} ${fresh ? 'is-new' : ''}`}
+    >
       {fresh && <span className="mm-repo-new" title={`Added ${repo.addedAt}`}>NEW</span>}
       <div className="mm-repo-row">
         <span className="mm-repo-num">{String(index).padStart(2, '0')}</span>

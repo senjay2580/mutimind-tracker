@@ -1,6 +1,7 @@
 import React from 'react'
 import type { DocsThemeConfig } from 'nextra-theme-docs'
 import { Compass } from 'lucide-react'
+import RepoSearch from './components/RepoSearch'
 
 const Logo = () => (
   <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
@@ -51,7 +52,7 @@ const config: DocsThemeConfig = {
     <div style={{ maxWidth: '100%', width: '100%' }}>{children}</div>
   ),
   search: {
-    placeholder: '搜索项目 / 关键词 / 作者…'
+    component: <RepoSearch />
   },
   feedback: { content: null },
   editLink: { content: '编辑此页 →' },

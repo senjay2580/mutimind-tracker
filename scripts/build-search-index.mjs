@@ -33,6 +33,20 @@ const ownerFromUrl = (url) => {
 
 const isGithubUrl = (url) => /^https:\/\/github\.com\//.test(url)
 
+// Stable per-repo DOM anchor: `${slug}__${normalized-url-path}`.
+// Used by RepoList (sets element id) AND by RepoSearch / external links to
+// deep-link to a specific card via /tracker/<slug>#<anchor>.
+const anchorOf = (slug, url) => {
+  const path = url
+    .replace(/^https?:\/\//, '')
+    .replace(/[?#].*$/, '')
+    .replace(/\/+$/, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return `${slug}__${path}`
+}
+
 const parseStars = (s) => {
   if (!s) return null
   const cleaned = String(s).replace(/[★,\s]/g, '').toLowerCase()
@@ -259,6 +273,7 @@ try {
 for (const r of unique) {
   const t = urlAddedAt.get(r.url)
   if (t) r.addedAt = t
+  r.anchor = anchorOf(r.slug, r.url)
 }
 
 // Sort within each slug by stars desc (null at end)

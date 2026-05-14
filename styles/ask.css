@@ -465,3 +465,94 @@ html:not(.dark) .mm-modal-answer-md strong { color: #2563eb; }
     padding: 5vh 10px 10px;
   }
 }
+
+/* ---------- Deep mode toggle row ---------- */
+.mm-modal-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -2px 0 8px;
+  padding: 0 2px;
+  flex-wrap: wrap;
+}
+
+.mm-modal-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.mm-modal-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+}
+.mm-modal-mode-toggle.is-on {
+  color: #fde68a;
+  background: rgba(250, 204, 21, 0.1);
+  border-color: rgba(250, 204, 21, 0.45);
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.08);
+}
+.mm-modal-mode-state {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 2px;
+}
+.mm-modal-mode-toggle.is-on .mm-modal-mode-state {
+  background: rgba(250, 204, 21, 0.22);
+  color: #fde68a;
+}
+
+.mm-modal-mode-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.42);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ---------- Streaming stage banner ---------- */
+.mm-modal-stage-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  color: rgba(96, 165, 250, 0.85);
+  background: rgba(96, 165, 250, 0.06);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+/* Light mode */
+html.light .mm-modal-mode-toggle {
+  color: rgba(15, 23, 42, 0.6);
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+html.light .mm-modal-mode-toggle.is-on {
+  color: #92400e;
+  background: rgba(250, 204, 21, 0.18);
+  border-color: rgba(202, 138, 4, 0.5);
+}
+html.light .mm-modal-mode-hint {
+  color: rgba(15, 23, 42, 0.5);
+}
+html.light .mm-modal-stage-banner {
+  color: rgba(37, 99, 235, 0.9);
+  background: rgba(96, 165, 250, 0.1);
+  border-color: rgba(96, 165, 250, 0.3);
+}
