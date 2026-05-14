@@ -70,6 +70,21 @@ function search(q: string): Scored[] {
   return out.slice(0, MAX_HITS)
 }
 
+// Some repo descriptions are 1200-char dumps (table-row stripped or wiki text).
+// For the dropdown we want one tight line: strip md headings / table noise,
+// collapse whitespace, drop everything past the first sentence-ender, hard cap.
+function cleanDesc(raw: string, max: number): string {
+  let s = raw
+    .replace(/^#+\s+/gm, '')
+    .replace(/\|/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+  const cut = s.search(/[。\.!！?？]/)
+  if (cut > 20 && cut < max) s = s.slice(0, cut + 1)
+  if (s.length > max) s = s.slice(0, max).trimEnd() + '…'
+  return s
+}
+
 const fmtStars = (n: number | null): string | null => {
   if (n == null) return null
   if (n >= 10000) return `${(n / 1000).toFixed(0)}k`
@@ -274,8 +289,7 @@ export const RepoSearch: React.FC = () => {
                     </div>
                     {r.description && (
                       <div className="mm-search-item-desc">
-                        {highlight(r.description.slice(0, 140), gramList)}
-                        {r.description.length > 140 && '…'}
+                        {highlight(cleanDesc(r.description, 90), gramList)}
                       </div>
                     )}
                   </button>

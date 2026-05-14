@@ -972,8 +972,9 @@ html:not(.dark) .mm-repo-group-header:hover {
 .mm-search-panel {
   position: absolute;
   top: calc(100% + 6px);
-  left: 0;
   right: 0;
+  width: 420px;
+  max-width: 90vw;
   z-index: 1000;
   max-height: 70vh;
   overflow-y: auto;
@@ -1027,12 +1028,24 @@ html:not(.dark) .mm-repo-group-header:hover {
 }
 .mm-search-item-name {
   flex: 1;
-  font-size: 13.5px;
+  min-width: 0;
+  font-size: 13.5px !important;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.95);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+.mm-search-item-name * {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: inherit !important;
 }
 .mm-search-item-stars {
   display: inline-flex;
@@ -1073,10 +1086,27 @@ html:not(.dark) .mm-repo-group-header:hover {
   font-size: 11.5px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.55);
-  display: -webkit-box;
+  display: -webkit-box !important;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  max-height: 3em;
+  word-break: break-word;
+}
+.mm-search-item-desc * {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline !important;
+  line-height: inherit !important;
+}
+.mm-search-item-desc .mm-search-hl {
+  display: inline !important;
+  background: rgba(250, 204, 21, 0.22) !important;
+  color: #fde68a !important;
 }
 
 .mm-search-hl {
