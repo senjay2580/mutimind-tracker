@@ -916,10 +916,31 @@ html:not(.dark) .mm-repo-group-header:hover {
   color: rgba(96, 165, 250, 0.9);
 }
 
+/* Kill Nextra's .nextra-focus tailwind ring (uses --tw-ring-shadow var) on
+   anything inside our search component — both the input itself and any
+   nextra-injected wrapper element that may carry the class. */
+.mm-search *:focus,
+.mm-search *:focus-visible,
+.mm-search :focus,
+.mm-search :focus-visible {
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-color: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
+
 .mm-search-input,
 .mm-search-input:focus,
 .mm-search-input:focus-visible,
-.mm-search-input:focus-within {
+.mm-search-input:focus-within,
+.mm-search-input.nextra-focus,
+.mm-search-input.nextra-focus:focus,
+.mm-search-input.nextra-focus:focus-visible,
+.mm-search .nextra-focus:focus-visible,
+.mm-search .nextra-focusable:focus-visible {
   flex: 1;
   height: 100%;
   background: transparent !important;
@@ -927,6 +948,11 @@ html:not(.dark) .mm-repo-group-header:hover {
   outline: 0 !important;
   outline-offset: 0 !important;
   box-shadow: none !important;
+  /* Nextra/Tailwind 用这两个 CSS 变量合成 ring，必须清零才能彻底关掉那道内圈 */
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-width: 0 !important;
   color: inherit;
   font-size: 13px;
   letter-spacing: 0.01em;
