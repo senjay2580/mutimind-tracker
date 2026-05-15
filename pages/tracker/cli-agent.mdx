@@ -67,4 +67,36 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Claude Code 二次开发的开源 CLI 编码 Agent — runs anywhere, uses anything** — 基于 Claude Code 代码库，支持 OpenAI / Gemini / DeepSeek / Ollama / GLM / Codex 等 200+ OpenAI 兼容模型。终端优先，保留 prompts / tools / agents / MCP / slash commands / streaming。B站「进化中的阿陈」反复推荐。适合需要在 Claude Code 体验下接非官方模型的场景。
 
+## [OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)
+
+<RepoMeta
+  url="https://github.com/iOfficeAI/OfficeCLI"
+  stars={4423}
+  updated="2026-05-14"
+  lang="C#"
+  license="Apache-2.0"
+  tags={['office', 'cli', 'ai-agent', 'mcp']}
+/>
+
+**AI Agent 专用 Office 文档 CLI** — 让 Agent 用命令行创建、读取、编辑和验证 Word / Excel / PowerPoint 文件。单二进制、无需安装 Microsoft Office，自带 agent-friendly 渲染引擎，可把 `.docx` / `.xlsx` / `.pptx` 渲染成 HTML 或 PNG，让 Agent 进入“生成 → 预览 → 修复”的闭环。适合自动报告、PPT 生成、Excel 批处理和 CI/CD 里的 Office 文档质量检查。
+
+**亮点**：
+- 支持 Office 三件套，命令输出可走结构化 JSON，适合 Agent 调用
+- 内置预览、截图、校验、模板合并、MCP server 和自动安装 skill
+
+**注意**：这是 Agent/开发者工具，不是给普通用户替代 Office GUI 的编辑器；复杂排版仍需要用预览和验证循环反复修。
+
+## [codex-auth](https://github.com/Loongphy/codex-auth)
+
+<RepoMeta
+  url="https://github.com/Loongphy/codex-auth"
+  stars={1726}
+  updated="2026-05-14"
+  lang="Zig"
+  license="MIT"
+  tags={['codex', 'auth', 'cli']}
+/>
+
+**Codex 账号切换管理 CLI** — 用来在本机切换和管理多个 Codex 账号。适合需要区分个人 / 工作 / 测试账号，或经常在多套 Codex 凭据之间切换的用户。Zig 单工具定位很窄，但正好补上 Codex CLI 生态里的账号管理空位。
+
 </div>
