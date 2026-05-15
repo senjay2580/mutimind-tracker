@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import { useEffect, type ReactElement } from 'react'
+import SidebarNewBadges from '../components/SidebarNewBadges'
 import '../styles/globals.css'
 import '../styles/ask.css'
 import '../styles/repos.css'
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
       <Component {...pageProps} />
+      <SidebarNewBadges />
       <AskFab />
     </>
   )

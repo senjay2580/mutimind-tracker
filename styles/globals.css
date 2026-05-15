@@ -182,6 +182,38 @@ aside.nextra-sidebar-container .nextra-sidebar-active,
   box-shadow: 0 0 18px -4px rgba(var(--mm-glow-rgb), 0.4);
 }
 
+aside.nextra-sidebar-container a.mm-sidebar-link-with-new {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+aside.nextra-sidebar-container .mm-sidebar-new-badge {
+  flex: 0 0 auto;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background: linear-gradient(135deg, rgba(255, 115, 48, 0.98), rgba(255, 72, 35, 0.98));
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.26),
+    0 8px 18px -8px rgba(255, 92, 42, 0.8);
+}
+
+html.dark aside.nextra-sidebar-container .mm-sidebar-new-badge {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 8px 18px -8px rgba(255, 111, 54, 0.85);
+}
+
 /* ============================================================
    Index hero H1 — gradient text with soft glow
    ============================================================ */
@@ -770,4 +802,3 @@ html:not(.dark) .mm-api-copy {
   }
   .mm-api-path { font-size: 12.5px; }
 }
-

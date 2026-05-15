@@ -176,6 +176,7 @@
     "subcategory": "",
     "slug": "agent-frameworks",
     "description": "一句话定位 — Computer-Use Agent 基础设施：给 AI 代理提供沙箱、SDK、桌面自动化和 benchmark，让代理能看屏幕、点按钮、打字并执行完整 GUI 工作流。项目拆成 Cua Driver、跨平台 sandbox API、CuaBot、Cua-Bench 和 Lume 等模块，覆盖 macOS / Linux / Windows 的桌面控制与评测。适合做浏览器自动化、桌面自动化、agent benchmark、GUI workflow 执行，更偏 agent infra / runtime / benchmark platform，不是普通用户装了就直接提效的插件。 亮点： - 面向 full desktop control 的开源 agent sandbox 与评测基础设施 - 覆盖 computer-use、desktop automation、virtualization、Windows sandbox 等完整链路 注意：偏底层基础设施和实验平台，上手成本高于普通 Agent 应用；macOS 相关能力会依赖 Apple Silicon / virtualization 生态。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "agent-frameworks__github-com-trycua-cua"
   },
   {
@@ -640,6 +641,7 @@
     "subcategory": "",
     "slug": "aggregation",
     "description": "AI Creation Agent。面向创作流程的 AI 工具，把不同来源材料转成新的创作产物，定位更接近“素材理解 + 生成式创作工作台”。适合跟 NotebookLM、Elicit 这类知识/研究工具一起观察，看它是否能把资料整理进一步推进到内容创作",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "aggregation__youmind-com"
   },
   {
@@ -714,6 +716,7 @@
     "subcategory": "",
     "slug": "ai-llm-core",
     "description": "金融市场语言基础模型 — 面向金融市场序列和交易数据的 foundation model，把市场行为当作一种“语言”来建模。适合关注 AI for Finance、量化研究、金融时间序列建模的人跟踪，和通用 LLM 不同，它更偏垂直领域基础模型。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "ai-llm-core__github-com-shiyu-coder-kronos"
   },
   {
@@ -1343,6 +1346,7 @@
     "subcategory": "",
     "slug": "cc-skills-marketplaces",
     "description": "多源内容 → NotebookLM 的 Claude Skill — 支持微信文章、网页、YouTube、PDF、Markdown、搜索查询等内容源，处理后送入 NotebookLM，并产出 Podcast / PPT / MindMap / Quiz 等学习材料。适合把“收资料 → 变学习资产”的流程交给 Agent。 | 名称 | 地址 | 类型 | 描述 | |------|------|------|------| | skills.sh | https://skills.sh | Skill 目录 | AI Agent Skills 的检索和分发站点，适合按主题发现可安装 skill，并作为 GitHub skill 仓库之外的补充入口 | | ClawHub | https://clawhub.ai | Skill 市场 | OpenClaw/Claude Code 生态的 skill 市场，支持作者页、单 skill 页和 clawhub install 风格分发 | | SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 | | SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 | | SkillHub | https://www.skillhub.club | Skill 市场 | Claude Skills 专用市场。和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，和 SkillsMP 区别：SkillsMP 偏中文、SkillHub 偏英文社区。适合发现\"针对 Claude Code 优化的\"skill（如配套 hook / agent / slash command 整套配置） | | tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | Tavily AI 搜索 skill 包（ClawHub 发布）。给 Agent 加 Tavily Search 能力的一键安装包——免去手动配 API key / 写 tool definition / 处理 JSON parse 各种麻烦，装上即可让 Agent 调 Tavily 做研究 ",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "cc-skills-marketplaces__github-com-joeseesun-qiaomu-anything-to-notebooklm"
   },
   {
@@ -1957,6 +1961,7 @@
     "subcategory": "",
     "slug": "cli-agent",
     "description": "AI Agent 专用 Office 文档 CLI — 让 Agent 用命令行创建、读取、编辑和验证 Word / Excel / PowerPoint 文件。单二进制、无需安装 Microsoft Office，自带 agent-friendly 渲染引擎，可把 .docx / .xlsx / .pptx 渲染成 HTML 或 PNG，让 Agent 进入“生成 → 预览 → 修复”的闭环。适合自动报告、PPT 生成、Excel 批处理和 CI/CD 里的 Office 文档质量检查。 亮点： - 支持 Office 三件套，命令输出可走结构化 JSON，适合 Agent 调用 - 内置预览、截图、校验、模板合并、MCP server 和自动安装 skill 注意：这是 Agent/开发者工具，不是给普通用户替代 Office GUI 的编辑器；复杂排版仍需要用预览和验证循环反复修。",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "cli-agent__github-com-iofficeai-officecli"
   },
   {
@@ -2001,6 +2006,7 @@
     "subcategory": "",
     "slug": "cli-agent",
     "description": "Codex 账号切换管理 CLI — 用来在本机切换和管理多个 Codex 账号。适合需要区分个人 / 工作 / 测试账号，或经常在多套 Codex 凭据之间切换的用户。Zig 单工具定位很窄，但正好补上 Codex CLI 生态里的账号管理空位。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "cli-agent__github-com-loongphy-codex-auth"
   },
   {
@@ -3515,6 +3521,7 @@
     "subcategory": "",
     "slug": "prompt-engineering",
     "description": "中文 AI 提示词库 — 覆盖工作、学习、内容、营销和生活场景的中文 prompt 集合。相比英文 prompt awesome list，它更贴近日常中文表达和国内内容场景，适合拿来做个人 prompt 素材库、产品内置模板或运营工作流参考。 --- 总计项目数: 150+ 总 Stars 数: 5,500,000+ 分类覆盖: AI/LLM、Agent 框架、Claude Code Skills（Agents365 / Marketing）、Prompt 工程、Vibe Coding & 开发工具、语音合成、视频 AI、自动化测试、垂直领域 Agent、教程库 & 学习路径、免费 API、免费 API 索引（聚合站/媒体/AI 生成）、速查手册、手机应用、演示工具、CLI 工具、资源聚合 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "prompt-engineering__github-com-yaojingang-yao-open-prompts"
   },
   {
@@ -3634,6 +3641,7 @@
     "subcategory": "",
     "slug": "robotics",
     "description": "CAD / 机器人 / 硬件设计 Agent Skills 集合 — 面向 text-to-CAD、机械工程和机器人硬件设计，覆盖 STEP / STL / DXF / GLB / URDF / SDF / SRDF 等格式与 Build123d / OpenCascade / WASM 等工具链。适合让 Agent 从文本需求生成可检查、可导出的 CAD / 机器人描述文件。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "robotics__github-com-earthtojake-text-to-cad"
   },
   {
@@ -3738,6 +3746,7 @@
     "subcategory": "",
     "slug": "tts",
     "description": "一句话定位 — 本地运行的轻量多语言 TTS 引擎：基于 ONNX Runtime 在设备端原生生成语音，主打快速、离线、低依赖，不走云端 API。当前 Supertonic 3 强调 31 种语言支持，并提供 Python、Node.js、Browser、Java、C++、C#、Go、Swift、iOS 等多端示例。适合给 AI 产品、浏览器插件、桌面助手、移动端 App 加本地发声能力，尤其适合隐私、延迟和部署成本敏感的场景。 亮点： - On-device TTS，适合离线和隐私敏感应用 - 多语言、多端 SDK 示例齐全，便于嵌入现有产品 注意：它是语音基础组件，不是完整语音助手；音色克隆、情绪控制等高阶能力需要结合实际模型包和场景评估。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "tts__github-com-supertone-inc-supertonic"
   },
   {
@@ -3917,6 +3926,7 @@
     "subcategory": "",
     "slug": "tutorials",
     "description": "AI / ML / DL / GenAI 项目案例库 — 收集作者做过的人工智能项目，覆盖机器学习、深度学习、计算机视觉、NLP、LLM、生成式 AI、数据科学和 Power BI 等方向。适合新手按项目找练手机会，也适合做选题时快速浏览“能做什么样的 AI 小项目”。 注意：无明确 license，适合学习参考；如果要复制代码或商用二次分发，需要单独确认授权。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "tutorials__github-com-kalyanm45-ai-project-gallery"
   },
   {
@@ -4186,6 +4196,7 @@
     "subcategory": "",
     "slug": "vibe-coding",
     "description": "Claude Code 里的 HTML 原生设计 skill — 面向高保真原型、幻灯片、动画和 MP4 导出的设计工作流，把设计哲学、评审标准和可运行 HTML 产物结合起来。适合让 Agent 从“能写页面”升级到“有设计判断地做页面 / 原型 / 演示”。",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "vibe-coding__github-com-alchaincyf-huashu-design"
   },
   {
@@ -4260,6 +4271,7 @@
     "subcategory": "",
     "slug": "vibe-coding",
     "description": "一条命令提取网站设计系统 — 从任意网站抽取 DTCG design tokens、语义/基础/复合 token、CSS 健康审计和 WCAG 修复建议，并提供 MCP server 给 Claude Code / Cursor / Windsurf 使用。适合做竞品 UI 分析、设计系统迁移、Tailwind / Figma / shadcn/ui token 化。",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "vibe-coding__github-com-manavarya09-design-extract"
   },
   {
@@ -4274,6 +4286,7 @@
     "subcategory": "",
     "slug": "vibe-coding",
     "description": "Claude Design 灵感库 — 收集 68 套可直接使用的 DESIGN.md 设计系统灵感。把其中一套丢给 Claude Code / 设计 Agent，就能更稳定地 scaffold 出完整 UI。适合做 Vibe Coding 时快速选风格，减少“默认模板味”。 </div>",
+    "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "vibe-coding__github-com-voltagent-awesome-claude-design"
   },
   {
