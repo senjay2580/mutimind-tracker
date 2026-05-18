@@ -506,6 +506,7 @@
     "subcategory": "",
     "slug": "aggregation",
     "description": "CTO 资源精选清单 — 面向首席技术官（尤其创业公司 CTO）的精选、有观点的资源集：技术架构、工程管理、招聘面试、技术路线、决策原则。技术管理者最常被推荐的角色清单之一。",
+    "addedAt": "2026-05-18T19:41:05+08:00",
     "anchor": "aggregation__github-com-kuchin-awesome-cto"
   },
   {
@@ -535,6 +536,7 @@
     "subcategory": "",
     "slug": "aggregation",
     "description": "创业 CEO 资源精选清单 — 面向创业公司创始人与高增长公司领导者的精选资源：领导力、管理、决策、融资、创业方法论。与 awesome-cto 同作者的姊妹清单。⚠️ 2023-02 后未更新。",
+    "addedAt": "2026-05-18T19:41:05+08:00",
     "anchor": "aggregation__github-com-kuchin-awesome-ceo"
   },
   {
@@ -549,6 +551,7 @@
     "subcategory": "",
     "slug": "aggregation",
     "description": "技术项目经理（TPM）资源精选清单 — 面向 Technical Program Manager 的精选资源：技术项目管理、路线规划、跨团队协作。kuchin 角色清单三件套之一。⚠️ 2022-03 后未更新。 </div>",
+    "addedAt": "2026-05-18T19:41:05+08:00",
     "anchor": "aggregation__github-com-kuchin-awesome-tpm"
   },
   {
@@ -3072,6 +3075,20 @@
     "anchor": "skills__github-com-k-dense-ai-scientific-agent-skills"
   },
   {
+    "name": "vercel-labs/skills",
+    "owner": "vercel-labs",
+    "url": "https://github.com/vercel-labs/skills",
+    "stars": 19033,
+    "updated": "2026-05-16",
+    "lang": "TypeScript",
+    "license": "No License",
+    "category": "Claude Code Skills",
+    "subcategory": "Skill 市场 & 合集",
+    "slug": "skills",
+    "description": "Vercel 开放 Agent Skills 工具 — npx skills — 整个 npx skills add <owner>/<repo> 安装体系的官方 CLI 本体（2026-01 由 Vercel 推出）。把任意 GitHub skill 仓库一键装进 Claude Code / Cursor / Copilot / Cline 等 18+ AI agent。配套官方目录站 skills.sh（skill 排行榜 + 匿名安装量遥测）。注意与 vercel-labs/agent-skills（技能合集）区分：这个是安装工具本体。⚠️ 无 LICENSE。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "anchor": "skills__github-com-vercel-labs-skills"
+  },
+  {
     "name": "baoyu-skills",
     "owner": "JimLiu",
     "url": "https://github.com/JimLiu/baoyu-skills",
@@ -3322,7 +3339,7 @@
     "category": "Claude Code Skills",
     "subcategory": "Skill 市场 & 合集",
     "slug": "skills",
-    "description": "把完成的 Codex 工作流沉淀成 Skill — 面向 Codex 的轻量工具，把一次跑通的工作流程整理成可复用 skill。适合个人把高频操作从聊天记录里提炼出来，转成下一次可直接调用的操作手册。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "description": "把完成的 Codex 工作流沉淀成 Skill — 面向 Codex 的轻量工具，把一次跑通的工作流程整理成可复用 skill。适合个人把高频操作从聊天记录里提炼出来，转成下一次可直接调用的操作手册。",
     "addedAt": "2026-05-11T20:51:57+08:00",
     "anchor": "skills__github-com-emove-skillify-for-codex"
   },
@@ -3400,6 +3417,20 @@
     "description": "Claude Skills 专用市场。和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，和 SkillsMP 区别：SkillsMP 偏中文、SkillHub 偏英文社区。适合发现\"针对 Claude Code 优化的\"skill（如配套 hook / agent / slash command 整套配置）",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "skills__www-skillhub-club"
+  },
+  {
+    "name": "SkillsVote",
+    "owner": "",
+    "url": "https://skills.vote",
+    "stars": null,
+    "updated": null,
+    "lang": null,
+    "license": null,
+    "category": "Claude Code Skills",
+    "subcategory": "Skill 市场 & 合集",
+    "slug": "skills",
+    "description": "\"The Skills Engine for AI Agents\" — AI Agent skill 的发现 / 投票 / 检索引擎站，定位与 skills.sh / ClawHub / SkillsMP 同生态位（页面 JS 渲染，详细功能与运营方待进一步确认）。可作为发现可安装 skill 的又一补充入口",
+    "anchor": "skills__skills-vote"
   },
   {
     "name": "tavily-search",
