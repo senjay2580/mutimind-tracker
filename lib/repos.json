@@ -960,21 +960,6 @@
     "anchor": "auto-research__github-com-jarvis-xs-se-agent"
   },
   {
-    "name": "roubao",
-    "owner": "Turbo1123",
-    "url": "https://github.com/Turbo1123/roubao",
-    "stars": 2048,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "自动化 & 测试",
-    "subcategory": "",
-    "slug": "automation-testing",
-    "description": "基于视觉语言模型的 Android 自动化 Agent（MIT，Kotlin）。手机端 Computer-Use Agent — VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。Mobile-Agent / Auto-UI 同生态位",
-    "addedAt": "2026-05-09T19:43:23+08:00",
-    "anchor": "automation-testing__github-com-turbo1123-roubao"
-  },
-  {
     "name": "opencli",
     "owner": "jackwener",
     "url": "https://github.com/jackwener/opencli",
@@ -1375,9 +1360,24 @@
     "category": "桌面自动化",
     "subcategory": "",
     "slug": "desktop-automation",
-    "description": "桌面级 Computer-Use Agent — 对标 Anthropic Computer Use + OpenAI Operator，让 LLM 通过截屏 + 鼠标键盘控制操作真实桌面（Windows / macOS / Linux）。GUI Agent + 浏览器 use + 桌面 use 三合一，MCP 兼容可被 Claude Code / Cursor 调用。典型用例：自动跑桌面办公（填表 / 截屏 / 操作 SaaS）、不可 API 化软件的自动化。TurixAI 团队出品。 </div>",
+    "description": "桌面级 Computer-Use Agent — 对标 Anthropic Computer Use + OpenAI Operator，让 LLM 通过截屏 + 鼠标键盘控制操作真实桌面（Windows / macOS / Linux）。GUI Agent + 浏览器 use + 桌面 use 三合一，MCP 兼容可被 Claude Code / Cursor 调用。典型用例：自动跑桌面办公（填表 / 截屏 / 操作 SaaS）、不可 API 化软件的自动化。TurixAI 团队出品。",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "desktop-automation__github-com-turixai-turix-cua"
+  },
+  {
+    "name": "roubao",
+    "owner": "Turbo1123",
+    "url": "https://github.com/Turbo1123/roubao",
+    "stars": 2191,
+    "updated": "2026-01-08",
+    "lang": "Kotlin",
+    "license": "MIT",
+    "category": "桌面自动化",
+    "subcategory": "",
+    "slug": "desktop-automation",
+    "description": "基于视觉语言模型的 Android 自动化 Agent — 手机端 Computer-Use Agent：VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。 注意：⚠️ 2026-01 后未更新；仅 Android。 </div>",
+    "addedAt": "2026-05-09T19:43:23+08:00",
+    "anchor": "desktop-automation__github-com-turbo1123-roubao"
   },
   {
     "name": "stanfordnlp/dspy",
