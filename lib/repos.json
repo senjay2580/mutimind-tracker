@@ -475,7 +475,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "",
     "slug": "aggregation",
-    "description": "中国独立开发者项目列表 — 社区维护的清单，分享中国独立开发者都在做什么：网站 / App / 小程序 / 浏览器插件 / 开源项目等，每条带项目简介与链接。适合了解国内 indie 生态、找灵感、看同行在做什么。 </div>",
+    "description": "中国独立开发者项目列表 — 社区维护的清单，分享中国独立开发者都在做什么：网站 / App / 小程序 / 浏览器插件 / 开源项目等，每条带项目简介与链接。适合了解国内 indie 生态、找灵感、看同行在做什么。",
     "addedAt": "2026-05-18T18:58:43+08:00",
     "anchor": "aggregation__github-com-1c7-chinese-independent-developer"
   },
@@ -495,6 +495,20 @@
     "anchor": "aggregation__github-com-hesreallyhim-awesome-claude-code"
   },
   {
+    "name": "awesome-cto",
+    "owner": "kuchin",
+    "url": "https://github.com/kuchin/awesome-cto",
+    "stars": 34927,
+    "updated": "2026-03-02",
+    "lang": null,
+    "license": "CC0-1.0",
+    "category": "资源聚合 & 信息源",
+    "subcategory": "",
+    "slug": "aggregation",
+    "description": "CTO 资源精选清单 — 面向首席技术官（尤其创业公司 CTO）的精选、有观点的资源集：技术架构、工程管理、招聘面试、技术路线、决策原则。技术管理者最常被推荐的角色清单之一。",
+    "anchor": "aggregation__github-com-kuchin-awesome-cto"
+  },
+  {
     "name": "InvenTree",
     "owner": "inventree",
     "url": "https://github.com/inventree/InvenTree",
@@ -508,6 +522,34 @@
     "description": "开源库存管理系统（MIT，Python / Django）。面向中小制造业 / Maker / 实验室的开源 ERP 雏形：库存 / BOM / 工单 / 采购 / 仓位 / 条码扫描 / 报表。Django 后端 + Vue 前端 + REST API + 移动 App，自托管 Docker 一键起。可对接 KiCad（PCB BOM 自动导入）/ 3D 打印机 / 标签打印机。淘宝 ERP 月费的开源替代，尤其适合实物零件管理（电子工程师 / 工坊主）",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "aggregation__github-com-inventree-inventree"
+  },
+  {
+    "name": "awesome-ceo",
+    "owner": "kuchin",
+    "url": "https://github.com/kuchin/awesome-ceo",
+    "stars": 2379,
+    "updated": "2023-02-16",
+    "lang": null,
+    "license": "CC0-1.0",
+    "category": "资源聚合 & 信息源",
+    "subcategory": "",
+    "slug": "aggregation",
+    "description": "创业 CEO 资源精选清单 — 面向创业公司创始人与高增长公司领导者的精选资源：领导力、管理、决策、融资、创业方法论。与 awesome-cto 同作者的姊妹清单。⚠️ 2023-02 后未更新。",
+    "anchor": "aggregation__github-com-kuchin-awesome-ceo"
+  },
+  {
+    "name": "awesome-tpm",
+    "owner": "kuchin",
+    "url": "https://github.com/kuchin/awesome-tpm",
+    "stars": 300,
+    "updated": "2022-03-23",
+    "lang": null,
+    "license": "CC0-1.0",
+    "category": "资源聚合 & 信息源",
+    "subcategory": "",
+    "slug": "aggregation",
+    "description": "技术项目经理（TPM）资源精选清单 — 面向 Technical Program Manager 的精选资源：技术项目管理、路线规划、跨团队协作。kuchin 角色清单三件套之一。⚠️ 2022-03 后未更新。 </div>",
+    "anchor": "aggregation__github-com-kuchin-awesome-tpm"
   },
   {
     "name": "ai.hubtoday.app",
