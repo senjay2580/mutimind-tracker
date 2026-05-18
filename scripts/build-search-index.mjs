@@ -69,7 +69,9 @@ const files = readdirSync(TRACKER).filter((f) => f.endsWith('.mdx'))
 
 // Categories that can include arbitrary site URLs (not just GitHub repos).
 // For these slugs the parser accepts any http(s) URL.
-const SITE_SLUGS = new Set(['aggregation', 'cc-skills-marketplaces', 'free-apis-index'])
+const SITE_SLUGS = new Set(['aggregation', 'free-apis-index', 'skills'])
+// Slugs whose card-format (`## [...]`) entries are grouped by `### ` subheadings.
+const SUBCAT_CARD_SLUGS = new Set(['skills'])
 const ANY_URL_RE = /https?:\/\/[^\s|)\]'">]+/
 const GH_URL_RE = /https:\/\/github\.com\/[a-zA-Z0-9._/-]+/
 
@@ -174,6 +176,13 @@ for (const file of files) {
     const url = m[2].trim().replace(/[).,;]+$/, '')
     let body = m[3]
 
+    // For SUBCAT_CARD_SLUGS, a card inherits the nearest preceding `### ` heading.
+    let cardSub = ''
+    if (SUBCAT_CARD_SLUGS.has(slug)) {
+      const subsBefore = txt.slice(0, m.index).match(/^###\s+.+$/gm)
+      if (subsBefore) cardSub = subsBefore[subsBefore.length - 1].replace(/^###\s+/, '').trim()
+    }
+
     let stars = null
     let updated = null
     let lang = null
@@ -202,7 +211,7 @@ for (const file of files) {
       lang,
       license,
       category,
-      subcategory: '',
+      subcategory: cardSub,
       slug,
       description: stripMd(body).slice(0, 1200)
     })
@@ -276,12 +285,29 @@ for (const r of unique) {
   r.anchor = anchorOf(r.slug, r.url)
 }
 
-// Sort within each slug by stars desc (null at end)
+// Subcategory display order for SUBCAT_CARD_SLUGS = order of `### ` headings in
+// that slug's source file (so `### ` blocks render in document order).
+const subOrderBySlug = {}
+for (const slug of SUBCAT_CARD_SLUGS) {
+  try {
+    const t = readFileSync(resolve(TRACKER, `${slug}.mdx`), 'utf8')
+    subOrderBySlug[slug] = ['', ...[...t.matchAll(/^###\s+(.+?)\s*$/gm)].map((m) => m[1].trim())]
+  } catch {
+    subOrderBySlug[slug] = ['']
+  }
+}
+
+// Sort within each slug by stars desc (null at end). For SUBCAT_CARD_SLUGS,
+// keep `### ` subcategory blocks contiguous in heading order first.
 unique.sort((a, b) => {
   if (a.slug !== b.slug) return 0
-  const sa = a.stars ?? -1
-  const sb = b.stars ?? -1
-  return sb - sa
+  const order = subOrderBySlug[a.slug]
+  if (order) {
+    const sa = order.indexOf(a.subcategory || '')
+    const sb = order.indexOf(b.subcategory || '')
+    if (sa !== sb) return sa - sb
+  }
+  return (b.stars ?? -1) - (a.stars ?? -1)
 })
 
 mkdirSync(dirname(OUT), { recursive: true })
