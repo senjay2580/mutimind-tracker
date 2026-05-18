@@ -30,7 +30,8 @@ const titles: Record<string, string> = {
   'trend-signals': '趋势洞察 / 选题信号源',
   'network-tools': '网络工具',
   'software-collections': '软件集合',
-  'browser-automation': '浏览器自动化'
+  'browser-automation': '浏览器自动化',
+  'desktop-automation': '桌面自动化'
 }
 
 export default Object.fromEntries(

@@ -150,21 +150,6 @@
     "anchor": "agent-frameworks__github-com-multica-ai-multica"
   },
   {
-    "name": "cua",
-    "owner": "trycua",
-    "url": "https://github.com/trycua/cua",
-    "stars": 16722,
-    "updated": "2026-05-14",
-    "lang": "HTML",
-    "license": "MIT",
-    "category": "Agent 框架",
-    "subcategory": "",
-    "slug": "agent-frameworks",
-    "description": "一句话定位 — Computer-Use Agent 基础设施：给 AI 代理提供沙箱、SDK、桌面自动化和 benchmark，让代理能看屏幕、点按钮、打字并执行完整 GUI 工作流。项目拆成 Cua Driver、跨平台 sandbox API、CuaBot、Cua-Bench 和 Lume 等模块，覆盖 macOS / Linux / Windows 的桌面控制与评测。适合做浏览器自动化、桌面自动化、agent benchmark、GUI workflow 执行，更偏 agent infra / runtime / benchmark platform，不是普通用户装了就直接提效的插件。 亮点： - 面向 full desktop control 的开源 agent sandbox 与评测基础设施 - 覆盖 computer-use、desktop automation、virtualization、Windows sandbox 等完整链路 注意：偏底层基础设施和实验平台，上手成本高于普通 Agent 应用；macOS 相关能力会依赖 Apple Silicon / virtualization 生态。 </div>",
-    "addedAt": "2026-05-15T10:35:08+08:00",
-    "anchor": "agent-frameworks__github-com-trycua-cua"
-  },
-  {
     "name": "agency-agents-zh",
     "owner": "jnMetaCode",
     "url": "https://github.com/jnMetaCode/agency-agents-zh",
@@ -975,36 +960,6 @@
     "anchor": "auto-research__github-com-jarvis-xs-se-agent"
   },
   {
-    "name": "SeleniumBase",
-    "owner": "seleniumbase",
-    "url": "https://github.com/seleniumbase/SeleniumBase",
-    "stars": 12561,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "自动化 & 测试",
-    "subcategory": "",
-    "slug": "automation-testing",
-    "description": "浏览器自动化 + 测试 + 反检测绕过的瑞士军刀（MIT，Python）。对 Selenium / Playwright 的高级封装 — 同时支持两套底层，提供 pytest 集成 / API recorder / dashboard / 截图 diff / 性能基准。核心卖点：UC Mode（Undetected Chromedriver） 让浏览器自动化能绕过 Cloudflare / Datadome / hCaptcha 等反爬。端到端测试 + 数据爬取双场景，比纯 Selenium 易写 60%，比 Playwright 多了反检测能力",
-    "addedAt": "2026-05-09T19:43:23+08:00",
-    "anchor": "automation-testing__github-com-seleniumbase-seleniumbase"
-  },
-  {
-    "name": "TuriX-CUA",
-    "owner": "TurixAI",
-    "url": "https://github.com/TurixAI/TuriX-CUA",
-    "stars": 2095,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "自动化 & 测试",
-    "subcategory": "",
-    "slug": "automation-testing",
-    "description": "桌面级 Computer-Use Agent（MIT，Python）。对标 Anthropic Computer Use + OpenAI Operator — 让 LLM 通过截屏 + 鼠标键盘控制操作真实桌面（Windows / macOS / Linux）。GUI Agent + 浏览器 use + 桌面 use 三合一，MCP 兼容可被 Claude Code / Cursor 调用。典型用例：自动跑桌面办公（填表 / 截屏 / 操作 SaaS）、不可 API 化软件的自动化。TurixAI 团队出品",
-    "addedAt": "2026-05-09T19:43:23+08:00",
-    "anchor": "automation-testing__github-com-turixai-turix-cua"
-  },
-  {
     "name": "roubao",
     "owner": "Turbo1123",
     "url": "https://github.com/Turbo1123/roubao",
@@ -1031,6 +986,7 @@
     "subcategory": "OpenCLI 生态",
     "slug": "browser-automation",
     "description": "把任意网站/工具变成 CLI + 让 AI agent 驱动你已登录的浏览器 — 通用 CLI Hub 与 AI-native runtime。三种自动化合一：① 内置 100+ 站点适配器（B站/知乎/小红书/Reddit/HackerNews/Twitter 等）；② 让 AI agent 通过你已登录的 Chrome 实时操作任意网站（导航/填表/点击/抽取）；③ 用 opencli browser + opencli-adapter-author skill 端到端写新适配器。也能当 CLI Hub 纳管 gh/docker/wx 等本地工具，并通过 CDP 控制 Cursor/Codex/ChatGPT 等 Electron 桌面应用。 能做： - 实时浏览器自动化 —— 凭证留在浏览器，运行时零 LLM 成本（确定性输出、不烧 token） - 100+ 内置适配器 + 外部 CLI passthrough + Electron 桌面应用控制 - 多 Chrome profile 路由（--profile）；AI agent 经 npx skills add jackwener/opencli 装配套 skill 使用 能力边界 ⚠️： - 强依赖 Browser Bridge 浏览器扩展 + Chrome/Chromium —— 没装扩展，浏览器类命令全部失效 - 需 Node.js ≥ 21 - 依赖你已登录的浏览器会话 —— 它不替你登录、不过验证码，凭证管理是你自己的事 - 网站改版会让适配器失效，需 opencli-autofix skill 修复 - 它是接口层 / runtime，不是爬虫框架本身；浏览器命令\"设计给 AI agent 用，非手动跑\"",
+    "addedAt": "2026-05-18T20:50:17+08:00",
     "anchor": "browser-automation__github-com-jackwener-opencli"
   },
   {
@@ -1044,8 +1000,39 @@
     "category": "浏览器自动化",
     "subcategory": "OpenCLI 生态",
     "slug": "browser-automation",
-    "description": "OpenCLI 插件 —— 批量归档微信公众号合集 — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 opencli weixin download），生成带本地路径的 Markdown 索引文件。支持增量下载（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：opencli plugin install github:SlowGrowth1314/opencli-weixin-album。 注意：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。 </div>",
+    "description": "OpenCLI 插件 —— 批量归档微信公众号合集 — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 opencli weixin download），生成带本地路径的 Markdown 索引文件。支持增量下载（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：opencli plugin install github:SlowGrowth1314/opencli-weixin-album。 注意：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。 ### 通用 Web 操控",
+    "addedAt": "2026-05-18T20:50:17+08:00",
     "anchor": "browser-automation__github-com-slowgrowth1314-opencli-weixin-album"
+  },
+  {
+    "name": "page-agent",
+    "owner": "alibaba",
+    "url": "https://github.com/alibaba/page-agent",
+    "stars": 17917,
+    "updated": "2026-05-11",
+    "lang": "TypeScript",
+    "license": "MIT",
+    "category": "浏览器自动化",
+    "subcategory": "通用 Web 操控",
+    "slug": "browser-automation",
+    "description": "页面内嵌 GUI Agent — JS 在页面里直接控制网页 — 自然语言操作网页 UI。和 browser-use 对比：page-agent 是页面内嵌（agent 跑在被控网页里），browser-use 是外部工具调用浏览器。适合给已有产品加内置 AI 操作员。",
+    "addedAt": "2026-05-11T21:05:35+08:00",
+    "anchor": "browser-automation__github-com-alibaba-page-agent"
+  },
+  {
+    "name": "SeleniumBase",
+    "owner": "seleniumbase",
+    "url": "https://github.com/seleniumbase/SeleniumBase",
+    "stars": 12702,
+    "updated": "2026-05-18",
+    "lang": "Python",
+    "license": "MIT",
+    "category": "浏览器自动化",
+    "subcategory": "通用 Web 操控",
+    "slug": "browser-automation",
+    "description": "浏览器自动化 + 测试 + 反检测绕过的瑞士军刀 — 对 Selenium / Playwright 的高级封装，同时支持两套底层，提供 pytest 集成 / API recorder / dashboard / 截图 diff / 性能基准。核心卖点 UC Mode（Undetected Chromedriver） 让浏览器自动化能绕过 Cloudflare / Datadome / hCaptcha 等反爬。端到端测试 + 数据爬取双场景，比纯 Selenium 易写、比 Playwright 多反检测能力。 </div>",
+    "addedAt": "2026-05-09T19:43:23+08:00",
+    "anchor": "browser-automation__github-com-seleniumbase-seleniumbase"
   },
   {
     "name": "DevOps-Roadmap",
@@ -1361,6 +1348,36 @@
     "description": "AI Agent SDK 统一编排层（MIT，TypeScript）。给多个 Agent SDK（Anthropic / OpenAI / Vercel AI SDK）做统一编排：支持 intelligent fallback（一个失败自动切下一个）+ sub-agent 模式（主 Agent 调子 Agent）。适合 Node.js 应用想集成多 LLM provider 又懒得写胶水代码。早期项目，值得观察",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "cli-agent__github-com-d-kimuson-super-agent"
+  },
+  {
+    "name": "cua",
+    "owner": "trycua",
+    "url": "https://github.com/trycua/cua",
+    "stars": 16896,
+    "updated": "2026-05-18",
+    "lang": "HTML",
+    "license": "MIT",
+    "category": "桌面自动化",
+    "subcategory": "",
+    "slug": "desktop-automation",
+    "description": "Computer-Use Agent 基础设施 — 给 AI 代理提供沙箱、SDK、桌面自动化和 benchmark，让代理能看屏幕、点按钮、打字并执行完整 GUI 工作流。拆成 Cua Driver、跨平台 sandbox API、CuaBot、Cua-Bench、Lume 等模块，覆盖 macOS / Linux / Windows 的桌面控制与评测。偏 agent infra / runtime / benchmark 平台，不是装了就提效的普通插件。 注意：⚠️ 偏底层基础设施与实验平台，上手成本高于普通 Agent 应用；macOS 相关能力依赖 Apple Silicon / virtualization 生态。",
+    "addedAt": "2026-05-15T10:35:08+08:00",
+    "anchor": "desktop-automation__github-com-trycua-cua"
+  },
+  {
+    "name": "TuriX-CUA",
+    "owner": "TurixAI",
+    "url": "https://github.com/TurixAI/TuriX-CUA",
+    "stars": 2972,
+    "updated": "2026-05-18",
+    "lang": "Python",
+    "license": "MIT",
+    "category": "桌面自动化",
+    "subcategory": "",
+    "slug": "desktop-automation",
+    "description": "桌面级 Computer-Use Agent — 对标 Anthropic Computer Use + OpenAI Operator，让 LLM 通过截屏 + 鼠标键盘控制操作真实桌面（Windows / macOS / Linux）。GUI Agent + 浏览器 use + 桌面 use 三合一，MCP 兼容可被 Claude Code / Cursor 调用。典型用例：自动跑桌面办公（填表 / 截屏 / 操作 SaaS）、不可 API 化软件的自动化。TurixAI 团队出品。 </div>",
+    "addedAt": "2026-05-09T19:43:23+08:00",
+    "anchor": "desktop-automation__github-com-turixai-turix-cua"
   },
   {
     "name": "stanfordnlp/dspy",
@@ -4433,21 +4450,6 @@
     "description": "📦 整个 Git 仓库 → 单个 AI-friendly 文件（MIT，TypeScript）。喂代码库给 LLM 的标准工具：递归扫描 + .gitignore 过滤 + 按 token 数排序 + 输出 Markdown / XML / JSON 单文件。支持 Claude / ChatGPT / DeepSeek / Perplexity / Gemini / Llama / Grok 等所有主流 LLM 的格式优化。对比 git clone + cat：自动剔除 lock 文件 / 二进制 / 编译产物，token 友好。Code review / 大重构 / 让 LLM 理解整个项目时必备",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "vibe-coding__github-com-yamadashy-repomix"
-  },
-  {
-    "name": "page-agent (alibaba)",
-    "owner": "alibaba",
-    "url": "https://github.com/alibaba/page-agent",
-    "stars": 17737,
-    "updated": "2026-05-11",
-    "lang": "TypeScript",
-    "license": "MIT",
-    "category": "Vibe Coding & 开发工具",
-    "subcategory": "",
-    "slug": "vibe-coding",
-    "description": "页面内嵌 GUI Agent — JS 在页面里直接控制网页 — 自然语言操作网页 UI。和 browser-use 对比：page-agent 是页面内嵌（agent 跑在被控网页里），browser-use 是外部工具调用浏览器。适合给已有产品加内置 AI 操作员。",
-    "addedAt": "2026-05-11T21:05:35+08:00",
-    "anchor": "vibe-coding__github-com-alibaba-page-agent"
   },
   {
     "name": "huashu-design",
