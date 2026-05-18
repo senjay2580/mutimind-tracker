@@ -71,7 +71,7 @@ const files = readdirSync(TRACKER).filter((f) => f.endsWith('.mdx'))
 // For these slugs the parser accepts any http(s) URL.
 const SITE_SLUGS = new Set(['aggregation', 'free-apis-index', 'skills'])
 // Slugs whose card-format (`## [...]`) entries are grouped by `### ` subheadings.
-const SUBCAT_CARD_SLUGS = new Set(['skills'])
+const SUBCAT_CARD_SLUGS = new Set(['skills', 'browser-automation'])
 const ANY_URL_RE = /https?:\/\/[^\s|)\]'">]+/
 const GH_URL_RE = /https:\/\/github\.com\/[a-zA-Z0-9._/-]+/
 

@@ -1,0 +1,58 @@
+---
+title: "浏览器自动化"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# 浏览器自动化
+
+<RepoList slug="browser-automation" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
+
+### OpenCLI 生态
+
+## [opencli](https://github.com/jackwener/opencli)
+
+<RepoMeta
+  url="https://github.com/jackwener/opencli"
+  stars={21698}
+  updated="2026-05-18"
+  lang="JavaScript"
+  license="Apache-2.0"
+  tags={['cli-hub', 'browser-automation', 'ai-agent']}
+/>
+
+**把任意网站/工具变成 CLI + 让 AI agent 驱动你已登录的浏览器** — 通用 CLI Hub 与 AI-native runtime。三种自动化合一：① 内置 100+ 站点适配器（B站/知乎/小红书/Reddit/HackerNews/Twitter 等）；② 让 AI agent 通过你已登录的 Chrome 实时操作任意网站（导航/填表/点击/抽取）；③ 用 `opencli browser` + `opencli-adapter-author` skill 端到端写新适配器。也能当 CLI Hub 纳管 gh/docker/wx 等本地工具，并通过 CDP 控制 Cursor/Codex/ChatGPT 等 Electron 桌面应用。
+
+**能做**：
+- 实时浏览器自动化 —— 凭证留在浏览器，运行时**零 LLM 成本**（确定性输出、不烧 token）
+- 100+ 内置适配器 + 外部 CLI passthrough + Electron 桌面应用控制
+- 多 Chrome profile 路由（`--profile`）；AI agent 经 `npx skills add jackwener/opencli` 装配套 skill 使用
+
+**能力边界 ⚠️**：
+- **强依赖 Browser Bridge 浏览器扩展 + Chrome/Chromium** —— 没装扩展，浏览器类命令全部失效
+- 需 Node.js ≥ 21
+- 依赖你**已登录**的浏览器会话 —— 它不替你登录、不过验证码，凭证管理是你自己的事
+- 网站改版会让适配器失效，需 `opencli-autofix` skill 修复
+- 它是接口层 / runtime，不是爬虫框架本身；浏览器命令"设计给 AI agent 用，非手动跑"
+
+## [opencli-weixin-album](https://github.com/SlowGrowth1314/opencli-weixin-album)
+
+<RepoMeta
+  url="https://github.com/SlowGrowth1314/opencli-weixin-album"
+  stars={173}
+  updated="2026-05-16"
+  lang="TypeScript"
+  license="MIT"
+  tags={['opencli-plugin', 'wechat', 'archiving']}
+/>
+
+**OpenCLI 插件 —— 批量归档微信公众号合集** — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 `opencli weixin download`），生成带本地路径的 Markdown 索引文件。支持**增量下载**（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：`opencli plugin install github:SlowGrowth1314/opencli-weixin-album`。
+
+**注意**：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。
+
+</div>

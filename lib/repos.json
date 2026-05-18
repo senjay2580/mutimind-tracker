@@ -150,21 +150,6 @@
     "anchor": "agent-frameworks__github-com-multica-ai-multica"
   },
   {
-    "name": "OpenCLI",
-    "owner": "jackwener",
-    "url": "https://github.com/jackwener/OpenCLI",
-    "stars": 18570,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "Agent 框架",
-    "subcategory": "",
-    "slug": "agent-frameworks",
-    "description": "任意网站/应用 → CLI 通用接口（JavaScript）。CLI 命令 + Chrome 扩展 + AI-native runtime，把任何网站、Electron 应用或本地二进制变成标准化命令行接口。通过统一 AGENT.md 让 AI agent 自动 discover / learn / execute 工具，不用配 API Key。让 AI 像真人一样操作网页搜信息。vs AutoCLI-skill（680 stars）：OpenCLI 是更大、更通用的协议层（任意工具皆可纳入）；AutoCLI 是预配置好 55+ 主流平台、开箱即用。前者灵活后者方便",
-    "addedAt": "2026-05-09T19:43:23+08:00",
-    "anchor": "agent-frameworks__github-com-jackwener-opencli"
-  },
-  {
     "name": "cua",
     "owner": "trycua",
     "url": "https://github.com/trycua/cua",
@@ -1033,6 +1018,34 @@
     "description": "基于视觉语言模型的 Android 自动化 Agent（MIT，Kotlin）。手机端 Computer-Use Agent — VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。Mobile-Agent / Auto-UI 同生态位",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "automation-testing__github-com-turbo1123-roubao"
+  },
+  {
+    "name": "opencli",
+    "owner": "jackwener",
+    "url": "https://github.com/jackwener/opencli",
+    "stars": 21698,
+    "updated": "2026-05-18",
+    "lang": "JavaScript",
+    "license": "Apache-2.0",
+    "category": "浏览器自动化",
+    "subcategory": "OpenCLI 生态",
+    "slug": "browser-automation",
+    "description": "把任意网站/工具变成 CLI + 让 AI agent 驱动你已登录的浏览器 — 通用 CLI Hub 与 AI-native runtime。三种自动化合一：① 内置 100+ 站点适配器（B站/知乎/小红书/Reddit/HackerNews/Twitter 等）；② 让 AI agent 通过你已登录的 Chrome 实时操作任意网站（导航/填表/点击/抽取）；③ 用 opencli browser + opencli-adapter-author skill 端到端写新适配器。也能当 CLI Hub 纳管 gh/docker/wx 等本地工具，并通过 CDP 控制 Cursor/Codex/ChatGPT 等 Electron 桌面应用。 能做： - 实时浏览器自动化 —— 凭证留在浏览器，运行时零 LLM 成本（确定性输出、不烧 token） - 100+ 内置适配器 + 外部 CLI passthrough + Electron 桌面应用控制 - 多 Chrome profile 路由（--profile）；AI agent 经 npx skills add jackwener/opencli 装配套 skill 使用 能力边界 ⚠️： - 强依赖 Browser Bridge 浏览器扩展 + Chrome/Chromium —— 没装扩展，浏览器类命令全部失效 - 需 Node.js ≥ 21 - 依赖你已登录的浏览器会话 —— 它不替你登录、不过验证码，凭证管理是你自己的事 - 网站改版会让适配器失效，需 opencli-autofix skill 修复 - 它是接口层 / runtime，不是爬虫框架本身；浏览器命令\"设计给 AI agent 用，非手动跑\"",
+    "anchor": "browser-automation__github-com-jackwener-opencli"
+  },
+  {
+    "name": "opencli-weixin-album",
+    "owner": "SlowGrowth1314",
+    "url": "https://github.com/SlowGrowth1314/opencli-weixin-album",
+    "stars": 173,
+    "updated": "2026-05-16",
+    "lang": "TypeScript",
+    "license": "MIT",
+    "category": "浏览器自动化",
+    "subcategory": "OpenCLI 生态",
+    "slug": "browser-automation",
+    "description": "OpenCLI 插件 —— 批量归档微信公众号合集 — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 opencli weixin download），生成带本地路径的 Markdown 索引文件。支持增量下载（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：opencli plugin install github:SlowGrowth1314/opencli-weixin-album。 注意：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。 </div>",
+    "anchor": "browser-automation__github-com-slowgrowth1314-opencli-weixin-album"
   },
   {
     "name": "DevOps-Roadmap",
@@ -3296,6 +3309,7 @@
     "subcategory": "Skill 市场 & 合集",
     "slug": "skills",
     "description": "Agent 原生的 skill 推荐引擎 — MemTensor（MemOS / openmem 团队）出品，官网 skills.vote。理念是\"告别硬编码、臃肿的 skill 列表\"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 SKILL.md 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于\"动态按需推荐\"而非\"列表浏览\"。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "addedAt": "2026-05-18T19:47:53+08:00",
     "anchor": "skills__github-com-memtensor-skills-vote"
   },
   {
