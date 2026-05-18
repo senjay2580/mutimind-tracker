@@ -30,7 +30,8 @@ const titles: Record<string, string> = {
   'dspy': 'DSPy',
   'prompt-engineering': 'Prompt 工程 & AI 资源精选',
   'info-sources': '高质量信息源 / RSS / 博客',
-  'trend-signals': '趋势洞察 / 选题信号源'
+  'trend-signals': '趋势洞察 / 选题信号源',
+  'network-tools': '网络工具'
 }
 
 export default Object.fromEntries(

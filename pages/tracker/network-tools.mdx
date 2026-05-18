@@ -1,0 +1,34 @@
+---
+title: "网络工具"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# 网络工具
+
+<RepoList slug="network-tools" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+
+<div className="mm-source-data">
+
+## [hysteria](https://github.com/apernet/hysteria)
+
+<RepoMeta
+  url="https://github.com/apernet/hysteria"
+  stars={21168}
+  updated="2026-05-16"
+  lang="Go"
+  license="MIT"
+  tags={['proxy', 'quic', 'anti-censorship']}
+/>
+
+**基于 QUIC 的抗审查代理工具** — Hysteria 2 专为**高丢包、高延迟、被限速的劣质网络**设计。用自研的暴力拥塞控制算法 `Brutal`，在丢包严重的链路上仍能跑满带宽；流量伪装成标准 HTTP/3，抗 DPI 识别能力较强。定位与 V2Ray、Xray、sing-box 同类。
+
+**亮点**：
+- 劣质网络下吞吐显著优于传统 TCP 代理
+- QUIC / HTTP/3 伪装，被动探测识别难度高
+- 支持 SOCKS5、HTTP proxy、TUN、relay 多种接入方式
+
+</div>
