@@ -3085,7 +3085,8 @@
     "category": "Claude Code Skills",
     "subcategory": "Skill 市场 & 合集",
     "slug": "skills",
-    "description": "Vercel 开放 Agent Skills 工具 — npx skills — 整个 npx skills add <owner>/<repo> 安装体系的官方 CLI 本体（2026-01 由 Vercel 推出）。把任意 GitHub skill 仓库一键装进 Claude Code / Cursor / Copilot / Cline 等 18+ AI agent。配套官方目录站 skills.sh（skill 排行榜 + 匿名安装量遥测）。注意与 vercel-labs/agent-skills（技能合集）区分：这个是安装工具本体。⚠️ 无 LICENSE。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "description": "Vercel 开放 Agent Skills 工具 — npx skills — 整个 npx skills add <owner>/<repo> 安装体系的官方 CLI 本体（2026-01 由 Vercel 推出）。把任意 GitHub skill 仓库一键装进 Claude Code / Cursor / Copilot / Cline 等 18+ AI agent。配套官方目录站 skills.sh（skill 排行榜 + 匿名安装量遥测）。注意与 vercel-labs/agent-skills（技能合集）区分：这个是安装工具本体。⚠️ 无 LICENSE。",
+    "addedAt": "2026-05-18T19:45:25+08:00",
     "anchor": "skills__github-com-vercel-labs-skills"
   },
   {
@@ -3284,6 +3285,20 @@
     "anchor": "skills__github-com-virgiliojr94-book-to-skill"
   },
   {
+    "name": "skills-vote",
+    "owner": "MemTensor",
+    "url": "https://github.com/MemTensor/skills-vote",
+    "stars": 200,
+    "updated": "2026-05-18",
+    "lang": "Python",
+    "license": "MIT",
+    "category": "Claude Code Skills",
+    "subcategory": "Skill 市场 & 合集",
+    "slug": "skills",
+    "description": "Agent 原生的 skill 推荐引擎 — MemTensor（MemOS / openmem 团队）出品，官网 skills.vote。理念是\"告别硬编码、臃肿的 skill 列表\"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 SKILL.md 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于\"动态按需推荐\"而非\"列表浏览\"。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "anchor": "skills__github-com-memtensor-skills-vote"
+  },
+  {
     "name": "skills-link",
     "owner": "shanliuling",
     "url": "https://github.com/shanliuling/skills-link",
@@ -3417,20 +3432,6 @@
     "description": "Claude Skills 专用市场。和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，和 SkillsMP 区别：SkillsMP 偏中文、SkillHub 偏英文社区。适合发现\"针对 Claude Code 优化的\"skill（如配套 hook / agent / slash command 整套配置）",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "skills__www-skillhub-club"
-  },
-  {
-    "name": "SkillsVote",
-    "owner": "",
-    "url": "https://skills.vote",
-    "stars": null,
-    "updated": null,
-    "lang": null,
-    "license": null,
-    "category": "Claude Code Skills",
-    "subcategory": "Skill 市场 & 合集",
-    "slug": "skills",
-    "description": "\"The Skills Engine for AI Agents\" — AI Agent skill 的发现 / 投票 / 检索引擎站，定位与 skills.sh / ClawHub / SkillsMP 同生态位（页面 JS 渲染，详细功能与运营方待进一步确认）。可作为发现可安装 skill 的又一补充入口",
-    "anchor": "skills__skills-vote"
   },
   {
     "name": "tavily-search",

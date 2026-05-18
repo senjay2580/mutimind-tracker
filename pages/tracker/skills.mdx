@@ -23,7 +23,6 @@ import RepoMeta from '../../components/RepoMeta'
 | SkillsMP 中文站 | https://skillsmp.com/zh | Skill 市场 | 中文 AI Skills marketplace，面向中文用户做 skill 发现、复制、安装和分享 |
 | SkillStore | https://skillstore.space | Skill 市场 | 又一个 Agent Skill 市场，适合作为 skills.sh / ClawHub / SkillsMP 之外的补充入口横向比较 skill 资源 |
 | SkillHub | https://www.skillhub.club | Skill 市场 | **Claude Skills 专用市场**。**和 SkillsMP / ClawHub / SkillStore 同生态位但更聚焦 Claude Code 而非泛 Agent**。提供 skill 浏览 / 一键安装 / 作者主页 / 评分排行，**和 SkillsMP 区别**：SkillsMP 偏中文、SkillHub 偏英文社区。**适合发现"针对 Claude Code 优化的"skill**（如配套 hook / agent / slash command 整套配置） |
-| SkillsVote | https://skills.vote | Skill 引擎 | **"The Skills Engine for AI Agents"** — AI Agent skill 的发现 / 投票 / 检索引擎站，定位与 skills.sh / ClawHub / SkillsMP 同生态位（页面 JS 渲染，详细功能与运营方待进一步确认）。可作为发现可安装 skill 的又一补充入口 |
 | tavily-search | https://clawhub.ai/matthew77/liang=tavily-search | ClawHub Skill | **Tavily AI 搜索 skill 包**（ClawHub 发布）。**给 Agent 加 Tavily Search 能力的一键安装包**——免去手动配 API key / 写 tool definition / 处理 JSON parse 各种麻烦，装上即可让 Agent 调 Tavily 做研究 / 检索 / 实时网页问答。**Deep Research 类工作流必备**，对比裸调 API：封装好提示词 + 错误处理 + 结果格式化 |
 | youtube-watcher | https://clawhub.ai/michaelgathara/youtube-watcher | ClawHub Skill | **YouTube 频道 / 视频自动化追踪 skill**。**核心能力**：监控指定频道新视频 → 自动转录字幕 → LLM 摘要 → 提取关键时间戳 → 跟踪历史输出。**适合**做"AI 自动给我每天看完的视频写摘要" / 竞品频道监控 / 跨频道选题分析。装到 Agent 后无需手动开 YouTube |
 | summarize | https://clawhub.ai/steipete/summarize | ClawHub Skill | **通用结构化摘要 skill**（Peter Steinberger 出品）。**和 LLM 默认"总结一下"区别**：按预定义结构（要点 / 关键引用 / 行动项 / 反对意见 / 三句话版本）输出，**质量稳定可控**。适合把文章 / 会议纪要 / 网页 / 长文 PDF 压成可复用的结构化笔记，**接入 Obsidian / Notion / Roam 工作流**典型用法 |
@@ -307,6 +306,19 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **Vercel 开放 Agent Skills 工具 — `npx skills`** — 整个 `npx skills add <owner>/<repo>` 安装体系的官方 CLI 本体（2026-01 由 Vercel 推出）。把任意 GitHub skill 仓库一键装进 Claude Code / Cursor / Copilot / Cline 等 18+ AI agent。配套官方目录站 [skills.sh](https://skills.sh)（skill 排行榜 + 匿名安装量遥测）。注意与 `vercel-labs/agent-skills`（技能合集）区分：这个是**安装工具本体**。⚠️ 无 LICENSE。
+
+## [skills-vote](https://github.com/MemTensor/skills-vote)
+
+<RepoMeta
+  url="https://github.com/MemTensor/skills-vote"
+  stars={200}
+  updated="2026-05-18"
+  lang="Python"
+  license="MIT"
+  tags={['skill-recommendation', 'agent-native', 'memtensor']}
+/>
+
+**Agent 原生的 skill 推荐引擎** — MemTensor（MemOS / openmem 团队）出品，官网 [skills.vote](https://skills.vote)。理念是"告别硬编码、臃肿的 skill 列表"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 `SKILL.md` 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于"动态按需推荐"而非"列表浏览"。
 
 ### 人物 / 蒸馏 Skill
 
