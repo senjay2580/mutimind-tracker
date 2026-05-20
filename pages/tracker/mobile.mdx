@@ -211,4 +211,25 @@ import RepoMeta from '../../components/RepoMeta'
 
 **多台电脑共享一套键盘鼠标** — Barrier / Synergy 的开源接班人。鼠标移到屏幕边缘自动切换到另一台设备，剪贴板自动跨设备同步。主要场景是 PC↔PC，但实验性支持 Android 端（需 USB OTG）。**对于 PC↔Phone 协同**：作为 ClipSync 之外的剪贴板 + 鼠标切换补充，适合多屏工作流。
 
+## [ntfy](https://github.com/binwiederhier/ntfy)
+
+<RepoMeta
+  url="https://github.com/binwiederhier/ntfy"
+  stars={30275}
+  updated="2026-05-18"
+  lang="Go"
+  license="Apache-2.0"
+  tags={['push-notification', 'self-hosted', 'http-api', 'cross-device']}
+/>
+
+**最简化的跨设备推送方案** — 30k★。**任何脚本一行 `curl -d "hello" ntfy.sh/your-topic` → 手机弹通知**。HTTP PUT/POST 触发，支持文本 / 图片 / 优先级 / 点击 action / 标签。一行 Docker 自托管，配 Tailscale 私有，**完全替代 Pushbullet / Firebase**。
+
+**典型用法**：
+- PC 编译/部署完成 → `curl` 一下 → 手机收到通知
+- ClipSync 出错 → ntfy 推到手机 + PC 双端
+- 监控脚本 / Cron job 失败 → 立刻推送
+- HA automation 出口（替代 HA 内置 notify）
+
+**对比 HA Companion**：ntfy 是"轻量直推"，5 分钟搭好；HA 是"自动化大脑"，前期重但功能远超。**ntfy 适合"只想 PC 推手机"的极简场景**，HA 适合"复杂双向自动化"。
+
 </div>
