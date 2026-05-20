@@ -75,4 +75,140 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 无开源 license，商用 / 二次分发需自行确认授权。
 
+## [scrcpy](https://github.com/Genymobile/scrcpy)
+
+<RepoMeta
+  url="https://github.com/Genymobile/scrcpy"
+  stars={142057}
+  updated="2026-05-19"
+  lang="C"
+  license="Apache-2.0"
+  tags={['android', 'mirror', 'remote-control', 'screen-cast']}
+/>
+
+**PC 端镜像 + 控制 Android 屏幕的开源神器** — 142k★ 的黄金标准。USB / 无线 ADB 连接 → 在 PC 上看手机屏幕 + 用鼠标键盘操作 + 双向剪贴板同步 + 拖拽文件互传 + 录屏 + 截图。原生 C / SDL2，延迟极低，无需 root，纯 ADB 协议。生态完整：配套 [`NetrisTV/ws-scrcpy`](https://github.com/NetrisTV/ws-scrcpy) 浏览器版，可远程访问。
+
+**注意**：⚠️ HyperOS 3 / MIUI 14+ 上 PC 端键鼠点击手机可能被 `INJECT_EVENTS` 权限拦，镜像 + 文件 + 剪贴板仍正常 — 这是小米 ROM 加固，跟项目无关。
+
+## [LocalSend](https://github.com/localsend/localsend)
+
+<RepoMeta
+  url="https://github.com/localsend/localsend"
+  stars={81636}
+  updated="2026-04-30"
+  lang="Dart"
+  license="Apache-2.0"
+  tags={['airdrop-alternative', 'cross-platform', 'lan', 'file-share']}
+/>
+
+**AirDrop 跨平台开源平替** — 81k★。Win / macOS / Linux / Android / iOS 任意方向无线传文件 + 文字。**纯局域网 / Tailscale 直连**，不经过任何云，无大小限制。接收端后台静默跑（几 MB 内存），发送端 3 tap 完成（系统分享菜单选 LocalSend → 选目标设备）。**0 配置，装上即用**。
+
+**配合 Tailscale**：跨地理位置传文件，跨网穿透零摩擦。
+
+## [Syncthing](https://github.com/syncthing/syncthing)
+
+<RepoMeta
+  url="https://github.com/syncthing/syncthing"
+  stars={84230}
+  updated="2026-05-19"
+  lang="Go"
+  license="MPL-2.0"
+  tags={['continuous-sync', 'p2p', 'cross-platform', 'encrypted']}
+/>
+
+**文件夹双向后台自动同步** — 84k★。**装一次，永远忘了它** — 手机相册拍照立刻同步到 PC，PC 笔记改了立刻同步到手机，完全 P2P 端到端加密，无需任何云服务器。配合 Tailscale 走加密 mesh，跨网完美。**这是 LocalSend / 微信 都做不到的"被动持续同步"能力**，典型场景：相册自动备份、跨设备项目文件夹、Obsidian 笔记仓库。
+
+## [PairDrop](https://github.com/schlagmichdoch/PairDrop)
+
+<RepoMeta
+  url="https://github.com/schlagmichdoch/PairDrop"
+  stars={10378}
+  updated="2026-04-22"
+  lang="JavaScript"
+  license="GPL-3.0"
+  tags={['airdrop-alternative', 'web', 'p2p', 'self-hosted']}
+/>
+
+**SnapDrop 活跃 fork（SnapDrop 2025-02 后停更）** — Web 版 AirDrop，**任意浏览器对传文件**，无需装 APP。可一行 Docker 自托管，配 Tailscale 私有部署。比 LocalSend 更轻 — 适合临时跨设备传一次性文件的场景。
+
+## [CrossPaste](https://github.com/CrossPaste/crosspaste-desktop)
+
+<RepoMeta
+  url="https://github.com/CrossPaste/crosspaste-desktop"
+  stars={2117}
+  updated="2026-05-20"
+  lang="Kotlin"
+  license="AGPL-3.0"
+  tags={['clipboard', 'cross-platform', 'paste-history']}
+/>
+
+**通用跨设备剪贴板** — Android + Win + Mac + Linux，Kotlin Multiplatform 实现，带剪贴板历史 + 设备发现 + 加密同步。**自写 ClipSync 同类参考**，如果不想自己维护 ClipSync，这是最完整的开源替代。**注意**：AGPL-3.0，商用闭源场景慎用。
+
+## [SyncClipboard](https://github.com/Jeric-X/SyncClipboard)
+
+<RepoMeta
+  url="https://github.com/Jeric-X/SyncClipboard"
+  stars={4465}
+  updated="2026-05-04"
+  lang="C#"
+  license="MIT"
+  tags={['clipboard', 'chinese', 'history', 'self-hosted']}
+/>
+
+**中文向跨平台剪贴板同步 + 历史管理** — Win / macOS / Linux / Android / iOS。**支持自建服务器**（WebDAV / 本地 HTTP），不依赖第三方云。MIT 友好商用。**ClipSync 的中文同款方案**，如果不想自托管也提供官方服务。
+
+## [KDE Connect](https://github.com/KDE/kdeconnect-android)
+
+<RepoMeta
+  url="https://github.com/KDE/kdeconnect-android"
+  stars={1355}
+  updated="2026-05-20"
+  lang="Kotlin"
+  license="GPL-2.0"
+  tags={['notification-sync', 'sms-bridge', 'remote-input', 'all-in-one']}
+/>
+
+**老牌 PC↔Phone 协同瑞士军刀** — 一个 APP 解决：**通知镜像 / SMS 桥 / 文件传输 / 剪贴板 / 媒体控制 / 远程鼠键 / 找回手机 / 电池状态 / 输入框远程打字**。配套桌面端 [`KDE/kdeconnect-kde`](https://github.com/KDE/kdeconnect-kde)（3.7k★，C++，Win/Linux/Mac 都支持）。**注意**：MIUI / HyperOS 上剪贴板和部分自启动功能受限，但 70% 功能仍可跑。Apple Continuity 的开源 + 跨厂商对标。
+
+## [Home Assistant Companion](https://github.com/home-assistant/android)
+
+<RepoMeta
+  url="https://github.com/home-assistant/android"
+  stars={3607}
+  updated="2026-05-20"
+  lang="Kotlin"
+  license="Apache-2.0"
+  tags={['ha-companion', 'automation', 'sensor', 'smart-home']}
+/>
+
+**把手机变成 Home Assistant 的传感器节点** — 电池 / GPS / WiFi / 蓝牙 / 通知 / 步数 / 加速度 / 解锁状态 等数十种传感器全部暴露给 HA。配合 HA automation 5 行 YAML 实现："手机电池低 → PC 弹通知"、"GPS 离家 → 自动锁 PC"、"WiFi 切换到家 → 启动 NAS"。**PC↔Phone 协同的"自动化大脑"**，需先部署 HA 服务端（Docker 一行）。
+
+**注意**：⚠️ 默认走 Firebase 推送（国内不通），但配 WebSocket + Tailscale 完全绕过，本地推送延迟 < 1 秒。
+
+## [ws-scrcpy](https://github.com/NetrisTV/ws-scrcpy)
+
+<RepoMeta
+  url="https://github.com/NetrisTV/ws-scrcpy"
+  stars={2416}
+  updated="2026-02-13"
+  lang="TypeScript"
+  license="MIT"
+  tags={['scrcpy', 'browser', 'remote', 'web-client']}
+/>
+
+**scrcpy 的浏览器版** — 不用装客户端，任意浏览器即可看 + 控手机屏幕。基于 ws + WebRTC，可部署到自己服务器，配 Tailscale 公网即可访问。**场景**：出门用 iPad 浏览器远程控家里 Android 手机；在多台 PC 间无需重复装 scrcpy 客户端。
+
+## [Input Leap](https://github.com/input-leap/input-leap)
+
+<RepoMeta
+  url="https://github.com/input-leap/input-leap"
+  stars={7951}
+  updated="2025-12-01"
+  lang="C++"
+  license="GPL-2.0"
+  tags={['kvm', 'shared-keyboard-mouse', 'cross-platform']}
+/>
+
+**多台电脑共享一套键盘鼠标** — Barrier / Synergy 的开源接班人。鼠标移到屏幕边缘自动切换到另一台设备，剪贴板自动跨设备同步。主要场景是 PC↔PC，但实验性支持 Android 端（需 USB OTG）。**对于 PC↔Phone 协同**：作为 ClipSync 之外的剪贴板 + 鼠标切换补充，适合多屏工作流。
+
 </div>
