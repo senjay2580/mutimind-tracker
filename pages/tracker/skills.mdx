@@ -29,6 +29,7 @@ import RepoMeta from '../../components/RepoMeta'
 | humanizer | https://clawhub.ai/biostartechnology/humanizer | ClawHub Skill | **AI 文本去机器味改写 skill**。**专治"AI 生成味"** — 把 ChatGPT / Claude 输出的"作为一个 AI 助手 / 总而言之 / 综上所述"等模式化语言改写得更自然、更口语、更像真人写的。**和 AIGC 降重区别**：humanizer 目标是阅读流畅而非过 AI 检测。**适合内容创作者**让 AI 草稿不那么"AI 味" |
 | xiucheng-self-improving-agent | https://clawhub.ai/xiucheng/xiucheng-self-improving-agent | ClawHub Skill | **自我改进型 Agent skill**（秀程出品）。**核心循环：执行 → 反馈 → 反思 → 改写 → 迭代**。让 Agent 在执行任务后**自动检视自己的输出**，识别不足并重写——而非一次性产出就完事。**适合需要高质量输出但单次生成不够好的场景**（深度研究 / 复杂代码 / 长文创作），对标 Reflexion / Self-Refine 论文方法的工程落地 |
 | find-skills-skill | https://clawhub.ai/fangkelvin/find-skills-skill | ClawHub Skill | "找 skill 的 skill"，用于在 skill 市场或仓库中发现适合当前任务的 Agent skill |
+| browse.sh | https://browse.sh | Skill 目录 + CLI | **Browserbase 出品的 "Browser CLI + open web skill catalog for agents"**。一站融合：① `browse` CLI（`npm install -g browse`）让 agent 在命令行操作浏览器；② skill marketplace 浏览 / 安装社区 browser skill；③ 后端走 Browserbase 云浏览器（免费 60min/月，超出 ~$0.10/min）。**和 [browserbase/skills](https://github.com/browserbase/skills) 互补**：那个是 GitHub 上 10 个具体 skill 包，browse.sh 是发现 + 装的入口。**典型用法**：Claude Code 里 `npx skills add ...` 一键拉 skill，配 Browserbase 处理反爬强站点（Cloudflare/Datadome）。⚠️ 核心 skill 走付费云，纯本地需求建议用 x-browser-intel 替代 |
 
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
