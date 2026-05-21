@@ -31,4 +31,28 @@ import RepoMeta from '../../components/RepoMeta'
 - QUIC / HTTP/3 伪装，被动探测识别难度高
 - 支持 SOCKS5、HTTP proxy、TUN、relay 多种接入方式
 
+## [zmap](https://github.com/zmap/zmap)
+
+<RepoMeta
+  url="https://github.com/zmap/zmap"
+  stars={6208}
+  updated="2026-05-21"
+  lang="C"
+  license="Apache-2.0"
+  tags={['internet-scanning', 'port-scanner', 'security-research', 'stateless']}
+/>
+
+**互联网级单包端口扫描器** — 密歇根大学 Halderman 团队出品，2013 USENIX Security 论文级里程碑工具。**stateless single-packet 设计**：千兆网卡 **45 分钟扫完整个 IPv4 公网** 一个端口，10G + netmap 仅 5 分钟。支持 TCP SYN / ICMP / DNS / UPnP / BACNET / UDP 探针。**和 nmap 方向不同**：nmap 深扫单主机，ZMap 浅扫全互联网；要拿 banner / TLS 证书必须配套 [ZGrab2](https://github.com/zmap/zgrab2)。
+
+**配套生态**：Censys.io 商业全网测量服务 + 国内外安全研究 / 红队侦察 / 学术测量必备。
+
+**亮点**：
+- 全网级扫描速度，把"互联网测量"从理论变日常
+- 用户态网络栈（netmap / PF_RING）绕过内核
+- 多探针模块化，可写自定义 UDP payload
+
+**注意**：⚠️ 未经授权扫别人 IP = 违法（《网络安全法》/ CFAA / GDPR）；公网扫描会被运营商和 CDN 风控立即记下；要 root；Windows 原生不支持，需 Linux/macOS/BSD/WSL2。
+
+**Fork**：[senjay2580/zmap](https://github.com/senjay2580/zmap)（已 fork 备份）
+
 </div>
