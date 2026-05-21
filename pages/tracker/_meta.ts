@@ -4,6 +4,7 @@ const full = { theme: { layout: 'full' as const, toc: false } }
 const titles: Record<string, string> = {
   'netdisk-tools': '网盘 & 下载工具',
   'ai-llm-core': 'AI/LLM 核心项目',
+  'models': '开源模型大全',
   'auto-research': '自主研究 & 自进化',
   'rag-orchestration': 'RAG & LLM 编排',
   'agent-frameworks': 'Agent 框架',

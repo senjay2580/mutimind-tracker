@@ -1,0 +1,341 @@
+---
+title: "开源模型大全"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# 开源模型大全
+
+按科研方向分类的代表性开源模型。每个子分类只收**最当下最 SOTA / 最被引用 / 最被部署**的 1–3 个代表，不堆全。
+
+> **隔壁分类找**：LLM 基座看 [AI/LLM 核心项目](/tracker/ai-llm-core) · TTS 语音合成看 [语音合成](/tracker/tts) · 视频生成看 [视频 AI](/tracker/video-ai)。这里只补它们没覆盖的方向。
+
+<RepoList slug="models" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+{/* 15 个 ### 子分类：推理 / 多模态 / 代码 / Embedding / ASR / 文生图 / 3D / 音乐 / OCR / Agent / 时序 / 生物 / 数学 / NER / 翻译 */}
+
+<div className="mm-source-data">
+
+### 推理 / 思考模型
+
+2025 年最大趋势。开源 R1 系列重写了"小模型能不能搞推理"的答案。
+
+## [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)
+
+<RepoMeta
+  url="https://github.com/deepseek-ai/DeepSeek-R1"
+  stars={92022}
+  updated="2025-06-27"
+  lang="Python"
+  license="MIT"
+  tags={['llm', 'reasoning', 'rl', 'deepseek']}
+/>
+
+**开源界的 o1 平替** — 671B MoE / 37B 激活，纯强化学习训出长链推理能力，性能逼近 OpenAI o1。同时提供 distill 到 **1.5B / 7B / 14B / 32B / 70B** 的小模型版本，让本地 GPU 也能跑推理。**所有开源推理模型的研究起点**。
+
+### 多模态 VLM（视觉 + 语言）
+
+看图说话的开源 SOTA 战场。
+
+## [Qwen2.5-VL / Qwen3-VL](https://github.com/QwenLM/Qwen2.5-VL)
+
+<RepoMeta
+  url="https://github.com/QwenLM/Qwen2.5-VL"
+  stars={19205}
+  updated="2026-01-30"
+  lang="Jupyter Notebook"
+  license="Apache-2.0"
+  tags={['vlm', 'multimodal', 'qwen', 'video']}
+/>
+
+**阿里 Qwen 团队多模态大模型** — 仓库已升级到 Qwen3-VL 系列。**视频理解 + GUI agent 双强**，2B 到 72B 多档位，长视频时序定位 + 屏幕元素识别都能干。**开源 VLM 第一梯队**，工程链路最完整。
+
+## [InternVL](https://github.com/OpenGVLab/InternVL)
+
+<RepoMeta
+  url="https://github.com/OpenGVLab/InternVL"
+  stars={10034}
+  updated="2025-09-22"
+  lang="Python"
+  license="MIT"
+  tags={['vlm', 'multimodal', 'cvpr2024']}
+/>
+
+**[CVPR 2024 Oral] 接近 GPT-4o 表现的开源多模态对话模型** — 上海 AI Lab 出品，长期开源 VLM 榜首常客。学术基线 + 工业部署两边都吃，**1B 到 78B 全档位**，强项在 OCR/图表理解/复杂推理。和 Qwen-VL 互为对照，挑哪个看你信哪家生态。
+
+### 代码模型
+
+## [Qwen2.5-Coder / Qwen3-Coder](https://github.com/QwenLM/Qwen2.5-Coder)
+
+<RepoMeta
+  url="https://github.com/QwenLM/Qwen2.5-Coder"
+  stars={16527}
+  updated="2026-03-24"
+  lang="Python"
+  license="No License"
+  tags={['code-llm', 'qwen']}
+/>
+
+**Qwen 系代码版** — 仓库已升级到 Qwen3-Coder。**32B 当前开源代码 SOTA**，能跑 HumanEval/MBPP/LiveCodeBench 几乎追平闭源。Cursor / Cline / Continue 等编辑器插件大量在用本地部署版本。⚠️ 无 LICENSE。
+
+## [DeepSeek-Coder-V2](https://github.com/deepseek-ai/DeepSeek-Coder-V2)
+
+<RepoMeta
+  url="https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+  stars={6766}
+  updated="2025-11-11"
+  lang="Python"
+  license="MIT"
+  tags={['code-llm', 'moe', 'deepseek']}
+/>
+
+**Breaking the Barrier of Closed-Source Models in Code Intelligence** — 236B MoE / 21B 激活，是开源代码模型里第一次正面对标 GPT-4 Turbo 的工作。论文常引，社区做代码模型对比时的标杆基线。
+
+### Embedding / Reranker（RAG 检索端）
+
+## [FlagEmbedding (BGE)](https://github.com/FlagOpen/FlagEmbedding)
+
+<RepoMeta
+  url="https://github.com/FlagOpen/FlagEmbedding"
+  stars={11700}
+  updated="2026-04-22"
+  lang="Python"
+  license="MIT"
+  tags={['embedding', 'reranker', 'rag', 'bge']}
+/>
+
+**Retrieval and Retrieval-augmented LLMs** — 北京智源 (BAAI) 出品。**国产 RAG 检索端全家桶**：bge-m3 多语言嵌入 + bge-reranker-v2-m3 重排 + bge-en-icl 上下文学习版。MTEB / C-MTEB 长期前列，**国内 RAG 圈事实标准**，几乎所有 Xinference / RAGFlow / FastGPT 部署都从这里挑模型。
+
+### ASR / 语音识别
+
+## [Whisper](https://github.com/openai/whisper)
+
+<RepoMeta
+  url="https://github.com/openai/whisper"
+  stars={99843}
+  updated="2026-04-15"
+  lang="Python"
+  license="MIT"
+  tags={['asr', 'speech', 'openai', 'multilingual']}
+/>
+
+**Robust Speech Recognition via Large-Scale Weak Supervision** — OpenAI 出品的开源通用 ASR 模型，**99k★ 是全 ASR 领域无敌的事实标准**。large-v3 / turbo 双形态：精度优先选 large-v3，速度优先选 turbo（8x 速度精度略降）。所有商用 / 开源 ASR 工具的底座，**没人不在用**。
+
+## [SenseVoice](https://github.com/FunAudioLLM/SenseVoice)
+
+<RepoMeta
+  url="https://github.com/FunAudioLLM/SenseVoice"
+  stars={8186}
+  updated="2026-05-19"
+  lang="Python"
+  license="No License"
+  tags={['asr', 'speech', 'emotion', 'funaudio', 'chinese']}
+/>
+
+**Multilingual Voice Understanding Model** — 阿里通义实验室 (FunAudioLLM) 出品，**中文场景体验显著强过 Whisper**：直接给情绪 + 事件检测 + 标点 + 逆文本归一化，工业级一站到位。如果你做中文客服质检 / 直播字幕 / 播客转录，**先试 SenseVoice 再试 Whisper**。
+
+### 文生图
+
+## [FLUX.1](https://github.com/black-forest-labs/flux)
+
+<RepoMeta
+  url="https://github.com/black-forest-labs/flux"
+  stars={25556}
+  updated="2025-07-31"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['text-to-image', 'diffusion', 'flux', 'sota']}
+/>
+
+**Official inference repo for FLUX.1 models** — Black Forest Labs（原 Stable Diffusion 核心团队出走后新公司）出品。**FLUX.1 \[dev\] / \[schnell\] / \[pro\]** 三档：dev 非商用最强、schnell 1-4 步快速、pro 闭源 API。**目前开源界文生图 SOTA**，画手脚 + 文字渲染 + prompt 跟随显著超过 SDXL 时代。ComfyUI / Forge / Diffusers 全支持。
+
+### 3D 生成
+
+## [Hunyuan3D-2](https://github.com/Tencent/Hunyuan3D-2)
+
+<RepoMeta
+  url="https://github.com/Tencent/Hunyuan3D-2"
+  stars={13803}
+  updated="2025-10-28"
+  lang="Python"
+  license="No License"
+  tags={['3d-generation', 'mesh', 'tencent', 'sota']}
+/>
+
+**High-Resolution 3D Assets Generation with Large Scale Hunyuan3D Diffusion Models** — 腾讯混元出品，**开源 3D 生成事实标准**。文本/图片 → 高分辨率 mesh + texture 一气呵成，质量已接近商业级 Tripo / Meshy。Blender 插件 + ComfyUI 节点齐全。**做游戏 / VR / 电商素材**首选。
+
+### 音乐 / 音频生成
+
+## [YuE](https://github.com/multimodal-art-projection/YuE)
+
+<RepoMeta
+  url="https://github.com/multimodal-art-projection/YuE"
+  stars={6231}
+  updated="2025-06-04"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['music-generation', 'suno', 'open-source']}
+/>
+
+**Open Full-song Music Generation Foundation Model, something similar to Suno.ai but open** — 多模态艺术项目组出品，**开源界 Suno 平替**。给 lyrics + style prompt → 直接生成带人声 + 伴奏的完整歌曲（3 分钟级别），不是只生伴奏。Apache 2.0 可商用，是当下最完整的开源音乐生成方案。
+
+### OCR / 文档解析（RAG 数据准备端）
+
+## [olmOCR](https://github.com/allenai/olmocr)
+
+<RepoMeta
+  url="https://github.com/allenai/olmocr"
+  stars={17335}
+  updated="2026-03-25"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['ocr', 'pdf', 'document-ai', 'allenai']}
+/>
+
+**Toolkit for linearizing PDFs for LLM datasets/training** — AllenAI 出品，**第三方 benchmark 显示在 PDF 阅读顺序保持 + 公式 + 表格上同时 outperform Marker / MinerU / GOT-OCR**。基于 7B VLM 做端到端 OCR，2026 起公认 PDF→文本最强工具之一。
+
+## [MinerU](https://github.com/opendatalab/MinerU)
+
+<RepoMeta
+  url="https://github.com/opendatalab/MinerU"
+  stars={64199}
+  updated="2026-05-19"
+  lang="Python"
+  license="No License"
+  tags={['pdf-to-markdown', 'document-ai', 'opendatalab']}
+/>
+
+**PDF / Office docs → LLM-ready markdown / JSON** — 上海 AI Lab OpenDataLab 出品，**64k★ 是 PDF→Markdown 赛道社区第一**。公式 LaTeX / 表格结构 / 图片裁剪一站搞定，**国产 RAG 项目数据预处理标配**。和 olmOCR 互为对照：MinerU 偏 layout + pipeline 工程链，olmOCR 偏 VLM 端到端精度。
+
+## [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR)
+
+<RepoMeta
+  url="https://github.com/deepseek-ai/DeepSeek-OCR"
+  stars={23149}
+  updated="2026-01-27"
+  lang="Python"
+  license="MIT"
+  tags={['ocr', 'token-efficiency', 'deepseek', 'contexts-optical-compression']}
+/>
+
+**Contexts Optical Compression** — DeepSeek 新出，**核心创新：100 tokens/page 反超 GOT-OCR 的 256 tokens/page**。把文档当图像压缩到极少 token 数仍保住精度，**长文档 RAG 场景显著省 context 窗口**。新晋黑马，落地前自己跑 demo 看你的场景适不适合。
+
+### Agent / Function Calling 模型
+
+## [xLAM](https://github.com/SalesforceAIResearch/xLAM)
+
+<RepoMeta
+  url="https://github.com/SalesforceAIResearch/xLAM"
+  stars={619}
+  updated="2025-08-21"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['agent', 'function-calling', 'tool-use', 'salesforce']}
+/>
+
+**xLAM: A Family of Large Action Models to Empower AI Agent Systems** — Salesforce 出品，**专攻 function calling / tool use 场景**。1B → 70B 全档位，BFCL (Berkeley Function-Calling Leaderboard) 开源类长期前列。如果你做 agent 需要稳定调工具，xLAM 比通用 LLM 微调更省事。
+
+### 时序预测（2024 才出现的基础模型新方向）
+
+## [TimesFM](https://github.com/google-research/timesfm)
+
+<RepoMeta
+  url="https://github.com/google-research/timesfm"
+  stars={19874}
+  updated="2026-05-19"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['time-series', 'forecasting', 'google', 'foundation-model']}
+/>
+
+**TimesFM (Time Series Foundation Model)** — Google Research 出品，**首批专门做时序预测的基础模型**。200M 参数预训练好，零样本预测各种时序（销量 / 流量 / 传感器）。和传统 ARIMA / Prophet / LightGBM 互补——稀疏数据 + 跨域迁移场景显著强。
+
+## [Chronos](https://github.com/amazon-science/chronos-forecasting)
+
+<RepoMeta
+  url="https://github.com/amazon-science/chronos-forecasting"
+  stars={5335}
+  updated="2026-04-21"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['time-series', 'forecasting', 'amazon', 't5']}
+/>
+
+**Pretrained Models for Time Series Forecasting** — Amazon Science 出品，用 T5 架构改造做时序。**和 TimesFM 同期最强对照组**，零样本 / few-shot 表现接近。挑哪个看你信哪家生态 + 模型尺寸偏好。
+
+### 生物 / 蛋白质
+
+## [ESM (EvolutionaryScale)](https://github.com/evolutionaryscale/esm)
+
+<RepoMeta
+  url="https://github.com/evolutionaryscale/esm"
+  stars={2336}
+  updated="2026-05-11"
+  lang="Python"
+  license="No License"
+  tags={['protein', 'biology', 'esm', 'foundation-model']}
+/>
+
+**ESM-3 蛋白质语言模型** — Meta FAIR 蛋白研究团队独立成立的 EvolutionaryScale 公司，**开源 ESM-3** 蛋白质基础模型。能做蛋白质设计 / 结构预测 / 功能注释，是 AlphaFold 生态外的独立技术路线。生物医药 AI 必看的基线之一。
+
+## [Boltz](https://github.com/jwohlwend/boltz)
+
+<RepoMeta
+  url="https://github.com/jwohlwend/boltz"
+  stars={3981}
+  updated="2026-03-29"
+  lang="Python"
+  license="MIT"
+  tags={['protein', 'biology', 'alphafold', 'open-source']}
+/>
+
+**Official repository for the Boltz biomolecular interaction models** — MIT 出品，**AlphaFold 3 的开源平替**：蛋白质 + 核酸 + 小分子相互作用预测。AF3 权重不开放，Boltz 是公开权重的同档替代。**学术研究和创业药企的现实选择**。
+
+### 数学专项
+
+## [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math)
+
+<RepoMeta
+  url="https://github.com/QwenLM/Qwen2.5-Math"
+  stars={1078}
+  updated="2025-01-11"
+  lang="Python"
+  license="No License"
+  tags={['math', 'qwen', 'chain-of-thought']}
+/>
+
+**Qwen 系列数学专项模型** — 1.5B / 7B / 72B，覆盖小学到 AIME 竞赛题，**MATH / GSM8K / AIME 开源 SOTA**。是开源数学推理基线的事实标准，常被 NuminaMath / 自家 fine-tune 拿来当起点。⚠️ 无 LICENSE。
+
+### 信息抽取 / NER
+
+## [GLiNER](https://github.com/urchade/GLiNER)
+
+<RepoMeta
+  url="https://github.com/urchade/GLiNER"
+  stars={3200}
+  updated="2026-05-13"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['ner', 'zero-shot', 'information-extraction']}
+/>
+
+**Generalist and Lightweight Model for Named Entity Recognition (Extract any entity types from texts)** — **零样本 NER 神器**：不用训练，给一个 entity type 列表（"人名"、"药品"、"金额"）直接抽。比 spaCy 灵活、比 LLM 便宜 100 倍、延迟低，**实体抽取赛道工业首选**。
+
+### 多模态翻译
+
+## [Seamless Communication](https://github.com/facebookresearch/seamless_communication)
+
+<RepoMeta
+  url="https://github.com/facebookresearch/seamless_communication"
+  stars={11780}
+  updated="2026-04-08"
+  lang="Jupyter Notebook"
+  license="No License"
+  tags={['translation', 'speech', 'meta', 'multilingual']}
+/>
+
+**Foundational Models for State-of-the-Art Speech and Text Translation** — Meta FAIR 出品。**语音 ↔ 文本 ↔ 语音任意方向翻译**，覆盖 100+ 语言。SeamlessM4T v2 是当下开源里最完整的多模态翻译方案，**做实时口译 / 跨语种字幕** 这一类应用必看。
+
+</div>
