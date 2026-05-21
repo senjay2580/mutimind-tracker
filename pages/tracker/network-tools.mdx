@@ -55,4 +55,29 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Fork**：[senjay2580/zmap](https://github.com/senjay2580/zmap)（已 fork 备份）
 
+## [zgrab2](https://github.com/zmap/zgrab2)
+
+<RepoMeta
+  url="https://github.com/zmap/zgrab2"
+  stars={2117}
+  updated="2026-05-20"
+  lang="Go"
+  license="No License"
+  tags={['internet-scanning', 'banner-grab', 'tls-handshake', 'zmap-ecosystem']}
+/>
+
+**ZMap 姊妹项目：Fast Application Layer Scanner** — 用 Go 写的有状态应用层扫描器，**专门补 ZMap 缺的那一段**：ZMap 只发单包探测"端口是否开"，ZGrab2 接力做**完整 TCP 握手 + 协议级抓取**——HTTP banner / TLS 证书链 / SSH key / FTP welcome / SMTP greeting / MySQL handshake 等。**标准 pipeline**：`zmap -p 443 | zgrab2 tls`，先全网筛活的，再批量抓握手。
+
+**核心模块**：http / tls / ssh / ftp / smtp / mysql / postgres / mongodb / redis / telnet / modbus（工控）/ bacnet（楼宇自控）。
+
+**亮点**：
+- ZMap 工作流的"第二段"，配套使用才是完整侦察链
+- Go 写，跨平台编译方便（Linux/Mac/Windows 都能跑）
+- 输出标准化 JSON，方便接 Elastic / ClickHouse 做大规模分析
+- 是 Censys.io 全网证书库背后的工程实现
+
+**注意**：⚠️ NOASSERTION（无标准 license，二次分发要看 LICENSE 文件原文）；扫公网仍然受法律约束，参考上方 zmap 同款警告。
+
+**Fork**：[senjay2580/zgrab2](https://github.com/senjay2580/zgrab2)（已 fork 备份）
+
 </div>
