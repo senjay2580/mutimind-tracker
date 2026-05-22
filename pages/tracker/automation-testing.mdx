@@ -16,3 +16,23 @@ import RepoList from '../../components/RepoList'
 |---------|------------|-------|------|
 
 </div>
+
+## [midscene](https://github.com/web-infra-dev/midscene)
+
+<RepoMeta
+  url="https://github.com/web-infra-dev/midscene"
+  stars={13235}
+  updated="2026-05-22"
+  lang="TypeScript"
+  license="MIT"
+  tags={['ui-automation', 'ai-test', 'computer-use', 'mcp']}
+/>
+
+**一句话定位** — AI 驱动、视觉感知的全平台 UI 自动化工具，用自然语言描述目标即可让 Agent 规划并操作界面。Midscene 支持 Web、Android、iOS 以及任意可截图界面，可与 Playwright/Puppeteer、ADB、WebDriverAgent 和 MCP 集成，用于自动化测试、数据提取、UI 断言与跨端操作。
+
+**亮点**：
+- 纯视觉路线定位和操作 UI，适合 DOM 不稳定、Canvas、移动端和桌面界面场景
+- 提供 `aiAssert()`、`aiLocate()`、`aiWaitFor()` 等开发者 API，以及可视化回放报告、Playground、Chrome 插件
+- 支持 MCP 暴露原子 UI 操作，方便上层 Agent 调用，并可接入 UI-TARS、Qwen-VL、Gemini 等视觉模型
+
+**注意**：⚠️ 这是自动化/测试与 computer-use 基础设施，需要配置模型、浏览器或移动端运行环境；复杂任务的稳定性取决于视觉模型和目标 UI 状态。
