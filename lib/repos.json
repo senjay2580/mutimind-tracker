@@ -430,9 +430,23 @@
     "category": "Agent",
     "subcategory": "自主研究 & 自进化",
     "slug": "agents",
-    "description": "一句话定位 — 面向 arXiv 论文搜索与分析的 MCP Server，让 Claude、GPT、各类 Agent 通过标准 Model Context Protocol 查询论文、读取元数据并辅助研究。适合把 arXiv 作为 Agent 的实时论文检索工具接入文献综述、选题和论文阅读流程。 亮点： - 以 MCP server 形式提供，方便接入 Claude Desktop、Claude Code 或其他 MCP 客户端 - 聚焦 arXiv 搜索、论文信息获取和研究辅助分析 - 适合搭配文献综述 Agent、研究日报、论文推荐和自动摘要工具 ### 垂直领域 Agent 绑定特定行业 / 任务的 Agent：安全、金融、SRE、求职、内容、编程、教育等。 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | TradingAgents | https://github.com/TauricResearch/TradingAgents | 67,707 | 多 Agent LLM 交易框架（Apache-2.0，Python 3.13，arxiv 2412.20138）— 模拟真实对冲基金决策链：4 分析师（Fundamentals/Sentiment/News/Technical）→ 多空研究员辩论 → Trader → 风控 → PM 审批。LangGraph 编排，支持 OpenAI/Claude/Gemini/DeepSeek/Qwen/GLM/Grok 多 LLM 后端 + Alpha Vantage 数据。conda create -n tradingagents python=3.13 && pip install . && tradingagents 或 docker compose run --rm tradingagents。💸 单 ticker 一次 propagate ≈ $3-10 LLM 费（默认 max_debate_rounds=2 = 16 次调用），用 DeepSeek 替 OpenAI 降本 95%。⚠️ 仅研究用、回测能力弱、A 股/港股不支持。比 dexter 重得多但有论文背书 | | shannon | https://github.com/KeygraphHQ/shannon | 35,974 | 白盒自主化 Web/API 渗透测试 Agent（AGPL-3，TypeScript，KeygraphHQ）。\"Shannon Lite is an autonomous, white-box AI pentester\" — 输入源代码 → 自动识别攻击面（SQL 注入 / XSS / 路径穿越 / 认证绕过 ",
+    "description": "一句话定位 — 面向 arXiv 论文搜索与分析的 MCP Server，让 Claude、GPT、各类 Agent 通过标准 Model Context Protocol 查询论文、读取元数据并辅助研究。适合把 arXiv 作为 Agent 的实时论文检索工具接入文献综述、选题和论文阅读流程。 亮点： - 以 MCP server 形式提供，方便接入 Claude Desktop、Claude Code 或其他 MCP 客户端 - 聚焦 arXiv 搜索、论文信息获取和研究辅助分析 - 适合搭配文献综述 Agent、研究日报、论文推荐和自动摘要工具",
     "addedAt": "2026-05-22T19:10:30+08:00",
     "anchor": "agents__github-com-blazickjp-arxiv-mcp-server"
+  },
+  {
+    "name": "daily-arXiv-ai-enhanced",
+    "owner": "dw-dengwei",
+    "url": "https://github.com/dw-dengwei/daily-arXiv-ai-enhanced",
+    "stars": 2733,
+    "updated": "2026-05-22",
+    "lang": "JavaScript",
+    "license": "NOASSERTION",
+    "category": "Agent",
+    "subcategory": "自主研究 & 自进化",
+    "slug": "agents",
+    "description": "arXiv 论文每日 AI 摘要的零基建自托管工具 — 是什么：一个 fork 即用的 arXiv 论文每日追踪器，配套站点 arxiv.dw-dengwei.cn。能干什么：每天自动爬取指定 arXiv 分类（默认 cs.CV / cs.GR / cs.CL / cs.AI）的新论文，用 DeepSeek 等 LLM 生成中文摘要，再渲染成网页发布。重点：零基建 —— 全靠 GitHub Actions + GitHub Pages 跑，不需要服务器，成本约每天 0.2 元。特色：① fork 仓库 + 填两个 secret（OPENAI_API_KEY / OPENAI_BASE_URL）+ 几个变量（分类 / 语言 / 模型）即可拥有自己的每日 arXiv 简报站；② 自带 SKILL 系统 —— 可插拔的论文筛选模块，按关键词 / 作者偏好高亮论文；③ 阅读偏好一键导出、跨设备、本地存储保护隐私。 注意：⚠️ NOASSERTION（非标准 license）；README 明确警告 —— 学术数据有审查要求的法域请谨慎运行，二次分发需自行履行合规审查。 ### 垂直领域 Agent 绑定特定行业 / 任务的 Agent：安全、金融、SRE、求职、内容、编程、教育等。 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | TradingAgents | https://github.com/TauricResearch/TradingAgents | 67,707 | 多 Agent LLM 交易框架（Apache-2.0，Python 3.13，arxiv 2412.20138）— 模拟真实对冲基金决策链：4 分析师（Fundamentals/Sentiment/News/Technical）→ 多空研究员辩论 → Trader → 风控 → PM 审批。LangGraph 编排，支持 OpenAI/Claude/Gemini/DeepSeek/Qwen/GLM/Grok 多 LLM 后端 + Alpha Vantage 数据。conda create -n tradingagents python=3.13 && pip install . && tradingagents 或 docker compose run --rm tradingagents。💸 单 ticker 一次 propagate ≈ $3-10 LLM 费（默认 max_debate_rounds=2 = 16 次调用），用 DeepSeek 替 OpenAI 降本 95%。⚠️ 仅研究用、回测能力弱、A 股/港股不支持。比 dexter 重得多但有论文背书 | | shanno",
+    "anchor": "agents__github-com-dw-dengwei-daily-arxiv-ai-enhanced"
   },
   {
     "name": "AgentEvolver",
@@ -1751,6 +1765,7 @@
     "subcategory": "Awesome 清单 & 聚合站",
     "slug": "aggregation",
     "description": "一句话定位 — 数学资源精选清单，聚合各类数学教材、讲义、课程、可视化和工具资源。适合补数学基础、查找专业方向资料，也适合作为 AI/科研/算法学习路线中的数学资源入口。 亮点： - 覆盖数学多个分支和大量公开讲义/课程 - awesome-list 形式便于快速筛选资源 - 对机器学习、图形学、物理模拟、优化等方向的基础补课有价值 ### 信息源 / RSS / 博客 > 信息源以 网址 / RSS / 类型 / 说明 表格化整理，便于直接喂 Inoreader / Miniflux / Follow / RSSHub。 #### 国外 · 综合科技 & 工程 | 名称 | 网址 | RSS | 说明 | |------|------|-----|------| | Hacker News | https://news.ycombinator.com/ | https://news.ycombinator.com/rss | 硅谷程序员第一信息源，技术深度高，社区讨论质量极高 | | Lobsters | https://lobste.rs/ | https://lobste.rs/rss | 邀请制技术社区，比 HN 更纯粹，偏系统/编程语言/底层 | | TechCrunch | https://techcrunch.com/ | https://techcrunch.com/feed/ | 创投 & 科技产业新闻，覆盖 AI/创业/融资 | | The New Stack | https://thenewstack.io/ | https://thenewstack.io/feed/ | 云原生/DevOps/平台工程，偏架构和基础设施 | | ACM CACM | https://cacm.acm.org/ | https://cacm.acm.org/feed/ | 计算机科学权威期刊，硬核工程和研究文章 | #### 国外 · AI 专题 | 名称 | 网址 | RSS | 说明 | |------|------|-----|------| | Anthropic Blog | https://www.anthropic.com/blog | — | Claude 官方博客，模型发布/安全研究 | | OpenAI Blog | https://openai.com/blog | https://openai.com/blog/rss.xml | GPT/ChatGPT 官方动态 | | NVIDIA AI Blog | https://blogs.nvidia.com/blog/category/deep-learning/ | https://blogs.nvidia.com/feed/ | GPU/算力/机器人/物理 AI | | The",
+    "addedAt": "2026-05-22T20:09:16+08:00",
     "anchor": "aggregation__github-com-rossant-awesome-math"
   },
   {
@@ -2470,6 +2485,7 @@
     "subcategory": "免费 API & 索引",
     "slug": "aggregation",
     "description": "一句话定位 — 开发者免费额度资源清单，系统收集 SaaS / PaaS / IaaS / DevOps / Infra 服务中对开发者有价值的 free tier。用户给出的 free-for.dev 站点对应此仓库，适合快速查找数据库、托管、监控、CI/CD、邮件、对象存储等服务的免费方案。 亮点： - 覆盖云服务、开发工具、数据服务、监控、安全、邮件、CDN 等大量分类 - 社区长期维护，适合做“先用免费额度验证 MVP”的资源入口 - 对独立开发者、学生、小团队和 Agent 自动化环境搭建都很实用 注意：⚠️ 各厂商 free tier 会变化，使用前要再次确认官方限制、地区和计费规则。 > 以下为 API 聚合站 / 媒体素材 / AI 生成等纯 SaaS API 索引。GitHub repo 标 stars，纯 SaaS API/文档站标\"站点\"。 #### API 聚合站 | 名称 | 地址 | Stars / 类型 | 描述 | |------|------|-------------|------| | PublicAPIs.dev | https://publicapis.dev/ | 站点 | public-apis 仓库的 Web 版索引。1400+ 公共 API 分类索引（音乐 / AI / 图片 / 工具 / 金融 / 天气 / 体育等 40+ 大类），可按 HTTPS / CORS / Auth / Category 筛选。和原 GitHub repo 区别：站点带 JSON API 可被 Agent / 程序检索，适合\"让 LLM 自己找数据源\"的场景。社区维护、更新勤、链接死率低 | | FreePublicAPIs | https://www.freepublicapis.com/ | 站点 | 每日自动检测可用性的免费 API 索引。核心卖点：每天爬一遍所有收录的 API，标\"今天能不能用\"——和那种\"收了 500 个但一半死链\"的 awesome-list 完全不同。每条 API 标响应时间 / 上次成功调用 / 是否需 key / 速率限制。找\"真的还能用\"的免费 API 时第一站，避免踩坑死链 | | RapidAPI Free APIs | https://rapidapi.com/collection/list-of-free-apis | 站点 | 全球最大 API 市场 RapidAPI 的免费 API 合集。统一 key + 统一计费 + 统一文档：注册一个 RapidAPI 账号就能调上千个 freemium API（多数免费档够开发 / 小项目）。省去\"每个 API 各注册一遍 + 各管一套 key\"的麻烦。但要注意 RapidAPI 抽佣，长期生产用应直接对接原厂 | | APILayer Mar",
+    "addedAt": "2026-05-22T20:09:16+08:00",
     "anchor": "aggregation__github-com-ripienaar-free-for-dev"
   },
   {
@@ -2814,6 +2830,7 @@
     "subcategory": "",
     "slug": "cli-agent",
     "description": "一句话定位 — 飞书/Lark 官方 CLI，覆盖 Messenger、Docs、Base、Sheets、Calendar、Mail、Tasks、Meetings 等核心业务域，并内置 200+ 命令和 20+ AI Agent Skills。适合把飞书生态能力变成可脚本化、可被 Agent 调用的企业协作接口层。 亮点： - 官方维护，面向人类 CLI 与 AI Agent 双场景 - 覆盖 IM、文档、多维表格、表格、日历、邮箱、任务、会议等常用工作流 - 适合作为企业 Agent 的工作台连接器和自动化执行层",
+    "addedAt": "2026-05-22T20:09:16+08:00",
     "anchor": "cli-agent__github-com-larksuite-cli"
   },
   {
@@ -2873,6 +2890,7 @@
     "subcategory": "",
     "slug": "cli-agent",
     "description": "一句话定位 — 面向 AI Agent 的统一虚拟文件系统，把多种后端和运行环境抽象成 Agent 可操作的文件层。它适合给 Claude Code、OpenAI Agents、LangChain 等 Agent 提供隔离、可控、可组合的文件访问接口，减少真实文件系统暴露风险。 亮点： - 支持 TypeScript/Python 生态接入，定位为 Agent 工具层基础设施 - 通过 VFS 抽象统一本地/远程/沙盒资源，方便做权限边界和环境隔离 - 适合构建 Agent sandbox、代码执行环境、工具编排和多租户文件访问层 </div>",
+    "addedAt": "2026-05-22T20:09:16+08:00",
     "anchor": "cli-agent__github-com-strukto-ai-mirage"
   },
   {

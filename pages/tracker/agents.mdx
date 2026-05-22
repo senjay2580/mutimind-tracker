@@ -167,6 +167,21 @@ AI Scientist 类自主研究 Agent + 自我进化 / 进化算法方向。
 - 聚焦 arXiv 搜索、论文信息获取和研究辅助分析
 - 适合搭配文献综述 Agent、研究日报、论文推荐和自动摘要工具
 
+## [daily-arXiv-ai-enhanced](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced)
+
+<RepoMeta
+  url="https://github.com/dw-dengwei/daily-arXiv-ai-enhanced"
+  stars={2733}
+  updated="2026-05-22"
+  lang="JavaScript"
+  license="NOASSERTION"
+  tags={['arxiv', 'research-tool', 'daily-digest', 'github-actions']}
+/>
+
+**arXiv 论文每日 AI 摘要的零基建自托管工具** — **是什么**：一个 fork 即用的 arXiv 论文每日追踪器，配套站点 [arxiv.dw-dengwei.cn](https://arxiv.dw-dengwei.cn)。**能干什么**：每天自动爬取指定 arXiv 分类（默认 cs.CV / cs.GR / cs.CL / cs.AI）的新论文，用 DeepSeek 等 LLM 生成中文摘要，再渲染成网页发布。**重点**：**零基建** —— 全靠 GitHub Actions + GitHub Pages 跑，不需要服务器，成本约每天 0.2 元。**特色**：① fork 仓库 + 填两个 secret（`OPENAI_API_KEY` / `OPENAI_BASE_URL`）+ 几个变量（分类 / 语言 / 模型）即可拥有自己的每日 arXiv 简报站；② 自带 **SKILL 系统** —— 可插拔的论文筛选模块，按关键词 / 作者偏好高亮论文；③ 阅读偏好一键导出、跨设备、本地存储保护隐私。
+
+**注意**：⚠️ NOASSERTION（非标准 license）；README 明确警告 —— 学术数据有审查要求的法域请谨慎运行，二次分发需自行履行合规审查。
+
 ### 垂直领域 Agent
 
 绑定特定行业 / 任务的 Agent：安全、金融、SRE、求职、内容、编程、教育等。
