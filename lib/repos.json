@@ -265,7 +265,7 @@
     "category": "Agent",
     "subcategory": "框架 / 运行时 / 编排",
     "slug": "agents",
-    "description": "开源 Agent 编排器（orchestrator） — 是什么：一个不绑定 IDE、不绑定单一 agent、不绑定封闭模型生态的可插拔编排器，npx pikiclaw@latest 一行起，Node 20+。能干什么：让创作者不碰代码、从一个控制台并行驱动「一群 agent」，通过四层架构自由组合 —— ① Terminal 层：Telegram / 飞书 / 微信 / Slack / Discord / 钉钉 / 企业微信 / Web Dashboard 全是平级入口，从最顺手的 IM 直接发指令；② Agent 层：Claude Code / Codex / Gemini / Hermes 经 driver registry + ACP 接入；③ Model 层：Claude / GPT / Gemini / DeepSeek / 豆包 / MiMo / MiniMax / OpenRouter 及任意 OpenAI 兼容代理任选；④ Tool 层：Skills / MCP / CLI（global × workspace 两级）。 重点 & 特色： - 产品本体就是编排器 —— 刻意反「软件创作必须困在单个代码编辑器里」的范式，赌「下一代创作发生在 orchestrator 而非 IDE」 - 完全自举（self-bootstrapped） —— pikiclaw 自身就是用 pikiclaw 造出来的，把「用 agent 群造软件」当作自证 - IM 即终端 —— 把 agent swarm 指挥台搬进你已在用的聊天软件，新终端即插即用 注意：⚠️ 仅 268★、2026-05 起步的早期项目，driver registry / ACP 生态与工程稳定性仍处早期，生产用前自评。 ### 自主研究 & 自进化 AI Scientist 类自主研究 Agent + 自我进化 / 进化算法方向。 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | autoresearch | https://github.com/karpathy/autoresearch | 65,662 | Karpathy 单卡 GPU 自主研究 Agent（无 LICENSE，Python）。Andrej Karpathy 个人实验仓库：让 AI Agent 在单 GPU 上自动训练 nanochat（Karpathy 自己的 ~561 行 LLM 训练样本仓）并自主迭代研究。典型用法：让 Agent 跑超参搜索 / 架构消融 / 训练曲线分析，自动产出研究 insights。为\"个人用 1 张卡也能跑 AI 研究\"提供示范，配合 nanochat / nanoGPT / micr",
+    "description": "开源 Agent 编排器（orchestrator） — 是什么：一个不绑定 IDE、不绑定单一 agent、不绑定封闭模型生态的可插拔编排器，npx pikiclaw@latest 一行起，Node 20+。能干什么：让创作者不碰代码、从一个控制台并行驱动「一群 agent」，通过四层架构自由组合 —— ① Terminal 层：Telegram / 飞书 / 微信 / Slack / Discord / 钉钉 / 企业微信 / Web Dashboard 全是平级入口，从最顺手的 IM 直接发指令；② Agent 层：Claude Code / Codex / Gemini / Hermes 经 driver registry + ACP 接入；③ Model 层：Claude / GPT / Gemini / DeepSeek / 豆包 / MiMo / MiniMax / OpenRouter 及任意 OpenAI 兼容代理任选；④ Tool 层：Skills / MCP / CLI（global × workspace 两级）。 重点 & 特色： - 产品本体就是编排器 —— 刻意反「软件创作必须困在单个代码编辑器里」的范式，赌「下一代创作发生在 orchestrator 而非 IDE」 - 完全自举（self-bootstrapped） —— pikiclaw 自身就是用 pikiclaw 造出来的，把「用 agent 群造软件」当作自证 - IM 即终端 —— 把 agent swarm 指挥台搬进你已在用的聊天软件，新终端即插即用 注意：⚠️ 仅 268★、2026-05 起步的早期项目，driver registry / ACP 生态与工程稳定性仍处早期，生产用前自评。",
     "addedAt": "2026-05-22T19:37:18+08:00",
     "anchor": "agents__github-com-xiaotonng-pikiclaw"
   },
@@ -445,7 +445,8 @@
     "category": "Agent",
     "subcategory": "自主研究 & 自进化",
     "slug": "agents",
-    "description": "arXiv 论文每日 AI 摘要的零基建自托管工具 — 是什么：一个 fork 即用的 arXiv 论文每日追踪器，配套站点 arxiv.dw-dengwei.cn。能干什么：每天自动爬取指定 arXiv 分类（默认 cs.CV / cs.GR / cs.CL / cs.AI）的新论文，用 DeepSeek 等 LLM 生成中文摘要，再渲染成网页发布。重点：零基建 —— 全靠 GitHub Actions + GitHub Pages 跑，不需要服务器，成本约每天 0.2 元。特色：① fork 仓库 + 填两个 secret（OPENAI_API_KEY / OPENAI_BASE_URL）+ 几个变量（分类 / 语言 / 模型）即可拥有自己的每日 arXiv 简报站；② 自带 SKILL 系统 —— 可插拔的论文筛选模块，按关键词 / 作者偏好高亮论文；③ 阅读偏好一键导出、跨设备、本地存储保护隐私。 注意：⚠️ NOASSERTION（非标准 license）；README 明确警告 —— 学术数据有审查要求的法域请谨慎运行，二次分发需自行履行合规审查。 ### 垂直领域 Agent 绑定特定行业 / 任务的 Agent：安全、金融、SRE、求职、内容、编程、教育等。 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | TradingAgents | https://github.com/TauricResearch/TradingAgents | 67,707 | 多 Agent LLM 交易框架（Apache-2.0，Python 3.13，arxiv 2412.20138）— 模拟真实对冲基金决策链：4 分析师（Fundamentals/Sentiment/News/Technical）→ 多空研究员辩论 → Trader → 风控 → PM 审批。LangGraph 编排，支持 OpenAI/Claude/Gemini/DeepSeek/Qwen/GLM/Grok 多 LLM 后端 + Alpha Vantage 数据。conda create -n tradingagents python=3.13 && pip install . && tradingagents 或 docker compose run --rm tradingagents。💸 单 ticker 一次 propagate ≈ $3-10 LLM 费（默认 max_debate_rounds=2 = 16 次调用），用 DeepSeek 替 OpenAI 降本 95%。⚠️ 仅研究用、回测能力弱、A 股/港股不支持。比 dexter 重得多但有论文背书 | | shanno",
+    "description": "arXiv 论文每日 AI 摘要的零基建自托管工具 — 是什么：一个 fork 即用的 arXiv 论文每日追踪器，配套站点 arxiv.dw-dengwei.cn。能干什么：每天自动爬取指定 arXiv 分类（默认 cs.CV / cs.GR / cs.CL / cs.AI）的新论文，用 DeepSeek 等 LLM 生成中文摘要，再渲染成网页发布。重点：零基建 —— 全靠 GitHub Actions + GitHub Pages 跑，不需要服务器，成本约每天 0.2 元。特色：① fork 仓库 + 填两个 secret（OPENAI_API_KEY / OPENAI_BASE_URL）+ 几个变量（分类 / 语言 / 模型）即可拥有自己的每日 arXiv 简报站；② 自带 SKILL 系统 —— 可插拔的论文筛选模块，按关键词 / 作者偏好高亮论文；③ 阅读偏好一键导出、跨设备、本地存储保护隐私。 注意：⚠️ NOASSERTION（非标准 license）；README 明确警告 —— 学术数据有审查要求的法域请谨慎运行，二次分发需自行履行合规审查。",
+    "addedAt": "2026-05-22T20:56:29+08:00",
     "anchor": "agents__github-com-dw-dengwei-daily-arxiv-ai-enhanced"
   },
   {
@@ -729,7 +730,7 @@
     "category": "Agent",
     "subcategory": "垂直领域 Agent",
     "slug": "agents",
-    "description": "Boss 直聘轻量自动投递 — 基于 goodjob (get_jobs) 优化的 Boss 直聘垂直版本，浏览器脚本 + 本地后端，比 Java 上游更轻。来源：B站 BV1MyX6BFEp3（九月的鸟蛋）。 ### 案例库 & 灵感 > 不知道让 Agent 做什么？看大神们都在做什么。这里收录的是精选清单/案例库类型 repo，每条都链接到可直接运行的开源实现，适合「找灵感 → 抄一个 → 改自己的」。 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | 500-AI-Agents-Projects | https://github.com/ashishpatel26/500-AI-Agents-Projects | 29,508 | 500+ AI Agent 行业案例宝库（curated list）。按行业分类（医疗/金融/教育/零售/客服/法律/研发等），每个用例都链到对应开源实现项目。还按框架二级分类（CrewAI / AutoGen / Agno / Langgraph 各自的用例）。代表案例：HIA 健康洞察代理、人工智能健康助手、自动交易机器人、虚拟教育导师、24×7 客服 chatbot 等。适合「先确定行业场景再找参考实现」的 PM/创业方向调研 | | awesome-ai-apps | https://github.com/Arindam200/awesome-ai-apps | 10,493 | 80+ LLM 实战项目合集（Python 主导）。专门收集 RAG / Agent / 工作流等 LLM 应用，按板块清晰分类：🧩 Starter Agents / 🪶 Simple Agents / 🎙️ Voice Agents / 🗂️ MCP Agents / 🧠 Memory Agents / 📚 RAG Applications / 🔬 Advanced Agents。几乎每个项目都能直接跑（不是 readme demo 集合，是真实可执行 repo）。配套教程/视频列表 + 框架 tutorials。适合「想动手做 Agent 但不知道从哪个原型开始」的入门到进阶 | </div>",
+    "description": "Boss 直聘轻量自动投递 — 基于 goodjob (get_jobs) 优化的 Boss 直聘垂直版本，浏览器脚本 + 本地后端，比 Java 上游更轻。来源：B站 BV1MyX6BFEp3（九月的鸟蛋）。",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "agents__github-com-czc6666-czc-good-job"
   },
@@ -1764,7 +1765,7 @@
     "category": "资源聚合 & 信息源",
     "subcategory": "Awesome 清单 & 聚合站",
     "slug": "aggregation",
-    "description": "一句话定位 — 数学资源精选清单，聚合各类数学教材、讲义、课程、可视化和工具资源。适合补数学基础、查找专业方向资料，也适合作为 AI/科研/算法学习路线中的数学资源入口。 亮点： - 覆盖数学多个分支和大量公开讲义/课程 - awesome-list 形式便于快速筛选资源 - 对机器学习、图形学、物理模拟、优化等方向的基础补课有价值 ### 信息源 / RSS / 博客 > 信息源以 网址 / RSS / 类型 / 说明 表格化整理，便于直接喂 Inoreader / Miniflux / Follow / RSSHub。 #### 国外 · 综合科技 & 工程 | 名称 | 网址 | RSS | 说明 | |------|------|-----|------| | Hacker News | https://news.ycombinator.com/ | https://news.ycombinator.com/rss | 硅谷程序员第一信息源，技术深度高，社区讨论质量极高 | | Lobsters | https://lobste.rs/ | https://lobste.rs/rss | 邀请制技术社区，比 HN 更纯粹，偏系统/编程语言/底层 | | TechCrunch | https://techcrunch.com/ | https://techcrunch.com/feed/ | 创投 & 科技产业新闻，覆盖 AI/创业/融资 | | The New Stack | https://thenewstack.io/ | https://thenewstack.io/feed/ | 云原生/DevOps/平台工程，偏架构和基础设施 | | ACM CACM | https://cacm.acm.org/ | https://cacm.acm.org/feed/ | 计算机科学权威期刊，硬核工程和研究文章 | #### 国外 · AI 专题 | 名称 | 网址 | RSS | 说明 | |------|------|-----|------| | Anthropic Blog | https://www.anthropic.com/blog | — | Claude 官方博客，模型发布/安全研究 | | OpenAI Blog | https://openai.com/blog | https://openai.com/blog/rss.xml | GPT/ChatGPT 官方动态 | | NVIDIA AI Blog | https://blogs.nvidia.com/blog/category/deep-learning/ | https://blogs.nvidia.com/feed/ | GPU/算力/机器人/物理 AI | | The",
+    "description": "一句话定位 — 数学资源精选清单，聚合各类数学教材、讲义、课程、可视化和工具资源。适合补数学基础、查找专业方向资料，也适合作为 AI/科研/算法学习路线中的数学资源入口。 亮点： - 覆盖数学多个分支和大量公开讲义/课程 - awesome-list 形式便于快速筛选资源 - 对机器学习、图形学、物理模拟、优化等方向的基础补课有价值",
     "addedAt": "2026-05-22T20:09:16+08:00",
     "anchor": "aggregation__github-com-rossant-awesome-math"
   },
@@ -2649,7 +2650,7 @@
     "category": "自动化（浏览器/桌面/测试）",
     "subcategory": "浏览器自动化",
     "slug": "automation",
-    "description": "OpenCLI 插件 —— 批量归档微信公众号合集 — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 opencli weixin download），生成带本地路径的 Markdown 索引文件。支持增量下载（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：opencli plugin install github:SlowGrowth1314/opencli-weixin-album。 注意：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。 ### 桌面自动化",
+    "description": "OpenCLI 插件 —— 批量归档微信公众号合集 — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 opencli weixin download），生成带本地路径的 Markdown 索引文件。支持增量下载（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：opencli plugin install github:SlowGrowth1314/opencli-weixin-album。 注意：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。",
     "addedAt": "2026-05-18T20:50:17+08:00",
     "anchor": "automation__github-com-slowgrowth1314-opencli-weixin-album"
   },
@@ -2694,7 +2695,7 @@
     "category": "自动化（浏览器/桌面/测试）",
     "subcategory": "桌面自动化",
     "slug": "automation",
-    "description": "基于视觉语言模型的 Android 自动化 Agent — 手机端 Computer-Use Agent：VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。 注意：⚠️ 2026-01 后未更新；仅 Android。 ### 测试 & UI 自动化",
+    "description": "基于视觉语言模型的 Android 自动化 Agent — 手机端 Computer-Use Agent：VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。 注意：⚠️ 2026-01 后未更新；仅 Android。",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "automation__github-com-turbo1123-roubao"
   },
@@ -3219,7 +3220,7 @@
     "category": "AI 内容生成（视频/语音/PPT）",
     "subcategory": "视频 AI",
     "slug": "media-ai",
-    "description": "AI 视频编辑 Agent — 把手工剪辑变成意图驱动的导演 — 自然语言交互 + LLM 规划 + 精准工具编排。MCP Server + Agent Client 架构，human-in-the-loop 创作，可复用 Style Skills 保证专业一致性。注意仓库名带连字符（FireRed-OpenStoryline，不是 FireRedOpenStoryline）。 ### 语音合成 (TTS) | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | GPT-SoVITS | https://github.com/RVC-Boss/GPT-SoVITS | 56,391 | 少样本语音克隆 TTS 引擎（MIT，RVC-Boss）。核心卖点是 1 分钟参考音频精调出可用 TTS、5 秒音频即可零样本生成接近原声的语音。三段式：① 零样本（5s 参考立刻推理）② 少样本（1min 微调质量飞跃）③ 跨语言推理（中/英/日/韩/粤互推）。基于 SoVITS（SoftVC + VITS）+ GPT 自回归 token 预测，WebUI 把数据集制作 / 训练 / 推理 / 工具链一站式打包。国内中文 TTS 克隆事实标准，个人配音 / 有声书 / 二次元角色音典型用法 | | ChatTTS | https://github.com/2noise/ChatTTS | 39,013 | 对话场景生成式 TTS（AGPL-3.0，2noise）。专为 LLM 输出口语化对话设计，中英双语，强在长文本拼接时的自然停顿、笑声、语气词、连读。基于 4 万小时中英对话语料训练，自带韵律 / 情绪控制 token（[laugh] [break] [uv_break]），让生成更像\"真人在说话\"。侧重对话流畅度而非高保真音色，适合 AI 助手、虚拟主播、对话播客。⚠️ AGPL-3.0 商用衍生品需开源 | | fish-speech | https://github.com/fishaudio/fish-speech | 29,082 | 生产级开源 TTS 全家桶（fishaudio）。技术栈横跨 VALL-E / VITS / VQ-VAE / VQ-GAN / Llama transformer，强项是音质保真 + 多语言低延迟。支持 8 种主流语言（中英日韩法德阿西），10 秒参考音频零样本克隆，配套 Fish Agent v0.1 多模态对话模型联动语音 in/out。提供 WebUI + HTTP API + Docker 部署，A100 端到端延迟 < 150ms。适合自建商业 TTS 服务的团队。⚠️ 非标准开源协议，商用前确认条款 | | VoxCPM2",
+    "description": "AI 视频编辑 Agent — 把手工剪辑变成意图驱动的导演 — 自然语言交互 + LLM 规划 + 精准工具编排。MCP Server + Agent Client 架构，human-in-the-loop 创作，可复用 Style Skills 保证专业一致性。注意仓库名带连字符（FireRed-OpenStoryline，不是 FireRedOpenStoryline）。",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "media-ai__github-com-fireredteam-firered-openstoryline"
   },
@@ -3309,7 +3310,7 @@
     "category": "AI 内容生成（视频/语音/PPT）",
     "subcategory": "语音合成 (TTS)",
     "slug": "media-ai",
-    "description": "一句话定位 — 本地运行的轻量多语言 TTS 引擎：基于 ONNX Runtime 在设备端原生生成语音，主打快速、离线、低依赖，不走云端 API。当前 Supertonic 3 强调 31 种语言支持，并提供 Python、Node.js、Browser、Java、C++、C#、Go、Swift、iOS 等多端示例。适合给 AI 产品、浏览器插件、桌面助手、移动端 App 加本地发声能力，尤其适合隐私、延迟和部署成本敏感的场景。 亮点： - On-device TTS，适合离线和隐私敏感应用 - 多语言、多端 SDK 示例齐全，便于嵌入现有产品 注意：它是语音基础组件，不是完整语音助手；音色克隆、情绪控制等高阶能力需要结合实际模型包和场景评估。 ### HTML / Canvas 转 PPT | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | reveal.js | https://github.com/hakimel/reveal.js | 70,930 | 最流行的 HTML 演示文稿框架（MIT，JavaScript，Hakim El Hattab）。用 HTML / Markdown / CSS 写 slides：纵横二维导航、PDF 导出、speaker notes、touch / 键盘 / 遥控器多端控制、丰富过渡动画。开发者 / 技术演讲圈的事实选择 — GitHub Pages 直接托管、版本控制友好、可嵌 live code 演示。生态完整：插件 (Math / Highlight / Markdown / Search / Zoom)、众多主题、付费配套 slides.com 在线编辑 | | PptxGenJS | https://github.com/gitbrent/PptxGenJS | 4,936 | 用 JavaScript 生成 PowerPoint（MIT，TypeScript）。Node / React / 浏览器全跑得动的 .pptx 生成库 — 编程式定义 slides / shapes / 文本 / 表格 / 图表 / 媒体 / 主题。官方 Office.js 的开源替代，输出原生可编辑 PowerPoint（不是图片导出）。典型场景：报表自动生成 / 数据驱动 PPT / 模板批量出图。和 python-pptx 同生态位但 JS 派 | | Presenton | https://github.com/presenton/presenton | 4,559 | 开源 AI 演示生成器 + API（Apache-2.0，JavaScript）。Gamma / Beautiful AI / Decktopus 的开",
+    "description": "一句话定位 — 本地运行的轻量多语言 TTS 引擎：基于 ONNX Runtime 在设备端原生生成语音，主打快速、离线、低依赖，不走云端 API。当前 Supertonic 3 强调 31 种语言支持，并提供 Python、Node.js、Browser、Java、C++、C#、Go、Swift、iOS 等多端示例。适合给 AI 产品、浏览器插件、桌面助手、移动端 App 加本地发声能力，尤其适合隐私、延迟和部署成本敏感的场景。 亮点： - On-device TTS，适合离线和隐私敏感应用 - 多语言、多端 SDK 示例齐全，便于嵌入现有产品 注意：它是语音基础组件，不是完整语音助手；音色克隆、情绪控制等高阶能力需要结合实际模型包和场景评估。",
     "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "media-ai__github-com-supertone-inc-supertonic"
   },
@@ -3954,7 +3955,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "开源界的 o1 平替 — 671B MoE / 37B 激活，纯强化学习训出长链推理能力，性能逼近 OpenAI o1。同时提供 distill 到 1.5B / 7B / 14B / 32B / 70B 的小模型版本，让本地 GPU 也能跑推理。所有开源推理模型的研究起点。 ### 多模态 VLM（视觉 + 语言） 看图说话的开源 SOTA 战场。",
+    "description": "开源界的 o1 平替 — 671B MoE / 37B 激活，纯强化学习训出长链推理能力，性能逼近 OpenAI o1。同时提供 distill 到 1.5B / 7B / 14B / 32B / 70B 的小模型版本，让本地 GPU 也能跑推理。所有开源推理模型的研究起点。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-deepseek-ai-deepseek-r1"
   },
@@ -3984,7 +3985,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Official inference repo for FLUX.1 models — Black Forest Labs（原 Stable Diffusion 核心团队出走后新公司）出品。FLUX.1 \\[dev\\] / \\[schnell\\] / \\[pro\\] 三档：dev 非商用最强、schnell 1-4 步快速、pro 闭源 API。目前开源界文生图 SOTA，画手脚 + 文字渲染 + prompt 跟随显著超过 SDXL 时代。ComfyUI / Forge / Diffusers 全支持。 ### 3D 生成",
+    "description": "Official inference repo for FLUX.1 models — Black Forest Labs（原 Stable Diffusion 核心团队出走后新公司）出品。FLUX.1 \\[dev\\] / \\[schnell\\] / \\[pro\\] 三档：dev 非商用最强、schnell 1-4 步快速、pro 闭源 API。目前开源界文生图 SOTA，画手脚 + 文字渲染 + prompt 跟随显著超过 SDXL 时代。ComfyUI / Forge / Diffusers 全支持。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-black-forest-labs-flux"
   },
@@ -3999,7 +4000,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "手机端可跑的口袋级多模态 LLM — OpenBMB / 面壁出品。8B 参数，端到端理解图像 + 视频 + 语音 + 文本 + 实时流，GPT-4o-mini 级能力但部署到 iPhone / Android 也跑得动。MiniCPM-V 多模态系列演进版，实时视频问答 + 端侧语音助手 + 摄像头流式理解是核心新能力。中文 OCR / 表格 / 公式识别国内最强开源之一。 ### 代码模型",
+    "description": "手机端可跑的口袋级多模态 LLM — OpenBMB / 面壁出品。8B 参数，端到端理解图像 + 视频 + 语音 + 文本 + 实时流，GPT-4o-mini 级能力但部署到 iPhone / Android 也跑得动。MiniCPM-V 多模态系列演进版，实时视频问答 + 端侧语音助手 + 摄像头流式理解是核心新能力。中文 OCR / 表格 / 公式识别国内最强开源之一。",
     "addedAt": "2026-05-09T19:43:23+08:00",
     "anchor": "models__github-com-openbmb-minicpm-o"
   },
@@ -4014,7 +4015,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "金融市场语言基础模型 — 面向金融市场序列和交易数据的 foundation model，把市场行为当作一种“语言”来建模。适合关注 AI for Finance、量化研究、金融时间序列建模的人跟踪，和通用 LLM 不同，它更偏垂直领域基础模型。 ### 生物 / 蛋白质",
+    "description": "金融市场语言基础模型 — 面向金融市场序列和交易数据的 foundation model，把市场行为当作一种“语言”来建模。适合关注 AI for Finance、量化研究、金融时间序列建模的人跟踪，和通用 LLM 不同，它更偏垂直领域基础模型。",
     "addedAt": "2026-05-15T10:35:08+08:00",
     "anchor": "models__github-com-shiyu-coder-kronos"
   },
@@ -4029,7 +4030,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Contexts Optical Compression — DeepSeek 新出，核心创新：100 tokens/page 反超 GOT-OCR 的 256 tokens/page。把文档当图像压缩到极少 token 数仍保住精度，长文档 RAG 场景显著省 context 窗口。新晋黑马，落地前自己跑 demo 看你的场景适不适合。 ### Agent / Function Calling 模型",
+    "description": "Contexts Optical Compression — DeepSeek 新出，核心创新：100 tokens/page 反超 GOT-OCR 的 256 tokens/page。把文档当图像压缩到极少 token 数仍保住精度，长文档 RAG 场景显著省 context 窗口。新晋黑马，落地前自己跑 demo 看你的场景适不适合。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-deepseek-ai-deepseek-ocr"
   },
@@ -4104,7 +4105,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "High-Resolution 3D Assets Generation with Large Scale Hunyuan3D Diffusion Models — 腾讯混元出品，开源 3D 生成事实标准。文本/图片 → 高分辨率 mesh + texture 一气呵成，质量已接近商业级 Tripo / Meshy。Blender 插件 + ComfyUI 节点齐全。做游戏 / VR / 电商素材首选。 ### 音乐 / 音频生成",
+    "description": "High-Resolution 3D Assets Generation with Large Scale Hunyuan3D Diffusion Models — 腾讯混元出品，开源 3D 生成事实标准。文本/图片 → 高分辨率 mesh + texture 一气呵成，质量已接近商业级 Tripo / Meshy。Blender 插件 + ComfyUI 节点齐全。做游戏 / VR / 电商素材首选。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-tencent-hunyuan3d-2"
   },
@@ -4134,7 +4135,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Retrieval and Retrieval-augmented LLMs — 北京智源 (BAAI) 出品。国产 RAG 检索端全家桶：bge-m3 多语言嵌入 + bge-reranker-v2-m3 重排 + bge-en-icl 上下文学习版。MTEB / C-MTEB 长期前列，国内 RAG 圈事实标准，几乎所有 Xinference / RAGFlow / FastGPT 部署都从这里挑模型。 ### ASR / 语音识别",
+    "description": "Retrieval and Retrieval-augmented LLMs — 北京智源 (BAAI) 出品。国产 RAG 检索端全家桶：bge-m3 多语言嵌入 + bge-reranker-v2-m3 重排 + bge-en-icl 上下文学习版。MTEB / C-MTEB 长期前列，国内 RAG 圈事实标准，几乎所有 Xinference / RAGFlow / FastGPT 部署都从这里挑模型。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-flagopen-flagembedding"
   },
@@ -4164,7 +4165,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Multilingual Voice Understanding Model — 阿里通义实验室 (FunAudioLLM) 出品，中文场景体验显著强过 Whisper：直接给情绪 + 事件检测 + 标点 + 逆文本归一化，工业级一站到位。如果你做中文客服质检 / 直播字幕 / 播客转录，先试 SenseVoice 再试 Whisper。 ### 文生图",
+    "description": "Multilingual Voice Understanding Model — 阿里通义实验室 (FunAudioLLM) 出品，中文场景体验显著强过 Whisper：直接给情绪 + 事件检测 + 标点 + 逆文本归一化，工业级一站到位。如果你做中文客服质检 / 直播字幕 / 播客转录，先试 SenseVoice 再试 Whisper。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-funaudiollm-sensevoice"
   },
@@ -4179,7 +4180,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Breaking the Barrier of Closed-Source Models in Code Intelligence — 236B MoE / 21B 激活，是开源代码模型里第一次正面对标 GPT-4 Turbo 的工作。论文常引，社区做代码模型对比时的标杆基线。 ### Embedding / Reranker（RAG 检索端）",
+    "description": "Breaking the Barrier of Closed-Source Models in Code Intelligence — 236B MoE / 21B 激活，是开源代码模型里第一次正面对标 GPT-4 Turbo 的工作。论文常引，社区做代码模型对比时的标杆基线。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-deepseek-ai-deepseek-coder-v2"
   },
@@ -4194,7 +4195,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Open Full-song Music Generation Foundation Model, something similar to Suno.ai but open — 多模态艺术项目组出品，开源界 Suno 平替。给 lyrics + style prompt → 直接生成带人声 + 伴奏的完整歌曲（3 分钟级别），不是只生伴奏。Apache 2.0 可商用，是当下最完整的开源音乐生成方案。 ### OCR / 文档解析（RAG 数据准备端）",
+    "description": "Open Full-song Music Generation Foundation Model, something similar to Suno.ai but open — 多模态艺术项目组出品，开源界 Suno 平替。给 lyrics + style prompt → 直接生成带人声 + 伴奏的完整歌曲（3 分钟级别），不是只生伴奏。Apache 2.0 可商用，是当下最完整的开源音乐生成方案。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-multimodal-art-projection-yue"
   },
@@ -4224,7 +4225,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Official repository for the Boltz biomolecular interaction models — MIT 出品，AlphaFold 3 的开源平替：蛋白质 + 核酸 + 小分子相互作用预测。AF3 权重不开放，Boltz 是公开权重的同档替代。学术研究和创业药企的现实选择。 ### 数学专项",
+    "description": "Official repository for the Boltz biomolecular interaction models — MIT 出品，AlphaFold 3 的开源平替：蛋白质 + 核酸 + 小分子相互作用预测。AF3 权重不开放，Boltz 是公开权重的同档替代。学术研究和创业药企的现实选择。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-jwohlwend-boltz"
   },
@@ -4239,7 +4240,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Generalist and Lightweight Model for Named Entity Recognition (Extract any entity types from texts) — 零样本 NER 神器：不用训练，给一个 entity type 列表（\"人名\"、\"药品\"、\"金额\"）直接抽。比 spaCy 灵活、比 LLM 便宜 100 倍、延迟低，实体抽取赛道工业首选。 ### 多模态翻译",
+    "description": "Generalist and Lightweight Model for Named Entity Recognition (Extract any entity types from texts) — 零样本 NER 神器：不用训练，给一个 entity type 列表（\"人名\"、\"药品\"、\"金额\"）直接抽。比 spaCy 灵活、比 LLM 便宜 100 倍、延迟低，实体抽取赛道工业首选。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-urchade-gliner"
   },
@@ -4269,7 +4270,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "Qwen 系列数学专项模型 — 1.5B / 7B / 72B，覆盖小学到 AIME 竞赛题，MATH / GSM8K / AIME 开源 SOTA。是开源数学推理基线的事实标准，常被 NuminaMath / 自家 fine-tune 拿来当起点。⚠️ 无 LICENSE。 ### 信息抽取 / NER",
+    "description": "Qwen 系列数学专项模型 — 1.5B / 7B / 72B，覆盖小学到 AIME 竞赛题，MATH / GSM8K / AIME 开源 SOTA。是开源数学推理基线的事实标准，常被 NuminaMath / 自家 fine-tune 拿来当起点。⚠️ 无 LICENSE。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-qwenlm-qwen2-5-math"
   },
@@ -4284,7 +4285,7 @@
     "category": "开源大模型",
     "subcategory": "",
     "slug": "models",
-    "description": "xLAM: A Family of Large Action Models to Empower AI Agent Systems — Salesforce 出品，专攻 function calling / tool use 场景。1B → 70B 全档位，BFCL (Berkeley Function-Calling Leaderboard) 开源类长期前列。如果你做 agent 需要稳定调工具，xLAM 比通用 LLM 微调更省事。 ### 时序预测（2024 才出现的基础模型新方向）",
+    "description": "xLAM: A Family of Large Action Models to Empower AI Agent Systems — Salesforce 出品，专攻 function calling / tool use 场景。1B → 70B 全档位，BFCL (Berkeley Function-Calling Leaderboard) 开源类长期前列。如果你做 agent 需要稳定调工具，xLAM 比通用 LLM 微调更省事。",
     "addedAt": "2026-05-21T08:43:16+08:00",
     "anchor": "models__github-com-salesforceairesearch-xlam"
   },
@@ -4794,7 +4795,7 @@
     "category": "Claude Code Skills",
     "subcategory": "Skill 市场 & 合集",
     "slug": "skills",
-    "description": "Agent 原生的 skill 推荐引擎 — MemTensor（MemOS / openmem 团队）出品，官网 skills.vote。理念是\"告别硬编码、臃肿的 skill 列表\"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 SKILL.md 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于\"动态按需推荐\"而非\"列表浏览\"。 ### 人物 / 蒸馏 Skill > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 nuwa-skill 用于持续蒸馏新角色。",
+    "description": "Agent 原生的 skill 推荐引擎 — MemTensor（MemOS / openmem 团队）出品，官网 skills.vote。理念是\"告别硬编码、臃肿的 skill 列表\"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 SKILL.md 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于\"动态按需推荐\"而非\"列表浏览\"。",
     "addedAt": "2026-05-18T19:47:53+08:00",
     "anchor": "skills__github-com-memtensor-skills-vote"
   },
@@ -5214,7 +5215,7 @@
     "category": "Claude Code Skills",
     "subcategory": "人物 / 蒸馏 Skill",
     "slug": "skills",
-    "description": "给 Claude Code 一行命令，自动组建专家委员会推动项目到生产质量 — 10 阶段流水线 + 对抗性评分循环到 100/100。把公共专业知识沉淀成可复用的 Codex 顾问配置文件。新仓库星标 0，但思路非常贴合 personas 主题。 ### Agents365-ai Skill > 来源：B站 UP 主「探索未至之境」（6169 粉丝） — 2026-04 持续更新中。同类绘图 Skill 选型：tldraw-skill 手绘白板风（白板讲解 / 内部文档）、drawio-skill 干净专业风（商务 / 学术正式图）、mermaid DSL 文转图（文档随手画）、excalidraw 草图非正式风（汇报演示）。 | 项目名称 | GitHub 地址 | 描述 | |---------|------------|------| | drawio-skill | https://github.com/Agents365-ai/drawio-skill | AI 一句话生成专业 draw.io 图表（v1.4）。三套风格预设（default/corporate/handdrawn）+ 六种模板（ERD/UML/Sequence/Architecture/Flowchart/ML 神经网络）+ 数据流动画。适合商务/学术正式图 | | tldraw-skill | https://github.com/Agents365-ai/tldraw-skill | AI 一句话生成手绘白板风图表。schema 正确的 .tldr JSON 骨架，10 色语义系统，视觉自检循环（自动读 PNG 修复重叠/截断/断箭头）。npm install -g @kitschpatrol/tldraw-cli 兼容 Claude Code/Opencode/OpenClaw/Hermes/Codex | | video-podcast-maker | https://github.com/Agents365-ai/video-podcast-maker | 视频播客制作 Skill（用于自动生成视频/讲解类内容） |",
+    "description": "给 Claude Code 一行命令，自动组建专家委员会推动项目到生产质量 — 10 阶段流水线 + 对抗性评分循环到 100/100。把公共专业知识沉淀成可复用的 Codex 顾问配置文件。新仓库星标 0，但思路非常贴合 personas 主题。",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "skills__github-com-wd041216-bit-expert-distiller"
   },
@@ -5229,7 +5230,7 @@
     "category": "Claude Code Skills",
     "subcategory": "Agents365-ai Skill",
     "slug": "skills",
-    "description": "B站评论分析 Agent CLI — 一行命令拉 Bilibili 视频评论做情感分析 / 关键词提取 / 铁粉识别 / 地域分布 / 回复盘点 / 时间演变。零依赖 Python，纯 cookie 认证只读安全。Claude Code / Codex / OpenClaw 多平台。配套视频 BV1FcdZBPEAT。 ### 营销 / 商业 Skill > 来源：推特推荐（@Jaden_riku 2026-05）— Marketing 方向 Claude Code / Codex / Gemini CLI Skill 包 | 项目名称 | GitHub 地址 | Stars | 描述 | |---------|------------|-------|------| | marketingskills | https://github.com/coreyhaines31/marketingskills | 26,806 | Marketing skills for Claude Code & AI agents（MIT，2026-01 创建，2026-05 持续更新）。skills/ 目录含 40 个 marketing 子 skill，覆盖 5 大方向：CRO 转化率优化（form-cro / page-cro / onboarding-cro / popup-cro / signup-flow-cro / paywall-upgrade-cro）、文案 & 内容（copywriting / copy-editing / cold-email / email-sequence / content-strategy / social-content / image / video）、SEO（seo-audit / ai-seo / programmatic-seo / schema-markup / site-architecture / aso-audit）、获客增长（paid-ads / ad-creative / launch-strategy / referral-program / directory-submissions / lead-magnets / free-tool-strategy / community-marketing）、数据运营（analytics-tracking / ab-test-setup / churn-prevention / customer-research / marketing-psychology / competitor-profiling / pricing-strategy / product-marketing-context / revops / sales-enablement） |",
+    "description": "B站评论分析 Agent CLI — 一行命令拉 Bilibili 视频评论做情感分析 / 关键词提取 / 铁粉识别 / 地域分布 / 回复盘点 / 时间演变。零依赖 Python，纯 cookie 认证只读安全。Claude Code / Codex / OpenClaw 多平台。配套视频 BV1FcdZBPEAT。",
     "addedAt": "2026-05-11T21:05:35+08:00",
     "anchor": "skills__github-com-agents365-ai-bbc-skill"
   },
@@ -5274,7 +5275,7 @@
     "category": "Claude Code Skills",
     "subcategory": "营销 / 商业 Skill",
     "slug": "skills",
-    "description": "全栈营销与 AI Business Skills — fullstack-mkt-skills 已重定向到 minhnv0807/ai-business-skills，仓库提供 60 个生产可用的营销 Skill，覆盖个人品牌、AI Avatar、Dropshipping、区域化营销和自动化工作流。适合把营销增长 SOP 做成可复用 agent skill。 ### 工程 / 编码原则 Skill",
+    "description": "全栈营销与 AI Business Skills — fullstack-mkt-skills 已重定向到 minhnv0807/ai-business-skills，仓库提供 60 个生产可用的营销 Skill，覆盖个人品牌、AI Avatar、Dropshipping、区域化营销和自动化工作流。适合把营销增长 SOP 做成可复用 agent skill。",
     "addedAt": "2026-05-11T20:51:57+08:00",
     "anchor": "skills__github-com-minhnv0807-ai-business-skills"
   },
@@ -5331,7 +5332,7 @@
     "category": "实用工具箱",
     "subcategory": "网盘 & 下载工具",
     "slug": "toolbox",
-    "description": "轻量级纯 Python 视频下载器 — 支持抖音、快手、小红书、B站、TikTok、YouTube、优酷、腾讯、爱奇艺、微博、TED 等大量流媒体平台，主打高清无水印优先。适合把短视频/长视频采集下载纳入脚本化素材处理流程。 ### 网络工具",
+    "description": "轻量级纯 Python 视频下载器 — 支持抖音、快手、小红书、B站、TikTok、YouTube、优酷、腾讯、爱奇艺、微博、TED 等大量流媒体平台，主打高清无水印优先。适合把短视频/长视频采集下载纳入脚本化素材处理流程。",
     "addedAt": "2026-05-11T20:51:57+08:00",
     "anchor": "toolbox__github-com-charlespikachu-videodl"
   },
@@ -5436,7 +5437,7 @@
     "category": "实用工具箱",
     "subcategory": "网络工具",
     "slug": "toolbox",
-    "description": "全能隐写术 (Steganography) 工具套件 — 作者 elder-plinius（著名 AI jailbreak / 安全研究者，L1B3RT4S 系列作者）。支持多载体隐藏信息：图片 / 音频 / 文档 / 网络包 / 代码，内置 100+ 示例文件方便测试和学习。AGPL 协议偏教学 / 研究向。和 StegHide / OutGuess 这类老牌单类型工具不同：ST3GG 主打 all-in-one 多载体 + 现代 Web UI（HTML 主导项目结构）。 典型场景： - 红队 C2 信道隐写（用图片走出公司 DLP） - CTF 隐写题练习 + 出题 - 数字取证 / 反隐写（steganalysis）练习 - 安全教学演示 注意：⚠️ 隐写工具天生灰区——在授权红队、CTF、研究教学场景合法；用于绕过企业 DLP / 走私违规内容则违法。AGPL 意味着商业服务里集成需开源整个服务（网络分发即触发）。 ### 软件集合",
+    "description": "全能隐写术 (Steganography) 工具套件 — 作者 elder-plinius（著名 AI jailbreak / 安全研究者，L1B3RT4S 系列作者）。支持多载体隐藏信息：图片 / 音频 / 文档 / 网络包 / 代码，内置 100+ 示例文件方便测试和学习。AGPL 协议偏教学 / 研究向。和 StegHide / OutGuess 这类老牌单类型工具不同：ST3GG 主打 all-in-one 多载体 + 现代 Web UI（HTML 主导项目结构）。 典型场景： - 红队 C2 信道隐写（用图片走出公司 DLP） - CTF 隐写题练习 + 出题 - 数字取证 / 反隐写（steganalysis）练习 - 安全教学演示 注意：⚠️ 隐写工具天生灰区——在授权红队、CTF、研究教学场景合法；用于绕过企业 DLP / 走私违规内容则违法。AGPL 意味着商业服务里集成需开源整个服务（网络分发即触发）。",
     "addedAt": "2026-05-21T09:38:24+08:00",
     "anchor": "toolbox__github-com-elder-plinius-st3gg"
   },

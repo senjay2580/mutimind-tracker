@@ -169,8 +169,10 @@ for (const file of files) {
   }
 
   // ---------- Pattern B: card style — `## [name](url)` + optional <RepoMeta /> + paragraph ----------
+  // Card body stops at the next card (`## `) OR the next subsection (`### `),
+  // so the last card before a `### ` heading doesn't swallow downstream content.
   const cardRe =
-    /^## \[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\s*\n+([\s\S]*?)(?=\n## |(?![\s\S]))/gm
+    /^## \[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\s*\n+([\s\S]*?)(?=\n#{2,3} |(?![\s\S]))/gm
   for (const m of txt.matchAll(cardRe)) {
     const name = m[1].trim()
     const url = m[2].trim().replace(/[).,;]+$/, '')
