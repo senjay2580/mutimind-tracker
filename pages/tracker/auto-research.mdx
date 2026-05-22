@@ -17,22 +17,6 @@ import RepoMeta from '../../components/RepoMeta'
 |---------|------------|-------|------|
 | autoresearch | https://github.com/karpathy/autoresearch | 65,662 | **Karpathy 单卡 GPU 自主研究 Agent**（无 LICENSE，Python）。**Andrej Karpathy 个人实验仓库**：让 AI Agent 在**单 GPU 上自动训练 nanochat**（Karpathy 自己的 ~561 行 LLM 训练样本仓）并自主迭代研究。**典型用法：让 Agent 跑超参搜索 / 架构消融 / 训练曲线分析，自动产出研究 insights**。**为"个人用 1 张卡也能跑 AI 研究"提供示范**，配合 nanochat / nanoGPT / micrograd 形成完整教学链 |
 | AutoResearchClaw | https://github.com/aiming-lab/AutoResearchClaw | 10,316 | **🦞 全自主 + 自进化的研究 Agent**（MIT，Python，aiming-lab）。**"Chat an Idea. Get a Paper."** 从一句话想法到完整论文全自动 — 多 Agent 辩论生成假设、引用验证（防幻觉）、自进化的研究策略改进。**配套 metaClaw + OpenClaw 生态**（自家 Agent harness），强调 self-evolving — Agent 跑多轮研究后自动 evolve 自身 prompt / 工具选择。AI Scientist / Agent Laboratory / InternAgent 同生态位 |
-| AgentEvolver | https://github.com/modelscope/AgentEvolver | 1,336 | **高效自进化 Agent 训练框架**（阿里巴巴 ModelScope，Apache-2.0）。**用强化学习自进化 Agent**：Agent 在环境中行动 → 收集轨迹 → RL 优化策略 → Agent 自身能力提升 → 重复。**和"prompt 工程优化"路线不同 —— 这是真正改 Agent 的模型权重**。架构覆盖单 / 多 Agent、reward 设计、训练效率优化。论文 + 开源代码，ModelScope 在自进化 Agent 方向的代表作 |
-| Hermes Agent Self-Evolution | https://github.com/NousResearch/hermes-agent-self-evolution | 623 | **⚒ Hermes Agent 的进化式自我改进框架**（Nous Research）。**用 DSPy + GEPA（遗传进化提示优化）自动优化 Agent 的 skill / prompt / 代码**。和直接微调模型不同 —— 不改模型权重，**改"Agent 怎么用模型"**（更便宜更可控）。Nous Research 是开源大模型圈知名实验室（Hermes / Capybara / Yarn 系列），这个项目把 Stanford DSPy 框架与遗传算法结合，**研究"Agent 自我优化"的代表实践之一** |
-| SE-Agent | https://github.com/JARVIS-Xs/SE-Agent | 245 | **LLM Code Agent 的自进化框架**（MIT，Python）。**核心创新：trajectory-level evolution** — 跨多条推理路径交换信息（Revision / Recombination / Refinement 三种算子），扩大搜索空间逃离局部最优。**在 SWE-bench Verified 拿到 SOTA**（修真实 GitHub bug 测试集），MCTS（蒙特卡洛树搜索）+ test-time scaling 思路。配合 Claude Code 使用，**适合研究"如何让代码 Agent 自我进化"** |
-
-## [AI-Scientist (Sakana AI)](https://github.com/SakanaAI/AI-Scientist)
-
-<RepoMeta
-  url="https://github.com/SakanaAI/AI-Scientist"
-  stars={13553}
-  updated="2025-12-19"
-  lang="Jupyter Notebook"
-  license="No License"
-  tags={['scientific-discovery', 'sakana', 'paper-writing']}
-/>
-
-**全球首个全自动科学发现系统 v1** — Sakana AI 出品，端到端：想法 → 文献检索 → 代码 → 实验 → 写论文 → 自动审稿。论文 [arxiv 2408.06292](https://arxiv.org/abs/2408.06292)。学术界标志性项目，研究 agentic ML 工作流必看。
 
 ## [AI-Scientist-v2](https://github.com/SakanaAI/AI-Scientist-v2)
 
@@ -64,5 +48,43 @@ import RepoMeta from '../../components/RepoMeta'
 - Markdown-only skills，不依赖任何编排框架
 - cross-model review loop 设计，让多模型互相挑刺
 - 自带 paper-review 和 paper-writing 工作流模板
+
+## [AutoFigure-Edit](https://github.com/ResearAI/AutoFigure-Edit)
+
+<RepoMeta
+  url="https://github.com/ResearAI/AutoFigure-Edit"
+  stars={3297}
+  updated="2026-05-17"
+  lang="Python"
+  license="MIT"
+  tags={['scientific-figures', 'svg', 'paper-writing', 'research']}
+/>
+
+**一句话定位** — 从论文方法文本生成可编辑科研插图的工具，把 method section 转成 editable SVG figures，并支持后续编辑。它面向科研写作和论文图表生产，可用于把实验方法、模型结构、流程图快速转成可修改的矢量插图。
+
+**亮点**：
+- 目标不是静态图片，而是可编辑 SVG，便于论文排版和二次修改
+- 配套 AutoFigure / FigureBench 方向，适合科研图生成评测与自动化写作流程
+- 对需要批量产出模型结构图、实验流程图的研究 Agent 很有价值
+
+**注意**：⚠️ 科研插图需要事实校验；自动生成图不能替代作者对方法细节和视觉表达的最终审阅。
+
+## [arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server)
+
+<RepoMeta
+  url="https://github.com/blazickjp/arxiv-mcp-server"
+  stars={2761}
+  updated="2026-05-18"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['arxiv', 'mcp-server', 'research', 'papers']}
+/>
+
+**一句话定位** — 面向 arXiv 论文搜索与分析的 MCP Server，让 Claude、GPT、各类 Agent 通过标准 Model Context Protocol 查询论文、读取元数据并辅助研究。适合把 arXiv 作为 Agent 的实时论文检索工具接入文献综述、选题和论文阅读流程。
+
+**亮点**：
+- 以 MCP server 形式提供，方便接入 Claude Desktop、Claude Code 或其他 MCP 客户端
+- 聚焦 arXiv 搜索、论文信息获取和研究辅助分析
+- 适合搭配文献综述 Agent、研究日报、论文推荐和自动摘要工具
 
 </div>
