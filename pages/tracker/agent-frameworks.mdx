@@ -57,4 +57,24 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 短期内爆涨的项目，工程稳定性 / 数据安全实践还在验证；商用前自己跑生产 ready 评估。
 
+## [pikiclaw](https://github.com/xiaotonng/pikiclaw)
+
+<RepoMeta
+  url="https://github.com/xiaotonng/pikiclaw"
+  stars={268}
+  updated="2026-05-21"
+  lang="TypeScript"
+  license="MIT"
+  tags={['agent-orchestrator', 'multi-agent', 'im-driven', 'npx']}
+/>
+
+**开源 Agent 编排器（orchestrator）** — **是什么**：一个不绑定 IDE、不绑定单一 agent、不绑定封闭模型生态的可插拔编排器，`npx pikiclaw@latest` 一行起，Node 20+。**能干什么**：让创作者不碰代码、从一个控制台并行驱动「一群 agent」，通过四层架构自由组合 —— ① **Terminal 层**：Telegram / 飞书 / 微信 / Slack / Discord / 钉钉 / 企业微信 / Web Dashboard 全是平级入口，从最顺手的 IM 直接发指令；② **Agent 层**：Claude Code / Codex / Gemini / Hermes 经 driver registry + ACP 接入；③ **Model 层**：Claude / GPT / Gemini / DeepSeek / 豆包 / MiMo / MiniMax / OpenRouter 及任意 OpenAI 兼容代理任选；④ **Tool 层**：Skills / MCP / CLI（global × workspace 两级）。
+
+**重点 & 特色**：
+- **产品本体就是编排器** —— 刻意反「软件创作必须困在单个代码编辑器里」的范式，赌「下一代创作发生在 orchestrator 而非 IDE」
+- **完全自举（self-bootstrapped）** —— pikiclaw 自身就是用 pikiclaw 造出来的，把「用 agent 群造软件」当作自证
+- **IM 即终端** —— 把 agent swarm 指挥台搬进你已在用的聊天软件，新终端即插即用
+
+**注意**：⚠️ 仅 268★、2026-05 起步的早期项目，driver registry / ACP 生态与工程稳定性仍处早期，生产用前自评。
+
 </div>
