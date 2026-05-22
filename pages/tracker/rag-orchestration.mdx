@@ -19,7 +19,7 @@ import RepoMeta from '../../components/RepoMeta'
 | LightRAG | https://github.com/hkuds/lightrag | 32,106 | **轻量级 Graph-RAG 框架**（EMNLP 2025 论文，香港大学 HKUDS，MIT）。首次把 **GraphRAG 效果**做到 **LangChain RAG 量级的工程复杂度**。检索阶段先抽实体 / 关系建知识图谱，再做**双层检索**：low-level 精确实体匹配，high-level 图谱关系推理。对比 Microsoft GraphRAG：索引构建快 10×、token 消耗低 50%。**Neo4j / NetworkX 双后端**，配套 WebUI 直接可视化图谱。适合需要"长尾事实 + 全局推理"的研究 / 法律 / 医疗知识库 |
 | RAG-Anything | https://github.com/HKUDS/RAG-Anything | 15,128 | **All-in-One 多模态 RAG 框架**（HKUDS，MIT）。**LightRAG 同源团队的多模态版**，图片 / 表格 / 公式 / 图表全部接入同一条流水线。文档解析走 MinerU / opendataloader-pdf，**模态特定检索器** — 图片走 VLM、表格走结构化查询、文本走 graph + vector 双路，最后协调器融合。一行代码索引复杂 PDF / PPT / 扫描件，**统一查询接口屏蔽模态差异**。适合"图文表混合检索"的科研论文库、产品手册库、医学影像 + 报告联合查询 |
 | Dynamiq | https://github.com/dynamiq-ai/dynamiq | 1,043 | **Agent + RAG 一体化编排框架**（Apache-2.0）。定位 LangChain / LlamaIndex 替代品，**更聚焦 LLMOps + 生产部署**：内置评估、监控、A/B 测试、回归套件。组件化抽象：Nodes（LLM / 工具 / 检索器）→ Flows（DAG 编排）→ Workflows（生产部署单元）。支持多 LLM provider、流式输出、人在环、记忆持久化。**适合"既要 RAG 又要 Agent 还要可观测"的中型团队**，对比 LangChain 更工程化、更少 magic |
-| LLM Wiki | https://github.com/nashsu/llm_wiki | 5,400 | 跨平台桌面应用，用 LLM（非传统 RAG）把文档自动整理成互联知识库。两步 CoT 入库 + 知识图谱可视化 + 社区检测 + Web 调研 + Chrome 剪藏 |
+| LLM Wiki | https://github.com/nashsu/llm_wiki | 8,849 | 跨平台桌面应用，用 LLM（非传统 RAG）把文档自动整理成互联知识库。两步 CoT 入库 + 知识图谱可视化 + 社区检测 + Web 调研 + Chrome 剪藏 |
 
 ## [opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf)
 
@@ -46,5 +46,18 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **生产环境稳定的复杂 PDF / Office 解析** — OpenDataLab 出品，把 PDF 和 Office 文档转成 LLM-ready Markdown / JSON 喂给 agentic workflow。和 opendataloader-pdf 横向对比：MinerU 来自国内 OpenDataLab，社区生态更成熟（62k★）。来源：B站 BV1uYA3z3EBL。
+
+## [ai-knowledge-graph](https://github.com/robert-mcdermott/ai-knowledge-graph)
+
+<RepoMeta
+  url="https://github.com/robert-mcdermott/ai-knowledge-graph"
+  stars={2288}
+  updated="2025-12-28"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['knowledge-graph', 'llm', 'visualization', 'networkx']}
+/>
+
+**LLM 驱动的知识图谱生成器** — 把任意非结构化文本喂给 LLM，自动抽取实体与关系，构建成可交互的知识图谱。底层用 `networkx` 建图、`pyvis` 渲染交互式可视化，输出独立 HTML 文件浏览器直接打开。支持知识蒸馏（合并同义实体、去重关系），适合从文档 / 笔记 / 研究资料里快速提炼出概念网络。
 
 </div>
