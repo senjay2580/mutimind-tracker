@@ -23,7 +23,7 @@ import RepoMeta from '../../components/RepoMeta'
 | compound-engineering-plugin | https://github.com/EveryInc/compound-engineering-plugin | 13,212 | **Compound Engineering 官方多 Agent 插件**（MIT，TypeScript）。**Every.to 创始团队提出的 "Compound Engineering" 工程方法论**实现：把开发拆成 Planner + Builder + Reviewer 多 Agent 角色，并行运转 + 互相评审。**Claude Code / Codex / Cursor 全平台插件**，提供配套 skill + slash command + agent 定义。**适合想从"单 Agent vibe coding"升级到"多 Agent 流水线"的开发者** |
 | vercel/streamdown | https://github.com/vercel/streamdown | 4,919 | **AI 流式输出专用 Markdown 渲染器**（NOASSERTION，TypeScript，Vercel 官方）。**react-markdown 的 drop-in 替换** — 但**专门为 LLM streaming token 优化**：增量渲染（已渲染部分不重绘）、不完整 markdown 安全处理（半截 code block / 表格不崩）、代码高亮性能优化。**AI 聊天 UI 的事实选择** — Vercel AI SDK 配套，复制 v0 / ChatGPT 的渲染体验 |
 | gh-aw | https://github.com/github/gh-aw | 4,225 | **GitHub Agentic Workflows 官方 gh 扩展**（MIT，Go，GitHub 官方）。**把 Claude Code / Codex / Copilot 等编码 Agent 接入 GitHub Actions** — 在 PR / Issue 上触发 Agent 自动做 review / 修 bug / 写测试，结果回写到 PR 评论。`gh extension install github/gh-aw` 一键装。**官方维护**，对比社区方案（compound-engineering 等）更稳，是"Agentic DevOps"的官方支持入口 |
-| open-design | https://github.com/nexu-io/open-design | 13,200 | **本地优先开源设计工具**（Anthropic Claude Design 替代）。Next.js + Node.js + TypeScript + SQLite。通过 Claude Code / Cursor / Gemini 等 AI 编码 Agent 生成网页/移动应用/演示文稿原型。内置 31 个设计 Skill + 72 个品牌级设计系统，Apache-2.0 |
+| open-design | https://github.com/nexu-io/open-design | 49,389 | **本地优先开源 Claude Design 替代品**（Apache-2.0，TypeScript）。通过 Claude Code / Codex / Cursor / Gemini / OpenCode / Qwen / Copilot / Hermes / Kimi CLI 等 AI 编码 Agent 生成 web / desktop / mobile 原型、slides、图片、视频和 HyperFrames。内置 19 个 Skills + 71 套品牌级 Design Systems，支持沙盒预览与 HTML/PDF/PPTX/MP4 导出。 |
 
 ## [gstack (Garry Tan)](https://github.com/garrytan/gstack)
 
@@ -76,5 +76,25 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **Claude Design 灵感库** — 收集 68 套可直接使用的 `DESIGN.md` 设计系统灵感。把其中一套丢给 Claude Code / 设计 Agent，就能更稳定地 scaffold 出完整 UI。适合做 Vibe Coding 时快速选风格，减少“默认模板味”。
+
+## [html-anything](https://github.com/nexu-io/html-anything)
+
+<RepoMeta
+  url="https://github.com/nexu-io/html-anything"
+  stars={4549}
+  updated="2026-05-22"
+  lang="HTML"
+  license="Apache-2.0"
+  tags={['html-editor', 'agentic-design', 'hyperframes', 'claude-code']}
+/>
+
+**一句话定位** — Agentic HTML 编辑器：让本地 AI Agent 写 HTML，用户负责发布与导出。它把 magazine、deck、poster、小红书/推文、prototype、data report、Hyperframes 等 9 类输出面向 Agent 封装成可复用能力，支持沙盒预览、一键导出 HTML/PNG 以及发布到微信/X/知乎等渠道。
+
+**亮点**：
+- Local-first + BYOK/零平台 API key 思路，可接 Claude Code、Cursor、Codex、Gemini、Copilot、OpenCode、Qwen、Aider 等编码 Agent
+- 内置 75 个 Skills × 9 个 Surfaces，适合把「写 HTML」升级成面向内容/设计场景的工作流
+- 提供沙盒预览与导出/发布链路，适合快速做海报、长图、deck、数据报告和原型
+
+**注意**：⚠️ 这是面向 Agent 的 HTML 生产/编辑工具，最终质量仍取决于所接入模型与提示词/Skill 设计。
 
 </div>
