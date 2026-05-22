@@ -216,6 +216,13 @@ html.dark aside.nextra-sidebar-container .mm-sidebar-new-badge {
     0 8px 18px -8px rgba(255, 111, 54, 0.85);
 }
 
+/* 侧栏只显示分类导航：点开分类后，Nextra 默认把该页所有 ## 标题
+   （即每个项目名）当锚点塞进侧栏。隐藏这个嵌套锚点列表 ——
+   该 <ul> 的特征是它的直接子项链接带 `#`（页内锚点）。 */
+aside.nextra-sidebar-container ul:has(> li > a[href*='#']) {
+  display: none;
+}
+
 /* ============================================================
    Index hero H1 — gradient text with soft glow
    ============================================================ */
