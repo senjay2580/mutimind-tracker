@@ -1,11 +1,11 @@
 ---
-title: "CLI 工具汇聚 & AI Agent 集成"
+title: "CLI 工具 & 终端 Agent"
 ---
 
 import RepoList from '../../components/RepoList'
 import RepoMeta from '../../components/RepoMeta'
 
-# CLI 工具汇聚 & AI Agent 集成
+# CLI 工具 & 终端 Agent
 
 <RepoList slug="cli-agent" />
 
@@ -118,5 +118,41 @@ import RepoMeta from '../../components/RepoMeta'
 - 适合把 Google NotebookLM 的摘要、资料组织、播客生成等能力包装成 Agent 工具
 
 **注意**：⚠️ 非官方 API，可能受 Google NotebookLM 前端/接口变更影响；生产使用前需要关注鉴权方式和稳定性。
+
+## [cli](https://github.com/larksuite/cli)
+
+<RepoMeta
+  url="https://github.com/larksuite/cli"
+  stars={12335}
+  updated="2026-05-22"
+  lang="Go"
+  license="MIT"
+  tags={['lark', 'feishu', 'cli', 'agent-skills']}
+/>
+
+**一句话定位** — 飞书/Lark 官方 CLI，覆盖 Messenger、Docs、Base、Sheets、Calendar、Mail、Tasks、Meetings 等核心业务域，并内置 200+ 命令和 20+ AI Agent Skills。适合把飞书生态能力变成可脚本化、可被 Agent 调用的企业协作接口层。
+
+**亮点**：
+- 官方维护，面向人类 CLI 与 AI Agent 双场景
+- 覆盖 IM、文档、多维表格、表格、日历、邮箱、任务、会议等常用工作流
+- 适合作为企业 Agent 的工作台连接器和自动化执行层
+
+## [mirage](https://github.com/strukto-ai/mirage)
+
+<RepoMeta
+  url="https://github.com/strukto-ai/mirage"
+  stars={2551}
+  updated="2026-05-22"
+  lang="TypeScript"
+  license="Apache-2.0"
+  tags={['virtual-filesystem', 'agent-tools', 'sandbox', 'vfs']}
+/>
+
+**一句话定位** — 面向 AI Agent 的统一虚拟文件系统，把多种后端和运行环境抽象成 Agent 可操作的文件层。它适合给 Claude Code、OpenAI Agents、LangChain 等 Agent 提供隔离、可控、可组合的文件访问接口，减少真实文件系统暴露风险。
+
+**亮点**：
+- 支持 TypeScript/Python 生态接入，定位为 Agent 工具层基础设施
+- 通过 VFS 抽象统一本地/远程/沙盒资源，方便做权限边界和环境隔离
+- 适合构建 Agent sandbox、代码执行环境、工具编排和多租户文件访问层
 
 </div>

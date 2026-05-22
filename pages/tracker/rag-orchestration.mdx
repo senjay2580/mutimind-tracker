@@ -1,11 +1,11 @@
 ---
-title: "RAG & LLM 编排"
+title: "RAG & 知识库"
 ---
 
 import RepoList from '../../components/RepoList'
 import RepoMeta from '../../components/RepoMeta'
 
-# RAG & LLM 编排
+# RAG & 知识库
 
 <RepoList slug="rag-orchestration" />
 
@@ -59,5 +59,18 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **LLM 驱动的知识图谱生成器** — 把任意非结构化文本喂给 LLM，自动抽取实体与关系，构建成可交互的知识图谱。底层用 `networkx` 建图、`pyvis` 渲染交互式可视化，输出独立 HTML 文件浏览器直接打开。支持知识蒸馏（合并同义实体、去重关系），适合从文档 / 笔记 / 研究资料里快速提炼出概念网络。
+
+## [UltraRAG](https://github.com/OpenBMB/UltraRAG)
+
+<RepoMeta
+  url="https://github.com/OpenBMB/UltraRAG"
+  stars={5552}
+  updated="2026-05-22"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['rag', 'mcp', 'low-code', 'openbmb']}
+/>
+
+**低代码 MCP-First RAG 框架** — OpenBMB / 面壁智能出品。**核心创新：用 MCP 协议串联整个 RAG 链路** —— 每个组件（embedding / 检索器 / reranker / LLM / VLM）都是一个 MCP server，可拖拽组合。覆盖 DeepSeek / Qwen / 开源 + 商业模型，支持多模态 RAG（VLM 处理图表）。Flask UI + 端到端示例，**适合想自己拼装 RAG 流水线但不想写 LangChain 胶水代码的研究者 / PoC 团队**。
 
 </div>

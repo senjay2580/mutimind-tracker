@@ -1,0 +1,152 @@
+---
+title: "自动化（浏览器/桌面/测试）"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# 自动化（浏览器/桌面/测试）
+
+<RepoList slug="automation" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+{/* 3 个 ### 子分类：浏览器自动化 · 桌面自动化 · 测试 & UI 自动化 */}
+
+<div className="mm-source-data">
+
+### 浏览器自动化
+
+## [opencli](https://github.com/jackwener/opencli)
+
+<RepoMeta
+  url="https://github.com/jackwener/opencli"
+  stars={21698}
+  updated="2026-05-18"
+  lang="JavaScript"
+  license="Apache-2.0"
+  tags={['cli-hub', 'browser-automation', 'ai-agent']}
+/>
+
+**把任意网站/工具变成 CLI + 让 AI agent 驱动你已登录的浏览器** — 通用 CLI Hub 与 AI-native runtime。三种自动化合一：① 内置 100+ 站点适配器（B站/知乎/小红书/Reddit/HackerNews/Twitter 等）；② 让 AI agent 通过你已登录的 Chrome 实时操作任意网站（导航/填表/点击/抽取）；③ 用 `opencli browser` + `opencli-adapter-author` skill 端到端写新适配器。也能当 CLI Hub 纳管 gh/docker/wx 等本地工具，并通过 CDP 控制 Cursor/Codex/ChatGPT 等 Electron 桌面应用。
+
+**能做**：
+- 实时浏览器自动化 —— 凭证留在浏览器，运行时**零 LLM 成本**（确定性输出、不烧 token）
+- 100+ 内置适配器 + 外部 CLI passthrough + Electron 桌面应用控制
+- 多 Chrome profile 路由（`--profile`）；AI agent 经 `npx skills add jackwener/opencli` 装配套 skill 使用
+
+**能力边界 ⚠️**：
+- **强依赖 Browser Bridge 浏览器扩展 + Chrome/Chromium** —— 没装扩展，浏览器类命令全部失效
+- 需 Node.js ≥ 21
+- 依赖你**已登录**的浏览器会话 —— 它不替你登录、不过验证码，凭证管理是你自己的事
+- 网站改版会让适配器失效，需 `opencli-autofix` skill 修复
+- 它是接口层 / runtime，不是爬虫框架本身；浏览器命令"设计给 AI agent 用，非手动跑"
+
+## [page-agent](https://github.com/alibaba/page-agent)
+
+<RepoMeta
+  url="https://github.com/alibaba/page-agent"
+  stars={17917}
+  updated="2026-05-11"
+  lang="TypeScript"
+  license="MIT"
+  tags={['gui-agent', 'in-page', 'natural-language', 'alibaba']}
+/>
+
+**页面内嵌 GUI Agent — JS 在页面里直接控制网页** — 自然语言操作网页 UI。和 browser-use 对比：page-agent 是页面内嵌（agent 跑在被控网页里），browser-use 是外部工具调用浏览器。适合给已有产品加内置 AI 操作员。
+
+## [SeleniumBase](https://github.com/seleniumbase/SeleniumBase)
+
+<RepoMeta
+  url="https://github.com/seleniumbase/SeleniumBase"
+  stars={12702}
+  updated="2026-05-18"
+  lang="Python"
+  license="MIT"
+  tags={['browser-automation', 'testing', 'anti-bot']}
+/>
+
+**浏览器自动化 + 测试 + 反检测绕过的瑞士军刀** — 对 Selenium / Playwright 的高级封装，同时支持两套底层，提供 pytest 集成 / API recorder / dashboard / 截图 diff / 性能基准。核心卖点 **UC Mode（Undetected Chromedriver）** 让浏览器自动化能绕过 Cloudflare / Datadome / hCaptcha 等反爬。端到端测试 + 数据爬取双场景，比纯 Selenium 易写、比 Playwright 多反检测能力。
+
+## [opencli-weixin-album](https://github.com/SlowGrowth1314/opencli-weixin-album)
+
+<RepoMeta
+  url="https://github.com/SlowGrowth1314/opencli-weixin-album"
+  stars={173}
+  updated="2026-05-16"
+  lang="TypeScript"
+  license="MIT"
+  tags={['opencli-plugin', 'wechat', 'archiving']}
+/>
+
+**OpenCLI 插件 —— 批量归档微信公众号合集** — 获取一个公众号「合集（Album）」的全部文章链接（直接调微信 API，无需 Cookie），自动逐篇下载正文 + 图片（复用 `opencli weixin download`），生成带本地路径的 Markdown 索引文件。支持**增量下载**（自动跳过已下载的文章），翻页/下载间隔随机暂停防限流。安装：`opencli plugin install github:SlowGrowth1314/opencli-weixin-album`。
+
+**注意**：⚠️ 依赖 opencli ≥ 1.3.3 + Chrome + opencli Browser Bridge 扩展（下载文章时需要）。
+
+### 桌面自动化
+
+## [cua](https://github.com/trycua/cua)
+
+<RepoMeta
+  url="https://github.com/trycua/cua"
+  stars={16896}
+  updated="2026-05-18"
+  lang="HTML"
+  license="MIT"
+  tags={['computer-use', 'agent', 'sandbox', 'benchmark']}
+/>
+
+**Computer-Use Agent 基础设施** — 给 AI 代理提供沙箱、SDK、桌面自动化和 benchmark，让代理能看屏幕、点按钮、打字并执行完整 GUI 工作流。拆成 Cua Driver、跨平台 sandbox API、CuaBot、Cua-Bench、Lume 等模块，覆盖 macOS / Linux / Windows 的桌面控制与评测。偏 agent infra / runtime / benchmark 平台，不是装了就提效的普通插件。
+
+**注意**：⚠️ 偏底层基础设施与实验平台，上手成本高于普通 Agent 应用；macOS 相关能力依赖 Apple Silicon / virtualization 生态。
+
+## [TuriX-CUA](https://github.com/TurixAI/TuriX-CUA)
+
+<RepoMeta
+  url="https://github.com/TurixAI/TuriX-CUA"
+  stars={2972}
+  updated="2026-05-18"
+  lang="Python"
+  license="MIT"
+  tags={['computer-use', 'desktop-agent', 'gui-agent']}
+/>
+
+**桌面级 Computer-Use Agent** — 对标 Anthropic Computer Use + OpenAI Operator，让 LLM 通过截屏 + 鼠标键盘控制操作真实桌面（Windows / macOS / Linux）。GUI Agent + 浏览器 use + 桌面 use 三合一，MCP 兼容可被 Claude Code / Cursor 调用。典型用例：自动跑桌面办公（填表 / 截屏 / 操作 SaaS）、不可 API 化软件的自动化。TurixAI 团队出品。
+
+## [roubao](https://github.com/Turbo1123/roubao)
+
+<RepoMeta
+  url="https://github.com/Turbo1123/roubao"
+  stars={2191}
+  updated="2026-01-08"
+  lang="Kotlin"
+  license="MIT"
+  tags={['android', 'computer-use', 'vlm', 'mobile-agent']}
+/>
+
+**基于视觉语言模型的 Android 自动化 Agent** — 手机端 Computer-Use Agent：VLM 看截屏 + 推导坐标 + ADB 模拟点击，让 LLM 自主操作真实 Android 手机。不依赖 accessibility service（避开应用反爬限制），用纯视觉 + adb shell 通用接口。典型场景：手机自动化测试、抢券脚本、社交 App 互动机器人、跨 App 工作流。
+
+**注意**：⚠️ 2026-01 后未更新；仅 Android。
+
+### 测试 & UI 自动化
+
+## [midscene](https://github.com/web-infra-dev/midscene)
+
+<RepoMeta
+  url="https://github.com/web-infra-dev/midscene"
+  stars={13235}
+  updated="2026-05-22"
+  lang="TypeScript"
+  license="MIT"
+  tags={['ui-automation', 'ai-test', 'computer-use', 'mcp']}
+/>
+
+**一句话定位** — AI 驱动、视觉感知的全平台 UI 自动化工具，用自然语言描述目标即可让 Agent 规划并操作界面。Midscene 支持 Web、Android、iOS 以及任意可截图界面，可与 Playwright/Puppeteer、ADB、WebDriverAgent 和 MCP 集成，用于自动化测试、数据提取、UI 断言与跨端操作。
+
+**亮点**：
+- 纯视觉路线定位和操作 UI，适合 DOM 不稳定、Canvas、移动端和桌面界面场景
+- 提供 `aiAssert()`、`aiLocate()`、`aiWaitFor()` 等开发者 API，以及可视化回放报告、Playground、Chrome 插件
+- 支持 MCP 暴露原子 UI 操作，方便上层 Agent 调用，并可接入 UI-TARS、Qwen-VL、Gemini 等视觉模型
+
+**注意**：⚠️ 这是自动化/测试与 computer-use 基础设施，需要配置模型、浏览器或移动端运行环境；复杂任务的稳定性取决于视觉模型和目标 UI 状态。
+
+</div>

@@ -22,7 +22,7 @@
       "name": "项目追踪",
       "short_name": "追踪",
       "description": "浏览全部分类",
-      "url": "/tracker/ai-llm-core",
+      "url": "/tracker/agents",
       "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]

@@ -69,9 +69,9 @@ const files = readdirSync(TRACKER).filter((f) => f.endsWith('.mdx'))
 
 // Categories that can include arbitrary site URLs (not just GitHub repos).
 // For these slugs the parser accepts any http(s) URL.
-const SITE_SLUGS = new Set(['aggregation', 'free-apis-index', 'skills'])
+const SITE_SLUGS = new Set(['aggregation', 'skills'])
 // Slugs whose card-format (`## [...]`) entries are grouped by `### ` subheadings.
-const SUBCAT_CARD_SLUGS = new Set(['skills', 'browser-automation'])
+const SUBCAT_CARD_SLUGS = new Set(['skills', 'agents', 'automation', 'media-ai', 'toolbox', 'aggregation'])
 const ANY_URL_RE = /https?:\/\/[^\s|)\]'">]+/
 const GH_URL_RE = /https:\/\/github\.com\/[a-zA-Z0-9._/-]+/
 

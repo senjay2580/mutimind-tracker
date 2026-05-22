@@ -1,0 +1,195 @@
+---
+title: "AI 内容生成（视频/语音/PPT）"
+---
+
+import RepoList from '../../components/RepoList'
+import RepoMeta from '../../components/RepoMeta'
+
+# AI 内容生成（视频/语音/PPT）
+
+<RepoList slug="media-ai" />
+
+{/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+{/* 3 个 ### 子分类：视频 AI · 语音合成 (TTS) · HTML/Canvas 转 PPT */}
+
+<div className="mm-source-data">
+
+### 视频 AI
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| MoneyPrinterTurbo | https://github.com/harry0703/MoneyPrinterTurbo | 56,600 | **AI 全自动短视频生成**（v1.2.7, 2026-04-03）。输入主题/关键词 → 自动生成文案+素材+字幕+BGM → 合成高清竖屏/横屏短视频。Streamlit Web + FastAPI，MoviePy 合成，支持 OpenAI/DeepSeek/通义千问，Docker 部署，批量生成 |
+| pyVideoTrans | https://github.com/jianchang512/pyvideotrans | 17,100 | **一键视频翻译/配音工具**（v3.99, 2026-04-14）。ASR → 翻译 → TTS → 合成 全流程。faster-whisper + edge-tts + F5-TTS/CosyVoice 零样本声音克隆，集成 DeepSeek/ChatGPT/Claude 翻译，PySide6 桌面 + CLI，支持说话人识别多角色配音 |
+| VideoRAG | https://github.com/HKUDS/VideoRAG | 2,839 | **超长视频问答 RAG 框架**（KDD 2026 论文，HKUDS）。**"Chat with Your Videos"** — 把 1-10 小时长视频做成可检索 RAG 知识库。**核心创新**：用视频帧 + 字幕 + 语音多模态 embedding，结合知识图谱组织时序事件，回答"第几分钟讲到 X / 视频里出现了 Y 几次"这类长视频问题。**附带 Vimo 桌面应用**可直接用。**对标 Google NotebookLM 的视频版**，B 站长视频 / 公开课 / 监控视频问答场景代表作 |
+| ViMax | https://github.com/HKUDS/ViMax | 2,582 | **Agentic 视频生成全流水线**（HKUDS，MIT，Python）。**"导演 + 编剧 + 制片人 + 视频生成器 All-in-One"** — 多 Agent 协作完成视频创作全流程：编剧 Agent 写脚本 → 导演 Agent 出分镜 → 制片人 Agent 协调资源 → 视频生成 Agent 调用底层模型出片。**和"单次 prompt 出短视频"工具不同 — 强调"长视频 + 叙事一致性 + 角色一致性"**。Vibe Coding 时代视频版的代表性工作 |
+| Open Generative AI | https://github.com/Anil-matcha/Open-Generative-AI | 10,800 | **200+ 模型聚合 / 数字人对口型 / 节点式工作流 / Muapi 网关** 免费无审查 AI 图片+视频生成工作室（v1.0.10, 2026-05-01）。5 大 Studio：Image(50+T2I/55+I2I, 14 张参考图)、Video(40+T2V/60+I2V)、Lip Sync(9 模型对口型)、Cinema(专业镜头控制)、Workflow(节点式无代码流水线)。Next.js 14 + Electron 桌面，本地推理走 sd.cpp(Metal/CUDA/Vulkan/ROCm)，云推理走 Muapi.ai 付费网关。MIT |
+| awesome-seedance-2-guide | https://github.com/EvoLinkAI/awesome-seedance-2-guide | 333 | **Seedance 2.0 = 字节即梦 AI 视频模型**完整使用指南（社区版，EvoLinkAI 整理）。覆盖图/视频/音频/文本多模态输入、prompts、用例、实战示例。配套的纯 prompts 仓库：[`EvoLinkAI/awesome-seedance-2.0-prompts`](https://github.com/EvoLinkAI/awesome-seedance-2.0-prompts) 100+ 精选 prompt。**官方更全版**（字节出品 Lark Wiki）：https://bytedance.larkoffice.com/wiki/A5RHwWhoB... — 想要最详细官方文档优先看 Lark wiki，想要可 fork/embed 的开源整理用 GitHub 版 |
+
+#### Agent 视频制作方案
+
+> 用 AI Agent（Claude Code / Cursor / Codex）做视频的两条主路径：**Code-based 框架** + **Generation-based 模型**，混合管道是当下主流。
+
+**框架与系统（Code-based）**
+
+| 项目 | GitHub | 类型 | 描述 |
+|---|---|---|---|
+| Hyperframes | https://github.com/heygen-com/hyperframes | 框架（HTML+GSAP） | HeyGen 出品，**Built for agents** — 写 HTML 渲染视频。CLI non-interactive 默认，原生注册为 Claude Code slash command（`/hyperframes` `/gsap`）。AI agent 首选，新项目推荐 |
+| Remotion | https://github.com/remotion-dev/remotion | 框架（React） | 用 React/JSX/CSS 写视频，每一帧一次 React 渲染（`useCurrentFrame()`）。生态成熟，`@remotion/lambda` 支持 AWS 批渲。前端开发者首选 |
+| OpenMontage | https://github.com/calesthio/OpenMontage | 全栈 agentic 系统 | **世界首个开源 agentic 视频制作系统**。端到端流水线：研究主题→脚本→分镜→素材生成/检索→剪辑→配音→字幕→音乐→渲染。**12 条视频 pipeline**（动画科普/短视频/纪录片蒙太奇/播客转视频/软件演示/虚拟人/翻译配音/电影预告片等）+ 52 tools + 500+ agent skills。Groq Llama 4 Scout 自动路由到 Remotion（React 程序化）/ Hyperframes（HTML+GSAP 动效）/ Motion Canvas / Revideo / Diffusion Studio。**真实素材路线**：Archive.org / NASA / Wikimedia / Pexels / Unsplash 检索开放视频片段（非纯图片幻灯片）。**Agent 指令体系**：skills/ + pipeline_defs/ + .agents/skills/ 大量 Markdown/YAML 指挥每步。**质量检查**：渲染前后 ffprobe + 帧采样 + 音频/字幕/黑帧检查 + 成本估算 + 决策日志。**API 可选**：fal.ai / Kling / Runway / Veo / OpenAI / ElevenLabs / Google TTS / Suno / Pexels；无 Key 也能用 Piper TTS + FFmpeg + 开放素材本地渲染 |
+| Cutia | https://linux.do/t/topic/1684186 | AI Native 在线视频编辑器 | Agent 一键成片，把经验固化成 prompt，一次生成一致性强的批量视频 |
+| video-podcast-maker | https://github.com/Agents365-ai/video-podcast-maker | Claude Code Skill | **AI 视频播客自动化生产 Skill**（"探索未至之境" UP 主出品）。**输入主题 → 自动生成双人对谈脚本 → TTS 配音 → 视频合成（语谱图 / 字幕 / 简单画面）**全流程闭环。**和 NotebookLM Audio Overview 区别**：那是音频，这个能直出视频上 B 站 / YouTube。**适合"想做内容但懒得真人录制"**的 UP 主——靠 AI 工业化批量产播客类视频 |
+| HKUDS/VideoAgent | https://github.com/HKUDS/VideoAgent | 学术派 Agent 框架 | All-in-One Agentic Framework for Video Understanding, Editing, and Remaking |
+
+**Skill 与生态扩展**
+
+| 项目 | GitHub | 描述 |
+|---|---|---|
+| Seedance 2.0 Claude Agent Skill | https://linux.do/t/topic/1619920 | **小说→视频三件套**：Claude Code（剧本/分镜）+ Nano Banana Pro（角色一致性图）+ 视频生成模型。完整自动化生产链 |
+| coreyhaines31/marketingskills | https://github.com/coreyhaines31/marketingskills | Marketing Skill 集合，含 video skill（Hyperframes/Remotion + Veo/Runway/Kling/Pika + HeyGen/Synthesia 数字人） |
+| nateherkai/hyperframes-student-kit | https://github.com/nateherkai/hyperframes-student-kit | 12 个完整项目，HTML-native motion graphics 教学 kit，学 Hyperframes + GSAP 端到端管线 |
+
+**SaaS 产品（黑盒 Agent）**
+
+| 产品 | 链接 | 描述 |
+|---|---|---|
+| Vizplainer | https://www.vizplainer.com/ | AI 解说视频生成器。脚本/音频→可视化故事板+动画+运动图形，几分钟出片。专做 explainer 视频（产品介绍/科普/营销） |
+| LTX Studio | https://ltx.studio/ | 全链路 AI 视频工作台（视觉开发/分镜/多模型生成/音频/时间线/导出）。报告称 5–10x 产能提升 |
+| HeyGen / Synthesia | — | AI 数字人头像视频，可与 Remotion 拼接做批量数字人口播 |
+
+**选型建议**
+
+| 场景 | 推荐栈 |
+|---|---|
+| 教程/科普 | Claude Code + Remotion + ElevenLabs + Whisper |
+| 营销/Logo 动画 | Claude Code + **Hyperframes**（Agent 写 HTML 最顺） |
+| 小说→故事化短片 | Seedance 2.0 三件套 |
+| 批量数字人口播 | HeyGen + Remotion + FFmpeg |
+| 一键 agentic | OpenMontage |
+| 不写代码出 explainer | Vizplainer |
+
+**易混淆项目（不是视频工具）**
+
+- [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) — 3.5K stars，生成 **HTML 页面**（架构图/diff review/plan audit），不是视频
+- 类似的 [Mojouiss/ai-visual-explainer](https://github.com/Mojouiss/ai-visual-explainer)
+
+**典型 5 阶段工作流**
+
+```
+①意图（结构化 brief：时长/节拍/品牌色/平台）
+②脚本+分镜（Claude Code 当编剧，输出 JSON/YAML）
+③素材生成（并行调 Veo/Kling/Runway + ElevenLabs + Whisper + Nano Banana）
+④合成渲染（Remotion/Hyperframes 把分镜 JSON 喂给 defaultProps，一行命令出 MP4）
+⑤校对发布（Agent 自检 + 人审节奏品牌）
+```
+
+**关键经验**：
+- 拆 scene-level 渲染，错了只重做一段
+- 角色一致性必须用同一张参考图（Nano Banana / Midjourney CRef）
+- 声画对齐用 Whisper 反推时间戳，喂 `@remotion/captions`
+- brief 必须具体（`"60s, 3 beats, big claim 0–3s"`），模糊 brief = 模糊产出
+
+## [FireRed-OpenStoryline](https://github.com/FireRedTeam/FireRed-OpenStoryline)
+
+<RepoMeta
+  url="https://github.com/FireRedTeam/FireRed-OpenStoryline"
+  stars={2612}
+  updated="2026-05-07"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['video-editing', 'agent', 'mcp-server', 'storyline']}
+/>
+
+**AI 视频编辑 Agent — 把手工剪辑变成意图驱动的导演** — 自然语言交互 + LLM 规划 + 精准工具编排。MCP Server + Agent Client 架构，human-in-the-loop 创作，可复用 Style Skills 保证专业一致性。注意仓库名带连字符（`FireRed-OpenStoryline`，不是 `FireRedOpenStoryline`）。
+
+### 语音合成 (TTS)
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| GPT-SoVITS | https://github.com/RVC-Boss/GPT-SoVITS | 56,391 | **少样本语音克隆 TTS 引擎**（MIT，RVC-Boss）。核心卖点是 **1 分钟参考音频精调出可用 TTS、5 秒音频即可零样本生成**接近原声的语音。三段式：① 零样本（5s 参考立刻推理）② 少样本（1min 微调质量飞跃）③ 跨语言推理（中/英/日/韩/粤互推）。基于 SoVITS（SoftVC + VITS）+ GPT 自回归 token 预测，WebUI 把数据集制作 / 训练 / 推理 / 工具链一站式打包。**国内中文 TTS 克隆事实标准**，个人配音 / 有声书 / 二次元角色音典型用法 |
+| ChatTTS | https://github.com/2noise/ChatTTS | 39,013 | **对话场景生成式 TTS**（AGPL-3.0，2noise）。专为 LLM 输出口语化对话设计，**中英双语**，强在长文本拼接时的自然停顿、笑声、语气词、连读。基于 4 万小时中英对话语料训练，自带韵律 / 情绪控制 token（`[laugh]` `[break]` `[uv_break]`），让生成更像"真人在说话"。**侧重对话流畅度而非高保真音色**，适合 AI 助手、虚拟主播、对话播客。⚠️ AGPL-3.0 商用衍生品需开源 |
+| fish-speech | https://github.com/fishaudio/fish-speech | 29,082 | **生产级开源 TTS 全家桶**（fishaudio）。技术栈横跨 VALL-E / VITS / VQ-VAE / VQ-GAN / Llama transformer，**强项是音质保真 + 多语言低延迟**。支持 8 种主流语言（中英日韩法德阿西），10 秒参考音频零样本克隆，配套 Fish Agent v0.1 多模态对话模型联动语音 in/out。提供 WebUI + HTTP API + Docker 部署，A100 端到端延迟 < 150ms。**适合自建商业 TTS 服务的团队**。⚠️ 非标准开源协议，商用前确认条款 |
+| VoxCPM2 | https://github.com/OpenBMB/VoxCPM | 17,199 | **Tokenizer-Free TTS**（OpenBMB / 面壁，Apache 2.0 商用友好）。2B 参数，200 万小时多语种语音训练，**30 种语言 + 9 种中文方言**（四川话/粤语/吴语/东北话/河南话/陕西话/山东话/天津话/闽南话）。三种使用方式：① **Voice Design** 自然语言描述（性别/年龄/语调/情绪/节奏）凭空造新声音，无需参考音频；② **Controllable Cloning** 短参考音频克隆 + 可选风格引导；③ **Ultimate Cloning** 给参考音频 + 转录，无缝续写保留全部细节。**48kHz 录音棚级音质**，支持 16kHz 输入超分到 48kHz。RTX 4090 上 RTF ~0.3，配 [Nano-vLLM](https://github.com/a710128/nanovllm-voxcpm) 或 vLLM-Omni 加速到 ~0.13。基于 MiniCPM-4 backbone，端到端 diffusion autoregressive 直接生成连续语音表征（不走离散 token）|
+
+## [supertonic](https://github.com/supertone-inc/supertonic)
+
+<RepoMeta
+  url="https://github.com/supertone-inc/supertonic"
+  stars={5391}
+  updated="2026-05-06"
+  lang="Swift"
+  license="MIT"
+  tags={['tts', 'on-device', 'onnx', 'multilingual']}
+/>
+
+**一句话定位** — **本地运行的轻量多语言 TTS 引擎**：基于 ONNX Runtime 在设备端原生生成语音，主打快速、离线、低依赖，不走云端 API。当前 Supertonic 3 强调 31 种语言支持，并提供 Python、Node.js、Browser、Java、C++、C#、Go、Swift、iOS 等多端示例。适合给 AI 产品、浏览器插件、桌面助手、移动端 App 加本地发声能力，尤其适合隐私、延迟和部署成本敏感的场景。
+
+**亮点**：
+- On-device TTS，适合离线和隐私敏感应用
+- 多语言、多端 SDK 示例齐全，便于嵌入现有产品
+
+**注意**：它是语音基础组件，不是完整语音助手；音色克隆、情绪控制等高阶能力需要结合实际模型包和场景评估。
+
+### HTML / Canvas 转 PPT
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| reveal.js | https://github.com/hakimel/reveal.js | 70,930 | **最流行的 HTML 演示文稿框架**（MIT，JavaScript，Hakim El Hattab）。**用 HTML / Markdown / CSS 写 slides**：纵横二维导航、PDF 导出、speaker notes、touch / 键盘 / 遥控器多端控制、丰富过渡动画。**开发者 / 技术演讲圈的事实选择** — GitHub Pages 直接托管、版本控制友好、可嵌 live code 演示。生态完整：插件 (Math / Highlight / Markdown / Search / Zoom)、众多主题、付费配套 [slides.com](https://slides.com) 在线编辑 |
+| PptxGenJS | https://github.com/gitbrent/PptxGenJS | 4,936 | **用 JavaScript 生成 PowerPoint**（MIT，TypeScript）。**Node / React / 浏览器全跑得动**的 `.pptx` 生成库 — 编程式定义 slides / shapes / 文本 / 表格 / 图表 / 媒体 / 主题。**官方 Office.js 的开源替代**，输出原生可编辑 PowerPoint（不是图片导出）。**典型场景**：报表自动生成 / 数据驱动 PPT / 模板批量出图。和 python-pptx 同生态位但 JS 派 |
+| Presenton | https://github.com/presenton/presenton | 4,559 | **开源 AI 演示生成器 + API**（Apache-2.0，JavaScript）。**Gamma / Beautiful AI / Decktopus 的开源平替**：输入主题 / 大纲 / 文档 → 自动生成完整演示（文字 + 图片 + 配色 + 布局）。**自带 REST API** 可嵌入到其他产品（如教育 SaaS / 内容工具）。本地部署 + 自选 LLM provider，**避开 SaaS 月费 + 数据外送**的痛点。免费 / 私有部署的 Gamma 替代品首选 |
+| PPT Master | https://github.com/hugohe3/ppt-master | 3,709 | **AI 生成"真 PowerPoint" — 原生可编辑 PPTX**（MIT，Python，作者 Hugo He）。**和"AI 出图再贴 PPT"不同 — 直接生成 PowerPoint 原生 shapes + 动画**，每个文本框 / 图形 / 排版都可在 PPT 里继续修改 / 调整。**典型卖点：让 AI 给你的 deck 草稿但保留人工最后润色的可能**。输入任意文档（PDF / Word / Markdown）→ 输出可编辑 PPTX，集成多 LLM provider |
+| dom-to-pptx | https://github.com/atharva9167j/dom-to-pptx | 102 | **HTML DOM → 可编辑 PPTX 的客户端库**（MIT，JavaScript）。**完全浏览器端**（无后端），把任意 HTML 元素转成 pixel-perfect 的 `.pptx` slide — **保留 gradient / shadow / 圆角图 / 响应式布局**。和 html2canvas 区别：那个出 PNG，这个出**可编辑 PowerPoint shapes**。**典型用法**：把 web dashboard / data viz 一键导出成可在 PPT 里继续编辑的 deck，企业内汇报神器 |
+| PPT-Design-Prompt | https://github.com/Russell-cell/PPT-Design-Prompt | 887 | **DESIGN.md → 演示图像 prompt 转换器**（不做生成 PPT 本身）。把 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 上游的网页/UI 品牌设计指南，转换成"演示图像导向"的 `DESIGN.md` 文件，给 image model + design agent 当 prompt 模板用，专门生成 PowerPoint/Keynote/PDF deck/视觉随笔 用的图像素材。Python CLI（`pip install -e .` → `design-md-ppt convert`），输入 `source/<brand>/DESIGN.md`，输出 `ppt-image/<brand>/DESIGN.md` + `conversion_manifest.json`。明确**不是**：deck 生成器、PPT 导出器、截图爬虫。`source/` 默认 gitignore，避免误传第三方品牌素材 |
+
+## [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)
+
+<RepoMeta
+  url="https://github.com/op7418/guizang-ppt-skill"
+  stars={6840}
+  updated="2026-05-10"
+  lang="HTML"
+  license="MIT"
+  tags={['ppt', 'claude-code-skill', 'html-deck']}
+/>
+
+**横滑杂志风 HTML Deck Skill** — Claude Code Skill，可把 prompt 转成横向滑动、杂志排版风格的单文件 HTML 演示文稿。内置 10 种布局、5 套主题和 WebGL hero 背景，适合做视觉感更强的分享页、路演页和社媒化 deck。
+
+## [mckinsey-pptx](https://github.com/seulee26/mckinsey-pptx)
+
+<RepoMeta
+  url="https://github.com/seulee26/mckinsey-pptx"
+  stars={414}
+  updated="2026-04-24"
+  lang="Python"
+  license="NOASSERTION"
+  tags={['pptx', 'consulting', 'claude-code-plugin']}
+/>
+
+**麦肯锡风 PPTX 生成插件** — Claude Code plugin，提供 40 个 slide templates，并用 subagent 选择合适模板、解释选择理由。适合咨询报告、市场研究和结构化商业汇报的 PPTX 快速生产。
+
+## [ppt-image-first](https://github.com/NyxTides/ppt-image-first)
+
+<RepoMeta
+  url="https://github.com/NyxTides/ppt-image-first"
+  stars={740}
+  updated="2026-05-08"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['ppt', 'powerpoint', 'agent-skill']}
+/>
+
+**图片优先的 PPT Skill** — 面向 Codex、Claude Code 和 Opencode CLI 的 PPT image-first skill。核心思路是先把关键视觉资产和版式效果跑通，再组织成可展示的 slide/deck，适合图像表达优先的演示制作。
+
+## [beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates)
+
+<RepoMeta
+  url="https://github.com/zarazhangrui/beautiful-html-templates"
+  stars={1698}
+  updated="2026-05-19"
+  lang="HTML"
+  license="MIT"
+  tags={['html-slides', 'templates', 'agent-friendly', 'auto-deck']}
+/>
+
+**Agent 友好的 HTML 幻灯片模板库** — A library of HTML slide templates designed so any coding agent can pick the right one and produce a beautiful deck on the user's behalf, automatically. 设计目标就是让 coding agent（Claude Code / Cursor / Codex）能**自动挑模板** + **自动产出好看的整套 slide**，不用人工逐页排版。和 ppt-image-first 偏图像优先、mckinsey-ppt 偏咨询报告不同，这个偏**通用美观 + 模板可被 LLM 直接调用**，适合作为"Agent 出 PPT 默认模板源"。
+
+</div>

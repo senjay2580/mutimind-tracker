@@ -14,8 +14,8 @@ import { ApiList } from '../components/ApiList'
 持续追踪、按分类索引、由 [github-tracker](https://github.com/senjay2580/mutimind-tracker) skill 自动维护。
 
 <Stats items={[
-  { label: '收录项目', value: '230+', sub: '截至 2026-05' },
-  { label: '分类领域', value: 31 },
+  { label: '收录项目', value: '280+', sub: '截至 2026-05' },
+  { label: '分类领域', value: 13 },
   { label: '更新频率', value: '每周', sub: '由 skill 自动同步' },
   { label: '部署', value: 'Vercel', sub: 'push 即上线 ~30s' }
 ]} />
@@ -23,31 +23,19 @@ import { ApiList } from '../components/ApiList'
 ## 浏览分类
 
 <CategoryGrid items={[
-  { title: '网盘 & 下载工具', href: '/tracker/netdisk-tools', desc: 'NFD / OpenList / LinkSwift' },
-  { title: 'AI/LLM 核心项目', href: '/tracker/ai-llm-core', desc: '主流模型 / 推理框架 / 应用基础' },
-  { title: '开源模型大全', href: '/tracker/models', desc: '推理 / VLM / 代码 / Embedding / ASR / OCR / 3D / 音乐 / 时序 / 生物 / NER / 翻译' },
-  { title: '自主研究 & 自进化', href: '/tracker/auto-research', desc: 'AutoResearcher / AgentEvolver' },
-  { title: 'RAG & LLM 编排', href: '/tracker/rag-orchestration', desc: 'RAGFlow / LightRAG / Dynamiq' },
-  { title: 'Agent 框架', href: '/tracker/agent-frameworks', desc: 'superpowers / ChatDev / AutoAgent' },
-  { title: '手机开源项目', href: '/tracker/mobile' },
-  { title: 'HTML/Canvas 转 PPT', href: '/tracker/html-to-ppt' },
-  { title: 'CLI & AI Agent 集成', href: '/tracker/cli-agent', desc: 'OpenCLI / AutoCLI / 55+ 平台' },
-  { title: 'Vibe Coding', href: '/tracker/vibe-coding' },
-  { title: '语音合成 (TTS)', href: '/tracker/tts' },
-  { title: '视频 AI', href: '/tracker/video-ai' },
-  { title: '机器人 & ROS2', href: '/tracker/robotics' },
-  { title: '自动化 & 测试', href: '/tracker/automation-testing' },
-  { title: '教程库 & 学习路径', href: '/tracker/tutorials' },
-  { title: '免费 API', href: '/tracker/free-apis' },
-  { title: '速查手册', href: '/tracker/cheatsheets' },
-  { title: '垂直领域 Agent', href: '/tracker/vertical-agents' },
-  { title: 'Agent 案例库', href: '/tracker/agent-cases' },
-  { title: '资源聚合', href: '/tracker/aggregation' },
-  { title: '免费 API 索引', href: '/tracker/free-apis-index' },
+  { title: '开源大模型', href: '/tracker/models', desc: '推理 / VLM / 代码 / Embedding / ASR / OCR / 3D / 时序 / 生物' },
+  { title: 'Agent', href: '/tracker/agents', desc: '框架运行时 / 自主研究&自进化 / 垂直领域 / 案例库' },
+  { title: 'RAG & 知识库', href: '/tracker/rag-orchestration', desc: 'RAGFlow / LightRAG / UltraRAG' },
   { title: 'Claude Code Skills', href: '/tracker/skills', desc: '市场 & 合集 / 人物蒸馏 / Agents365 / 营销 / 工程编码' },
-  { title: 'Agent 视频制作', href: '/tracker/agent-video-tools' },
-  { title: 'DSPy', href: '/tracker/dspy' },
-  { title: 'Prompt 工程', href: '/tracker/prompt-engineering' }
+  { title: 'CLI 工具 & 终端 Agent', href: '/tracker/cli-agent', desc: 'OpenCLI / AutoCLI / 55+ 平台' },
+  { title: 'Vibe Coding & 开发工具', href: '/tracker/vibe-coding' },
+  { title: '自动化（浏览器/桌面/测试）', href: '/tracker/automation', desc: '浏览器 / 桌面 / 测试' },
+  { title: '手机 & 移动开源', href: '/tracker/mobile' },
+  { title: 'AI 内容生成（视频/语音/PPT）', href: '/tracker/media-ai', desc: '视频 AI / TTS / HTML 转 PPT' },
+  { title: '机器人 & 具身智能', href: '/tracker/robotics' },
+  { title: '教程 & 学习路径', href: '/tracker/tutorials' },
+  { title: '资源聚合 & 信息源', href: '/tracker/aggregation', desc: 'Awesome / RSS / 趋势 / 免费 API / 速查 / Prompt' },
+  { title: '实用工具箱', href: '/tracker/toolbox', desc: '网盘下载 / 网络工具 / 软件集合' }
 ]} />
 
 <ApiList />

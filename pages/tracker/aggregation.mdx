@@ -10,8 +10,11 @@ import RepoMeta from '../../components/RepoMeta'
 <RepoList slug="aggregation" />
 
 {/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
+{/* 6 个 ### 子分类：Awesome清单&聚合站 · 信息源/RSS/博客 · 趋势/选题信号 · 免费API&索引 · 速查手册 · Prompt工程 */}
 
 <div className="mm-source-data">
+
+### Awesome 清单 & 聚合站
 
 | 名称 | 地址 | Stars / 类型 | 描述 |
 |------|------|-------------|------|
@@ -99,5 +102,257 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **技术项目经理（TPM）资源精选清单** — 面向 Technical Program Manager 的精选资源：技术项目管理、路线规划、跨团队协作。kuchin 角色清单三件套之一。⚠️ 2022-03 后未更新。
+
+## [awesome-math](https://github.com/rossant/awesome-math)
+
+<RepoMeta
+  url="https://github.com/rossant/awesome-math"
+  stars={15334}
+  updated="2026-05-19"
+  lang="Python"
+  license="No License"
+  tags={['awesome-list', 'mathematics', 'lecture-notes', 'learning']}
+/>
+
+**一句话定位** — 数学资源精选清单，聚合各类数学教材、讲义、课程、可视化和工具资源。适合补数学基础、查找专业方向资料，也适合作为 AI/科研/算法学习路线中的数学资源入口。
+
+**亮点**：
+- 覆盖数学多个分支和大量公开讲义/课程
+- awesome-list 形式便于快速筛选资源
+- 对机器学习、图形学、物理模拟、优化等方向的基础补课有价值
+
+### 信息源 / RSS / 博客
+
+> 信息源以 **网址 / RSS / 类型 / 说明** 表格化整理，便于直接喂 Inoreader / Miniflux / Follow / RSSHub。
+
+#### 国外 · 综合科技 & 工程
+
+| 名称 | 网址 | RSS | 说明 |
+|------|------|-----|------|
+| **Hacker News** | https://news.ycombinator.com/ | https://news.ycombinator.com/rss | 硅谷程序员第一信息源，技术深度高，社区讨论质量极高 |
+| **Lobsters** | https://lobste.rs/ | https://lobste.rs/rss | 邀请制技术社区，比 HN 更纯粹，偏系统/编程语言/底层 |
+| **TechCrunch** | https://techcrunch.com/ | https://techcrunch.com/feed/ | 创投 & 科技产业新闻，覆盖 AI/创业/融资 |
+| **The New Stack** | https://thenewstack.io/ | https://thenewstack.io/feed/ | 云原生/DevOps/平台工程，偏架构和基础设施 |
+| **ACM CACM** | https://cacm.acm.org/ | https://cacm.acm.org/feed/ | 计算机科学权威期刊，硬核工程和研究文章 |
+
+#### 国外 · AI 专题
+
+| 名称 | 网址 | RSS | 说明 |
+|------|------|-----|------|
+| **Anthropic Blog** | https://www.anthropic.com/blog | — | Claude 官方博客，模型发布/安全研究 |
+| **OpenAI Blog** | https://openai.com/blog | https://openai.com/blog/rss.xml | GPT/ChatGPT 官方动态 |
+| **NVIDIA AI Blog** | https://blogs.nvidia.com/blog/category/deep-learning/ | https://blogs.nvidia.com/feed/ | GPU/算力/机器人/物理 AI |
+| **The Batch (Andrew Ng)** | https://www.deeplearning.ai/the-batch/ | — | 吴恩达每周 AI 简报，适合快速了解行业动态 |
+| **Hugging Face Blog** | https://huggingface.co/blog | https://huggingface.co/blog/feed.xml | 开源模型/数据集/工具发布 |
+
+#### 国外 · 个人博客（高质量）
+
+| 名称 | 网址 | RSS | 说明 |
+|------|------|-----|------|
+| **Simon Willison** | https://simonwillison.net/ | https://simonwillison.net/atom/everything/ | LLM 工具链专家，datasette 作者 |
+| **Julia Evans** | https://jvns.ca/ | https://jvns.ca/atom.xml | 系统/网络/调试，图文并茂风格独特 |
+| **Dan Luu** | https://danluu.com/ | https://danluu.com/atom.xml | 硬件/性能/工程文化，深度长文 |
+| **Xe Iaso** | https://xeiaso.net/blog | https://xeiaso.net/blog.rss | Nix/Go/Rust/AI，更新频繁 |
+| **Bartosz Ciechanowski** | https://ciechanow.ski/ | https://ciechanow.ski/atom.xml | 交互式可视化科普，极致工程美学 |
+
+#### 国内 · 综合科技 & 开发
+
+| 名称 | 网址 | RSS | 说明 |
+|------|------|-----|------|
+| **阮一峰·科技爱好者周刊** | https://www.ruanyifeng.com/blog/ | https://www.ruanyifeng.com/blog/atom.xml | 每周五发布，涵盖工具/文章/资讯/观点，中文技术周刊标杆 |
+| **InfoQ 中国** | https://www.infoq.cn/ | https://www.infoq.cn/feed | 架构/AI/云原生/工程实践，偏企业级 |
+| **掘金** | https://juejin.cn/ | RSSHub: https://rsshub.app/juejin/trending/all/weekly | 中文开发者社区，前后端/AI/面经 |
+| **36氪** | https://36kr.com/ | https://36kr.com/feed | 创投/产业/商业科技，覆盖面广 |
+| **少数派** | https://sspai.com/ | https://sspai.com/feed | 效率工具/数字生活/苹果生态 |
+
+#### 国内 · 技术深度
+
+| 名称 | 网址 | RSS | 说明 |
+|------|------|-----|------|
+| **HelloGitHub** | https://hellogithub.com/ | https://hellogithub.com/rss | 每月开源项目推荐，发现好项目 |
+| **酷壳 (陈皓)** | https://coolshell.cn/ | https://coolshell.cn/feed | 经典技术博客（已故，文章仍有极高价值） |
+| **云风的 Blog** | https://blog.codingnow.com/ | https://blog.codingnow.com/atom.xml | 游戏引擎/C/Lua/系统编程 |
+| **面向信仰编程** | https://draveness.me/ | https://draveness.me/feed.xml | Go/K8s/分布式系统，系列文章深度极高 |
+
+#### RSS 聚合工具
+
+| 工具 | 网址 | 说明 |
+|------|------|------|
+| **RSSHub** | https://rsshub.app | 万物皆可 RSS，把不支持 RSS 的网站变成 RSS |
+| **Miniflux** | https://miniflux.app/ | 自托管 RSS 阅读器，极简高效 |
+| **Inoreader** | https://www.inoreader.com/ | 在线 RSS 阅读器，免费版够用 |
+| **Follow** | https://follow.is/ | 新一代 RSS 阅读器，支持 AI 摘要 |
+
+#### 使用建议
+
+1. 用 RSSHub 可以把掘金、B站、知乎、微信公众号等不提供 RSS 的平台转为 RSS
+2. 每日必看：**Hacker News + 阮一峰周刊 + InfoQ**
+3. 深度阅读：**Lobsters + Simon Willison + Dan Luu**
+4. AI 追踪：**Anthropic Blog + The Batch + HuggingFace Blog**
+
+### 趋势 / 选题信号
+
+> 选题、内容、产品、广告、竞品、视觉趋势的早期信号源。和「信息源 / RSS / 博客」互补：那边是看新闻，这边是嗅趋势。
+
+| 名称 | 网址 | 用途 |
+|------|------|------|
+| **Reddit** | https://www.reddit.com/ | **真实用户痛点 / 抱怨 / 需求的金矿**。**搜某产品 + "issue / problem / hate / broken / alternative"** 直接挖到一手用户原声 — 比看官方文档诚实 100×。子版块（r/Entrepreneur / r/SaaS / r/SideProject / r/StartUps）是产品想法的早期信号源，**找 PMF / 选品 / 反向求购**必到 |
+| **Google Trends** | https://trends.google.com/ | **关键词热度 + 地域分布**官方数据。**判断"我这个 idea 是上升趋势还是衰退"** 的客观依据。可对比多关键词时序曲线 + 看不同国家 / 城市搜索强度，**适合选品 / 内容选题 / 命名 / 投放区域**决策。免费、无 key、数据延迟 1-3 天 |
+| **TikTok Creative Center** | https://ads.tiktok.com/business/creativecenter/ | **TikTok 官方趋势平台**（广告主入口但公开访问）。**Top Ads / 热门音乐 / 热门 hashtag / 创意洞察 / 商品趋势** 全方位看 TikTok 当下吃香的内容形态。**短视频 / 跨境电商 / 出海团队** 选题必看。比抖音商业版（巨量算数）更直接 |
+| **Product Hunt** | https://www.producthunt.com/ | **每日新产品 / 工具发布榜单**（硅谷创业风向标）。**看每天的 Top 5 + Newsletter** 就能跟上整个独立开发者圈在做什么。**适合**：找新工具替代旧工作流 / 看竞品发布日 / 学习 launch 文案 / 给自家产品找 launch 时机。**Show HN + PH 双登陆**是独立开发者标配 |
+| **GitHub Trending** | https://github.com/trending | **每日 / 每周 GitHub 最热仓库**（按语言 / 时间窗口筛）。**技术早期信号**——开发者真正花时间关注的项目（不是被刷上 HN 头条的）。**结合 awesome-list / Hacker News / Twitter dev 圈** 三路交叉验证。⚠️ 国内访问可能需代理 |
+| **Hacker News** | https://news.ycombinator.com/ | **硅谷工程师 / 创业圈讨论中心**（YC 旗下）。**评论质量行业最高** — 一线大厂工程师 / 创始人 / VC 直接对线，常有"被讨论的产品的作者亲自下场回复"。**Show HN / Ask HN / Front Page** 三栏分别用于发布产品 / 求问题 / 看热度。**全球技术 + 创业的事实公告板** |
+| **Substack** | https://substack.com/ | **独立作者长文订阅平台**（newsletter 复兴的代表）。**深度观点的源头** — Stratechery / Lenny's Newsletter / Not Boring / 各类硅谷分析师 / VC 个人媒体都在 Substack。**适合订阅 5-10 个领域专家**长期跟踪，建立深度洞察。**和 Twitter 区别**：Substack 给思考深度更长的内容空间 |
+| **Meta Ad Library** | https://www.facebook.com/ads/library/ | **Meta 官方广告透明库**（公开免费）。**直接搜索竞品在 Facebook / Instagram 投的所有广告素材**（图片 / 视频 / 文案 / 投放时间），**完全合规零灰色**——这是 Meta 强制广告主透明的法定数据。**电商 / DTC 品牌 / 跨境** 选品和找爆款素材的杀手锏 |
+| **AnswerThePublic** | https://answerthepublic.com/ | **搜索引擎自动补全的可视化聚合**。**输入一个关键词** → 自动呈现"who / what / when / where / why / how + 关键词" 等所有真实用户搜索补全 → 画成可视化树状图。**适合选题 / SEO / 内容营销** — 找出用户**实际**在问什么问题。免费档每天 3 次搜索，付费 $9+/月 |
+| **Pinterest Predicts** | https://business.pinterest.com/pinterest-predicts/ | **Pinterest 官方年度趋势预测报告**。**视觉 / 生活方式趋势先行指标** — Pinterest 上的 Pin 行为通常领先现实趋势 6-12 个月。**家居 / 时尚 / 美妆 / 婚礼 / 美食 / 育儿** 等垂类品牌、电商和广告创意必看。免费阅读，每年发布 |
+
+### 免费 API & 索引
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| public-apis | https://github.com/public-apis/public-apis | 419,537 | **免费公共 API 大全（GitHub Top 教程仓库之一）**（MIT，Python）。**1400+ 个免费 API 按分类索引**：动物 / 动漫 / 反恶意软件 / 商业 / 日历 / 云存储 / 加密货币 / 货币 / 数据验证 / 开发工具 / 词典 / 文档生成 / 娱乐 / 环境 / 金融 / 食物 / 游戏 / 地理 / 政府 / 健康 / 健身 / 房屋……每条 API 都标注是否需要 KEY / HTTPS / CORS / 协议。**爬数据 / 写 Side Project / Demo 找数据源的第一站**。Python 脚本可自动校验链接有效性 |
+| public-api-lists | https://github.com/public-api-lists/public-api-lists | 13,922 | **精选 48 类 730+ 免费公共 API（附 JSON 检索 API）**（MIT）。**和 public-apis 同生态位**，差异：① **配套[免费 JSON API 接口](https://api.publicapilists.com/)** 可被程序检索（"找所有金融 + 不需要 KEY + 支持 HTTPS 的 API"）— public-apis 只是 markdown；② **社区维护更勤、链接死率更低**；③ 配套站点 + Beginner-Friendly 标签。**给 Agent 用的免费 API 索引**首选 — 因为有 JSON 接口可直接被 LLM 调用 |
+
+## [free-for-dev](https://github.com/ripienaar/free-for-dev)
+
+<RepoMeta
+  url="https://github.com/ripienaar/free-for-dev"
+  stars={122545}
+  updated="2026-05-19"
+  lang="HTML"
+  license="No License"
+  tags={['free-tier', 'developer-resources', 'saas', 'awesome-list']}
+/>
+
+**一句话定位** — 开发者免费额度资源清单，系统收集 SaaS / PaaS / IaaS / DevOps / Infra 服务中对开发者有价值的 free tier。用户给出的 `free-for.dev` 站点对应此仓库，适合快速查找数据库、托管、监控、CI/CD、邮件、对象存储等服务的免费方案。
+
+**亮点**：
+- 覆盖云服务、开发工具、数据服务、监控、安全、邮件、CDN 等大量分类
+- 社区长期维护，适合做“先用免费额度验证 MVP”的资源入口
+- 对独立开发者、学生、小团队和 Agent 自动化环境搭建都很实用
+
+**注意**：⚠️ 各厂商 free tier 会变化，使用前要再次确认官方限制、地区和计费规则。
+
+> 以下为 API 聚合站 / 媒体素材 / AI 生成等纯 SaaS API 索引。GitHub repo 标 stars，纯 SaaS API/文档站标"站点"。
+
+#### API 聚合站
+
+| 名称 | 地址 | Stars / 类型 | 描述 |
+|------|------|-------------|------|
+| PublicAPIs.dev | https://publicapis.dev/ | 站点 | **public-apis 仓库的 Web 版索引**。**1400+ 公共 API 分类索引**（音乐 / AI / 图片 / 工具 / 金融 / 天气 / 体育等 40+ 大类），可按 HTTPS / CORS / Auth / Category 筛选。和原 GitHub repo 区别：站点带 JSON API 可被 Agent / 程序检索，**适合"让 LLM 自己找数据源"的场景**。社区维护、更新勤、链接死率低 |
+| FreePublicAPIs | https://www.freepublicapis.com/ | 站点 | **每日自动检测可用性的免费 API 索引**。**核心卖点：每天爬一遍所有收录的 API，标"今天能不能用"**——和那种"收了 500 个但一半死链"的 awesome-list 完全不同。每条 API 标响应时间 / 上次成功调用 / 是否需 key / 速率限制。**找"真的还能用"的免费 API 时第一站**，避免踩坑死链 |
+| RapidAPI Free APIs | https://rapidapi.com/collection/list-of-free-apis | 站点 | **全球最大 API 市场 RapidAPI 的免费 API 合集**。**统一 key + 统一计费 + 统一文档**：注册一个 RapidAPI 账号就能调上千个 freemium API（多数免费档够开发 / 小项目）。**省去"每个 API 各注册一遍 + 各管一套 key"**的麻烦。但要注意 RapidAPI 抽佣，长期生产用应直接对接原厂 |
+| APILayer Marketplace | https://marketplace.apilayer.com/ | 站点 | **偏商业稳定的 API 市场**（apilayer 旗下）。**和 RapidAPI 对比：精选 < 数量、稳定性 > 覆盖率**——主推少量但 SLA 有保证的商业 API（汇率 / 天气 / 货币 / IP / SMS / 验证）。**多数有免费额度** 100-1000 calls/月，适合"做正式产品但又不想直接对接每个原厂 SaaS" |
+| Mixed Analytics Free APIs | https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/ | 站点 | **"真免费 / 无 key / 无认证"公共 API 精选博文**。Mixed Analytics 团队人工筛出**完全不需要注册 + 不需要 token + 不限速**的开放 API（如 PokéAPI / Dog API / RESTCountries / Bored API 等）。**适合教学 demo / 学生作业 / 快速原型**，零摩擦。和 public-apis 的差异：那个混了"需要 key 的免费档" |
+| Apipheny Free API List | https://apipheny.io/free-api/ | 站点 | **Google Sheets 集成商 Apipheny 维护的 90+ 入门级公共 API**。**和 Mixed Analytics 同生态位但偏入门工具型** — 重点收纳那些适合塞进 Google Sheets / Notion / Airtable 等无代码工具的 API（天气 / 股价 / 加密币 / 翻译）。每条带"如何在 Sheets 调用"教程。**适合无代码爱好者 / 数据分析师 / 学生** |
+| APIs.guru | https://apis.guru/ | 站点 | **全球最大的 OpenAPI / Swagger 规范聚合站**。**收录 3000+ 个公开 API 的 OpenAPI JSON / YAML**（如 GitHub / Stripe / Twitter / Slack / AWS 等），**可被 OpenAPI Generator 自动生成 30+ 语言 SDK**。**适合给 Agent 喂结构化 API 描述**让其自动调用任意 SaaS。和功能性 API 索引区别：这是"机器可读"的索引 |
+
+#### 音乐 API
+
+| 名称 | 地址 | Stars / 类型 | 描述 |
+|------|------|-------------|------|
+| TheAudioDB | https://www.theaudiodb.com/free_music_api | 站点 | **众包音乐数据库**（社区维护）。**艺人 / 专辑 / 曲目 / MV / 排行榜 / 演唱会**全维度元数据，每条带封面图 + 多语言简介 + 流派标签。**免费档 ~30 req/min**（注册免费），付费 Patreon 解锁更高额度。**和 MusicBrainz 互补**：MusicBrainz 偏发行版本 / 唯一 ID，TheAudioDB 偏视觉 + 排行榜 |
+| Spotify Web API | https://developer.spotify.com/documentation/web-api | 站点 | **Spotify 官方 Web API**。**全球最大流媒体平台的曲库 / 播放列表 / 推荐 / 用户音乐库 / 播放控制**完整接口。**OAuth 2.0 认证**（需用户登录授权），分两种模式：Client Credentials（只读曲库元数据）+ Authorization Code（操作用户库 / 播放）。**免费且额度宽松**（合理使用即可），是音乐 App / 数据分析 / 推荐系统的核心入口 |
+| SoundCloud API | https://developers.soundcloud.com/ | 站点 | **SoundCloud 官方 API**。**独立音乐人 / 播客 / 电音 DJ 内容的事实平台**，1.75 亿月活创作者社区。提供音频上传 / 用户 / 播放 / 评论 / 转发 / 搜索接口。**和 Spotify 区别**：SoundCloud 偏长尾独立内容，OAuth 模型相似。⚠️ 2024 后 API 新申请受限，老 key 继续有效 |
+| Radio Browser | https://www.radio-browser.info/ | 站点 | **全球开源互联网电台聚合 API**。**40000+ 电台**实时索引（直播流 URL / 国家 / 语言 / 流派 / 比特率），**完全无 key + 无速率限制**（合理使用）。社区维护，自动检测电台可用性。**适合做电台 App / 收音机 widget / 后台白噪音**，开源应用首选数据源（替代 TuneIn 收费 API） |
+| Songlink / Odesli | https://odesli.co/ | 站点 | **一首歌跨平台链接生成器**。**输入任意流媒体 URL（Spotify / Apple Music / YouTube / SoundCloud / Tidal / Deezer 等），返回全平台对应链接**。免费 API + 友好速率，适合做"一键分享音乐到所有平台"工具、播放器封面图聚合、跨平台歌单同步。**社交分享 / Notion 插件**常见集成 |
+| Genius API | https://docs.genius.com/ | 站点 | **Genius（rap.genius 起家）歌词 + 注释 + 用户众包解读 API**。**和单纯歌词库区别**：每行歌词可点开看用户提供的解读（典故 / 隐喻 / 制作背景），是流行 / 嘻哈文化研究的金矿。API 提供歌曲 / 艺人 / Annotation / 用户接口，需注册免费 token |
+| Musixmatch | https://developer.musixmatch.com/ | 站点 | **全球最大同步歌词数据库 API**。**8000 万首歌 + 70+ 语言**，**带 LRC 时间码同步**可做卡拉 OK / 实时字幕。免费档够开发测试（提供"30 秒预览片段"），生产用商业 plan。**Spotify / Shazam / Vevo 等大厂都用它的歌词数据**。和开源 LRCLIB 对比：商业稳定但需付费 |
+| LRCLIB | https://lrclib.net/ | 站点 | **开源免费同步歌词数据库**（社区维护，类 MusicBrainz 模式）。**100+ 万首歌的 LRC 时间码歌词**，**完全免费 + 无 key + 无速率限制**。**适合开源播放器集成**（Lyricify / Sber / Hyperion 等都用），是 Musixmatch 的免费替代品。覆盖度不如 Musixmatch 但够日常使用 |
+| Discogs | https://www.discogs.com/developers | 站点 | **唱片 / 黑胶收藏家的"豆瓣"+ API**。**1500+ 万张实体唱片**（黑胶 / CD / 卡带 / 数字版）详细发行信息：母带 / 副盘 / 不同压片 / 发行年份 / 国家版本 / 流通价格。**用于黑胶估价 / 唱片元数据补全 / 收藏管理**。免费 API 60 req/min，OAuth 解锁收藏夹操作 |
+| MusicBrainz | https://musicbrainz.org/doc/MusicBrainz_API | 站点 | **音乐元数据 Wikipedia**（开放协议 CC0 / 部分 CC-BY-SA）。**最权威的音乐唯一 ID 系统**（MBID）+ 艺人 / 发行版 / 唱片 / 关系图谱。Last.fm / Spotify / iTunes 内部都用它的 ID。**免费 API 1 req/sec**（合理速率），社区驱动数据质量高。**做音乐应用必备的"打地基"数据源** |
+| Songkick | https://www.songkick.com/developer | 站点 | **演唱会 / 巡演 / 音乐活动追踪 API**。**500 万+ 活动数据库 + 全球巡演日程**，按城市 / 艺人 / 场地 / 日期查询。**适合做"我喜欢的艺人来我城市演出了"通知 App**。免费 API 需申请，Spotify / Last.fm / Bandsintown 同生态。⚠️ 数据需用户自报 + 场馆官方，准确度 95%+ |
+| Mubert | https://mubert.com/render | 站点 | **AI 音乐生成 API**。**生成无版权背景音乐 / 跑步音乐 / 视频配乐**，按情绪 / 风格 / 时长定制。**和 Suno / Udio 区别**：偏"功能性背景音"（适合直播 / 视频剪辑 / 健身 App 嵌入），不主打"惊艳单曲"。免费试用 / 小额度，订阅 $14+/月。视频自媒体免版税配乐选择 |
+| MusicGPT | https://musicgpt.com/ | 站点 | **AI 文本到音乐生成器**。**和 Suno / Udio 同生态位**——输入歌词 / 风格 prompt 直接生成完整歌曲（含人声 + 伴奏）。提供 Web App + API，免费每日少量生成额度，付费解锁高质量 / 长歌曲 / 商用许可。**适合个人音乐爱好者 / 内容创作者**做主题曲 |
+| PublicAPIs Music 分类 | https://publicapis.dev/category/music | 站点 | **PublicAPIs.dev 的"音乐 API"子目录入口**。**一站浏览所有音乐相关公共 API**：从 Spotify / SoundCloud 等大平台，到 MusicBrainz / Last.fm 等元数据库，再到 Genius / Musixmatch 歌词。**适合不知道用哪个 API 时先来扫一遍**找合适候选 |
+
+#### 图片 / 视频素材 API
+
+| 名称 | 地址 | Stars / 类型 | 描述 |
+|------|------|-------------|------|
+| Pexels API | https://www.pexels.com/api/ | 站点 | **免费可商用图片 + 视频素材 API**。**Pexels 自家库 + Unsplash 风格摄影**，**官方 API 完全免费**（200 req/小时、20K req/月）+ 无需归属署名。**和 Unsplash 区别**：Pexels 也提供视频素材（短片 / 4K 库）。**广告 / 内容创作 / 网站背景图** 首选免费 API |
+| Pixabay API | https://pixabay.com/api/docs/ | 站点 | **5.7M+ 免费可商用图片 / 视频 / 矢量 / 音效**。**比 Pexels 量更大但摄影质量略低**——胜在矢量插画 / 音效素材丰富。**免费 API 100 req/60 秒**，CC0 协议无需归属。**适合做 Notion / Canva 插件 / 教育 App**，免版税场景全覆盖 |
+| Unsplash API | https://unsplash.com/developers | 站点 | **专业摄影社区 + 免费 API**。**视觉质量行业标杆**——专门吸引摄影师投稿艺术级照片（多数是 16:9 / 9:16 高分辨率原图）。**免费 API 50 req/小时**（demo），生产档免费 5000 req/小时（需申请）。**首屏背景图 / 设计稿配图**默认选择，但需归属署名 |
+| GIPHY API | https://developers.giphy.com/ | 站点 | **全球最大 GIF / 贴纸 / 动图搜索引擎**。**官方搜索 / Trending / Translate / Random / Channel API**，覆盖 Meta（FB/IG）/ TikTok 等社交平台底层数据。免费 API 需申请 key，每应用 1000 req/小时（生产档可申请提升）。**做表情包 App / 评论框集成 / 内容创作工具** 必备 |
+| Tenor API | https://tenor.com/gifapi | 站点 | **Google 旗下 GIF 搜索 API**（被 Google 2018 年收购）。**和 GIPHY 同生态位但更深度集成 Google 体系**（Android Gboard / YouTube 等内置 Tenor）。**API 调用免费**（合理速率），偏内容创作 / 教育 / 流行文化方向。**部分企业偏好 Tenor**因为不被某些防火墙拦 |
+| Shutterstock API | https://api-reference.shutterstock.com/ | 站点 | **专业商业图库 Shutterstock 的 API**（4 亿+ 图片 / 视频 / 音乐）。**面向需要付费授权的企业用户** — 用 API 自动检索 + 下载 + 跟踪授权状态。**免费层主要是 OAuth 注册 + 浏览**，下载素材按 plan 计费（$29+/月起）。**适合代理商 / 设计公司 / 大媒体**批量调用，**个人慎入** |
+| Cloudinary | https://cloudinary.com/documentation | 站点 | **媒体管理 + 处理 + CDN 全家桶**（云端）。**核心能力**：图片 / 视频上传 → URL 参数式动态裁剪 / 滤镜 / 转码 / 水印 / AI 增强 / 自适应码率 → 全球 CDN 分发。**免费档 25 credits / 月**（约 25K 图片 / 1K 视频处理），生产 $99+/月。**和自建 ImageMagick + nginx 对比**：省运维 + 全球加速，Vercel / 中型 SaaS 标配 |
+| Bytescale | https://www.bytescale.com/docs | 站点 | **轻量级 Cloudinary 替代品**（原 Upload.io）。**专注"上传 + 简单处理 + CDN"**，去掉 Cloudinary 那些复杂 AI / DAM 功能。**和 Cloudinary 对比：更便宜、API 更直观、上手快**，适合中小项目。**14 天免费试用**，订阅 $24+/月。**Vercel / Next.js / React 项目** 首选轻量方案 |
+
+#### 音频 / 视频处理 API
+
+| 名称 | 地址 | Stars / 类型 | 描述 |
+|------|------|-------------|------|
+| Mux | https://www.mux.com/ | 站点 | **开发者优先的视频基础设施**（YC 出身，硅谷视频界顶级）。**API-first 视频上传 / 转码 / 自适应播放 / 直播 / 实时分析**全栈方案，**对标 AWS Elemental MediaConvert + Mux Player**。免费档 100 视频分钟/月 + 1000 流分钟/月，按用量计费。**Substack / Patreon / Datadog 等大厂都用 Mux 做视频**，是云端视频的事实标准之一 |
+| Shotstack | https://shotstack.io/ | 站点 | **可编程视频剪辑 + 模板渲染 API**。**用 JSON 描述视频时间线**（剪辑 / 转场 / 字幕 / 音乐 / 模板替换）→ 云端渲染输出 MP4。**适合做"批量生成营销短视频 / 个性化视频 / 自动剪辑"流水线**。免费档 20 视频/月，付费 $59+/月。**MoneyPrinterTurbo 之类工具的云端替代品**，免本地 ffmpeg |
+| Bytescale (媒体处理) | https://www.bytescale.com/docs/processing | 站点 | **Bytescale 的 URL 参数式媒体转码 API**。**把转码参数（resize / crop / format / quality / watermark）写进 URL**，CDN 边缘节点实时处理。**图片 / 视频 / 音频统一处理**，无需后端逻辑。**和主 Bytescale 服务对比**：这是处理子模块，免费试用同步 14 天 |
+| Cloudinary Video | https://cloudinary.com/documentation/video_manipulation_and_delivery | 站点 | **Cloudinary 的视频专项能力**。**URL 参数式动态视频压缩 / 裁剪 / 加水印 / 转 HLS-DASH / 自适应码率 / 缩略图提取 / 子码字幕烧录**。**和 Mux 对比**：Cloudinary 偏"图片公司加上视频"，Mux 是"视频专精"——Cloudinary 适合图片为主 + 偶尔视频，Mux 适合视频为核心业务 |
+| AssemblyAI | https://www.assemblyai.com/ | 站点 | **企业级 AI 音频转写 API**。**核心能力**：转录（多语言）+ 说话人分离（diarization）+ 摘要 + 章节自动分段 + 情感分析 + 内容审核 + 实体提取。**和 Whisper 自托管对比**：开箱即用 + 准确率行业领先 + 中等价位（$0.0125 / 分钟起）。**免费档 5 小时音频**，适合做播客平台 / 会议工具 / 客服分析 |
+| Deepgram | https://deepgram.com/ | 站点 | **实时低延迟 ASR API**（端到端深度学习）。**核心卖点：实时流式转录 < 300ms 延迟**，**比 AssemblyAI 更快**但准确率略弱。Nova-2 模型 30+ 语言，支持自定义关键词 / 数字格式化 / 多人对话。**免费档 $200 credit**（约 16K 分钟），适合做实时字幕 / 语音助手 / 直播。**和 Whisper 对比**：付费但实时更稳 |
+| ElevenLabs | https://elevenlabs.io/ | 站点 | **TTS + 声音克隆行业标杆**（YC，2023 年估值 11 亿）。**全球公认音质最自然的 AI 配音**，覆盖 30+ 语言，**5 秒参考音频零样本克隆**任意人声。**应用场景**：有声书 / 短视频配音 / 角色游戏 / 实时翻译。**免费档 10K 字符 / 月**（够测试），订阅 $5-330/月，**商用专业声音库需付费**。⚠️ 额度政策时常变 |
+| Hugging Face Inference Providers | https://huggingface.co/inference-api | 站点 | **Hugging Face 模型推理 API 聚合**（2024 重推）。**一个 API 调上百万开源模型** — 文本 / 图像 / 音频 / 视频 / Embedding 全覆盖，路由到 Together / Replicate / Fireworks 等底层 GPU 提供商。**小额免费 credit**（够做测试），生产按 token 计费。**适合 PoC 阶段快速试各种开源模型**找最合适那个 |
+
+#### AI 图片 / 音频 / 视频生成 API
+
+| 名称 | 地址 | Stars / 类型 | 描述 |
+|------|------|-------------|------|
+| Pollinations AI | https://pollinations.ai/ | 站点 | **完全免费 + 无 key 的 AI 文本 / 图片生成 API**。**直接 URL 拼参数即可生成图片**（如 `pollinations.ai/p/{prompt}`），**无需注册 / 无需 token / 无速率限制**（合理使用）。底层走 Stable Diffusion / Flux 等开源模型。**适合教学 demo / 学生作业 / 快速原型**，零摩擦但不能用于严肃生产 |
+| Hugging Face | https://huggingface.co/ | 站点 | **AI 界的 GitHub**（HF 公司，估值 45 亿）。**模型 / 数据集 / Spaces App 三件套** + Inference API + Inference Endpoints + AutoTrain。**免费档 credit 很小**（够开发测试），生产应该用 Inference Endpoints 包年。**做 ML 必去的中心枢纽**，但不要在生产环境直接调免费 inference（不稳） |
+| Replicate | https://replicate.com/ | 站点 | **开源模型即服务市场**（YC，2022 火起来）。**任意 Cog 容器化模型一键部署成 API**，多模型试用 + 生产按秒计费（GPU 时间）。**和 HF Inference 对比**：Replicate 启动更快、按量付费更清晰、生产可靠。**适合"想用 SD / Llama / Whisper 但不想自己跑 GPU"**的中小项目 |
+| fal.ai | https://fal.ai/ | 站点 | **媒体生成模型 API 聚合**（2023 出圈）。**核心卖点：图像 / 视频 / 音频生成模型超低延迟**——FLUX / SDXL / Stable Video / SD3 / 各种 LoRA 全聚合，**比 Replicate 快 3-10×**（专门优化推理）。按调用 / GPU 秒计费，付费有免费 credit。**做实时 AI 图像 / 视频应用** 首选 |
+| Stability AI | https://platform.stability.ai/ | 站点 | **Stable Diffusion 系列模型官方 API**（Stability AI 公司）。**SD3 / SDXL / Stable Video / Stable Audio 全家桶**，**按 credit 计费**（注册送少量 credit）。**和 Replicate / fal.ai 对比**：直接对接原厂，新模型最早发布，但价格稍贵。**研究 / 学术 / 严肃生产**首选官方渠道 |
+| Leonardo API | https://leonardo.ai/api/ | 站点 | **游戏美术 / 角色立绘 AI 生成 API**。**专精角色 / 场景 / 概念美术**——比通用 SD 在游戏 / 动漫 / 美少女题材更好。Web UI + API + 自家训练的 fine-tune（Phoenix / Anime XL 等）。**新号送 starter credit**（够测试一周），适合独立游戏开发 / 同人创作 |
+| xAI Imagine API | https://x.ai/ | 站点 | **xAI（马斯克的 AI 公司）多模态生成入口**。**Grok 模型背后的 API 平台** — 提供 Grok LLM + 图像生成（Aurora）+ 视频 / 音频生成接口。**和 OpenAI 同生态位但偏 X 平台集成**。⚠️ **非长期免费**，主要走 X Premium 订阅 + API credits 计费 |
+| AIMLAPI | https://aimlapi.com/ | 站点 | **400+ AI 模型一站式聚合 API**。**统一 OpenAI-compatible 接口**调 LLM / 图像 / 音频 / 视频 / 翻译多类模型 — Claude / Gemini / GPT-5 / DeepSeek / Llama / FLUX 等都在。**和 OpenRouter 同生态位但模型种类更杂**。**一个 key 替代 10+ provider**，适合开发者降低多 API 管理成本 |
+
+#### 通用 AI / 工具 API（带免费额度）
+
+| 名称 | 地址 | 免费额度 | 描述 |
+|------|------|---------|------|
+| Google AI Studio / Gemini | https://cloud.google.com/use-cases/free-ai-tools | 免费层，按模型限速/限日请求 | **Google 官方 Gemini API 入口**（AI Studio）。**Gemini 2.5 Pro / Flash / Flash Lite 全家桶** — LLM + 多模态（图像 / 视频 / 音频理解）+ 长文本（1M token 上下文）+ 代码生成。**免费档对个人很慷慨**（Flash 模型每天数百到数千请求），适合做 PoC / 长文本原型。**和 OpenAI 对比**：免费额度大、长上下文便宜、中文略弱 |
+| Cloudflare Workers AI | https://developers.cloudflare.com/workers-ai/platform/pricing/ | 10,000 Neurons/天 | **Cloudflare 边缘节点 AI 推理**。**全球 300+ PoP 就近运行开源模型**：Llama / Mistral / Whisper / SD / FLUX / Embedding 等。**免费档 10K Neurons/天**（Neuron 是 Cloudflare 的算力计费单位，足够个人项目）。**强项是低延迟 + 全球分发**，适合边缘 Agent / 实时翻译 / 边缘 ASR |
+| Groq | https://console.groq.com/docs/rate-limits | 多数模型有 RPM/RPD 免费限制（如 Llama 8B 14.4K RPD） | **超低延迟 LLM 推理**（自研 LPU 芯片）。**Llama 70B 推理速度 500+ tokens/sec**（OpenAI 的 5-10×），**完全改变实时 AI 应用体验**。免费档多数模型有慷慨日额度（Llama 8B 14.4K RPD），生产按量付费。**实时对话 / agent 工具循环 / 语音助手**必备 |
+| Cohere | https://docs.cohere.com/v1/docs/going-to-production | Trial key 1,000 API calls/月 | **企业 RAG + 检索专精的 LLM 公司**（YC 出身，估值 55 亿）。**核心强项不在通用 chat 而在 Embedding / Rerank**——业界公认最好的 Reranker（v3 模型），RAG 工程师标配。**Trial key 1000 calls/月免费**，适合给 RAG 加 Rerank 层验证效果 |
+| Tavily | https://www.tavily.com/pricing | 1,000 API credits/月 | **AI Agent 专用 Web 搜索 API**。**和 Google / Bing 区别**：Tavily 直接返回 LLM-ready 摘要 + 多源对比（不只是链接），**为 Agent 优化**（结构化 + 去噪声）。**免费档 1000 calls/月**，是 Perplexity / GPT Researcher / Claude Code 等 Agent 默认搜索引擎。**做 Deep Research Agent 必备** |
+| Exa | https://exa.ai/pricing | 1,000 requests/月 | **AI 优先的语义搜索引擎**（YC，原名 Metaphor）。**和 Tavily 同生态位但偏"找相似站点 / 找精准内容"**：输入"像 Substack 这种独立博客平台" → 返回 10 个真正同类站点。**适合做研究 / 竞品调研 / 趋势挖掘**。免费档 1000 requests/月，付费 $10+/月 |
+| Apify | https://apify.com/ | 免费计划/平台 credits（额度会变） | **云端网页抓取 + 浏览器自动化平台**。**Actors 商店**：上千个预制爬虫脚本可直接调（Twitter / Instagram / LinkedIn / Amazon / 房产网站等），**支持 API + Webhook + 定时任务 + 代理池**。**免费计划送 $5/月 credit**，适合中小爬虫项目。**对比自建 Playwright + 代理**：省运维 / 防反爬开箱即用 |
+| Hugging Face Inference Providers | https://huggingface.co/docs/api-inference/en/pricing | Free $0.10/月，Pro $2/月 | **HF Inference 的新计费模式**（2024 起）。**免费档 $0.10/月 credit**（约几百次小模型调用），**Pro $2/月 升级到 $1 credit**。**试各种开源模型 / 跑 Spaces demo / 验证模型效果**用，**不适合生产**（速率限制 + 冷启动慢）。生产应用 Inference Endpoints 包年方案 |
+| Pexels API (额度) | https://www.pexels.com/api/documentation/ | 200 req/小时，20,000 req/月 | **Pexels 免费图片 / 视频 API 的官方额度文档**。**注册免费 key 即可调用 200 req/小时 + 20K req/月**——对个人项目 / 小型应用足够。**无需归属署名**（虽然推荐礼貌性标注），可商用。**生产档可申请提升额度**至 50K+ req/小时 |
+| Pixabay API (额度) | https://pixabay.com/api/docs/ | 100 req/60 秒 | **Pixabay API 的额度细节**。**100 req / 60 秒**（约 144K req/天 理论上限）。**CC0 协议无需任何归属**，可直接嵌入商业产品。**适合做"开屏图 / Notion 插画 / Canva 模板"**自动化抓素材的场景 |
+| Resend | https://resend.com/pricing | 100 emails/天，3,000 emails/月 | **新一代开发者优先的邮件 API**（YC，2023 火起来）。**对标 SendGrid 但 API 更 modern + 开发体验更好**——React Email 集成、首批支持 OpenAPI / TypeScript SDK。**免费档 100 emails/天 + 3K/月**，适合事务邮件（密码重置 / 验证码 / 订单通知）。**Vercel / Cal.com / Linear 等都用 Resend** |
+| Brevo | https://help.brevo.com/hc/en-us/articles/208580669-Is-there-a-limit-to-the-free-plan | 300 emails/天 | **欧洲 Mailchimp 替代品**（原 Sendinblue，欧盟 GDPR 友好）。**和 Resend 区别**：Brevo 偏营销邮件（newsletter / 自动化触发 / CRM 集成），Resend 偏事务邮件。**免费档 300 emails/天**（不限月总量，比 Resend 月 3K 更宽松）+ CRM + 短信 + WhatsApp。**适合中小电商 / 内容创作者**做用户运营 |
+| Mapbox | https://www.mapbox.com/pricing | Geocoding 100K/月；Static Images 50K/月 | **Google Maps 的开发者优先替代品**（向量地图行业标准）。**核心能力**：地图渲染 / 地理编码 / 路线规划 / 静态地图 / 时速度信号灯 / 街景。**免费档极慷慨**：Geocoding 100K/月 + Static Images 50K/月 + Map Loads 50K/月。**Strava / Snapchat / FT / 大量 SaaS 用 Mapbox**，**自定义地图样式自由度甩 Google 几条街** |
+| OpenWeather | https://openweathermap.org/price | One Call 3.0 前 1,000 calls/天 | **全球天气数据 API 行业标准**。**实时天气 + 5 天预报 + 历史天气 + 空气质量 + UV 指数**，覆盖 200K+ 城市。**One Call 3.0 免费档前 1000 calls/天**（足够普通 App 数千用户），付费 $40+/月起。**iOS / Android 天气 App 八成都用 OpenWeather** 当数据源 |
+| NewsAPI | https://newsapi.org/pricing | 100 requests/天（开发测试用） | **全球新闻聚合 API**。**80000+ 新闻源 + 14 种语言**，按关键词 / 国家 / 来源 / 时间检索，返回标题 + 摘要 + 链接 + 缩略图。**免费档 100 requests/天 + 仅本地开发** —— ⚠️ **NewsAPI 免费档明确不允许生产用**，要上线必须付费 $449+/月。**适合 LLM Agent 做新闻摘要 / 趋势分析** PoC |
+| CoinMarketCap API | https://coinmarketcap.com/api/pricing/ | 15,000 call credits/月 | **全球最大加密货币数据平台 CoinMarketCap 的 API**。**实时价格 / 历史 K 线 / 市值排行 / 交易所深度 / 衍生品 / DeFi TVL** 全维度。**免费档 15K call credits / 月**（够个人 dashboard / 价格通知 bot）。**和 CoinGecko 对比**：CMC 老牌 + 数据全，CoinGecko 免费档更友好但准确度略弱 |
+
+### 速查手册 & 开发者参考
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| DevOps-Roadmap | https://github.com/milanm/DevOps-Roadmap | 19,104 | **2026 版 DevOps 工程师学习路线图**（Apache-2.0）。**完整 DevOps 知识树** — Linux / 网络 / 脚本（Bash + Python + Go）/ 配置管理 / 容器化（Docker + K8s）/ CI/CD（Jenkins / GitLab / GitHub Actions）/ 云平台（AWS + Azure + GCP）/ 监控（Prometheus + Grafana）/ IaC（Terraform + Ansible）/ DevSecOps。**每个节点都附"免费教程 + 推荐书"链接**。和 kamranahmedse/developer-roadmap 区别：这个聚焦 DevOps 单方向更细 |
+| cheatsheets (devhints.io) | https://github.com/rstacruz/cheatsheets | 14,406 | **Web 开发速查表大全**（SCSS，作者 Rico Sta. Cruz）。**在线站点 [devhints.io](https://devhints.io)** 的源仓库 — 收录 ~400 张开发速查表（cheatsheets）：JavaScript / CSS / Bash / Vim / Git / Markdown / Python / Ruby / Go / React / Vue / SQL……每张都是"一屏看懂"的精排版，**搜索式快速找到"忘了的那个语法"**。Web 开发者**书签里 Top 5 的工具站之一** |
+| reference | https://github.com/Fechin/reference | 10,290 | **⭕ 极简精美的开发者速查表**（GPL-3，EJS 模板，配套站点 [quickref.me](https://quickref.me)）。**和 devhints 同生态位但更新更勤、视觉更舒服** — Bash / awk / grep / Python / Go / Vim / Markdown / CSS / Git / Docker / curl / Linux 等核心工具速查，**全部一屏铺开 + 代码高亮 + 中英双语**。响应式 / dark mode / Ctrl-F 搜友好。**最适合"周末快速过一遍"扫盲的工具** |
+| backend-cheats | https://github.com/cheatsnake/backend-cheats | 4,424 | **📃 后端开发完整知识白皮书**（MIT，Markdown）。**和"语法速查"不同** — 这是后端开发的**架构 + 模式层**知识体系：API 设计 / 数据库选型 / 缓存策略 / 队列 / 微服务 / 安全 / 部署 / 监控 / 架构模式（CQRS / Event Sourcing / Saga）。**可视化图表丰富**，配套架构示意图。**适合 1-3 年后端开发者补"为什么这样设计"的认知**，对比 developer-roadmap 更深入后端单方向 |
+
+### Prompt 工程
+
+| 项目名称 | GitHub 地址 | Stars | 描述 |
+|---------|------------|-------|------|
+| awesome-gpt-image-2-prompts | https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts | 4,993 | 精选 GPT-Image-2 提示词库（OpenAI API），覆盖人像、海报、UI 原型、角色设定表、社区实验。站点 https://evolink.ai/gpt-image-2-prompts |
+
+## [yao-open-prompts](https://github.com/yaojingang/yao-open-prompts)
+
+<RepoMeta
+  url="https://github.com/yaojingang/yao-open-prompts"
+  stars={2035}
+  updated="2026-05-07"
+  lang="Python"
+  license="NOASSERTION"
+  tags={['prompt-engineering', 'chinese-prompts', 'ai']}
+/>
+
+**中文 AI 提示词库** — 覆盖工作、学习、内容、营销和生活场景的中文 prompt 集合。相比英文 prompt awesome list，它更贴近日常中文表达和国内内容场景，适合拿来做个人 prompt 素材库、产品内置模板或运营工作流参考。
 
 </div>
