@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ChevronDown, ArrowUpRight } from 'lucide-react'
+import { ChevronDown, ArrowUpRight, Boxes, Sparkles, Layers } from 'lucide-react'
 import repos from '../lib/repos.json'
 import CategoryWiki from './CategoryWiki'
 
@@ -197,12 +197,17 @@ export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
     return (
       <>
         <div className="mm-repo-summary">
-          共 <strong>{items.length}</strong> 项 · 按 stars 降序
+          <span className="mm-summary-stat" title="收录项目总数">
+            <Boxes size={13} strokeWidth={2.2} />
+            <strong>{items.length}</strong>
+          </span>
           {newCount > 0 && (
-            <span className="mm-repo-summary-new">
-              · 24h 内新增 <strong>{newCount}</strong>
+            <span className="mm-summary-stat mm-summary-stat-new" title="24h 内新增">
+              <Sparkles size={13} strokeWidth={2.2} />
+              <strong>{newCount}</strong>
             </span>
           )}
+          <span className="mm-summary-sort">按 stars 降序</span>
         </div>
         <CategoryWiki slug={slug} itemCount={items.length} />
         <div className="mm-repo-flow">
@@ -218,10 +223,18 @@ export const RepoList: React.FC<{ slug: string }> = ({ slug }) => {
   return (
     <>
       <div className="mm-repo-summary">
-        共 <strong>{items.length}</strong> 项 · 分 <strong>{groups.length}</strong> 组
+        <span className="mm-summary-stat" title="收录项目总数">
+          <Boxes size={13} strokeWidth={2.2} />
+          <strong>{items.length}</strong>
+        </span>
+        <span className="mm-summary-stat" title="子分组数">
+          <Layers size={13} strokeWidth={2.2} />
+          <strong>{groups.length}</strong>
+        </span>
         {newCount > 0 && (
-          <span className="mm-repo-summary-new">
-            · 24h 内新增 <strong>{newCount}</strong>
+          <span className="mm-summary-stat mm-summary-stat-new" title="24h 内新增">
+            <Sparkles size={13} strokeWidth={2.2} />
+            <strong>{newCount}</strong>
           </span>
         )}
       </div>

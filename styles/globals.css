@@ -35,9 +35,11 @@ html:not(.dark) {
    弥光底层 — 整页背景柔光晕
    ============================================================ */
 
-/* Prevent any stray horizontal overflow (mobile pan-to-side bug) */
+/* Prevent any stray horizontal overflow (mobile pan-to-side bug).
+   Use `clip` not `hidden`: `hidden` turns html/body into a scroll
+   container, which breaks `position: sticky` on the Nextra sidebar. */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 html.dark body::before {
