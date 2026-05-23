@@ -192,4 +192,43 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Agent 友好的 HTML 幻灯片模板库** — A library of HTML slide templates designed so any coding agent can pick the right one and produce a beautiful deck on the user's behalf, automatically. 设计目标就是让 coding agent（Claude Code / Cursor / Codex）能**自动挑模板** + **自动产出好看的整套 slide**，不用人工逐页排版。和 ppt-image-first 偏图像优先、mckinsey-ppt 偏咨询报告不同，这个偏**通用美观 + 模板可被 LLM 直接调用**，适合作为"Agent 出 PPT 默认模板源"。
 
+## [Paper2Any](https://github.com/OpenDCAI/Paper2Any)
+
+<RepoMeta
+  url="https://github.com/OpenDCAI/Paper2Any"
+  stars={2378}
+  updated="2026-05-19"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['paper2slides', 'ppt-generator', 'langgraph', 'editable-pptx']}
+/>
+
+**论文 → 多模态产出物的 agent**(LangGraph 架构,Python 3.11+,有在线 demo + Drawio 集成)。**输入** PDF / 截图 / 纯文本 / 主题,**输出** 模型结构图、技术路线图、实验配图、整套 PPT —— 全部 **editable**(可编辑 pptx / drawio 源文件,不是位图截图)。背后两篇配套论文已进 CVPR 2026 Findings(Paper2SysArch)和 ACL 2026 Main(SciFlow-Bench),把"科研图生成"做成可验证的研究问题。
+
+**亮点**:
+- **Drawio 原生集成** —— 不是出一张 PNG,出 `.drawio` 源文件,可在 drawio 里继续改、再导出任意格式
+- **批量图像生成** —— Image Model Playground 支持 Nano Banana 2 / Pro / Image 2 一键批量(1/2/4/8/16),压缩缩略图预览
+- **agent 友好编排** —— LangGraph 各步骤可观测可替换,不是黑盒一把梭
+- **同生态搭档** Edit-Banana(下一条)—— Paper2Any 正向生成,Edit-Banana 反向把别人的图解构成 drawio,组合更顺
+
+## [Edit-Banana](https://github.com/BIT-DataLab/Edit-Banana)
+
+<RepoMeta
+  url="https://github.com/BIT-DataLab/Edit-Banana"
+  stars={5213}
+  updated="2026-05-22"
+  lang="Python"
+  license="AGPL-3.0"
+  tags={['figure-editing', 'sam3', 'nanobanana', 'drawio']}
+/>
+
+**通用"不可编辑 → 可编辑"内容转换器**(北理工 BIT-DataLab,SAM 3 + 多模态大模型 + Nano Banana,Python 3.10+,推荐 CUDA)。**输入** 一张图(论文截图 / PPT 截图 / 静态图表),**输出** 可编辑的 DrawIO XML —— 几秒钟把"位图"还原成保留原图细节和**逻辑关系**的矢量结构。在线 demo `editbanana.net` 上传即出 XML。
+
+**亮点**:
+- **SAM 3 分割 + 多模态 LLM 理解** —— 不是 OCR 抠文字,是把图里的**元素 + 它们之间的逻辑关系**重建出来
+- **DrawIO 原生输出** —— 和 Paper2Any 同走 drawio 生态(出 XML 而非 PNG),可二次编辑;反向工作流互补
+- **5.2k★ 增长极快** —— stars 已超 Paper2Any(2.4k)
+
+**注意**:⚠️ AGPL-3.0(传染性强,商用慎用);⚠️ 作者明说**网站版超前于 GitHub 仓库**——最新功能/性能在 editbanana.net,本地代码滞后
+
 </div>
