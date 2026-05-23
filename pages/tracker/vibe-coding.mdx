@@ -97,4 +97,25 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 这是面向 Agent 的 HTML 生产/编辑工具，最终质量仍取决于所接入模型与提示词/Skill 设计。
 
+## [open-pencil](https://github.com/open-pencil/open-pencil)
+
+<RepoMeta
+  url="https://github.com/open-pencil/open-pencil"
+  stars={5126}
+  updated="2026-05-23"
+  lang="TypeScript"
+  license="MIT"
+  tags={['design-editor', 'figma-alternative', 'ai', 'tauri']}
+/>
+
+**AI 原生设计编辑器，开源 Figma 替代** — 可直接打开 `.fig`（Figma 原生格式）和 `.pen` 设计文件的桌面/Web 设计工具。内置 AI 聊天界面，用自然语言描述即可创建和修改设计节点（90+ 种工具操作）。**核心差异化**：不只是「又一个画图工具」，而是**可编程设计平台**——提供无头 Vue SDK、CLI、XPath 查询、Figma Plugin API 兼容层、MCP Server，以及对 Claude Code / Codex / Gemini CLI 的桌面 Agent 集成。
+
+**亮点**：
+- 原生 `.fig` 文件读写，支持组件/变体/实例，可在 Figma 和 OpenPencil 之间拷贝粘贴节点
+- AI 驱动：接入 OpenRouter / Anthropic / OpenAI / Google AI 等多 Provider，聊天即设计
+- 可编程：headless CLI + MCP Server + Figma Plugin API `eval`，适合做 design-to-code、Lint、Token 提取等自动化流水线
+- Tauri + Skia + WebGPU 渲染，跨平台桌面应用 + Web 版同步提供
+
+**注意**：⚠️ 项目仍处于活跃开发中（Active development），尚未进入生产可用阶段。
+
 </div>

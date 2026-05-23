@@ -155,4 +155,25 @@ import RepoMeta from '../../components/RepoMeta'
 - 通过 VFS 抽象统一本地/远程/沙盒资源，方便做权限边界和环境隔离
 - 适合构建 Agent sandbox、代码执行环境、工具编排和多租户文件访问层
 
+## [codeburn](https://github.com/getagentseal/codeburn)
+
+<RepoMeta
+  url="https://github.com/getagentseal/codeburn"
+  stars={6945}
+  updated="2026-05-23"
+  lang="TypeScript"
+  license="MIT"
+  tags={['cost-tracking', 'token-usage', 'cli', 'observability']}
+/>
+
+**AI 编程 Token 开销可视化仪表盘** — 一款终端 TUI 工具，实时追踪你在 Claude Code、Codex、Cursor 等 **20 种 AI 编程工具**上的 Token 用量与花费。按任务类型、模型、工具、项目、Provider 五个维度拆解支出，让你清楚知道钱花在哪了。**完全本地运行**：无代理、无 wrapper、无需 API key，直接读取本地 session 数据，通过 LiteLLM 定价引擎计算费用。
+
+**亮点**：
+- 支持 20+ AI 编程工具（Claude Code / Codex / Cursor / Copilot / Windsurf / Aider 等），一个面板统一看
+- 五维度费用拆解：按 task type / model / tool / project / provider 切片分析
+- 零侵入：不劫持请求、不做中间代理，纯粹读 disk 上的 session 文件 + LiteLLM 计价
+- npm 一键安装（`npx codeburn`），TUI 交互 + 菜单栏小组件
+
+**注意**：⚠️ 需要 Node.js ≥20；各 AI 工具的 session 文件路径可能随版本变化，需关注上游适配更新。
+
 </div>
