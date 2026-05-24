@@ -149,6 +149,62 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Multilingual Voice Understanding Model** — 阿里通义实验室 (FunAudioLLM) 出品，**中文场景体验显著强过 Whisper**：直接给情绪 + 事件检测 + 标点 + 逆文本归一化，工业级一站到位。如果你做中文客服质检 / 直播字幕 / 播客转录，**先试 SenseVoice 再试 Whisper**。
 
+### 语音增强 / 分离
+
+## [Ultimate Vocal Remover (UVR)](https://github.com/Anjok07/ultimatevocalremovergui)
+
+<RepoMeta
+  url="https://github.com/Anjok07/ultimatevocalremovergui"
+  stars={24757}
+  updated="2025-03-13"
+  lang="Python"
+  license="MIT"
+  tags={['vocal-remover', 'source-separation', 'mdx-net', 'demucs', 'gui']}
+/>
+
+**GUI for a Vocal Remover that uses Deep Neural Networks** — **音乐人声 / 伴奏分离的群众基础**。本质是把 MDX-Net、VR Architecture、Demucs 三家最强分离模型用统一 PyQt GUI 打包，下载 = 双击 = 拖入歌曲 = 出 vocals / instruments / drums / bass。**和直接用 Demucs CLI 的区别**：UVR 内置 30+ 预训练 ensemble 模型 + 单文件批处理 + 实时频谱预览，**完全不写代码就能做翻唱伴奏 / Karaoke / Remix / AI 翻唱训练集**。RVC / GPT-SoVITS 训练前的"扒人声"基本都从这里出。Windows / Mac 都有 release，CPU 也能跑（慢点）。
+
+## [Resemble Enhance](https://github.com/resemble-ai/resemble-enhance)
+
+<RepoMeta
+  url="https://github.com/resemble-ai/resemble-enhance"
+  stars={2302}
+  updated="2024-12-03"
+  lang="Python"
+  license="MIT"
+  tags={['speech-enhancement', 'denoise', 'super-resolution', 'resemble']}
+/>
+
+**AI powered speech denoising and enhancement** — 商业 TTS 公司 Resemble.ai 开源的**双段管线**：**Denoiser**（去环境噪声 / 室内回响 / 嘶嘶声）+ **Enhancer**（44kHz 重采样 + 频带补全 + 韵律修复），一次性把糟粕录音抬到录音棚级。**关键差异点**：同类工具（DeepFilterNet / RNNoise）只做 denoise，Resemble Enhance **denoise + super-resolution 一体**——专治"手机随手录 / 远场麦 / 老视频里抠人声"这种又脏又糊的料。pip install 即用，给 8s 片段或长 wav 都行。**做 TTS 训练数据清洗 / 播客后期 / 老素材修复** 直接命中。
+
+## [AudioSR](https://github.com/haoheliu/versatile_audio_super_resolution)
+
+<RepoMeta
+  url="https://github.com/haoheliu/versatile_audio_super_resolution"
+  stars={1845}
+  updated="2025-08-27"
+  lang="Python"
+  license="MIT"
+  tags={['audio-super-resolution', 'bandwidth-extension', 'diffusion']}
+/>
+
+**Versatile audio super resolution (any → 48kHz)** — 作者 Haohe Liu（同款 VoiceFixer 作者），**唯一一个"通用"音频超分**：不分人声 / 音乐 / 环境音 / 音效，任意输入采样率（2k / 4k / 8k / 16k / 24k / 32k）**统一抬到 48kHz**。基于 latent diffusion，模型只有 100MB 左右，**比传统 BWE / NU-Wave 跨域泛化好得多**。典型场景：**老电台 / 老电影低码率音频抢救、AI 生成低质音频后处理、压缩失真复原、做 hi-fi 数据集**。和 Resemble Enhance 区别：那个偏人声 denoise + enhance 一体，AudioSR 是**纯频带恢复**，可叠加使用。
+
+### 声音克隆 / VC
+
+## [RVC WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+
+<RepoMeta
+  url="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+  stars={35687}
+  updated="2024-11-24"
+  lang="Python"
+  license="MIT"
+  tags={['voice-conversion', 'rvc', 'sovits', 'vits', 'voice-clone']}
+/>
+
+**Easily train a good VC model with voice data ≤ 10 mins!** — **中文圈 AI 翻唱 / AI 孙燕姿 / AI 周杰伦的源头**，VITS + so-vits-svc 演进出的 **Retrieval-based Voice Conversion** 流派。和 TTS 类（GPT-SoVITS）的根本区别：**VC 不生新内容，只换"是谁在唱 / 说"**——输入任意人声 wav（自己录 / 别人唱 / TTS 生成）→ 输出换成目标音色但保留原韵律 / 咬字 / 颤音的版本。10 分钟数据集就能炼一个像样模型，整套 Gradio WebUI 把数据预处理 / 索引构建 / 训练 / 推理打包，**Colab / 本地 GPU 一键开炼**。⚠️ 配 UVR 扒干净人声 + 用 Whisper 做对齐是标准前置流程。
+
 ### 文生图
 
 ## [FLUX.1](https://github.com/black-forest-labs/flux)
