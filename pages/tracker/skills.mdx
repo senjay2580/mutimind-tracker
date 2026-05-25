@@ -308,6 +308,34 @@ import RepoMeta from '../../components/RepoMeta'
 
 **把完成的 Codex 工作流沉淀成 Skill** — 面向 Codex 的轻量工具，把一次跑通的工作流程整理成可复用 skill。适合个人把高频操作从聊天记录里提炼出来，转成下一次可直接调用的操作手册。
 
+## [claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
+
+<RepoMeta
+  url="https://github.com/anthropics/claude-plugins-official"
+  stars={27603}
+  updated="2026-05-25"
+  lang="Python"
+  license="No License"
+  tags={['claude-code', 'plugins', 'mcp', 'skills']}
+/>
+
+**Anthropic 官方 Claude Code 插件目录** — 由 Anthropic 维护的高质量 Claude Code Plugins 索引，插件可以封装 MCP server、slash commands、subagents 和 skills，通过 `/plugin install <name>@claude-plugins-official` 接入。它重点解决 Claude Code 扩展发现和分发问题，特色是官方托管目录 + 第三方插件统一入口，适合作为查找 Claude Code 能力扩展的第一站。
+
+## [Claude-OSINT](https://github.com/elementalsouls/Claude-OSINT)
+
+<RepoMeta
+  url="https://github.com/elementalsouls/Claude-OSINT"
+  stars={1370}
+  updated="2026-05-22"
+  lang="Python"
+  license="NOASSERTION"
+  tags={['claude-skills', 'osint', 'recon', 'security']}
+/>
+
+**授权 OSINT / 外部侦察 Skill 包** — 一组可直接放进 Claude skills system 的 `SKILL.md`，把资产发现、子域名、身份/SSO、Web 攻击面、云资产、密钥泄露、邮件安全、dorks 和攻击路径模板整理成结构化侦察流程。项目重点不是提供扫描器，而是把安全分析师的 recon 方法论压缩成 Claude 可调用的操作手册；特色是 90+ recon modules、48 个 secret regex、80+ dorks 和只读凭据验证模板。
+
+**注意**：⚠️ 仅适合授权红队、Bug Bounty 和自有资产排查，不能用于未授权目标。
+
 ## [vercel-labs/skills](https://github.com/vercel-labs/skills)
 
 <RepoMeta

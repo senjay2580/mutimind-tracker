@@ -78,6 +78,21 @@ import RepoMeta from '../../components/RepoMeta'
 
 **手机端可跑的口袋级多模态 LLM** — OpenBMB / 面壁出品。**8B 参数，端到端理解图像 + 视频 + 语音 + 文本 + 实时流**，GPT-4o-mini 级能力但**部署到 iPhone / Android 也跑得动**。MiniCPM-V 多模态系列演进版，**实时视频问答 + 端侧语音助手 + 摄像头流式理解**是核心新能力。中文 OCR / 表格 / 公式识别国内最强开源之一。
 
+## [Lance](https://github.com/bytedance/Lance)
+
+<RepoMeta
+  url="https://github.com/bytedance/Lance"
+  stars={874}
+  updated="2026-05-25"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['multimodal', 'image-generation', 'video-generation', 'editing']}
+/>
+
+**3B 统一多模态模型** — 字节开源的 native unified multimodal model，用同一模型框架覆盖图像/视频理解、生成和编辑，包括文生图、文生视频、图像编辑、视频编辑以及图像/视频问答。它重点突出 3B-active-parameter 的统一架构和多任务覆盖，特色是把“理解 + 生成 + 编辑”合到一个多模态模型项目里，适合研究统一视觉生成/理解路线。
+
+**注意**：⚠️ 推理显存门槛较高，README 标注至少约 40GB 显存。
+
 ### 代码模型
 
 ## [Qwen2.5-Coder / Qwen3-Coder](https://github.com/QwenLM/Qwen2.5-Coder)
@@ -249,6 +264,19 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **Open Full-song Music Generation Foundation Model, something similar to Suno.ai but open** — 多模态艺术项目组出品，**开源界 Suno 平替**。给 lyrics + style prompt → 直接生成带人声 + 伴奏的完整歌曲（3 分钟级别），不是只生伴奏。Apache 2.0 可商用，是当下最完整的开源音乐生成方案。
+
+## [WavFlow](https://github.com/facebookresearch/WavFlow)
+
+<RepoMeta
+  url="https://github.com/facebookresearch/WavFlow"
+  stars={103}
+  updated="2026-05-19"
+  lang="Python"
+  license="NOASSERTION"
+  tags={['audio-generation', 'waveform', 'multimodal', 'research']}
+/>
+
+**原始 waveform 空间的多模态音频生成模型** — Meta/Facebook Research 的音频生成研究项目，目标是直接在 raw waveform 空间生成高质量音频，面向视频配音、Foley、环境声和多模态音频生成。它重点突出绕开常见 VAE/latent 压缩路线，特色是把生成建模压到原始波形层，适合关注音频生成架构和声音质量上限的研究者。
 
 ### OCR / 文档解析（RAG 数据准备端）
 
