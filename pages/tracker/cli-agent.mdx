@@ -176,4 +176,24 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 需要 Node.js ≥20；各 AI 工具的 session 文件路径可能随版本变化，需关注上游适配更新。
 
+## [pi](https://github.com/earendil-works/pi)
+
+<RepoMeta
+  url="https://github.com/earendil-works/pi"
+  stars={54302}
+  updated="2026-05-25"
+  lang="TypeScript"
+  license="MIT"
+  tags={['coding-agent', 'cli', 'agent-runtime', 'tui']}
+/>
+
+**Self-extensible coding agent harness** — earendil-works 的 TypeScript monorepo，把交互式编码 Agent CLI、Agent runtime、统一多 provider LLM API 和 TUI 库打包成一套可扩展基础设施。用户可以直接 `npm install -g --ignore-scripts @earendil-works/pi-coding-agent` 后运行 `pi`，也可以通过 extensions、skills、prompt templates、themes 和 Pi Packages 改造自己的工作流。重点突出的是**让 Agent harness 本身可被用户扩展**：默认提供 `read` / `write` / `edit` / `bash` 等基础工具，但把子能力交给 TypeScript 扩展、skills 和包生态来组合，而不是把所有工作流硬编码进核心。特色是同时覆盖交互式 CLI、print/JSON、RPC 和 SDK 嵌入模式，适合拿来研究下一代 Codex / Claude Code / OpenClaw 类终端 Agent 的架构边界。
+
+**亮点**：
+- `packages/coding-agent`、`packages/agent`、`packages/ai`、`packages/tui` 分层清楚，既能当 CLI 用，也能作为 Agent runtime / UI 库研究
+- 支持 Anthropic、OpenAI、Azure OpenAI、Google、Copilot 等 provider，并可通过配置或 extension 接自定义模型
+- 内置 session、compaction、prompt template、skill、extension、theme 等可扩展机制，适合做个人化终端 Agent 工作台
+
+**注意**：⚠️ Node.js ≥22.19；项目高速演进，近期 issue 里有 Working 卡住、session folder collision、IME preedit、配置行为不清等工程问题，适合尝鲜和架构研究，生产化要先实测稳定性。
+
 </div>
