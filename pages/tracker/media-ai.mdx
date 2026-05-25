@@ -10,7 +10,7 @@ import RepoMeta from '../../components/RepoMeta'
 <RepoList slug="media-ai" />
 
 {/* ── 数据源（隐藏，构建时由 scripts/build-search-index.mjs 抽取） ── */}
-{/* 3 个 ### 子分类：视频 AI · 语音合成 (TTS) · HTML/Canvas 转 PPT */}
+{/* 4 个 ### 子分类：视频 AI · 语音合成 (TTS) · 文档 / 论文翻译 · HTML/Canvas 转 PPT */}
 
 <div className="mm-source-data">
 
@@ -143,6 +143,28 @@ import RepoMeta from '../../components/RepoMeta'
 - 多语言、多端 SDK 示例齐全，便于嵌入现有产品
 
 **注意**：它是语音基础组件，不是完整语音助手；音色克隆、情绪控制等高阶能力需要结合实际模型包和场景评估。
+
+### 文档 / 论文翻译
+
+## [BabelDOC](https://github.com/funstory-ai/BabelDOC)
+
+<RepoMeta
+  url="https://github.com/funstory-ai/BabelDOC"
+  stars={8546}
+  updated="2026-05-09"
+  lang="Python"
+  license="AGPL-3.0"
+  tags={['pdf', 'translation', 'bilingual', 'papers']}
+/>
+
+**一句话定位** — **PDF 科研论文翻译与双语对照库**，把复杂 PDF 翻译成可阅读的双语版本，主打保持论文排版、公式和段落结构，而不是只抽文本丢给翻译 API。它既能作为 CLI 直接跑（例如 `uv tool install --python 3.12 BabelDOC` 后用 `babeldoc --files example.pdf --openai ...` 批量处理 PDF），也提供 Python API，方便嵌进 Zotero 插件、PDFMathTranslate 自部署 WebUI 或其他文档处理流水线。重点突出的是**论文级 PDF 版式保留 + 双语对照输出 + 可嵌入工程库**，特色是把 Immersive Translate 的在线服务、PDFMathTranslate-next 的自部署入口和底层文档翻译引擎串在同一个生态里。
+
+**亮点**：
+- 支持 CLI / Python API / PyPI 安装，适合个人批量翻译和产品内嵌
+- 面向科研 PDF 的双语阅读场景，强调原文与译文对照而不是纯文本翻译
+- 可接 OpenAI-compatible 翻译服务，并能通过 Zotero / PDFMathTranslate 生态进入日常阅读流
+
+**注意**：⚠️ README 明确当前主要测试英语到中文场景；AGPL-3.0 集成到服务或衍生项目时要确认开源义务。
 
 ### HTML / Canvas 转 PPT
 
