@@ -66,6 +66,19 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Anthropic 官方 Agent Skills 公共仓库** — 行业基准 (132k★)，所有 Claude Code / Claude API agent skills 的事实标准来源，新人入门必看。研究 SKILL.md 规范、bundled assets、progressive disclosure 都从这里找参考实现。
 
+## [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)
+
+<RepoMeta
+  url="https://github.com/anthropics/knowledge-work-plugins"
+  stars={16923}
+  updated="2026-05-27"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['claude-cowork', 'plugins', 'skills', 'mcp']}
+/>
+
+**Anthropic 官方知识工作插件仓库** — 面向 Claude Cowork，也兼容 Claude Code 的插件集合；本质是把一个岗位需要的 skills、connectors、slash commands 和 sub-agents 打成可安装包。内置 11 个角色插件：productivity、sales、customer-support、product-management、marketing、legal、finance、data、enterprise-search、bio-research、cowork-plugin-management。典型用法是先添加 marketplace：`claude plugin marketplace add anthropics/knowledge-work-plugins`，再安装 `sales@knowledge-work-plugins` 这类具体插件。重点不是单个 prompt，而是把企业角色工作流、MCP 连接器和命令体系文件化；特色是官方给出了“Claude 插件应该怎样组织”的参考结构，适合团队照着改成自己的业务插件。
+
 ## [superpowers](https://github.com/obra/superpowers)
 
 <RepoMeta
