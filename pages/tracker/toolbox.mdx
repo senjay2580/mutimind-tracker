@@ -61,6 +61,21 @@ import RepoMeta from '../../components/RepoMeta'
 - QUIC / HTTP/3 伪装，被动探测识别难度高
 - 支持 SOCKS5、HTTP proxy、TUN、relay 多种接入方式
 
+## [firezone](https://github.com/firezone/firezone)
+
+<RepoMeta
+  url="https://github.com/firezone/firezone"
+  stars={8623}
+  updated="2026-05-27"
+  lang="Elixir"
+  license="Apache-2.0"
+  tags={['zero-trust', 'wireguard', 'vpn', 'self-hosted']}
+/>
+
+**基于 WireGuard 的零信任访问平台** — Firezone 是面向企业和团队的安全访问系统，用来替代传统全隧道 VPN：管理员定义用户、设备和资源策略，客户端按需连到内网服务、云资源或私有应用。它能做远程办公访问、私有服务暴露、开发环境访问控制和网络分段，底层复用 WireGuard 的高性能加密隧道，上层补齐身份、策略、审计和管理 UI。重点突出的是 **zero-trust access** 而不是“翻墙代理”；特色是把 WireGuard 从单机 VPN 配置提升成团队级访问控制平台，适合想自托管 Tailscale / Cloudflare Zero Trust 替代方案的团队。
+
+**注意**：⚠️ 网络访问控制工具涉及公司安全边界，生产部署前要认真评估身份源、密钥轮换、客户端管理和审计策略。
+
 ## [cfnew](https://github.com/byJoey/cfnew)
 
 <RepoMeta
@@ -154,6 +169,21 @@ import RepoMeta from '../../components/RepoMeta'
 | HiBit Uninstaller | https://hibitsoft.ir/Uninstaller.html | 软件卸载增强器 | **轻量 Windows 卸载与残留清理工具**。用于替代系统“程序和功能”的弱卸载体验：先走软件自带卸载器，再扫描残留文件、注册表项和启动项，适合清理顽固软件、失效 MSI、商店应用和卸载后的垃圾。自带批量卸载、强制卸载、启动项管理、进程管理、垃圾清理等附加工具。**注意**：残留扫描涉及注册表和用户目录，删除前要看清候选项，别把共享配置或文档目录一起勾掉。 |
 | PC Fresh | https://www.abelssoft.de/en/windows/system-utilities/pc-fresh | 系统 Tweaks 集合 | **Abelssoft 的 Windows 调优套件**。核心是把 Windows 服务、启动项、系统参数、RAM 优化、文件关联和性能模式集中成图形化开关，面向“不想手动翻注册表/服务管理器”的用户。适合做一次性性能排查、禁用不需要的后台服务、查看系统信息。**注意**：这类 tweak 工具收益高度依赖机器状态；改服务/系统参数前建议先建还原点，避免为了跑分把日常功能关坏。 |
 | cFosSpeed | https://atlas-cfosspeed.com/traffic-shaping/ | 网络流量调度器 | **Windows 网络 Traffic Shaping / Ping 优化驱动**。通过优先级队列和连接校准，把游戏、VoIP、音视频、ACK 等时延敏感流量排在大上传/下载前面，目标是在满载传输时保持低 ping。适合“上传/下载时游戏或会议明显卡顿”的单机/家庭网络场景。**注意**：它是网络驱动级软件，可能和主板厂商套件、VPN、虚拟网卡、杀软或 QoS 功能互相影响；现代路由器已有 SQM/QoS 时，优先比较路由器侧方案。 |
+
+## [ophel](https://github.com/urzeye/ophel)
+
+<RepoMeta
+  url="https://github.com/urzeye/ophel"
+  stars={711}
+  updated="2026-05-27"
+  lang="TypeScript"
+  license="GPL-3.0"
+  tags={['browser-extension', 'ai-workflow', 'prompt-management', 'chatgpt']}
+/>
+
+**AI 对话整理成可复用工作流的浏览器扩展** — Ophel 面向 ChatGPT、Claude、Gemini、Grok 等主流 AI 平台，把长对话、提示词、步骤和上下文整理成可组织、可复用的 workflow。它适合把一次性的 AI 聊天沉淀为可复跑的 SOP、prompt 模板、研究流程或个人知识资产，而不是让有价值的对话散落在各个平台历史记录里。重点突出跨平台对话管理、outline 组织和工作流复用；特色是它站在“AI 使用资产化”这个点上，不是又一个聊天客户端，而是给已有 AI 平台加一层工作流管理。
+
+**注意**：⚠️ 浏览器扩展会接触 AI 对话内容，使用前要看清权限范围；GPL-3.0 集成或二次分发要注意开源义务。
 
 ## [awesome-mac](https://github.com/jaywcjlove/awesome-mac)
 

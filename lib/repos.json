@@ -1763,6 +1763,7 @@
     "subcategory": "Awesome 清单 & 聚合站",
     "slug": "aggregation",
     "description": "微信小程序开发资源总索引 — 一个面向微信小程序开发者的 awesome list，不是入门教程，而是把开发过程中常用的官方文档、工具、插件、组件库和 Demo 汇到一处。它覆盖 uni-app / Taro / WePY / mpvue / kbone 等跨端或小程序框架，也收集 WXML / WXSS 工具、云开发脚手架、组件生态和实战样例。重点是帮开发者在“小程序该用什么库、参考哪个 demo、查哪份官方文档”时快速定位资源；特色在于它是中文小程序生态的老牌入口，51k★，更像微信小程序开发的导航页，而不是单一框架或工具。",
+    "addedAt": "2026-05-27T17:36:04+08:00",
     "anchor": "aggregation__github-com-justjavac-awesome-wechat-weapp"
   },
   {
@@ -3038,6 +3039,20 @@
     "slug": "cli-agent",
     "description": "多 Agent 终端协作框架（Python，2025-10 起，6 个月 2.5k★）。一行紧凑配置 cmd; writer:codex, reviewer:claude; qa:gemini(worktree) 起 tmux 多窗格团队，支持 Claude/Codex/Gemini/OpenCode/Droid；agent 间 /ask <name>、广播、worktree 隔离；每 agent 独立 API key/model。跨 Linux/macOS/Windows/WSL",
     "anchor": "cli-agent__github-com-bfly123-claude-codex-bridge"
+  },
+  {
+    "name": "xiaohongshu-cli",
+    "owner": "jackwener",
+    "url": "https://github.com/jackwener/xiaohongshu-cli",
+    "stars": 2049,
+    "updated": "2026-03-21",
+    "lang": "Python",
+    "license": "No License",
+    "category": "CLI 工具 & 终端 Agent",
+    "subcategory": "",
+    "slug": "cli-agent",
+    "description": "小红书命令行接口 — 一个面向人类和 AI Agent 的小红书 CLI，基于逆向 API 提供搜索、阅读、互动和发布能力。它能自动提取浏览器 cookie 或扫码登录，搜索笔记 / 用户 / 话题，读取笔记详情、评论、子评论和用户资料，也支持点赞、收藏、评论、关注、发布图文笔记、查看通知等操作；命令输出支持 YAML / JSON，适合接入脚本和 Agent 工作流。重点突出的是“把小红书变成可结构化调用的信息源和操作端”；特色是它专门做了反检测、稳定输出 envelope 和短编号导航，适合内容运营、竞品观察和本地自动化。 注意：⚠️ 逆向 API + 社媒交互有平台风控和账号风险；没有标准 license，商用或二次分发要谨慎。",
+    "anchor": "cli-agent__github-com-jackwener-xiaohongshu-cli"
   },
   {
     "name": "codex-auth",
@@ -4888,6 +4903,7 @@
     "subcategory": "Skill 市场 & 合集",
     "slug": "skills",
     "description": "Anthropic 官方知识工作插件仓库 — 面向 Claude Cowork，也兼容 Claude Code 的插件集合；本质是把一个岗位需要的 skills、connectors、slash commands 和 sub-agents 打成可安装包。内置 11 个角色插件：productivity、sales、customer-support、product-management、marketing、legal、finance、data、enterprise-search、bio-research、cowork-plugin-management。典型用法是先添加 marketplace：claude plugin marketplace add anthropics/knowledge-work-plugins，再安装 sales@knowledge-work-plugins 这类具体插件。重点不是单个 prompt，而是把企业角色工作流、MCP 连接器和命令体系文件化；特色是官方给出了“Claude 插件应该怎样组织”的参考结构，适合团队照着改成自己的业务插件。",
+    "addedAt": "2026-05-27T17:36:04+08:00",
     "anchor": "skills__github-com-anthropics-knowledge-work-plugins"
   },
   {
@@ -5674,6 +5690,20 @@
     "anchor": "toolbox__github-com-byjoey-cfnew"
   },
   {
+    "name": "firezone",
+    "owner": "firezone",
+    "url": "https://github.com/firezone/firezone",
+    "stars": 8623,
+    "updated": "2026-05-27",
+    "lang": "Elixir",
+    "license": "Apache-2.0",
+    "category": "实用工具箱",
+    "subcategory": "网络工具",
+    "slug": "toolbox",
+    "description": "基于 WireGuard 的零信任访问平台 — Firezone 是面向企业和团队的安全访问系统，用来替代传统全隧道 VPN：管理员定义用户、设备和资源策略，客户端按需连到内网服务、云资源或私有应用。它能做远程办公访问、私有服务暴露、开发环境访问控制和网络分段，底层复用 WireGuard 的高性能加密隧道，上层补齐身份、策略、审计和管理 UI。重点突出的是 zero-trust access 而不是“翻墙代理”；特色是把 WireGuard 从单机 VPN 配置提升成团队级访问控制平台，适合想自托管 Tailscale / Cloudflare Zero Trust 替代方案的团队。 注意：⚠️ 网络访问控制工具涉及公司安全边界，生产部署前要认真评估身份源、密钥轮换、客户端管理和审计策略。",
+    "anchor": "toolbox__github-com-firezone-firezone"
+  },
+  {
     "name": "zmap",
     "owner": "zmap",
     "url": "https://github.com/zmap/zmap",
@@ -5732,6 +5762,20 @@
     "description": "macOS 软件精选清单 — 系统按类别整理高质量 macOS 应用：开发工具 / 效率 / 设计 / 通讯 / 媒体 / 安全 / 终端等，每条带简介与官网链接，免费项目单独标注。中文友好，是 Mac 装机找软件的事实标准清单之一。 </div>",
     "addedAt": "2026-05-18T19:02:55+08:00",
     "anchor": "toolbox__github-com-jaywcjlove-awesome-mac"
+  },
+  {
+    "name": "ophel",
+    "owner": "urzeye",
+    "url": "https://github.com/urzeye/ophel",
+    "stars": 711,
+    "updated": "2026-05-27",
+    "lang": "TypeScript",
+    "license": "GPL-3.0",
+    "category": "实用工具箱",
+    "subcategory": "软件集合",
+    "slug": "toolbox",
+    "description": "AI 对话整理成可复用工作流的浏览器扩展 — Ophel 面向 ChatGPT、Claude、Gemini、Grok 等主流 AI 平台，把长对话、提示词、步骤和上下文整理成可组织、可复用的 workflow。它适合把一次性的 AI 聊天沉淀为可复跑的 SOP、prompt 模板、研究流程或个人知识资产，而不是让有价值的对话散落在各个平台历史记录里。重点突出跨平台对话管理、outline 组织和工作流复用；特色是它站在“AI 使用资产化”这个点上，不是又一个聊天客户端，而是给已有 AI 平台加一层工作流管理。 注意：⚠️ 浏览器扩展会接触 AI 对话内容，使用前要看清权限范围；GPL-3.0 集成或二次分发要注意开源义务。",
+    "anchor": "toolbox__github-com-urzeye-ophel"
   },
   {
     "name": "HiBit Uninstaller",
