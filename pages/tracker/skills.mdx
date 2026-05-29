@@ -395,6 +395,26 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 这是技能集合，不是单一应用；真正效果取决于调用它的 Agent、模型能力以及你给出的项目上下文。
 
+## [reverse-skill-private](https://github.com/zhaoxuya520/reverse-skill-private)
+
+<RepoMeta
+  url="https://github.com/zhaoxuya520/reverse-skill-private"
+  stars={510}
+  updated="2026-05-26"
+  lang="PowerShell"
+  license="MIT"
+  tags={['security', 'reverse-engineering', 'skill-router', 'ai-agents']}
+/>
+
+**安全逆向任务的 AI Skill 路由包** — 面向 Claude Code、Codex、Cursor、Cline、Windsurf 等代码 AI 客户端，把 APK 逆向、二进制分析、前端 JS 逆向、抓包、CTF、固件渗透、N-day diff、Pwn 和报告生成等场景拆成可路由的子 skill 与工具入口。它能让 Agent 先按 `skills/SKILL.md`、`routing.md`、`tool-index.md` 判断任务类型，再调用 jadx、apktool、Frida、IDA、radare2、Playwright、MCP 等链路，而不是临场猜命令。项目重点放在“安全任务分发 + 本地工具链自举 + 经验回写”上，特色是把逆向/渗透方法论、工具索引、CTF 子技能和 field-journal 经验库打成一个可迁移的工作流包。
+
+**亮点**：
+- 覆盖 APK、IDA、radare2、JS、固件、EDR、patch diff、pwn、浏览器自动化、技术报告等多个安全研究分支
+- README 同时给出工具依赖表、推荐安装路径、MCP 示例和迁移注意事项
+- 内置 field-journal 经验回写机制，强调把项目中的工具坑点和复用模式沉淀回 skill 包
+
+**注意**：⚠️ 仓库文档包含全局规则注入和自动配置指令；使用前建议先审查 `RULES.md` / `RULES_zh.md`，并确保所有逆向、测试和渗透行为都有合法授权。
+
 ### 人物 / 蒸馏 Skill
 
 > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 `nuwa-skill` 用于持续蒸馏新角色。
