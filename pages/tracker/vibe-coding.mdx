@@ -131,4 +131,44 @@ import RepoMeta from '../../components/RepoMeta'
 
 **把代码库变成交互式知识图谱的开发工具** — 面向 Claude Code、Codex、Cursor、Copilot、Gemini CLI 等 Agent 工作流，扫描代码库后抽取文件、函数、类、依赖关系和业务概念，生成 `.understand-anything/knowledge-graph.json` 并提供 dashboard 浏览、搜索和问答。它重点突出“理解代码库”而不是只画漂亮图，特色是 Tree-sitter 静态分析 + LLM 语义分析 + 多 agent pipeline，支持 diff 影响分析、架构分层、onboarding guide 和业务流程提取。
 
+## [open-lovable](https://github.com/firecrawl/open-lovable)
+
+<RepoMeta
+  url="https://github.com/firecrawl/open-lovable"
+  stars={26529}
+  updated="2025-11-19"
+  lang="TypeScript"
+  license="MIT"
+  tags={['website-clone', 'react', 'vibe-coding', 'firecrawl']}
+/>
+
+**URL → React App 的开源 Lovable 替代/复刻器** — 输入一个网站 URL，项目会用 Firecrawl 抓取页面内容与结构，再调用 LLM 生成可运行的现代 React 应用，适合把网页设计快速变成可编辑的前端原型。它重点突出的是“从真实网页出发的 Vibe Coding”：不是只生成静态截图，而是把页面拆成组件、样式和交互草稿，并通过沙盒预览继续迭代。特色是把 Firecrawl 抓取、LLM 代码生成、Vercel/E2B 沙盒运行串成端到端工作流，适合做落地页复刻、竞品 UI 学习、旧页面 React 化初稿。
+
+**亮点**：
+- 支持 OpenAI / Anthropic / Gemini / Groq 等模型，BYOK 接入
+- 支持 Vercel Sandbox 或 E2B 沙盒预览生成结果
+- 更适合“快速原型 / 学习 / 迁移初稿”，不是像素级网页克隆器
+
+**注意**：⚠️ 克隆商业网站要注意版权、商标和 UI 抄袭风险；复杂登录态、后台系统、Canvas / 动态图形页面可能不稳定。
+
+## [awesome-design-md](https://github.com/VoltAgent/awesome-design-md)
+
+<RepoMeta
+  url="https://github.com/VoltAgent/awesome-design-md"
+  stars={85327}
+  updated="2026-05-28"
+  lang="Markdown"
+  license="MIT"
+  tags={['design-md', 'design-system', 'vibe-coding', 'ui']}
+/>
+
+**给 AI Coding Agent 用的 DESIGN.md 品牌设计系统合集** — 收集 70+ 个来自真实网站 / 品牌的 `DESIGN.md` 文件，把视觉主题、颜色、字体、组件样式、布局原则、响应式规则和 Agent prompt guardrails 写成 Markdown。用法很直接：把某个品牌 / 产品的 `DESIGN.md` 放进项目根目录，让 Claude Code、Codex、Cursor、Google Stitch 等编码 / 设计 Agent 按同一套设计语言生成 UI。它重点突出的是“设计约束可读化”：不用 Figma 导出或 JSON schema，而是用 LLM 最容易读的 Markdown 固化设计系统。特色是覆盖 Claude、Lovable、Vercel、Airbnb、Meta、Nike 等大量现成风格，可作为 Vibe Coding 的 UI 风格库和反模板味素材库。
+
+**亮点**：
+- 每个 DESIGN.md 覆盖视觉氛围、色板、字体、组件、布局、阴影层级、Do/Don't、响应式和 Agent prompt
+- 适合快速给 AI 前端生成任务指定“像某品牌一样”的一致设计语言
+- README 明确这些文件来自公开可见网站设计分析，不主张拥有原品牌视觉身份
+
+**注意**：⚠️ 更适合做灵感和设计约束，不等于获得品牌授权；商业使用时需要避免直接复制受保护的品牌识别。
+
 </div>

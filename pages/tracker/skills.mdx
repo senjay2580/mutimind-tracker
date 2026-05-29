@@ -375,6 +375,26 @@ import RepoMeta from '../../components/RepoMeta'
 
 **Agent 原生的 skill 推荐引擎** — MemTensor（MemOS / openmem 团队）出品，官网 [skills.vote](https://skills.vote)。理念是"告别硬编码、臃肿的 skill 列表"：作为智能网关做 just-in-time 推荐，按当前任务动态把 agent 路由到真正需要的 skill，省 token、提升任务成功率。号称已从 GitHub 挖掘 168 万+ 个 `SKILL.md` 构建 skill 库。与 skills.sh / ClawHub 这类静态目录站的区别在于"动态按需推荐"而非"列表浏览"。
 
+## [garden-skills](https://github.com/ConardLi/garden-skills)
+
+<RepoMeta
+  url="https://github.com/ConardLi/garden-skills"
+  stars={6579}
+  updated="2026-05-27"
+  lang="CSS"
+  license="MIT"
+  tags={['agent-skills', 'web-design', 'rag', 'image-generation']}
+/>
+
+**ConardLi 的生产级 Agent Skills 花园** — 面向 Claude Code、Cursor、Codex 等 AI coding agents 的可安装技能集合，目前聚焦 4 类高频创作/工程场景：`web-video-presentation` 把文章、课程、产品 demo 变成可录屏的 16:9 React 视频演示；`web-design-engineer` 用设计流程、风格配方和校验规则提升前端原型审美；`gpt-image-2` 沉淀图片生成与提示词工作流；`kb-retriever` 提供本地知识检索能力。它重点突出“可直接拿来生产”的技能封装，不只是列 prompt，而是把检查点、主题 token、脚手架、安装方式和多 Agent 兼容性一起写进规范。特色是把设计、视频表达、图像提示词和知识检索这些偏创作的能力打成统一 Skill 包，适合给个人 Codex/Claude Code 工作流补上审美、演示和资料检索能力。
+
+**亮点**：
+- 支持 `npx skills`、Claude Code plugin marketplace、Release zip、手动复制、git submodule 等多种安装方式
+- `web-video-presentation` 内置 23 个演示主题，并支持 MiniMax / OpenAI TTS 等可插拔语音生成
+- `web-design-engineer` 提供 6 类设计方向和 25 个 anchored style recipes，专门减少 AI 前端默认模板味
+
+**注意**：⚠️ 这是技能集合，不是单一应用；真正效果取决于调用它的 Agent、模型能力以及你给出的项目上下文。
+
 ### 人物 / 蒸馏 Skill
 
 > 把公众人物 / 专家的认知操作系统蒸馏成可运行的 Skill。代表作者：alchaincyf 系列，配套元技能 `nuwa-skill` 用于持续蒸馏新角色。
