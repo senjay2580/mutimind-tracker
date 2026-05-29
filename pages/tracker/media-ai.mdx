@@ -31,6 +31,21 @@ import RepoMeta from '../../components/RepoMeta'
 
 **注意**：⚠️ 偏研究/高端 GPU 推理场景，普通消费级显卡不一定适合复现。
 
+## [Generative-Media-Skills](https://github.com/SamurAIGPT/Generative-Media-Skills)
+
+<RepoMeta
+  url="https://github.com/SamurAIGPT/Generative-Media-Skills"
+  stars={3344}
+  updated="2026-05-19"
+  lang="Shell"
+  license="MIT"
+  tags={['video-generation', 'claude-code-skill', 'muapi', 'mcp']}
+/>
+
+**生成式媒体 Agent Skill 包** — 面向 Claude Code、Cursor、Gemini CLI 的多模态技能集合，用 `muapi-cli` 把图像、视频、音频生成能力封装成 agent 可调用的脚本/Skill。它能跑文生视频、图生视频、视频延展、AI clipping、lip sync、产品广告、UGC 短视频、音乐/音效等流程，典型安装方式是 `npx skills add SamurAIGPT/Generative-Media-Skills --all`，也可通过 `muapi mcp serve` 暴露 MCP 工具。重点突出的是“给 AI Agent 用”的 schema-driven 工作流和现成 recipe pack，而不是单个视频模型；特色是把 Seedance、Kling、Veo、Midjourney、Flux、Suno 等 100+ 模型统一到 muapi 网关，并内置 `Motion / Video` 类视频 Skill，例如 Seedance 2、cinema director、UGC video factory、product ad maker、AI clipping。
+
+**注意**：⚠️ 核心能力依赖 `muapi.ai` 和 `MUAPI_API_KEY`，更像云端多模型网关的 Agent 技能包；视频生成成本、模型可用性和平台策略要按 muapi 当前状态确认。
+
 | 项目名称 | GitHub 地址 | Stars | 描述 |
 |---------|------------|-------|------|
 | MoneyPrinterTurbo | https://github.com/harry0703/MoneyPrinterTurbo | 56,600 | **AI 全自动短视频生成**（v1.2.7, 2026-04-03）。输入主题/关键词 → 自动生成文案+素材+字幕+BGM → 合成高清竖屏/横屏短视频。Streamlit Web + FastAPI，MoviePy 合成，支持 OpenAI/DeepSeek/通义千问，Docker 部署，批量生成 |
