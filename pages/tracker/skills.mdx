@@ -40,18 +40,18 @@ import RepoMeta from '../../components/RepoMeta'
 | AutoCLI-skill | https://github.com/nashsu/AutoCLI-skill | 680 | **55+ 平台 CLI 化的 Claude Code Skill 封装** — 让 AI agent 用自然语言访问 B站/知乎/微博/小红书/Twitter/YouTube/雪球/微信读书/HackerNews/Reddit 等 55+ 平台，**直接复用 Chrome 已有登录态，零 API Key**。底层 [nashsu/AutoCLI](https://github.com/nashsu/AutoCLI)（2,527 stars，Rust 重写，比 opencli 快 12×、内存少 10×，4.7MB 单二进制）。还能控制 Cursor/Notion/ChatGPT/Discord 桌面应用 + GitHub CLI/Docker/kubectl 统一接口。需装 Chrome 扩展 + Chrome 开着 + 已登录目标网站。安装：`npx skills add https://github.com/nashsu/AutoCLI-skill` |
 | mattpocock/skills | https://github.com/mattpocock/skills | — | **Skills For Real Engineers** — Matt Pocock（TypeScript 教育者）日常 `.claude` 目录开源。强调「小、易改、可组合」，对抗 GSD/BMAD/Spec-Kit 全流程接管式框架。核心 Skill：`/grill-me` `/grill-with-docs`（对齐 + CONTEXT.md 共享语言）、`/tdd`（红绿重构）、`/diagnose`（调试循环）、`/improve-codebase-architecture`（救烂泥球）、`/to-prd` `/to-issues` `/triage` `/zoom-out` `/caveman`（压缩 token ~75%）。一键安装：`npx skills@latest add mattpocock/skills` |
 
-## [everything-claude-code](https://github.com/affaan-m/everything-claude-code)
+## [ECC (everything-claude-code)](https://github.com/affaan-m/ECC)
 
 <RepoMeta
-  url="https://github.com/affaan-m/everything-claude-code"
-  stars={179094}
-  updated="2026-05-11"
+  url="https://github.com/affaan-m/ECC"
+  stars={198767}
+  updated="2026-05-28"
   lang="JavaScript"
   license="MIT"
   tags={['agent-harness', 'optimization', 'memory', 'security']}
 />
 
-**Agent harness 性能优化系统** — 覆盖 Claude Code / Codex / Opencode / Cursor 等多 agent harness 的 skills、instincts、memory、security 和 research-first 开发体系。星标极高 (179k★)，适合作 agent 整体优化的全景参考。
+**Agent harness 性能优化系统**（原 `everything-claude-code`，已更名 ECC，旧链接 302 重定向到此）— 覆盖 Claude Code / Codex / Opencode / Cursor 等多 agent harness 的 skills、instincts、memory、security 和 research-first 开发体系。星标极高 (198k★)，适合作 agent 整体优化的全景参考。
 
 ## [anthropics/skills](https://github.com/anthropics/skills)
 
@@ -634,5 +634,17 @@ import RepoMeta from '../../components/RepoMeta'
 />
 
 **中文技术写作 Agent Skill** — 约束设计文档 / 评审稿 / postmortem / 分享稿四类场景的语气、句法、结构。让 Agent 产出符合中文团队内部技术写作规范的文档。
+
+## [stop-slop](https://github.com/hardikpandya/stop-slop)
+
+<RepoMeta
+  url="https://github.com/hardikpandya/stop-slop"
+  stars={7120}
+  updated="2026-03-17"
+  license="MIT"
+  tags={['claude-code', 'writing', 'anti-ai-tells', 'prose']}
+/>
+
+**去除 AI 写作痕迹的单文件 Skill** — 一个 `SKILL.md` 形态的 Claude Code / agent 技能，专门识别并删除 AI 生成散文里的"机器味"信号：滥用破折号、"不是 X，而是 Y"句式、rule-of-three 排比、"delve / in conclusion / it's worth noting"等套话、空洞过渡句。**和文本润色/改写工具不同**：它不是泛泛地"让文字更好"，而是有一份明确的 AI 腔模式清单，让 Claude 在写作时就规避、或对已有文稿做定向清洗。**和 humanizer（过 AI 检测）区别**：stop-slop 目标是可读性与自然度而非骗过检测器。轻量、可直接塞进写作工作流。
 
 </div>
