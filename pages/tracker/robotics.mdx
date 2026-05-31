@@ -30,4 +30,19 @@ import RepoMeta from '../../components/RepoMeta'
 
 **CAD / 机器人 / 硬件设计 Agent Skills 集合** — 面向 text-to-CAD、机械工程和机器人硬件设计，覆盖 STEP / STL / DXF / GLB / URDF / SDF / SRDF 等格式与 Build123d / OpenCascade / WASM 等工具链。适合让 Agent 从文本需求生成可检查、可导出的 CAD / 机器人描述文件。
 
+## [stable-worldmodel](https://github.com/galilai-group/stable-worldmodel)
+
+<RepoMeta
+  url="https://github.com/galilai-group/stable-worldmodel"
+  stars={1500}
+  updated="2026-05-30"
+  lang="Python"
+  license="No License"
+  tags={['world-model', 'mpc', 'pytorch', 'robotics']}
+/>
+
+**可复现实验的 World Model 研究平台** — GalilAI Group 的 `stable-worldmodel` 把 world model 研究拆成统一接口：采集数据、训练模型、再用 model-predictive control 做评估。它能通过 `pip install stable-worldmodel` 使用，典型流程是 `World(...).collect()` 采集 PushT 等环境数据，加载 Lance/HDF5/video/LeRobot 数据集，接上自己的世界模型，再用 CEM 等 solver 做 MPC 评测。重点突出的是标准化环境、数据格式注册表、参考 baseline 和可复现实验，而不是只发布一个 checkpoint；特色是把 LeWM、DINO-WM/JEPA 路线、LanceDB 高吞吐数据格式、LeRobot Hub 适配和控制评估放进同一套平台，适合机器人/具身智能里的 world model 方法对比。
+
+**注意**：⚠️ README 标注项目仍在 active development，minor 版本之间 API 可能变化；更适合作为研究平台和实验基座，生产部署前需要锁版本。
+
 </div>
