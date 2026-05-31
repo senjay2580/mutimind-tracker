@@ -118,21 +118,22 @@ import RepoMeta from '../../components/RepoMeta'
 
 <RepoMeta
   url="https://github.com/teng-lin/notebooklm-py"
-  stars={14556}
-  updated="2026-05-22"
+  stars={15581}
+  updated="2026-05-31"
   lang="Python"
   license="MIT"
-  tags={['notebooklm', 'python-api', 'cli', 'agent-skill']}
+  tags={['notebooklm', 'python-api', 'deep-research', 'agent-skill']}
 />
 
-**一句话定位** — Google NotebookLM 的非官方 Python API、CLI 与 Agentic Skill，让 Agent/脚本可以程序化调用 NotebookLM 能力。它覆盖 Python SDK、命令行入口和面向 Claude Code、Codex、OpenClaw 等 Agent 的 skill 集成，适合把 NotebookLM 变成可自动化的研究/资料处理后端。
+**一句话定位** — Google NotebookLM 的非官方 Python API、CLI 与 Agentic Skill，让 Agent/脚本可以程序化调用 NotebookLM 能力（含 Web UI 未暴露的接口）。覆盖 Python SDK、命令行和面向 Claude Code、Codex、OpenClaw 的 skill 集成，适合把 NotebookLM 变成可自动化的研究/资料处理后端。
 
 **亮点**：
-- 提供 NotebookLM Web UI 未暴露能力的程序化入口，适合批量创建/管理资料库和自动化研究流程
-- 同时面向人类 CLI、Python 程序和 AI Agent，便于接进本地工作流
-- 适合把 Google NotebookLM 的摘要、资料组织、播客生成等能力包装成 Agent 工具
+- **Web / Drive research agents，分 fast / deep 两档模式**：`notebooklm source add-research "<查询>"` 一条命令发起联网（深度）研究并把搜到的源自动导入笔记本 —— 这正是把 NotebookLM「搜索 / 深度研究」暴露成接口的核心入口（长 query 用 `--prompt-file`）
+- 批量导入多源（URL / PDF / YouTube / Google Drive）、程序化抽取洞见，可拼成可复用的 research pipeline
+- 三种入口齐全：人类 CLI、Python SDK、AI Agent skill（自带 `SKILL.md`，`npx skills add` 可发现）
+- 摘要、资料组织、播客（Audio Overview）生成等能力也一并包装成可自动化工具
 
-**注意**：⚠️ 非官方 API，可能受 Google NotebookLM 前端/接口变更影响；生产使用前需要关注鉴权方式和稳定性。
+**注意**：⚠️ 非官方 API（逆向 NotebookLM 前端），Google 改接口即可能失效；需处理 Google 登录态 / 鉴权；作者明确定位 prototypes / research / personal，不建议直接上生产。deep 模式较慢、可能撞 NotebookLM 自身速率 / 配额。
 
 ## [cli](https://github.com/larksuite/cli)
 
