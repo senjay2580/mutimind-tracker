@@ -98,6 +98,21 @@ AI Scientist 类自主研究 Agent + 自我进化 / 进化算法方向。
 | Hermes Agent Self-Evolution | https://github.com/NousResearch/hermes-agent-self-evolution | 623 | **⚒ Hermes Agent 的进化式自我改进框架**（Nous Research）。**用 DSPy + GEPA（遗传进化提示优化）自动优化 Agent 的 skill / prompt / 代码**。和直接微调模型不同 —— 不改模型权重，**改"Agent 怎么用模型"**（更便宜更可控）。Nous Research 是开源大模型圈知名实验室（Hermes / Capybara / Yarn 系列），这个项目把 Stanford DSPy 框架与遗传算法结合，**研究"Agent 自我优化"的代表实践之一** |
 | SE-Agent | https://github.com/JARVIS-Xs/SE-Agent | 245 | **LLM Code Agent 的自进化框架**（MIT，Python）。**核心创新：trajectory-level evolution** — 跨多条推理路径交换信息（Revision / Recombination / Refinement 三种算子），扩大搜索空间逃离局部最优。**在 SWE-bench Verified 拿到 SOTA**（修真实 GitHub bug 测试集），MCTS（蒙特卡洛树搜索）+ test-time scaling 思路。配合 Claude Code 使用，**适合研究"如何让代码 Agent 自我进化"** |
 
+## [EverOS](https://github.com/EverMind-AI/EverOS)
+
+<RepoMeta
+  url="https://github.com/EverMind-AI/EverOS"
+  stars={6377}
+  updated="2026-05-27"
+  lang="Python"
+  license="Apache-2.0"
+  tags={['agent-memory', 'long-term-memory', 'mcp', 'self-evolving']}
+/>
+
+**自进化 Agent 的长期记忆操作系统** — EverMind-AI 的 EverOS 面向“会记住、会积累、会跨会话进化”的 Agent，仓库按 use cases、methods、benchmarks 三块组织，把长期记忆应用、记忆系统算法和开放评测套件放在一起。它能作为 EverCore 本地记忆层运行，也展示了 coding assistant 记忆、浏览器 Agent、多人 CLI coding agent、AI companion、智能眼镜等集成场景；重点突出的是 memory quality 与 agent self-evolution 的可评测、可复现实验，而不是只做一个简单向量库。特色是把 MCP/skill/coding assistant 场景、长期语义记忆、benchmark 和产品 demo 统一到一个“agent memory OS”里，适合跟踪下一代个人 AI / 自进化 Agent 的记忆层。
+
+**注意**：⚠️ 项目很新，README 里多个 use case 仍是外部 demo 或 coming soon；拿来做生产记忆层前需要实测数据隔离、隐私和长期一致性。
+
 ## [Auto-claude-code-research-in-sleep (ARIS)](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep)
 
 <RepoMeta
